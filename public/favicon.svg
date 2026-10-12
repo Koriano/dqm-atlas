@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <!-- Two parents joined by a family-tree bracket to the monster they synthesise. -->
+  <g fill="#8a93a0">
+    <rect x="2" y="5" width="2" height="3" />
+    <rect x="12" y="5" width="2" height="3" />
+    <rect x="2" y="6" width="12" height="2" />
+    <rect x="7" y="8" width="2" height="3" />
+  </g>
+  <g fill="#3b82f6">
+    <rect x="2" y="0" width="2" height="1" />
+    <rect x="1" y="1" width="4" height="1" />
+    <rect x="0" y="2" width="6" height="1" />
+    <rect x="0" y="3" width="6" height="1" />
+    <rect x="1" y="4" width="4" height="1" />
+    <rect x="12" y="0" width="2" height="1" />
+    <rect x="11" y="1" width="4" height="1" />
+    <rect x="10" y="2" width="6" height="1" />
+    <rect x="10" y="3" width="6" height="1" />
+    <rect x="11" y="4" width="4" height="1" />
+  </g>
+  <g fill="#ef4444">
+    <rect x="7" y="11" width="2" height="1" />
+    <rect x="6" y="12" width="4" height="1" />
+    <rect x="5" y="13" width="6" height="1" />
+    <rect x="5" y="14" width="6" height="1" />
+    <rect x="6" y="15" width="4" height="1" />
+  </g>
+</svg>

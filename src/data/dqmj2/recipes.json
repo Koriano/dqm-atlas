@@ -1,0 +1,2298 @@
+[
+  {
+    "id": "special_frou_fry",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "argon_lizard" },
+      { "type": "family", "familyId": "beast" }
+    ],
+    "result": "frou_fry",
+    "conditions": []
+  },
+  {
+    "id": "special_scissor_beatle",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "yabby" },
+      { "type": "monster", "monsterId": "scorpion" }
+    ],
+    "result": "scissor_beatle",
+    "conditions": []
+  },
+  {
+    "id": "special_frostburn",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "dragon_slime" },
+      { "type": "monster", "monsterId": "dancing_flame" }
+    ],
+    "result": "frostburn",
+    "conditions": []
+  },
+  {
+    "id": "special_frostburn_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "silvapithecus" },
+      { "type": "monster", "monsterId": "dancing_flame" }
+    ],
+    "result": "frostburn",
+    "conditions": []
+  },
+  {
+    "id": "special_jargon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "frou_fry" },
+      { "type": "family", "familyId": "nature" }
+    ],
+    "result": "jargon",
+    "conditions": []
+  },
+  {
+    "id": "special_drake_slime",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "slime" },
+      { "type": "family", "familyId": "dragon" }
+    ],
+    "result": "drake_slime",
+    "conditions": []
+  },
+  {
+    "id": "special_boreal_serpent",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "firn_fiend" },
+      { "type": "monster", "monsterId": "ethereal_serpent" }
+    ],
+    "result": "boreal_serpent",
+    "conditions": []
+  },
+  {
+    "id": "special_boreal_serpent_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "snowbird" },
+      { "type": "monster", "monsterId": "jargon" }
+    ],
+    "result": "boreal_serpent",
+    "conditions": []
+  },
+  {
+    "id": "special_nardragon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "komodo" },
+      { "type": "family", "familyId": "material" }
+    ],
+    "result": "nardragon",
+    "conditions": []
+  },
+  {
+    "id": "special_pan_piper",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "satyr" },
+      { "type": "monster", "monsterId": "dingaling" }
+    ],
+    "result": "pan_piper",
+    "conditions": []
+  },
+  {
+    "id": "special_dancing_flame",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "frostburn" },
+      { "type": "monster", "monsterId": "firespirit" }
+    ],
+    "result": "dancing_flame",
+    "conditions": []
+  },
+  {
+    "id": "special_dancing_flame_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "spitnik" },
+      { "type": "monster", "monsterId": "frostburn" }
+    ],
+    "result": "dancing_flame",
+    "conditions": []
+  },
+  {
+    "id": "special_demonrider",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "skelegon" },
+      { "type": "family", "familyId": "demon" }
+    ],
+    "result": "demonrider",
+    "conditions": []
+  },
+  {
+    "id": "special_snapdragon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "dragonthorn" },
+      { "type": "family", "familyId": "undead" }
+    ],
+    "result": "snapdragon",
+    "conditions": []
+  },
+  {
+    "id": "special_snowbird",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "powie_yowie" },
+      { "type": "monster", "monsterId": "firebird" }
+    ],
+    "result": "snowbird",
+    "conditions": []
+  },
+  {
+    "id": "special_goodybag",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "bag_o_laughs" },
+      { "type": "monster", "monsterId": "bag_o_laughs" }
+    ],
+    "result": "goodybag",
+    "conditions": []
+  },
+  {
+    "id": "special_cannibox",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "goodybag" },
+      { "type": "monster", "monsterId": "goodybag" }
+    ],
+    "result": "cannibox",
+    "conditions": []
+  },
+  {
+    "id": "special_skelegon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "green_dragon" },
+      { "type": "family", "familyId": "undead" }
+    ],
+    "result": "skelegon",
+    "conditions": []
+  },
+  {
+    "id": "special_skelegon_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "hacksaurus" },
+      { "type": "family", "familyId": "undead" }
+    ],
+    "result": "skelegon",
+    "conditions": []
+  },
+  {
+    "id": "special_dessert_demon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "imp" },
+      { "type": "monster", "monsterId": "dancing_devil" }
+    ],
+    "result": "dessert_demon",
+    "conditions": []
+  },
+  {
+    "id": "special_dragurn",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "jargon" },
+      { "type": "family", "familyId": "nature" }
+    ],
+    "result": "dragurn",
+    "conditions": []
+  },
+  {
+    "id": "special_anchorman",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "dingaling" },
+      { "type": "family", "familyId": "demon" }
+    ],
+    "result": "anchorman",
+    "conditions": []
+  },
+  {
+    "id": "special_scorpion",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "crabid" },
+      { "type": "family", "familyId": "nature" }
+    ],
+    "result": "scorpion",
+    "conditions": []
+  },
+  {
+    "id": "special_gold_golem",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "golem" },
+      { "type": "monster", "monsterId": "balhib" }
+    ],
+    "result": "gold_golem",
+    "conditions": []
+  },
+  {
+    "id": "special_gold_golem_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "golem" },
+      { "type": "monster", "monsterId": "drakularge" }
+    ],
+    "result": "gold_golem",
+    "conditions": []
+  },
+  {
+    "id": "special_red_dragon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "green_dragon" },
+      { "type": "family", "familyId": "beast" }
+    ],
+    "result": "red_dragon",
+    "conditions": []
+  },
+  {
+    "id": "special_brownie",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "hammerhood" },
+      { "type": "family", "familyId": "nature" }
+    ],
+    "result": "brownie",
+    "conditions": []
+  },
+  {
+    "id": "special_firn_fiend",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "snowbird" },
+      { "type": "monster", "monsterId": "magmalice" }
+    ],
+    "result": "firn_fiend",
+    "conditions": []
+  },
+  {
+    "id": "special_beshemoth_slime",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "she_slime" },
+      { "type": "monster", "monsterId": "behemoth_slime" }
+    ],
+    "result": "beshemoth_slime",
+    "conditions": []
+  },
+  {
+    "id": "special_slime_x",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "slime" },
+      { "type": "monster", "monsterId": "slime" }
+    ],
+    "result": "slime_x",
+    "conditions": [{ "type": "minimumLevel", "value": 20 }]
+  },
+  {
+    "id": "special_chimaera_x",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "chimaera" },
+      { "type": "monster", "monsterId": "chimaera" }
+    ],
+    "result": "chimaera_x",
+    "conditions": [{ "type": "minimumLevel", "value": 20 }]
+  },
+  {
+    "id": "special_goodybag_x",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "goodybag" },
+      { "type": "monster", "monsterId": "goodybag" }
+    ],
+    "result": "goodybag_x",
+    "conditions": [{ "type": "minimumLevel", "value": 20 }]
+  },
+  {
+    "id": "special_conklave_x",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "conklave" },
+      { "type": "monster", "monsterId": "conklave" }
+    ],
+    "result": "conklave_x",
+    "conditions": [{ "type": "minimumLevel", "value": 20 }]
+  },
+  {
+    "id": "special_hades_condor",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "lesser_demon" },
+      { "type": "family", "familyId": "beast" }
+    ],
+    "result": "hades_condor",
+    "conditions": []
+  },
+  {
+    "id": "fourway_great_sabrecat",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "great_sabrecub" },
+      { "type": "monster", "monsterId": "great_sabrecub" },
+      { "type": "monster", "monsterId": "great_sabrecub" },
+      { "type": "monster", "monsterId": "great_sabrecub" }
+    ],
+    "result": "great_sabrecat",
+    "conditions": []
+  },
+  {
+    "id": "special_gargoyle",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "lesser_demon" },
+      { "type": "monster", "monsterId": "hades_condor" }
+    ],
+    "result": "gargoyle",
+    "conditions": []
+  },
+  {
+    "id": "fourway_great_dracky",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "dracky" },
+      { "type": "monster", "monsterId": "dracky" },
+      { "type": "monster", "monsterId": "dracky" },
+      { "type": "monster", "monsterId": "dracky" }
+    ],
+    "result": "great_dracky",
+    "conditions": []
+  },
+  {
+    "id": "special_sea_dragon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "seasaur" },
+      { "type": "monster", "monsterId": "eveel" }
+    ],
+    "result": "sea_dragon",
+    "conditions": []
+  },
+  {
+    "id": "fourway_treeface",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "stump_chump" },
+      { "type": "monster", "monsterId": "stump_chump" },
+      { "type": "monster", "monsterId": "capsichum" },
+      { "type": "monster", "monsterId": "capsichum" }
+    ],
+    "result": "treeface",
+    "conditions": []
+  },
+  {
+    "id": "special_king_slime",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "behemoth_slime" },
+      { "type": "monster", "monsterId": "behemoth_slime" }
+    ],
+    "result": "king_slime",
+    "conditions": []
+  },
+  {
+    "id": "special_hunter_mech",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "metal_slime_knight" },
+      { "type": "monster", "monsterId": "lethal_armour" }
+    ],
+    "result": "hunter_mech",
+    "conditions": []
+  },
+  {
+    "id": "special_cureslime",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "healslime" },
+      { "type": "monster", "monsterId": "beshemoth_slime" }
+    ],
+    "result": "cureslime",
+    "conditions": []
+  },
+  {
+    "id": "special_metal_dragon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "red_dragon" },
+      { "type": "monster", "monsterId": "hunter_mech" }
+    ],
+    "result": "metal_dragon",
+    "conditions": []
+  },
+  {
+    "id": "special_metal_dragon_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "red_dragon" },
+      { "type": "monster", "monsterId": "metal_slime_knight" }
+    ],
+    "result": "metal_dragon",
+    "conditions": []
+  },
+  {
+    "id": "fourway_diemon",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "winky" },
+      { "type": "monster", "monsterId": "winky" },
+      { "type": "monster", "monsterId": "winky" },
+      { "type": "monster", "monsterId": "winky" }
+    ],
+    "result": "diemon",
+    "conditions": []
+  },
+  {
+    "id": "special_liquid_metal_slime",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "metal_slime" },
+      { "type": "monster", "monsterId": "metal_slime" }
+    ],
+    "result": "liquid_metal_slime",
+    "conditions": []
+  },
+  {
+    "id": "special_green_dragon_x",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "green_dragon" },
+      { "type": "monster", "monsterId": "green_dragon" }
+    ],
+    "result": "green_dragon_x",
+    "conditions": [{ "type": "minimumLevel", "value": 20 }]
+  },
+  {
+    "id": "special_teeny_sanguini_x",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "teeny_sanguini" },
+      { "type": "monster", "monsterId": "teeny_sanguini" }
+    ],
+    "result": "teeny_sanguini_x",
+    "conditions": [{ "type": "minimumLevel", "value": 20 }]
+  },
+  {
+    "id": "special_skeleton_x",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "skeleton" },
+      { "type": "monster", "monsterId": "skeleton" }
+    ],
+    "result": "skeleton_x",
+    "conditions": [{ "type": "minimumLevel", "value": 20 }]
+  },
+  {
+    "id": "fourway_great_argon_lizard",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "argon_lizard" },
+      { "type": "monster", "monsterId": "argon_lizard" },
+      { "type": "monster", "monsterId": "argon_lizard" },
+      { "type": "monster", "monsterId": "argon_lizard" }
+    ],
+    "result": "great_argon_lizard",
+    "conditions": []
+  },
+  {
+    "id": "special_abyss_diver",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "seasaur" },
+      { "type": "monster", "monsterId": "hades_condor" }
+    ],
+    "result": "abyss_diver",
+    "conditions": []
+  },
+  {
+    "id": "special_magmalice",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "firn_fiend" },
+      { "type": "monster", "monsterId": "firebird" }
+    ],
+    "result": "magmalice",
+    "conditions": []
+  },
+  {
+    "id": "special_lethal_armour",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "restless_armour" },
+      { "type": "monster", "monsterId": "dancing_devil" }
+    ],
+    "result": "lethal_armour",
+    "conditions": []
+  },
+  {
+    "id": "special_lethal_armour_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "restless_armour" },
+      { "type": "monster", "monsterId": "lesser_demon" }
+    ],
+    "result": "lethal_armour",
+    "conditions": []
+  },
+  {
+    "id": "special_lethal_armour_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "restless_armour" },
+      { "type": "monster", "monsterId": "octavian_sentry" }
+    ],
+    "result": "lethal_armour",
+    "conditions": []
+  },
+  {
+    "id": "special_phantom_swordsman",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "skeleton_soldier" },
+      { "type": "monster", "monsterId": "skeleton_soldier" }
+    ],
+    "result": "phantom_swordsman",
+    "conditions": []
+  },
+  {
+    "id": "special_fallen_priest",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "wrecktor" },
+      { "type": "monster", "monsterId": "puppeteer" }
+    ],
+    "result": "fallen_priest",
+    "conditions": []
+  },
+  {
+    "id": "special_grim_rider",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "demonrider" },
+      { "type": "monster", "monsterId": "bona_constrictor" }
+    ],
+    "result": "grim_rider",
+    "conditions": []
+  },
+  {
+    "id": "special_mimic",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "golem" },
+      { "type": "monster", "monsterId": "cannibox" }
+    ],
+    "result": "mimic",
+    "conditions": []
+  },
+  {
+    "id": "special_archdemon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "moosifer" },
+      { "type": "monster", "monsterId": "dessert_demon" }
+    ],
+    "result": "archdemon",
+    "conditions": []
+  },
+  {
+    "id": "special_archdemon_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "notso_macho" },
+      { "type": "monster", "monsterId": "dessert_demon" }
+    ],
+    "result": "archdemon",
+    "conditions": []
+  },
+  {
+    "id": "fourway_frou_frou",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "great_argon_lizard" },
+      { "type": "monster", "monsterId": "frou_fry" },
+      { "type": "monster", "monsterId": "frou_fry" },
+      { "type": "monster", "monsterId": "frou_fry" }
+    ],
+    "result": "frou_frou",
+    "conditions": []
+  },
+  {
+    "id": "special_boss_troll",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "diemon" },
+      { "type": "monster", "monsterId": "buffalogre" }
+    ],
+    "result": "boss_troll",
+    "conditions": []
+  },
+  {
+    "id": "special_boss_troll_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "gigantes" },
+      { "type": "monster", "monsterId": "buffalogre" }
+    ],
+    "result": "boss_troll",
+    "conditions": []
+  },
+  {
+    "id": "special_boss_troll_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "gigantes" },
+      { "type": "monster", "monsterId": "diemon" }
+    ],
+    "result": "boss_troll",
+    "conditions": []
+  },
+  {
+    "id": "special_jamirus",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "pazuzu" },
+      { "type": "monster", "monsterId": "gryphon" }
+    ],
+    "result": "jamirus",
+    "conditions": []
+  },
+  {
+    "id": "special_king_cureslime",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "king_slime" },
+      { "type": "monster", "monsterId": "king_slime" }
+    ],
+    "result": "king_cureslime",
+    "conditions": []
+  },
+  {
+    "id": "special_heligator",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "king_squid" },
+      { "type": "monster", "monsterId": "gracos" }
+    ],
+    "result": "heligator",
+    "conditions": []
+  },
+  {
+    "id": "special_wailin_weed",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "phantom_swordsman" },
+      { "type": "monster", "monsterId": "king_kelp" }
+    ],
+    "result": "wailin_weed",
+    "conditions": []
+  },
+  {
+    "id": "special_wailin_weed_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "skeleton_soldier" },
+      { "type": "monster", "monsterId": "king_kelp" }
+    ],
+    "result": "wailin_weed",
+    "conditions": []
+  },
+  {
+    "id": "special_thornella",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "gripevine" },
+      { "type": "monster", "monsterId": "dorsal_fiend" }
+    ],
+    "result": "thornella",
+    "conditions": []
+  },
+  {
+    "id": "special_thornella_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "gripevine" },
+      { "type": "monster", "monsterId": "dual_duellers" }
+    ],
+    "result": "thornella",
+    "conditions": []
+  },
+  {
+    "id": "special_thornella_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "gripevine" },
+      { "type": "monster", "monsterId": "exorsus" }
+    ],
+    "result": "thornella",
+    "conditions": []
+  },
+  {
+    "id": "special_thornella_4",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mortella" },
+      { "type": "monster", "monsterId": "gripevine" }
+    ],
+    "result": "thornella",
+    "conditions": []
+  },
+  {
+    "id": "special_killing_machine",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mechanowyrm" },
+      { "type": "monster", "monsterId": "hunter_mech" }
+    ],
+    "result": "killing_machine",
+    "conditions": []
+  },
+  {
+    "id": "special_killing_machine_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "phantom_swordsman" },
+      { "type": "monster", "monsterId": "hunter_mech" }
+    ],
+    "result": "killing_machine",
+    "conditions": []
+  },
+  {
+    "id": "special_killing_machine_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "ruin" },
+      { "type": "monster", "monsterId": "hunter_mech" }
+    ],
+    "result": "killing_machine",
+    "conditions": []
+  },
+  {
+    "id": "special_exorsus",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "wight_king" },
+      { "type": "monster", "monsterId": "dorsal_fiend" }
+    ],
+    "result": "exorsus",
+    "conditions": []
+  },
+  {
+    "id": "special_exorsus_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "wight_king" },
+      { "type": "monster", "monsterId": "dual_duellers" }
+    ],
+    "result": "exorsus",
+    "conditions": []
+  },
+  {
+    "id": "special_exorsus_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "wight_king" },
+      { "type": "monster", "monsterId": "mortella" }
+    ],
+    "result": "exorsus",
+    "conditions": []
+  },
+  {
+    "id": "special_exorsus_4",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "wight_king" },
+      { "type": "monster", "monsterId": "thornella" }
+    ],
+    "result": "exorsus",
+    "conditions": []
+  },
+  {
+    "id": "fourway_balhib",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "magmalice" },
+      { "type": "monster", "monsterId": "firn_fiend" },
+      { "type": "monster", "monsterId": "golem" },
+      { "type": "monster", "monsterId": "gold_golem" }
+    ],
+    "result": "balhib",
+    "conditions": []
+  },
+  {
+    "id": "special_conkettes",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mortella" },
+      { "type": "monster", "monsterId": "conklave" }
+    ],
+    "result": "conkettes",
+    "conditions": []
+  },
+  {
+    "id": "special_conkettes_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "thornella" },
+      { "type": "monster", "monsterId": "conklave" }
+    ],
+    "result": "conkettes",
+    "conditions": []
+  },
+  {
+    "id": "fourway_metal_kaiser_slime",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "metal_slime_knight" },
+      { "type": "monster", "monsterId": "liquid_metal_slime" },
+      { "type": "monster", "monsterId": "metal_slime" },
+      { "type": "monster", "monsterId": "metal_slime" }
+    ],
+    "result": "metal_kaiser_slime",
+    "conditions": []
+  },
+  {
+    "id": "special_dual_duellers",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "riptide" },
+      { "type": "monster", "monsterId": "dorsal_fiend" }
+    ],
+    "result": "dual_duellers",
+    "conditions": []
+  },
+  {
+    "id": "special_dual_duellers_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "riptide" },
+      { "type": "monster", "monsterId": "exorsus" }
+    ],
+    "result": "dual_duellers",
+    "conditions": []
+  },
+  {
+    "id": "special_dual_duellers_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "riptide" },
+      { "type": "monster", "monsterId": "mortella" }
+    ],
+    "result": "dual_duellers",
+    "conditions": []
+  },
+  {
+    "id": "special_dual_duellers_4",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "thornella" },
+      { "type": "monster", "monsterId": "riptide" }
+    ],
+    "result": "dual_duellers",
+    "conditions": []
+  },
+  {
+    "id": "special_riptide",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "jumping_jackal" },
+      { "type": "monster", "monsterId": "heligator" }
+    ],
+    "result": "riptide",
+    "conditions": []
+  },
+  {
+    "id": "special_mohawker",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "buffalogre" },
+      { "type": "monster", "monsterId": "bone_baron" }
+    ],
+    "result": "mohawker",
+    "conditions": []
+  },
+  {
+    "id": "special_mohawker_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "great_sabrecat" },
+      { "type": "monster", "monsterId": "buffalogre" }
+    ],
+    "result": "mohawker",
+    "conditions": []
+  },
+  {
+    "id": "special_mohawker_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "wild_slime" },
+      { "type": "monster", "monsterId": "buffalogre" }
+    ],
+    "result": "mohawker",
+    "conditions": []
+  },
+  {
+    "id": "special_boe",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "boh" },
+      { "type": "family", "familyId": "nature" }
+    ],
+    "result": "boe",
+    "conditions": []
+  },
+  {
+    "id": "special_boe_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "jum" },
+      { "type": "family", "familyId": "nature" }
+    ],
+    "result": "boe",
+    "conditions": []
+  },
+  {
+    "id": "special_boe_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mum" },
+      { "type": "family", "familyId": "nature" }
+    ],
+    "result": "boe",
+    "conditions": []
+  },
+  {
+    "id": "special_gracos",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "merman" },
+      { "type": "monster", "monsterId": "belial" }
+    ],
+    "result": "gracos",
+    "conditions": []
+  },
+  {
+    "id": "special_gracos_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "octavian_sentry" },
+      { "type": "monster", "monsterId": "belial" }
+    ],
+    "result": "gracos",
+    "conditions": []
+  },
+  {
+    "id": "special_tortured_soul",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "wailin_weed" },
+      { "type": "monster", "monsterId": "fright_knight" }
+    ],
+    "result": "tortured_soul",
+    "conditions": []
+  },
+  {
+    "id": "special_mortella",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "overkilling_machine" },
+      { "type": "monster", "monsterId": "dorsal_fiend" }
+    ],
+    "result": "mortella",
+    "conditions": []
+  },
+  {
+    "id": "special_mortella_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "overkilling_machine" },
+      { "type": "monster", "monsterId": "dual_duellers" }
+    ],
+    "result": "mortella",
+    "conditions": []
+  },
+  {
+    "id": "special_mortella_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "overkilling_machine" },
+      { "type": "monster", "monsterId": "exorsus" }
+    ],
+    "result": "mortella",
+    "conditions": []
+  },
+  {
+    "id": "special_mortella_4",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "thornella" },
+      { "type": "monster", "monsterId": "overkilling_machine" }
+    ],
+    "result": "mortella",
+    "conditions": []
+  },
+  {
+    "id": "special_garuda",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "heligator" },
+      { "type": "monster", "monsterId": "hades_condor" }
+    ],
+    "result": "garuda",
+    "conditions": []
+  },
+  {
+    "id": "special_moosifer",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "pan_piper" },
+      { "type": "monster", "monsterId": "buffalogre" }
+    ],
+    "result": "moosifer",
+    "conditions": []
+  },
+  {
+    "id": "special_moosifer_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "satyr" },
+      { "type": "monster", "monsterId": "buffalogre" }
+    ],
+    "result": "moosifer",
+    "conditions": []
+  },
+  {
+    "id": "special_mum",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "boe" },
+      { "type": "family", "familyId": "material" }
+    ],
+    "result": "mum",
+    "conditions": []
+  },
+  {
+    "id": "special_mum_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "boh" },
+      { "type": "family", "familyId": "material" }
+    ],
+    "result": "mum",
+    "conditions": []
+  },
+  {
+    "id": "special_mum_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "jum" },
+      { "type": "family", "familyId": "material" }
+    ],
+    "result": "mum",
+    "conditions": []
+  },
+  {
+    "id": "special_gemon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "jamirus" },
+      { "type": "monster", "monsterId": "belial" }
+    ],
+    "result": "gemon",
+    "conditions": []
+  },
+  {
+    "id": "special_roseguardin",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "lethal_armour" },
+      { "type": "monster", "monsterId": "bone_baron" }
+    ],
+    "result": "roseguardin",
+    "conditions": []
+  },
+  {
+    "id": "special_roseguardin_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "riptide" },
+      { "type": "monster", "monsterId": "lethal_armour" }
+    ],
+    "result": "roseguardin",
+    "conditions": []
+  },
+  {
+    "id": "special_mechanowyrm",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "metal_dragon" },
+      { "type": "monster", "monsterId": "great_dragon" }
+    ],
+    "result": "mechanowyrm",
+    "conditions": []
+  },
+  {
+    "id": "special_gripevine",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "marquis_de_leon" },
+      { "type": "monster", "monsterId": "hyper_heyedra" }
+    ],
+    "result": "gripevine",
+    "conditions": []
+  },
+  {
+    "id": "special_marquis_de_leon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mohawker" },
+      { "type": "monster", "monsterId": "buffalogre" }
+    ],
+    "result": "marquis_de_leon",
+    "conditions": []
+  },
+  {
+    "id": "special_boh",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "boe" },
+      { "type": "family", "familyId": "beast" }
+    ],
+    "result": "boh",
+    "conditions": []
+  },
+  {
+    "id": "special_boh_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "jum" },
+      { "type": "family", "familyId": "beast" }
+    ],
+    "result": "boh",
+    "conditions": []
+  },
+  {
+    "id": "special_boh_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mum" },
+      { "type": "family", "familyId": "beast" }
+    ],
+    "result": "boh",
+    "conditions": []
+  },
+  {
+    "id": "special_belial",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "atlas" },
+      { "type": "monster", "monsterId": "archdemon" }
+    ],
+    "result": "belial",
+    "conditions": []
+  },
+  {
+    "id": "special_belial_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "dessert_demon" },
+      { "type": "monster", "monsterId": "archdemon" }
+    ],
+    "result": "belial",
+    "conditions": []
+  },
+  {
+    "id": "special_belial_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "gold_golem" },
+      { "type": "monster", "monsterId": "archdemon" }
+    ],
+    "result": "belial",
+    "conditions": []
+  },
+  {
+    "id": "special_belial_4",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "great_dragon" },
+      { "type": "monster", "monsterId": "archdemon" }
+    ],
+    "result": "belial",
+    "conditions": []
+  },
+  {
+    "id": "special_bone_baron",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "grim_rider" },
+      { "type": "monster", "monsterId": "dark_slime_knight" }
+    ],
+    "result": "bone_baron",
+    "conditions": []
+  },
+  {
+    "id": "special_bone_baron_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mohawker" },
+      { "type": "monster", "monsterId": "grim_rider" }
+    ],
+    "result": "bone_baron",
+    "conditions": []
+  },
+  {
+    "id": "special_dorsal_fiend",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "gracos" },
+      { "type": "monster", "monsterId": "dual_duellers" }
+    ],
+    "result": "dorsal_fiend",
+    "conditions": []
+  },
+  {
+    "id": "special_dorsal_fiend_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "gracos" },
+      { "type": "monster", "monsterId": "exorsus" }
+    ],
+    "result": "dorsal_fiend",
+    "conditions": []
+  },
+  {
+    "id": "special_dorsal_fiend_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mortella" },
+      { "type": "monster", "monsterId": "gracos" }
+    ],
+    "result": "dorsal_fiend",
+    "conditions": []
+  },
+  {
+    "id": "special_dorsal_fiend_4",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "thornella" },
+      { "type": "monster", "monsterId": "gracos" }
+    ],
+    "result": "dorsal_fiend",
+    "conditions": []
+  },
+  {
+    "id": "special_pazuzu",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "silvapithecus" },
+      { "type": "monster", "monsterId": "gigantes" }
+    ],
+    "result": "pazuzu",
+    "conditions": []
+  },
+  {
+    "id": "special_pazuzu_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "silvapithecus" },
+      { "type": "monster", "monsterId": "jamirus" }
+    ],
+    "result": "pazuzu",
+    "conditions": []
+  },
+  {
+    "id": "special_pazuzu_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "silvapithecus" },
+      { "type": "monster", "monsterId": "king_squid" }
+    ],
+    "result": "pazuzu",
+    "conditions": []
+  },
+  {
+    "id": "special_dierantula",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "wormonger" },
+      { "type": "monster", "monsterId": "gripevine" }
+    ],
+    "result": "dierantula",
+    "conditions": []
+  },
+  {
+    "id": "fourway_metal_king_slime",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "liquid_metal_slime" },
+      { "type": "monster", "monsterId": "liquid_metal_slime" },
+      { "type": "monster", "monsterId": "liquid_metal_slime" },
+      { "type": "monster", "monsterId": "liquid_metal_slime" }
+    ],
+    "result": "metal_king_slime",
+    "conditions": []
+  },
+  {
+    "id": "special_black_dragon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "great_dragon" },
+      { "type": "monster", "monsterId": "bone_baron" }
+    ],
+    "result": "black_dragon",
+    "conditions": []
+  },
+  {
+    "id": "special_beetlebully",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "metal_king_slime" },
+      { "type": "monster", "monsterId": "beetleboy" }
+    ],
+    "result": "beetlebully",
+    "conditions": []
+  },
+  {
+    "id": "special_atlas",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "gigantes" },
+      { "type": "monster", "monsterId": "garuda" }
+    ],
+    "result": "atlas",
+    "conditions": []
+  },
+  {
+    "id": "special_atlas_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "moosifer" },
+      { "type": "monster", "monsterId": "gigantes" }
+    ],
+    "result": "atlas",
+    "conditions": []
+  },
+  {
+    "id": "fourway_trap_box",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "mimic" },
+      { "type": "monster", "monsterId": "mimic" },
+      { "type": "monster", "monsterId": "cannibox" },
+      { "type": "monster", "monsterId": "metal_kaiser_slime" }
+    ],
+    "result": "trap_box",
+    "conditions": []
+  },
+  {
+    "id": "special_dullahan",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "night_knight" },
+      { "type": "monster", "monsterId": "bone_baron" }
+    ],
+    "result": "dullahan",
+    "conditions": []
+  },
+  {
+    "id": "special_dullahan_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "phantom_fencer" },
+      { "type": "monster", "monsterId": "bone_baron" }
+    ],
+    "result": "dullahan",
+    "conditions": []
+  },
+  {
+    "id": "special_dullahan_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "ruin" },
+      { "type": "monster", "monsterId": "bone_baron" }
+    ],
+    "result": "dullahan",
+    "conditions": []
+  },
+  {
+    "id": "special_shogum",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "metal_kaiser_slime" },
+      { "type": "monster", "monsterId": "metal_kaiser_slime" }
+    ],
+    "result": "shogum",
+    "conditions": []
+  },
+  {
+    "id": "special_drakulard",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "drakularge" },
+      { "type": "monster", "monsterId": "atlas" }
+    ],
+    "result": "drakulard",
+    "conditions": []
+  },
+  {
+    "id": "special_drakulard_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "pazuzu" },
+      { "type": "monster", "monsterId": "drakularge" }
+    ],
+    "result": "drakulard",
+    "conditions": []
+  },
+  {
+    "id": "special_king_squid",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "night_clubber" },
+      { "type": "monster", "monsterId": "khalamari_kid" }
+    ],
+    "result": "king_squid",
+    "conditions": []
+  },
+  {
+    "id": "special_king_squid_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "yabby" },
+      { "type": "monster", "monsterId": "gracos" }
+    ],
+    "result": "king_squid",
+    "conditions": []
+  },
+  {
+    "id": "fourway_don_mole",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "mischievous_mole" },
+      { "type": "monster", "monsterId": "mischievous_mole" },
+      { "type": "monster", "monsterId": "night_clubber" },
+      { "type": "monster", "monsterId": "night_clubber" }
+    ],
+    "result": "don_mole",
+    "conditions": []
+  },
+  {
+    "id": "fourway_overkilling_machine",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "balhib" },
+      { "type": "monster", "monsterId": "balhib" },
+      { "type": "monster", "monsterId": "killing_machine" },
+      { "type": "monster", "monsterId": "killing_machine" }
+    ],
+    "result": "overkilling_machine",
+    "conditions": []
+  },
+  {
+    "id": "special_night_clubber",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "frou_frou" },
+      { "type": "monster", "monsterId": "boss_troll" }
+    ],
+    "result": "night_clubber",
+    "conditions": []
+  },
+  {
+    "id": "special_night_clubber_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "pazuzu" },
+      { "type": "monster", "monsterId": "boss_troll" }
+    ],
+    "result": "night_clubber",
+    "conditions": []
+  },
+  {
+    "id": "special_wight_king",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "tortured_soul" },
+      { "type": "monster", "monsterId": "king_bubble_slime" }
+    ],
+    "result": "wight_king",
+    "conditions": []
+  },
+  {
+    "id": "special_wight_king_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "tortured_soul" },
+      { "type": "monster", "monsterId": "king_slime" }
+    ],
+    "result": "wight_king",
+    "conditions": []
+  },
+  {
+    "id": "special_alabast_dragon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mechanowyrm" },
+      { "type": "monster", "monsterId": "drakulard" }
+    ],
+    "result": "alabast_dragon",
+    "conditions": []
+  },
+  {
+    "id": "fourway_darkonium_slime",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "beshemoth_slime" },
+      { "type": "monster", "monsterId": "beshemoth_slime" },
+      { "type": "monster", "monsterId": "king_cureslime" },
+      { "type": "monster", "monsterId": "metal_king_slime" }
+    ],
+    "result": "darkonium_slime",
+    "conditions": []
+  },
+  {
+    "id": "special_dracolord",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "great_dragon" },
+      { "type": "monster", "monsterId": "demon_at_arms" }
+    ],
+    "result": "dracolord",
+    "conditions": []
+  },
+  {
+    "id": "fourway_mumboh_jumboe",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "mum" },
+      { "type": "monster", "monsterId": "boh" },
+      { "type": "monster", "monsterId": "jum" },
+      { "type": "monster", "monsterId": "boe" }
+    ],
+    "result": "mumboh_jumboe",
+    "conditions": []
+  },
+  {
+    "id": "special_murdaw",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "night_clubber" },
+      { "type": "monster", "monsterId": "bjorn" }
+    ],
+    "result": "murdaw",
+    "conditions": []
+  },
+  {
+    "id": "special_baramos",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "hargon" },
+      { "type": "monster", "monsterId": "gemon" }
+    ],
+    "result": "baramos",
+    "conditions": []
+  },
+  {
+    "id": "special_hargon",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "dierantula" },
+      { "type": "monster", "monsterId": "dhuran" }
+    ],
+    "result": "hargon",
+    "conditions": []
+  },
+  {
+    "id": "special_malroth",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "hargon" },
+      { "type": "monster", "monsterId": "buffalogre" }
+    ],
+    "result": "malroth",
+    "conditions": []
+  },
+  {
+    "id": "special_malroth_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "khalamari" },
+      { "type": "monster", "monsterId": "hargon" }
+    ],
+    "result": "malroth",
+    "conditions": []
+  },
+  {
+    "id": "special_malroth_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "living_statue" },
+      { "type": "monster", "monsterId": "hargon" }
+    ],
+    "result": "malroth",
+    "conditions": []
+  },
+  {
+    "id": "fourway_grandpa_slime",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "metal_king_slime" },
+      { "type": "monster", "monsterId": "king_slime" },
+      { "type": "monster", "monsterId": "king_bubble_slime" },
+      { "type": "monster", "monsterId": "metal_kaiser_slime" }
+    ],
+    "result": "grandpa_slime",
+    "conditions": []
+  },
+  {
+    "id": "fourway_canzar",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "slime" },
+      { "type": "monster", "monsterId": "gem_slime" },
+      { "type": "monster", "monsterId": "crabid" },
+      { "type": "monster", "monsterId": "ruin" }
+    ],
+    "result": "canzar",
+    "conditions": []
+  },
+  {
+    "id": "fourway_khalamari",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "khalamari_kid" },
+      { "type": "monster", "monsterId": "khalamari_kid" },
+      { "type": "monster", "monsterId": "king_squid" },
+      { "type": "monster", "monsterId": "king_squid" }
+    ],
+    "result": "khalamari",
+    "conditions": []
+  },
+  {
+    "id": "special_dhoulmagus",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "estark" },
+      { "type": "monster", "monsterId": "alabast_dragon" }
+    ],
+    "result": "dhoulmagus",
+    "conditions": []
+  },
+  {
+    "id": "special_dhoulmagus_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "psaro" },
+      { "type": "monster", "monsterId": "alabast_dragon" }
+    ],
+    "result": "dhoulmagus",
+    "conditions": []
+  },
+  {
+    "id": "special_ruin",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mumboh_jumboe" },
+      { "type": "monster", "monsterId": "gold_golem" }
+    ],
+    "result": "ruin",
+    "conditions": []
+  },
+  {
+    "id": "special_ruin_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mumboh_jumboe" },
+      { "type": "monster", "monsterId": "living_statue" }
+    ],
+    "result": "ruin",
+    "conditions": []
+  },
+  {
+    "id": "special_ruin_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "stormsgate_citadel" },
+      { "type": "monster", "monsterId": "gold_golem" }
+    ],
+    "result": "ruin",
+    "conditions": []
+  },
+  {
+    "id": "special_ruin_4",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "stormsgate_citadel" },
+      { "type": "monster", "monsterId": "living_statue" }
+    ],
+    "result": "ruin",
+    "conditions": []
+  },
+  {
+    "id": "special_slime_xy",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "slime_x" },
+      { "type": "monster", "monsterId": "slime_x" }
+    ],
+    "result": "slime_xy",
+    "conditions": [{ "type": "minimumLevel", "value": 50 }]
+  },
+  {
+    "id": "special_green_dragon_xy",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "green_dragon_x" },
+      { "type": "monster", "monsterId": "green_dragon_x" }
+    ],
+    "result": "green_dragon_xy",
+    "conditions": [{ "type": "minimumLevel", "value": 50 }]
+  },
+  {
+    "id": "special_chimaera_xy",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "chimaera_x" },
+      { "type": "monster", "monsterId": "chimaera_x" }
+    ],
+    "result": "chimaera_xy",
+    "conditions": [{ "type": "minimumLevel", "value": 50 }]
+  },
+  {
+    "id": "special_teeny_sanguini_xy",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "teeny_sanguini_x" },
+      { "type": "monster", "monsterId": "teeny_sanguini_x" }
+    ],
+    "result": "teeny_sanguini_xy",
+    "conditions": [{ "type": "minimumLevel", "value": 50 }]
+  },
+  {
+    "id": "special_goodybag_xy",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "goodybag_x" },
+      { "type": "monster", "monsterId": "goodybag_x" }
+    ],
+    "result": "goodybag_xy",
+    "conditions": [{ "type": "minimumLevel", "value": 50 }]
+  },
+  {
+    "id": "special_conklave_xy",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "conklave_x" },
+      { "type": "monster", "monsterId": "conklave_x" }
+    ],
+    "result": "conklave_xy",
+    "conditions": [{ "type": "minimumLevel", "value": 50 }]
+  },
+  {
+    "id": "special_skeleton_xy",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "skeleton_x" },
+      { "type": "monster", "monsterId": "skeleton_x" }
+    ],
+    "result": "skeleton_xy",
+    "conditions": [{ "type": "minimumLevel", "value": 50 }]
+  },
+  {
+    "id": "fourway_dragonlord",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "dracolord" },
+      { "type": "monster", "monsterId": "alabast_dragon" },
+      { "type": "monster", "monsterId": "gem_slime" },
+      { "type": "monster", "monsterId": "captain_crow" }
+    ],
+    "result": "dragonlord",
+    "conditions": []
+  },
+  {
+    "id": "fourway_leopold",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "dhoulmagus" },
+      { "type": "monster", "monsterId": "xenlon" },
+      { "type": "monster", "monsterId": "hargon" },
+      { "type": "monster", "monsterId": "chainine" }
+    ],
+    "result": "leopold",
+    "conditions": []
+  },
+  {
+    "id": "fourway_leopold_2",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "dhoulmagus" },
+      { "type": "monster", "monsterId": "xenlon" },
+      { "type": "monster", "monsterId": "baramos" },
+      { "type": "monster", "monsterId": "chainine" }
+    ],
+    "result": "leopold",
+    "conditions": []
+  },
+  {
+    "id": "fourway_leopold_3",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "dhoulmagus" },
+      { "type": "monster", "monsterId": "xenlon" },
+      { "type": "monster", "monsterId": "murdaw" },
+      { "type": "monster", "monsterId": "chainine" }
+    ],
+    "result": "leopold",
+    "conditions": []
+  },
+  {
+    "id": "special_psaro",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "ruin" },
+      { "type": "monster", "monsterId": "roseguardin" }
+    ],
+    "result": "psaro",
+    "conditions": []
+  },
+  {
+    "id": "special_nimzo",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "drakulard" },
+      { "type": "monster", "monsterId": "baramos" }
+    ],
+    "result": "nimzo",
+    "conditions": []
+  },
+  {
+    "id": "special_nimzo_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "khalamari" },
+      { "type": "monster", "monsterId": "baramos" }
+    ],
+    "result": "nimzo",
+    "conditions": []
+  },
+  {
+    "id": "fourway_gem_slime",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "grandpa_slime" },
+      { "type": "monster", "monsterId": "grandpa_slime" },
+      { "type": "monster", "monsterId": "balhib" },
+      { "type": "monster", "monsterId": "balhib" }
+    ],
+    "result": "gem_slime",
+    "conditions": []
+  },
+  {
+    "id": "fourway_orochi",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "wormonger" },
+      { "type": "monster", "monsterId": "missing_lynx" },
+      { "type": "monster", "monsterId": "bjorn" },
+      { "type": "monster", "monsterId": "empyrea" }
+    ],
+    "result": "orochi",
+    "conditions": []
+  },
+  {
+    "id": "special_trauminator",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "ruin" },
+      { "type": "monster", "monsterId": "overkilling_machine" }
+    ],
+    "result": "trauminator",
+    "conditions": []
+  },
+  {
+    "id": "fourway_dr_snapped",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "rhapthorne_ii" },
+      { "type": "monster", "monsterId": "darkonium_slime" },
+      { "type": "monster", "monsterId": "orgodemir" },
+      { "type": "monster", "monsterId": "captain_crow" }
+    ],
+    "result": "dr_snapped",
+    "conditions": []
+  },
+  {
+    "id": "special_zoma",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "malroth" },
+      { "type": "monster", "monsterId": "captain_crow" }
+    ],
+    "result": "zoma",
+    "conditions": []
+  },
+  {
+    "id": "special_zoma_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "malroth" },
+      { "type": "monster", "monsterId": "dullahan" }
+    ],
+    "result": "zoma",
+    "conditions": []
+  },
+  {
+    "id": "special_zoma_3",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "wight_king" },
+      { "type": "monster", "monsterId": "malroth" }
+    ],
+    "result": "zoma",
+    "conditions": []
+  },
+  {
+    "id": "special_greygnarl",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "dragovian_lord" },
+      { "type": "monster", "monsterId": "barbarus" }
+    ],
+    "result": "greygnarl",
+    "conditions": []
+  },
+  {
+    "id": "fourway_trode",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "xenlon" },
+      { "type": "monster", "monsterId": "nokturnus" },
+      { "type": "monster", "monsterId": "gem_slime" },
+      { "type": "monster", "monsterId": "dual_duellers" }
+    ],
+    "result": "trode",
+    "conditions": []
+  },
+  {
+    "id": "fourway_trode_2",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "xenlon" },
+      { "type": "monster", "monsterId": "nokturnus" },
+      { "type": "monster", "monsterId": "gem_slime" },
+      { "type": "monster", "monsterId": "dorsal_fiend" }
+    ],
+    "result": "trode",
+    "conditions": []
+  },
+  {
+    "id": "fourway_trode_3",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "xenlon" },
+      { "type": "monster", "monsterId": "nokturnus" },
+      { "type": "monster", "monsterId": "gem_slime" },
+      { "type": "monster", "monsterId": "canzar" }
+    ],
+    "result": "trode",
+    "conditions": []
+  },
+  {
+    "id": "fourway_sagittar",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "trauminator" },
+      { "type": "monster", "monsterId": "overkilling_machine" },
+      { "type": "monster", "monsterId": "killing_machine" },
+      { "type": "monster", "monsterId": "trap_box" }
+    ],
+    "result": "sagittar",
+    "conditions": []
+  },
+  {
+    "id": "special_mortamor",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "nimzo" },
+      { "type": "monster", "monsterId": "estark" }
+    ],
+    "result": "mortamor",
+    "conditions": []
+  },
+  {
+    "id": "special_orgodemir",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mortamor" },
+      { "type": "monster", "monsterId": "alabast_dragon" }
+    ],
+    "result": "orgodemir",
+    "conditions": []
+  },
+  {
+    "id": "fourway_xenlon",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "ethereal_serpent" },
+      { "type": "monster", "monsterId": "boreal_serpent" },
+      { "type": "monster", "monsterId": "alabast_dragon" },
+      { "type": "monster", "monsterId": "orochi" }
+    ],
+    "result": "xenlon",
+    "conditions": []
+  },
+  {
+    "id": "special_nokturnus",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "dr_snapped" },
+      { "type": "monster", "monsterId": "dhuran" }
+    ],
+    "result": "nokturnus",
+    "conditions": []
+  },
+  {
+    "id": "special_rhapthorne",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "mortamor" },
+      { "type": "monster", "monsterId": "dhoulmagus" }
+    ],
+    "result": "rhapthorne",
+    "conditions": []
+  },
+  {
+    "id": "special_rhapthorne_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "nimzo" },
+      { "type": "monster", "monsterId": "dhoulmagus" }
+    ],
+    "result": "rhapthorne",
+    "conditions": []
+  },
+  {
+    "id": "fourway_aquarion",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "megalodon" },
+      { "type": "monster", "monsterId": "gracos" },
+      { "type": "monster", "monsterId": "trode" },
+      { "type": "monster", "monsterId": "rhapthorne_ii" }
+    ],
+    "result": "aquarion",
+    "conditions": []
+  },
+  {
+    "id": "special_estark",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "psaro" },
+      { "type": "monster", "monsterId": "marquis_de_leon" }
+    ],
+    "result": "estark",
+    "conditions": []
+  },
+  {
+    "id": "special_rhapthorne_ii",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "rhapthorne" },
+      { "type": "monster", "monsterId": "orgodemir" }
+    ],
+    "result": "rhapthorne_ii",
+    "conditions": []
+  },
+  {
+    "id": "special_rhapthorne_ii_2",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "zoma" },
+      { "type": "monster", "monsterId": "rhapthorne" }
+    ],
+    "result": "rhapthorne_ii",
+    "conditions": []
+  },
+  {
+    "id": "special_dragovian_lord",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "rhapthorne_ii" },
+      { "type": "monster", "monsterId": "dragonlord" }
+    ],
+    "result": "dragovian_lord",
+    "conditions": []
+  },
+  {
+    "id": "special_great_godbird",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "empyrea" },
+      { "type": "monster", "monsterId": "dragovian_lord" }
+    ],
+    "result": "great_godbird",
+    "conditions": []
+  },
+  {
+    "id": "special_wulfspade",
+    "type": "special",
+    "parents": [
+      { "type": "group", "groupId": "incarnus" },
+      { "type": "family", "familyId": "nature", "maxRank": "A" }
+    ],
+    "result": "wulfspade",
+    "conditions": []
+  },
+  {
+    "id": "special_hawkhart",
+    "type": "special",
+    "parents": [
+      { "type": "group", "groupId": "incarnus" },
+      { "type": "family", "familyId": "demon", "maxRank": "A" }
+    ],
+    "result": "hawkhart",
+    "conditions": []
+  },
+  {
+    "id": "special_cluboon",
+    "type": "special",
+    "parents": [
+      { "type": "group", "groupId": "incarnus" },
+      { "type": "family", "familyId": "material", "maxRank": "A" }
+    ],
+    "result": "cluboon",
+    "conditions": []
+  },
+  {
+    "id": "special_diamagon",
+    "type": "special",
+    "parents": [
+      { "type": "group", "groupId": "incarnus" },
+      { "type": "family", "familyId": "beast", "maxRank": "A" }
+    ],
+    "result": "diamagon",
+    "conditions": []
+  },
+  {
+    "id": "special_wulfspade_ace",
+    "type": "special",
+    "parents": [
+      { "type": "group", "groupId": "incarnus" },
+      { "type": "family", "familyId": "nature", "minRank": "S" }
+    ],
+    "result": "wulfspade_ace",
+    "conditions": []
+  },
+  {
+    "id": "special_hawkhart_ace",
+    "type": "special",
+    "parents": [
+      { "type": "group", "groupId": "incarnus" },
+      { "type": "family", "familyId": "demon", "minRank": "S" }
+    ],
+    "result": "hawkhart_ace",
+    "conditions": []
+  },
+  {
+    "id": "special_cluboon_ace",
+    "type": "special",
+    "parents": [
+      { "type": "group", "groupId": "incarnus" },
+      { "type": "family", "familyId": "material", "minRank": "S" }
+    ],
+    "result": "cluboon_ace",
+    "conditions": []
+  },
+  {
+    "id": "special_diamagon_ace",
+    "type": "special",
+    "parents": [
+      { "type": "group", "groupId": "incarnus" },
+      { "type": "family", "familyId": "beast", "minRank": "S" }
+    ],
+    "result": "diamagon_ace",
+    "conditions": []
+  },
+  {
+    "id": "special_ace_of_spades",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "wulfspade_ace" },
+      { "type": "monster", "monsterId": "leopold" }
+    ],
+    "result": "ace_of_spades",
+    "conditions": []
+  },
+  {
+    "id": "special_wildcard",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "wulfspade_ace" },
+      { "type": "monster", "monsterId": "great_godbird" }
+    ],
+    "result": "wildcard",
+    "conditions": []
+  },
+  {
+    "id": "fourway_zenith_dragon",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "xenlon" },
+      { "type": "monster", "monsterId": "nokturnus" },
+      { "type": "monster", "monsterId": "dracolord" },
+      { "type": "monster", "monsterId": "aquarion" }
+    ],
+    "result": "zenith_dragon",
+    "conditions": []
+  },
+  {
+    "id": "fourway_zenith_dragon_2",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "xenlon" },
+      { "type": "monster", "monsterId": "nokturnus" },
+      { "type": "monster", "monsterId": "dracolord" },
+      { "type": "monster", "monsterId": "sagittar" }
+    ],
+    "result": "zenith_dragon",
+    "conditions": []
+  },
+  {
+    "id": "fourway_leonyx",
+    "type": "fourWay",
+    "parents": [
+      { "type": "monster", "monsterId": "wildcard" },
+      { "type": "monster", "monsterId": "orochi" },
+      { "type": "monster", "monsterId": "marquis_de_leon" },
+      { "type": "monster", "monsterId": "don_mole" }
+    ],
+    "result": "leonyx",
+    "conditions": []
+  },
+  {
+    "id": "special_rigor_mortex",
+    "type": "special",
+    "parents": [
+      { "type": "monster", "monsterId": "zenith_dragon" },
+      { "type": "monster", "monsterId": "leonyx" }
+    ],
+    "result": "rigor_mortex",
+    "conditions": []
+  }
+]

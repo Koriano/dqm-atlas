@@ -1,0 +1,72 @@
+:root {
+  color-scheme: light dark;
+  --surface: #ffffff;
+  --canvas: #f4f5f7;
+  --border: #d9dce1;
+  --text: #1c1f24;
+  --text-muted: #5b616b;
+  --accent: #2f6fdb;
+  --success: #1e7d3c;
+  --success-soft: #e3f4e8;
+  --danger: #c0352b;
+  --info: #1f5fbf;
+  --info-soft: #e3edfb;
+  --shadow: 0 4px 16px rgb(0 0 0 / 0.18);
+  /* Background and frame of the monster icons, for the boxes standing in for one. */
+  --icon-background: rgb(49 74 90);
+  --icon-border: rgb(74 99 107);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--canvas);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #1d2026;
+    --canvas: #15171b;
+    --border: #343841;
+    --text: #e7e9ee;
+    --text-muted: #9aa1ad;
+    --accent: #7aa7ff;
+    --success: #7fd69a;
+    --success-soft: #1d3527;
+    --danger: #ff8a80;
+    --info: #8db8ff;
+    --info-soft: #1c2a40;
+    --shadow: 0 4px 16px rgb(0 0 0 / 0.5);
+  }
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+button,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+[hidden] {
+  display: none !important;
+}
