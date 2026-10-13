@@ -1,8 +1,9 @@
 import type { GameId } from "../domain/game"
 import en from "./en.json"
 import fr from "./fr.json"
+import ja from "./ja.json"
 
-export const LANGUAGES = ["fr", "en"] as const
+export const LANGUAGES = ["fr", "en", "ja"] as const
 export type Language = (typeof LANGUAGES)[number]
 
 export type AppMessages = typeof fr
@@ -10,7 +11,7 @@ export type AppMessages = typeof fr
 /** Entity names of one game in one language: section (same key as the game.json catalog, plus `monsters`) → id → name. */
 export type GameNames = Record<string, Record<string, string>>
 
-const appMessages: Record<Language, AppMessages> = { fr, en }
+const appMessages: Record<Language, AppMessages> = { fr, en, ja }
 
 const gameNameFiles = import.meta.glob<GameNames>("./*/*.json", { import: "default" })
 

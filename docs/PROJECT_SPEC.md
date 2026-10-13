@@ -30,7 +30,7 @@ World.
 - Accounts, backend, remote database, anything saved in the browser.
 - Automatic synthesis planner, shortest path, player inventory.
 - Search by family, rank or stats.
-- Languages other than French and English.
+- Languages other than French, English and Japanese.
 
 ## 3. Screens
 
@@ -88,7 +88,7 @@ search limited to the eligible monsters. The picked monster replaces the slot an
 ### Search
 
 By monster name only, in every available language at once and ignoring accents, so a monster is found from its
-French name in the English interface.
+French name in the English interface. Hiragana and katakana are read alike.
 
 ### Sharing
 
@@ -102,7 +102,7 @@ code — a tree is never restored in part.
 
 ### What's new
 
-A header button lists the changes, written by hand in French and English, one release per day, grouped into
+A header button lists the changes, written by hand in French, English and Japanese, one release per day, grouped into
 additions and fixes, each release with its age ("3 days ago"). Nothing is pushed to the user: no notification, no
 indicator, nothing stored in the browser.
 
@@ -123,9 +123,9 @@ Within a type, the first recipe in data order wins.
 
 ## 5. Languages
 
-French and English. The interface starts in the first supported language of the browser's preferences, English
-otherwise. The page title and description follow the language, and the title names the root of the open tree
-("Léopold - DQM Atlas").
+French, English and Japanese. The interface starts in the first supported language of the browser's preferences,
+English otherwise. The page title and description follow the language, and the title names the root of the open
+tree ("Léopold - DQM Atlas").
 
 French wording follows the game: "synthèse", never "fusion".
 

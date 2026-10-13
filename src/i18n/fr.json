@@ -18,7 +18,8 @@
     "language": "Langue",
     "languages": {
       "fr": "Français",
-      "en": "English"
+      "en": "English",
+      "ja": "日本語"
     },
     "openRelations": "Afficher le panneau des relations",
     "closeRelations": "Masquer le panneau des relations",

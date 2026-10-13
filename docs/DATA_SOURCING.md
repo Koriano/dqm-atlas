@@ -19,7 +19,9 @@ Every fact belongs to an exact game and version. Synthesis rules in particular c
 **DQMJ2 (original)** and **DQMJ2 Professional** are two different games: other monsters, other recipes, other ranks.
 The data of one is never used for the other.
 
-For DQMJ2, the reference is the European version, which gives the French and English texts.
+For DQMJ2, the reference is the European version, which gives the French and English texts. The Japanese texts are
+those of the Japanese original version, taken entry by entry at the same place in the game's text tables as the
+European text they stand for.
 
 ## What the game gives
 
