@@ -24,6 +24,8 @@ export function createLibraryOrderSynthesis(rule: LibraryOrderSynthesisRule, mon
   }
 
   return {
+    ordered: false,
+
     candidates(a, b) {
       if (a.id === b.id) return [{ resultId: a.id, slot: "identicalParents" }]
 

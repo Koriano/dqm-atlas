@@ -12,8 +12,10 @@ export interface SynthesisEngine {
   obtainMethods(targetId: string): ObtainMethods
   /** What a monster can be used for; normal children never include one of the parents. */
   usages(monsterId: string): UsageMethods
-  /** Parents usable on the other side of the pairs once `selectedId` is chosen, or on either side without a selection. */
-  partnerOptions(pairs: ParentPair[], selectedId?: string): string[]
+  /** Whether the order of the two normal-synthesis parents matters; pairs are then listed in each order that works. */
+  orderedParents: boolean
+  /** Monsters usable as the parent on `side` of the pairs, once `otherId` is chosen on the other side. */
+  parentOptions(pairs: ParentPair[], side: 0 | 1, otherId?: string): string[]
   /** Every monster accepted by a recipe's parent condition, in library order. */
   conditionCandidates(condition: ParentCondition): string[]
   /** Priority: four-way, then special, then normal synthesis. */
@@ -65,7 +67,7 @@ export function createSynthesisEngine(game: GameData): SynthesisEngine {
     return outcomes
   }
 
-  // Built on first reverse lookup: every unordered pair of monsters, synthesized once.
+  // Built on first reverse lookup: every pair of monsters synthesized once, or once in each order when it matters.
   let index: SynthesisIndex | undefined
   function getIndex(): SynthesisIndex {
     if (index) return index
@@ -77,7 +79,7 @@ export function createSynthesisEngine(game: GameData): SynthesisEngine {
     }
     const ids = game.monsters.map((m) => m.id)
     for (let i = 0; i < ids.length; i++) {
-      for (let j = i; j < ids.length; j++) {
+      for (let j = normal.ordered ? 0 : i; j < ids.length; j++) {
         const parentIds: [string, string] = [ids[i], ids[j]]
         for (const outcome of synthesize(...parentIds)) {
           if (outcome.type !== "normal" || parentIds.includes(outcome.resultId)) continue
@@ -116,16 +118,14 @@ export function createSynthesisEngine(game: GameData): SynthesisEngine {
       }
     },
 
-    partnerOptions(pairs, selectedId) {
+    orderedParents: normal.ordered,
+
+    parentOptions(pairs, side, otherId) {
       const options = new Set<string>()
-      for (const { parentIds: [a, b] } of pairs) {
-        if (selectedId === undefined) {
-          options.add(a).add(b)
-        } else if (a === selectedId) {
-          options.add(b)
-        } else if (b === selectedId) {
-          options.add(a)
-        }
+      for (const { parentIds } of pairs) {
+        // Without an order, a pair also works the other way round.
+        const placements = normal.ordered ? [parentIds] : [parentIds, [parentIds[1], parentIds[0]]]
+        for (const placed of placements) if (otherId === undefined || placed[1 - side] === otherId) options.add(placed[side])
       }
       return [...options].sort(libraryOrder)
     },

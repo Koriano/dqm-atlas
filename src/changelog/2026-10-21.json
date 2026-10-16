@@ -1,0 +1,31 @@
+{
+  "feature": [
+    {
+      "fr": "Dragon Quest Monsters: Le Prince des ombres est enfin là ! Découvrez ses 523 monstres, comment les obtenir et tout plein d'informations à leur sujet, comme leur compétence, leurs attributs, leurs statistiques et leurs résistances !",
+      "en": "Dragon Quest Monsters: The Dark Prince is finally here! Discover its 523 monsters, how to get them and plenty of information about them, such as their skill, traits, stats and resistances!",
+      "ja": "ドラゴンクエストモンスターズ3 魔族の王子とエルフの旅、ついに登場！全523体のモンスターの入手方法に加えて、スキル、特性、ステータス、耐性など、たくさんの情報をチェックしよう！"
+    },
+    {
+      "fr": "Les moyens d'obtention s'adaptent au Prince des ombres ! Découvrez en quelle saison et par quel temps recruter chaque monstre, et dans quelles régions trouver son œuf !",
+      "en": "Ways to get monsters are tailored to The Dark Prince! Find out in which season and weather to scout each monster, and in which regions to find its egg!",
+      "ja": "入手方法が魔族の王子とエルフの旅に対応！モンスターをスカウトできる季節と天候、そしてタマゴが見つかる地域をチェックしよう！"
+    },
+    {
+      "fr": "La taille des monstres a été revue pour Le Prince des ombres : sélectionnez votre monstre en taille S ou G et voyez ses attributs, ses statistiques et ses résistances s'adapter !",
+      "en": "Monster sizes have been reworked for The Dark Prince: pick size S or G for your monster and watch its traits, stats and resistances adapt!",
+      "ja": "魔族の王子とエルフの旅に合わせてモンスターのサイズを見直しました。サイズSとサイズGを切り替えると、特性、ステータス、耐性も変わります！"
+    },
+    {
+      "fr": "Pendant le chargement d'un jeu, une animation et une barre de progression indiquent l'avancement du chargement des icônes.",
+      "en": "While a game loads, an animation and a progress bar show how far the icons have loaded.",
+      "ja": "ゲームの読み込み中は、アニメーションとプログレスバーでアイコンの読み込み状況を表示します。"
+    }
+  ],
+  "fix": [
+    {
+      "fr": "Dans l'arbre et les recettes, un parent désigné par sa famille est représenté par l'icône de la famille seule, sans cadre.",
+      "en": "In the tree and the recipes, a parent given by its family is shown as the family icon alone, without a frame.",
+      "ja": "ツリーと配合レシピで、系統で指定される親は枠なしの系統アイコンだけで表示されます。"
+    }
+  ]
+}

@@ -51,12 +51,12 @@ in Vue, a synthesis rule inside a click handler.
 
 ```text
 src/
-├── app/          App.vue (shell), context.ts (state), route.ts (address), styles.css
+├── app/          App.vue (shell), context.ts (state), route.ts (address), preload.ts (images), styles.css
 ├── components/
 │   ├── layout/   header, relations panel, "What's new" and "About" buttons
 │   ├── graph/    AtlasCanvas, FocusCanvas, its viewport and parent picker, TreeShareControls
 │   ├── monster/  detail panel, its tabs, obtainment cards
-│   └── common/   combobox, icons, popover, tags, labels, focus and text-measuring helpers
+│   └── common/   combobox, icons, loading indicator, popover, tags, labels, focus and text-measuring helpers
 ├── domain/       monster.ts, synthesis.ts, game.ts
 ├── services/
 │   ├── synthesis/  engine, recipe matching, normal-synthesis strategies
@@ -79,16 +79,29 @@ State:
 - `tree`: `{ rootId, choices, selectedId }`, or `null` while the atlas is shown;
 - show parents / children and their depth;
 - left panel open or not;
-- `detailTab`, the sheet's tab, kept from one node to the next.
+- `detailTab`, the sheet's tab, kept from one node to the next;
+- `sheetSize`, the size the sheet shows, kept the same way (null: each monster in its own size).
 
 Derived from it: the loaded `GameData`, `monsters` (the one index of its monsters by id), the translated names and UI texts, `searchKeys` (every language),
-`statMaxima` (the highest value of each stat in the game, the scale of the gauges), the cached synthesis engine,
+`statMaxima` (the highest value of each stat in the game, in any size: the scale of the gauges), the cached synthesis engine,
 `ancestryTree` / `descendantTree` / `treeNodes`, and `selectedNode` (its monster, side, whether it is editable, its
 resolved choice, its normal-parent options).
+
+Loading a game also loads its monster icons before the atlas is shown (`preload.ts`): `status` stays `loading`
+meanwhile and `loadProgress` counts the icons. `common/LoadingIndicator.vue` shows the wait — the task, and its
+progress when it can be counted; it is the component for every long wait.
 
 Actions: `openTree`, `selectNode`, `setChoice`, `pickParent`, `resetTree`, `exportTree`, `importTree`.
 
 The game data is never mutated.
+
+## Sheet values
+
+`services/stats.ts` is the one place that computes what the sheet shows for a monster in a size: `sheetStats`
+multiplies the stored maximum stats by the size's multipliers (`rules.sizeVariants`) and those of the traits the
+monster has in that size (`Trait.sheetEffect`), then rounds once; `sheetResistances` adds their resistance bonuses
+to the stored values, a bonus never taking a value above 100 (immune). `resistanceStage` names a value by the stage
+it reaches. Components only display the result.
 
 ## Synthesis engine
 
@@ -98,12 +111,15 @@ The game data is never mutated.
 - `obtainMethods(target)`: every way to make a monster (four-way, special, normal parent pairs);
 - `usages(monster)`: what a monster helps to make;
 - `conditionCandidates`: the monsters accepted by a generic parent;
-- `partnerOptions`: the linked options of the two normal-synthesis parents;
+- `parentOptions`: the options of one normal-synthesis parent, given the parent picked on the other side;
 - `representativeOrigin`: four-way → special → normal, first recipe in data order within a type.
 
 Fixed recipes are stored. **Normal synthesis is computed, never stored**: the engine enumerates every pair of species
 once (a lazy index, about 0.3–0.6 s, prepared during browser idle time) and asks a strategy for the candidates. The
-strategy is chosen by `rules.normalSynthesis.kind` (`normal/libraryOrder.ts` for DQMJ2).
+strategy is chosen by `rules.normalSynthesis.kind` (`normal/libraryOrder.ts` for DQMJ2, `normal/familyTable.ts` for
+The Dark Prince). A strategy says whether the order of the parents matters (`ordered`): the index then holds each
+order that works, the first parent of a pair stays the first in the tree, and `parentOptions` keeps each side to its
+own place (`orderedParents`).
 
 ## Synthesis tree
 
@@ -112,7 +128,7 @@ strategy is chosen by `rules.normalSynthesis.kind` (`normal/libraryOrder.ts` for
 - A node id is its path: `root`, `root/<index>:<key>/…` for ancestors, `child:…` for descendants. Choices are keyed
   by that path, which is why two occurrences of a monster are independent.
 - `NodeChoice` is one of: a recipe (with the monsters picked for its generic parents, `picks[index]`), a normal
-  synthesis (`parents`), a scouting location, an event.
+  synthesis (`parents`), a scouting location, an egg's region, an event.
 - The choices of a replaced branch are kept but unused, so switching back restores them.
 - A monster repeated on its own branch is expanded like any other — otherwise it would look obtainable without
   parents. Only the depth limit ends recipes that need each other.
@@ -163,16 +179,15 @@ is not placed inside the node, where it would shrink with the zoom. The dialog m
 - `MonsterCombobox.vue`: the only monster search, used by the header and the parent picker. Its list is
   `position: fixed` and flips upwards so the mobile sheet cannot clip it.
 - `InfoPopover.vue`: the popover of the skill and traits, opened by hover, focus or tap.
-- `MonsterIcon.vue`, `FamilyIcon.vue`: icons, with the family icon cropped to its drawn area.
+- `MonsterIcon.vue`, `FamilyIcon.vue`: icons. The family icon is cropped to its drawn area (the game's
+  `familyIconFrame`) and brought to the same height in every game. Pixel art is kept sharp: a family icon enlarged by a
+  whole factor, a monster icon file of one slot (40 px). A larger monster icon file is smoothed.
 - `services/assets.ts`: the only place that builds an icon address and knows the icon sizes.
-- `labels.ts`: wording of conditions and recipes.
+- `labels.ts`: wording of conditions, recipes and scout situations: text lines for a game without seasons, one row of
+  seasons per story stage otherwise (the game's icons when it declares them).
 
-Two values are shared through CSS rather than repeated:
-
-- the 900 px breakpoint is only written in `App.vue`, which sets the `wide` class on the shell; styles elsewhere
-  use `.app-shell.wide` / `.app-shell:not(.wide)` instead of their own media query;
-- the background and frame of the monster icons are the `--icon-background` and `--icon-border` variables of
-  `styles.css`, for the boxes that stand in for an icon.
+The 900 px breakpoint is only written in `App.vue`, which sets the `wide` class on the shell; styles elsewhere use
+`.app-shell.wide` / `.app-shell:not(.wide)` instead of their own media query.
 
 ## Address and sharing
 
@@ -222,7 +237,8 @@ are only downloaded when the list is opened.
    `scripts/data-schema.ts`), so the types are the single source of truth. Constraints are added as JSDoc tags on
    the types (`/** @minItems 1 */`).
 2. **References.** Ids are unique; every id used by a monster or a recipe is declared in a `game.json` catalog; ranks
-   are in `rules.rankOrder`; icon files exist.
+   are in `rules.rankOrder`; icon files exist; a trait tied to a size is one the monster can have; resistances are
+   values in a game with `resistanceStages` and named in a game without.
 3. **Warnings**, not errors: unused catalog entries, missing or unknown translations.
 
 The game JSON is assembled with a cast (`as unknown as GameData`): the compiler does not check its shape, only the

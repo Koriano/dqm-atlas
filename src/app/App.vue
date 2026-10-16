@@ -2,6 +2,7 @@
 import { computed, onMounted, onUnmounted, ref, watch, watchEffect } from "vue"
 
 import { restoreFocus } from "../components/common/focus"
+import LoadingIndicator from "../components/common/LoadingIndicator.vue"
 import PanelToggleIcon from "../components/common/PanelToggleIcon.vue"
 import AtlasCanvas from "../components/graph/AtlasCanvas.vue"
 import FocusCanvas from "../components/graph/FocusCanvas.vue"
@@ -149,7 +150,11 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown))
       >
         <PanelToggleIcon direction="open" />
       </button>
-      <p v-if="app.status.value === 'loading'" class="canvas-message">{{ app.text.value.loading }}</p>
+      <LoadingIndicator
+        v-if="app.status.value === 'loading'"
+        :label="app.loadProgress.value ? app.text.value.loadingIcons : app.text.value.loading"
+        :progress="app.loadProgress.value"
+      />
       <p v-else-if="app.status.value === 'error'" class="canvas-message" role="alert">{{ app.text.value.loadError }}</p>
       <template v-else-if="app.game.value">
         <!-- The atlas stays mounted while a monster is focused so its viewport is kept. -->

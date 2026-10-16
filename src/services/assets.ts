@@ -13,17 +13,19 @@ export function monsterIconUrl(gameId: GameId, iconAssetKey: string): string {
   return `${import.meta.env.BASE_URL}assets/${gameId}/monsters/${iconAssetKey}.png`
 }
 
-/**
- * The family icons are drawn in a 14×20 area of a transparent 48×49 canvas; they are cropped to it when shown
- * (measured on every provided file).
- */
-export const FAMILY_ICON_CROP = { x: 17, y: 14, width: 14, height: 20 } as const
+/** Height of a family icon's drawing at scale 1, whatever the game: the game's `familyIconFrame` says where it is. */
+export const FAMILY_ICON_HEIGHT = 20
 
 /** Native size of the equipment icons. */
 export const EQUIPMENT_ICON_SIZE = { width: 12, height: 16 } as const
 
 export function equipmentIconUrl(gameId: GameId, iconAssetKey: string): string {
   return `${import.meta.env.BASE_URL}assets/${gameId}/equipment/${iconAssetKey}.png`
+}
+
+/** Icon of a weather or a season, for the games whose screens show them that way. */
+export function situationIconUrl(gameId: GameId, kind: "weathers" | "seasons", iconAssetKey: string): string {
+  return `${import.meta.env.BASE_URL}assets/${gameId}/${kind}/${iconAssetKey}.png`
 }
 
 export function familyIconUrl(gameId: GameId, iconAssetKey: string): string {

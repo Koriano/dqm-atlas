@@ -370,15 +370,17 @@ button.slot-field:hover {
   border-radius: 10px;
   background: var(--surface);
 }
-/* Same look as the monster icons' own background and frame, so the box reads as "a monster of this family". */
+/*
+ * A family parent is its family's icon on its own, at the bottom of the icon's place so its name sits as close as a
+ * monster's; a dashed box stands for a parent of no known family.
+ */
 .slot-box {
   display: grid;
-  place-items: center;
+  place-items: end center;
   box-sizing: border-box;
-  border: 1px solid var(--icon-border);
-  background: var(--icon-background);
 }
 .slot-box.unknown {
+  place-items: center;
   border: 1px dashed var(--text-muted);
   background: var(--surface);
   color: var(--text-muted);

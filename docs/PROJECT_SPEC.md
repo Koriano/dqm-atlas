@@ -13,19 +13,19 @@ needs:
 
 It is an unofficial fan site: free, without ads or donations, without accounts, and with nothing stored on a server.
 
-## 2. Scope of V1
+## 2. Scope
 
-### Game
+### Games
 
 - **Dragon Quest Monsters: Joker 2, original version.** DQMJ2 Professional is a different game with different
-  monsters and rules: its data must never be mixed in.
-- 311 monsters, 8 families (one of them `???`), ranks F to X plus `???`.
+  monsters and rules: its data must never be mixed in. 311 monsters, 8 families (one of them `???`), ranks F to X
+  plus `???`.
+- **Dragon Quest Monsters: The Dark Prince.** 523 monsters, 8 families (one of them `???`), ranks G to X.
 
 The game selector also lists the planned games, disabled, after the available ones (each group in release order):
-Joker, Joker 2 Professional, Terry's Wonderland 3D, Joker 3, Joker 3 Professional, The Dark Prince, The Withered
-World.
+Joker, Joker 2 Professional, Terry's Wonderland 3D, Joker 3, Joker 3 Professional, The Withered World.
 
-### Not in V1
+### Out of scope
 
 - Accounts, backend, remote database, anything saved in the browser.
 - Automatic synthesis planner, shortest path, player inventory.
@@ -58,10 +58,10 @@ to make) below.
 - Clicking a monster of the tree opens its sheet; it never rebuilds the tree. Only the atlas, the search and the
   sheet's "View" button open a new tree.
 - For the root and each ancestor, the sheet chooses how **that occurrence** is obtained: one of its recipes, a normal
-  synthesis, a scouting location or an event. A monster appearing several times keeps one choice per occurrence.
-- A scouted or event monster ends its branch, and its node carries a tag ("Recruitable", "Event").
+  synthesis, a scouting location, an egg or an event. A monster appearing several times keeps one choice per occurrence.
+- A scouted, egg or event monster ends its branch, and its node carries a tag ("Recruitable", "Egg", "Event").
 - Without an explicit choice, the root uses its representative synthesis (section 4); an ancestor uses its first
-  scouting location, then its representative synthesis, then its first event.
+  scouting location, then its first egg, then its representative synthesis, then its first event.
 - Descendants are read-only.
 - The parent depth set in the left panel is a hard limit, explicit choices included. It is also what ends recipes
   that need each other.
@@ -77,13 +77,22 @@ search limited to the eligible monsters. The picked monster replaces the slot an
 
 - Identity: icon, name, family, rank, size, skill and traits. The skill and each trait open a popover: what the skill
   unlocks at each skill-points threshold, or the trait's in-game description.
+- Size: in a game where every monster can have another size, one button per size picks the size the sheet shows —
+  its traits, stats and resistances follow. The choice is kept from one monster to the next, like the tab, and is not
+  part of the tree or its code.
+- Traits: all of them, whatever the size shown, with the level that unlocks a trait and a tag for a trait of one size
+  only; a trait the monster lacks in the size shown is dimmed.
 - "View": opens a tree rooted on this monster.
 - Three tabs, the active one kept from one monster to the next:
-  - **Obtainment**: scouting locations (with time of day, weather and story stage when they matter), syntheses
+  - **Obtainment**: scouting locations (with time of day, weather and story stage when they matter; in a game with
+    seasons, a row of the four seasons — all active without a condition — each dimmed when the monster is absent then
+    and followed by the weathers it needs, as the game's icons), eggs (region, egg colours, story stage), syntheses
     (each recipe with its parents as icon + name, plus normal synthesis), events.
-  - **Stats**: usable equipment, then the six maximum stats with a gauge scaled on the highest value of the game.
+  - **Stats**: usable equipment (in a game with equipment), then the six maximum stats in the size shown, with a
+    gauge scaled on the highest value of the game in any size.
   - **Resistances**: every category of the game; one without a stored value is shown as normal, a partial resistance
-    with its percentage.
+    with its percentage. In a game that gives resistance values, each value is named by the stage it reaches, as in
+    the game.
 
 ### Search
 

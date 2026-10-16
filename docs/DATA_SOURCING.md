@@ -23,6 +23,16 @@ For DQMJ2, the reference is the European version, which gives the French and Eng
 those of the Japanese original version, taken entry by entry at the same place in the game's text tables as the
 European text they stand for.
 
+For The Dark Prince, the reference is the Steam version with its downloadable content, which gives the French,
+English and Japanese texts. Two texts are adjusted, by decision of the project owner: family names keep the family's
+own word, in the singular in French, as DQMJ2 names them ("Famille des gluants" → "Gluant", "Slime Family" →
+"Slime"; Japanese keeps "スライム系"); the healing descriptions give the range of HP restored where the game writes
+"at least" a number ("Redonne 30-70 PV à un allié.").
+Some names do not exist in the game and were written for the site, by decision of the project owner: the story
+stages (short, e.g. "Après Suce-sang"), the egg colours, the "(donjon)" that tells an echelon's dungeons from its
+field, the "joins your party" event, and the French and English names of weathers and seasons, which the game only
+shows as icons (the names are the icons' text alternative).
+
 ## What the game gives
 
 - monsters: family, rank, size, library number, maximum stats, resistances, equipment, traits, skill;

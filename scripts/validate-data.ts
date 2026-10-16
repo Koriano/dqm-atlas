@@ -4,7 +4,7 @@ import { join } from "node:path"
 import Ajv from "ajv"
 import { createGenerator } from "ts-json-schema-generator"
 
-import type { GameData } from "../src/domain/game"
+import type { GameData, SheetEffect } from "../src/domain/game"
 
 const DATA_DIR = process.argv[2] ?? "src/data"
 const I18N_DIR = "src/i18n"
@@ -24,13 +24,16 @@ const CATALOG_KEYS = [
   "traits",
   "equipmentTypes",
   "resistanceCategories",
+  "resistanceStages",
   "locations",
   "timesOfDay",
+  "seasons",
   "weathers",
   "storyStages",
   "eventKinds",
   "regions",
   "events",
+  "eggColours",
   "monsterGroups",
 ] as const
 type CatalogKey = (typeof CATALOG_KEYS)[number]
@@ -124,9 +127,25 @@ function checkReferences(dir: string, game: GameData): void {
   unique("libraryId", game.monsters.map((monster) => monster.libraryId), at("monsters.json"))
   unique("recipe id", game.recipes.map((recipe) => recipe.id), at("recipes.json"))
 
+  const { drawn, width, height } = game.familyIconFrame
+  if (drawn.x + drawn.width > width || drawn.y + drawn.height > height)
+    errors.push(`${at("game.json")}: familyIconFrame.drawn goes beyond the ${width}×${height} icon`)
   for (const family of game.families) {
     const icon = join(ASSET_DIR, game.id, "families", `${family.iconAssetKey}.png`)
     if (!existsSync(icon)) errors.push(`${at("game.json", family.id)}: icon file ${icon} does not exist`)
+  }
+  for (const [key, folder] of [["weathers", "weathers"], ["seasons", "seasons"]] as const) {
+    for (const entry of game[key]) {
+      if (entry.iconAssetKey === undefined) continue
+      const icon = join(ASSET_DIR, game.id, folder, `${entry.iconAssetKey}.png`)
+      if (!existsSync(icon)) errors.push(`${at("game.json", entry.id)}: icon file ${icon} does not exist`)
+    }
+  }
+  for (const location of game.locations) {
+    for (const [season, weathers] of Object.entries(location.weathersBySeason ?? {})) {
+      ref("seasons", season, at("game.json", location.id))
+      for (const id of weathers) ref("weathers", id, at("game.json", location.id))
+    }
   }
   for (const type of game.equipmentTypes) {
     const icon = join(ASSET_DIR, game.id, "equipment", `${type.iconAssetKey}.png`)
@@ -141,6 +160,19 @@ function checkReferences(dir: string, game: GameData): void {
     unique("group member", group.monsterIds, where)
     for (const id of group.monsterIds) if (!monsterIds.has(id)) errors.push(`${where}: unknown group member "${id}"`)
   }
+
+  const sheetEffect = (effect: SheetEffect, where: string) => {
+    for (const id of Object.keys(effect.resistanceBonus ?? {})) ref("resistanceCategories", id, where)
+  }
+  for (const trait of game.traits) if (trait.sheetEffect) sheetEffect(trait.sheetEffect, at("game.json", trait.id))
+  const sizeVariants = game.rules.sizeVariants ?? []
+  unique("size variant", sizeVariants.map((variant) => variant.size), at("game.json", "rules.sizeVariants"))
+  for (const variant of sizeVariants) sheetEffect(variant, at("game.json", "rules.sizeVariants"))
+  const stages = game.resistanceStages
+  // Stages are not referenced by id: a resistance value reaches one.
+  for (const stage of stages) used.resistanceStages.add(stage.id)
+  if (stages.some((stage, index) => index > 0 && stage.min <= stages[index - 1].min))
+    errors.push(`${at("game.json")}: resistanceStages are not in strictly ascending min order`)
 
   for (const skill of game.skills) {
     const where = at("skills.json", skill.id)
@@ -158,34 +190,64 @@ function checkReferences(dir: string, game: GameData): void {
     ref("families", monster.familyId, where)
     rank(monster.rank, where)
     ref("skills", monster.skillId, where)
-    for (const id of monster.traitIds) ref("traits", id, where)
-    for (const id of monster.equipment) ref("equipmentTypes", id, where)
-    for (const id of Object.keys(monster.resistances)) ref("resistanceCategories", id, where)
+    for (const trait of monster.traits) {
+      ref("traits", trait.traitId, where)
+      if (trait.size !== undefined && trait.size !== monster.size && !sizeVariants.some((variant) => variant.size === trait.size))
+        errors.push(`${where}: trait "${trait.traitId}" is tied to size "${trait.size}", which the monster cannot have`)
+    }
+    unique("trait", monster.traits.map((trait) => `${trait.traitId} ${trait.level ?? 1} ${trait.size ?? ""}`), where)
+    for (const id of monster.equipment ?? []) ref("equipmentTypes", id, where)
+    for (const [id, resistance] of Object.entries(monster.resistances)) {
+      ref("resistanceCategories", id, where)
+      // A game with stages gives values, one without names each resistance: never both.
+      if ((typeof resistance === "number") !== stages.length > 0)
+        errors.push(`${where}: resistance "${id}" is ${typeof resistance === "number" ? "a value, but the game declares no resistanceStages" : "named, but the game gives values"}`)
+    }
     for (const obtainment of monster.obtainments) {
       if (obtainment.type === "event") {
         ref("events", obtainment.eventId, where)
         continue
       }
       ref("locations", obtainment.locationId, where)
+      if (obtainment.type === "egg") {
+        for (const id of obtainment.eggColours) ref("eggColours", id, where)
+        unique("egg colour", obtainment.eggColours, where)
+        if (obtainment.storyStage !== undefined) ref("storyStages", obtainment.storyStage, where)
+        continue
+      }
       for (const situation of obtainment.when ?? []) {
         if (situation.timeOfDay !== undefined) ref("timesOfDay", situation.timeOfDay, where)
+        if (situation.season !== undefined) ref("seasons", situation.season, where)
         if (situation.weather !== undefined) ref("weathers", situation.weather, where)
         if (situation.storyStage !== undefined) ref("storyStages", situation.storyStage, where)
       }
     }
     unique("scout location", monster.obtainments.flatMap((o) => (o.type === "scout" ? [o.locationId] : [])), where)
+    unique("egg location", monster.obtainments.flatMap((o) => (o.type === "egg" ? [o.locationId] : [])), where)
     const icon = join(ASSET_DIR, game.id, "monsters", `${monster.iconAssetKey}.png`)
     if (!existsSync(icon)) errors.push(`${where}: icon file ${icon} does not exist`)
   }
 
   const normalSynthesis = game.rules.normalSynthesis
   const ruleWhere = at("game.json", "rules.normalSynthesis")
-  unique("resultMonsterIds entry", normalSynthesis.resultMonsterIds, ruleWhere)
-  for (const id of normalSynthesis.resultMonsterIds) if (!monsterIds.has(id)) errors.push(`${ruleWhere}: unknown monster "${id}"`)
-  unique("familyMix pair", normalSynthesis.familyMix.map(({ families }) => [...families].sort().join(" × ")), ruleWhere)
-  for (const { families, result } of normalSynthesis.familyMix) {
-    for (const familyId of [...families, result]) ref("families", familyId, ruleWhere)
-    if (families[0] === families[1]) errors.push(`${ruleWhere}: familyMix pairs "${families[0]}" with itself`)
+  if (normalSynthesis.kind === "libraryOrder") {
+    unique("resultMonsterIds entry", normalSynthesis.resultMonsterIds, ruleWhere)
+    for (const id of normalSynthesis.resultMonsterIds) if (!monsterIds.has(id)) errors.push(`${ruleWhere}: unknown monster "${id}"`)
+    unique("familyMix pair", normalSynthesis.familyMix.map(({ families }) => [...families].sort().join(" × ")), ruleWhere)
+    for (const { families, result } of normalSynthesis.familyMix) {
+      for (const familyId of [...families, result]) ref("families", familyId, ruleWhere)
+      if (families[0] === families[1]) errors.push(`${ruleWhere}: familyMix pairs "${families[0]}" with itself`)
+    }
+  } else {
+    unique("table pair", normalSynthesis.table.map(({ families }) => families.join(" × ")), ruleWhere)
+    for (const { families, results } of normalSynthesis.table) {
+      for (const familyId of families) ref("families", familyId, ruleWhere)
+      if (families[0] === families[1]) errors.push(`${ruleWhere}: table pairs "${families[0]}" with itself`)
+      for (const [rankValue, id] of Object.entries(results)) {
+        rank(rankValue, ruleWhere)
+        if (!monsterIds.has(id)) errors.push(`${ruleWhere}: unknown monster "${id}"`)
+      }
+    }
   }
 
   for (const recipe of game.recipes) {

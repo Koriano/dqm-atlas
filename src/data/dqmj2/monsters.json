@@ -20,9 +20,13 @@
       "whips"
     ],
     "skillId": "slimer",
-    "traitIds": [
-      "critical_massacre",
-      "crafty_frizzer"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "crafty_frizzer"
+      }
     ],
     "resistances": {},
     "obtainments": [
@@ -61,8 +65,10 @@
       "staves"
     ],
     "skillId": "defender",
-    "traitIds": [
-      "crafty_fire_breather"
+    "traits": [
+      {
+        "traitId": "crafty_fire_breather"
+      }
     ],
     "resistances": {
       "dazzle": "immune"
@@ -101,9 +107,13 @@
       "staves"
     ],
     "skillId": "woosh_zap",
-    "traitIds": [
-      "artful_dodger",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "fire_breath": "weak",
@@ -152,8 +162,10 @@
       "staves"
     ],
     "skillId": "naturalist",
-    "traitIds": [
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "sizz": "weak",
@@ -188,8 +200,10 @@
       "swords"
     ],
     "skillId": "fear_monger",
-    "traitIds": [
-      "crafty_sleeper"
+    "traits": [
+      {
+        "traitId": "crafty_sleeper"
+      }
     ],
     "resistances": {
       "fizzle": "weak"
@@ -218,9 +232,13 @@
       "swords"
     ],
     "skillId": "dark_knight",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_woosher"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_woosher"
+      }
     ],
     "resistances": {
       "fizzle": "immune"
@@ -272,9 +290,13 @@
       "whips"
     ],
     "skillId": "graveheart",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_fizzler"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_fizzler"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -323,8 +345,10 @@
       "whips"
     ],
     "skillId": "crack_sizz",
-    "traitIds": [
-      "crafty_gobstopper"
+    "traits": [
+      {
+        "traitId": "crafty_gobstopper"
+      }
     ],
     "resistances": {
       "woosh": "immune",
@@ -354,7 +378,7 @@
       "staves"
     ],
     "skillId": "icemeister",
-    "traitIds": [],
+    "traits": [],
     "resistances": {
       "paralysis": "immune",
       "dim": "weak"
@@ -388,9 +412,13 @@
       "swords"
     ],
     "skillId": "saboteur",
-    "traitIds": [
-      "rabble_rouser",
-      "crafty_blade_blunter"
+    "traits": [
+      {
+        "traitId": "rabble_rouser"
+      },
+      {
+        "traitId": "crafty_blade_blunter"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -420,9 +448,13 @@
       "staves"
     ],
     "skillId": "guerrilla",
-    "traitIds": [
-      "psycho",
-      "lootist"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "lootist"
+      }
     ],
     "resistances": {
       "cold_breath": "weak",
@@ -457,8 +489,10 @@
       "swords"
     ],
     "skillId": "dancer",
-    "traitIds": [
-      "crafty_dance_banner"
+    "traits": [
+      {
+        "traitId": "crafty_dance_banner"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -507,8 +541,10 @@
       "staves"
     ],
     "skillId": "hypnotist",
-    "traitIds": [
-      "crafty_confuser"
+    "traits": [
+      {
+        "traitId": "crafty_confuser"
+      }
     ],
     "resistances": {
       "drain_magic": "immune",
@@ -543,7 +579,7 @@
       "swords"
     ],
     "skillId": "green_finger",
-    "traitIds": [],
+    "traits": [],
     "resistances": {
       "frizz": "weak",
       "fizzle": "immune"
@@ -591,9 +627,13 @@
       "whips"
     ],
     "skillId": "woosh_sizz",
-    "traitIds": [
-      "health_professional",
-      "crafty_whacker"
+    "traits": [
+      {
+        "traitId": "health_professional"
+      },
+      {
+        "traitId": "crafty_whacker"
+      }
     ],
     "resistances": {
       "decelerate": "immune",
@@ -623,9 +663,13 @@
       "whips"
     ],
     "skillId": "toxifier",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_poisoner"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_poisoner"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -655,9 +699,13 @@
       "swords"
     ],
     "skillId": "hive_mind",
-    "traitIds": [
-      "psycho",
-      "crafty_paralyser"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "crafty_paralyser"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -715,8 +763,10 @@
       "staves"
     ],
     "skillId": "bang_zam",
-    "traitIds": [
-      "desperado"
+    "traits": [
+      {
+        "traitId": "desperado"
+      }
     ],
     "resistances": {
       "crack": "weak",
@@ -746,8 +796,10 @@
       "swords"
     ],
     "skillId": "dancer",
-    "traitIds": [
-      "talent_scout"
+    "traits": [
+      {
+        "traitId": "talent_scout"
+      }
     ],
     "resistances": {
       "sleep": "immune",
@@ -796,8 +848,10 @@
       "swords"
     ],
     "skillId": "fire_fighter",
-    "traitIds": [
-      "frizzmeister"
+    "traits": [
+      {
+        "traitId": "frizzmeister"
+      }
     ],
     "resistances": {
       "woosh": "weak",
@@ -832,9 +886,13 @@
       "staves"
     ],
     "skillId": "seal",
-    "traitIds": [
-      "desperado",
-      "crafty_fizzler"
+    "traits": [
+      {
+        "traitId": "desperado"
+      },
+      {
+        "traitId": "crafty_fizzler"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -864,8 +922,10 @@
       "whips"
     ],
     "skillId": "graveheart",
-    "traitIds": [
-      "crafty_poisoner"
+    "traits": [
+      {
+        "traitId": "crafty_poisoner"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -900,9 +960,13 @@
       "whips"
     ],
     "skillId": "slimer",
-    "traitIds": [
-      "poisonous",
-      "crafty_poisoner"
+    "traits": [
+      {
+        "traitId": "poisonous"
+      },
+      {
+        "traitId": "crafty_poisoner"
+      }
     ],
     "resistances": {
       "poison": "immune",
@@ -932,8 +996,10 @@
       "staves"
     ],
     "skillId": "toxifier",
-    "traitIds": [
-      "escape_artist"
+    "traits": [
+      {
+        "traitId": "escape_artist"
+      }
     ],
     "resistances": {
       "poison": "immune",
@@ -968,9 +1034,13 @@
       "swords"
     ],
     "skillId": "diminisher",
-    "traitIds": [
-      "artful_dodger",
-      "paralysing_touch"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "paralysing_touch"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -1015,9 +1085,13 @@
       "staves"
     ],
     "skillId": "huntsman",
-    "traitIds": [
-      "psycho",
-      "rabble_rouser"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "rabble_rouser"
+      }
     ],
     "resistances": {
       "dazzle": "immune",
@@ -1066,9 +1140,13 @@
       "whips"
     ],
     "skillId": "icemeister",
-    "traitIds": [
-      "crackmeister",
-      "crafty_cracker"
+    "traits": [
+      {
+        "traitId": "crackmeister"
+      },
+      {
+        "traitId": "crafty_cracker"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -1099,9 +1177,13 @@
       "swords"
     ],
     "skillId": "frizz_woosh",
-    "traitIds": [
-      "hit_squad",
-      "talent_scout"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "talent_scout"
+      }
     ],
     "resistances": {
       "poison": "weak",
@@ -1141,7 +1223,7 @@
       "whips"
     ],
     "skillId": "materialist",
-    "traitIds": [],
+    "traits": [],
     "resistances": {
       "frizz": "weak",
       "dazzle": "immune"
@@ -1175,9 +1257,13 @@
       "whips"
     ],
     "skillId": "healer",
-    "traitIds": [
-      "health_professional",
-      "crafty_magic_drainer"
+    "traits": [
+      {
+        "traitId": "health_professional"
+      },
+      {
+        "traitId": "crafty_magic_drainer"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -1217,9 +1303,13 @@
       "whips"
     ],
     "skillId": "frizz_sizz",
-    "traitIds": [
-      "poisonous_touch",
-      "sizzmeister"
+    "traits": [
+      {
+        "traitId": "poisonous_touch"
+      },
+      {
+        "traitId": "sizzmeister"
+      }
     ],
     "resistances": {
       "sizz": "weak",
@@ -1260,9 +1350,13 @@
       "swords"
     ],
     "skillId": "frizz_bang",
-    "traitIds": [
-      "bangmeister",
-      "crafty_banger"
+    "traits": [
+      {
+        "traitId": "bangmeister"
+      },
+      {
+        "traitId": "crafty_banger"
+      }
     ],
     "resistances": {
       "sizz": "absorb",
@@ -1304,9 +1398,13 @@
       "whips"
     ],
     "skillId": "aquapothecary",
-    "traitIds": [
-      "health_professional",
-      "crafty_dance_banner"
+    "traits": [
+      {
+        "traitId": "health_professional"
+      },
+      {
+        "traitId": "crafty_dance_banner"
+      }
     ],
     "resistances": {
       "sizz": "weak",
@@ -1346,9 +1444,13 @@
       "whips"
     ],
     "skillId": "frizz_sizz",
-    "traitIds": [
-      "frizzmeister",
-      "crafty_frizzer"
+    "traits": [
+      {
+        "traitId": "frizzmeister"
+      },
+      {
+        "traitId": "crafty_frizzer"
+      }
     ],
     "resistances": {
       "frizz": "absorb",
@@ -1378,9 +1480,13 @@
       "whips"
     ],
     "skillId": "frizz_zap",
-    "traitIds": [
-      "frizzmeister",
-      "crafty_dazzler"
+    "traits": [
+      {
+        "traitId": "frizzmeister"
+      },
+      {
+        "traitId": "crafty_dazzler"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -1410,8 +1516,10 @@
       "staves"
     ],
     "skillId": "toughie",
-    "traitIds": [
-      "critical_massacre"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      }
     ],
     "resistances": {
       "drain_magic": "immune",
@@ -1441,9 +1549,13 @@
       "swords"
     ],
     "skillId": "naturalist",
-    "traitIds": [
-      "hit_squad",
-      "crafty_gobstopper"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_gobstopper"
+      }
     ],
     "resistances": {
       "decelerate": "immune",
@@ -1479,9 +1591,13 @@
       "swords"
     ],
     "skillId": "sizz_zap",
-    "traitIds": [
-      "hit_squad",
-      "crafty_dimmer"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_dimmer"
+      }
     ],
     "resistances": {
       "decelerate": "immune",
@@ -1520,8 +1636,10 @@
       "swords"
     ],
     "skillId": "trickster",
-    "traitIds": [
-      "crafty_dazzler"
+    "traits": [
+      {
+        "traitId": "crafty_dazzler"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -1562,9 +1680,13 @@
       "staves"
     ],
     "skillId": "mime",
-    "traitIds": [
-      "counterstriker",
-      "crafty_dance_banner"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "crafty_dance_banner"
+      }
     ],
     "resistances": {
       "decelerate": "immune",
@@ -1604,7 +1726,7 @@
       "whips"
     ],
     "skillId": "sizz_zam",
-    "traitIds": [],
+    "traits": [],
     "resistances": {
       "decelerate": "immune",
       "ban_dance": "weak"
@@ -1643,9 +1765,13 @@
       "staves"
     ],
     "skillId": "slimer",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_sizzer"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_sizzer"
+      }
     ],
     "resistances": {
       "fire_breath": "immune",
@@ -1682,10 +1808,16 @@
       "staves"
     ],
     "skillId": "ice",
-    "traitIds": [
-      "artful_dodger",
-      "crackmeister",
-      "big_hitter"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crackmeister"
+      },
+      {
+        "traitId": "big_hitter"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -1717,9 +1849,13 @@
       "staves"
     ],
     "skillId": "cleanser",
-    "traitIds": [
-      "hit_squad",
-      "crafty_dance_banner"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_dance_banner"
+      }
     ],
     "resistances": {
       "whack": "weak",
@@ -1759,9 +1895,13 @@
       "staves"
     ],
     "skillId": "crack_zap",
-    "traitIds": [
-      "hit_squad",
-      "crafty_ice_breather"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_ice_breather"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -1793,8 +1933,10 @@
       "swords"
     ],
     "skillId": "martyr",
-    "traitIds": [
-      "psycho"
+    "traits": [
+      {
+        "traitId": "psycho"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -1829,7 +1971,7 @@
       "whips"
     ],
     "skillId": "healer",
-    "traitIds": [],
+    "traits": [],
     "resistances": {
       "frizz": "weak",
       "dazzle": "immune"
@@ -1868,8 +2010,10 @@
       "whips"
     ],
     "skillId": "graveheart",
-    "traitIds": [
-      "sleepy_touch"
+    "traits": [
+      {
+        "traitId": "sleepy_touch"
+      }
     ],
     "resistances": {
       "crack": "immune",
@@ -1910,8 +2054,10 @@
       "staves"
     ],
     "skillId": "champion",
-    "traitIds": [
-      "psycho"
+    "traits": [
+      {
+        "traitId": "psycho"
+      }
     ],
     "resistances": {
       "sag": "immune",
@@ -1955,9 +2101,13 @@
       "swords"
     ],
     "skillId": "martyr",
-    "traitIds": [
-      "psycho",
-      "crafty_inactivist"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "crafty_inactivist"
+      }
     ],
     "resistances": {
       "paralysis": "weak",
@@ -1997,9 +2147,13 @@
       "staves"
     ],
     "skillId": "toughie",
-    "traitIds": [
-      "counterstriker",
-      "crafty_sleeper"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "crafty_sleeper"
+      }
     ],
     "resistances": {
       "sleep": "weak",
@@ -2029,9 +2183,13 @@
       "swords"
     ],
     "skillId": "nightmare",
-    "traitIds": [
-      "sleepy_touch",
-      "crafty_sleeper"
+    "traits": [
+      {
+        "traitId": "sleepy_touch"
+      },
+      {
+        "traitId": "crafty_sleeper"
+      }
     ],
     "resistances": {
       "sleep": "immune",
@@ -2061,9 +2219,13 @@
       "whips"
     ],
     "skillId": "fire_fighter",
-    "traitIds": [
-      "frizzmeister",
-      "crafty_frizzer"
+    "traits": [
+      {
+        "traitId": "frizzmeister"
+      },
+      {
+        "traitId": "crafty_frizzer"
+      }
     ],
     "resistances": {
       "frizz": "absorb",
@@ -2113,8 +2275,10 @@
       "staves"
     ],
     "skillId": "berserker",
-    "traitIds": [
-      "metal_beater"
+    "traits": [
+      {
+        "traitId": "metal_beater"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -2154,9 +2318,13 @@
       "swords"
     ],
     "skillId": "diminisher",
-    "traitIds": [
-      "counterstriker",
-      "crafty_sagger"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "crafty_sagger"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -2186,9 +2354,13 @@
       "swords"
     ],
     "skillId": "bolsterer",
-    "traitIds": [
-      "talent_scout",
-      "crafty_magical_saboteur"
+    "traits": [
+      {
+        "traitId": "talent_scout"
+      },
+      {
+        "traitId": "crafty_magical_saboteur"
+      }
     ],
     "resistances": {
       "whack": "weak",
@@ -2237,9 +2409,13 @@
       "whips"
     ],
     "skillId": "frizz_woosh",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_decelerater"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_decelerater"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -2274,9 +2450,13 @@
       "staves"
     ],
     "skillId": "huntsman",
-    "traitIds": [
-      "paralysing",
-      "crafty_inactivist"
+    "traits": [
+      {
+        "traitId": "paralysing"
+      },
+      {
+        "traitId": "crafty_inactivist"
+      }
     ],
     "resistances": {
       "decelerate": "weak",
@@ -2315,9 +2495,13 @@
       "staves"
     ],
     "skillId": "cold_sleep",
-    "traitIds": [
-      "artful_dodger",
-      "able_ambusher"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "able_ambusher"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -2368,9 +2552,13 @@
       "swords"
     ],
     "skillId": "materialist",
-    "traitIds": [
-      "confusing_touch",
-      "crafty_donker"
+    "traits": [
+      {
+        "traitId": "confusing_touch"
+      },
+      {
+        "traitId": "crafty_donker"
+      }
     ],
     "resistances": {
       "confusion": "immune",
@@ -2400,9 +2588,13 @@
       "swords"
     ],
     "skillId": "bang_woosh",
-    "traitIds": [
-      "health_professional",
-      "crafty_magic_drainer"
+    "traits": [
+      {
+        "traitId": "health_professional"
+      },
+      {
+        "traitId": "crafty_magic_drainer"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -2438,9 +2630,13 @@
       "whips"
     ],
     "skillId": "woosh_zam",
-    "traitIds": [
-      "talent_scout",
-      "crafty_magic_drainer"
+    "traits": [
+      {
+        "traitId": "talent_scout"
+      },
+      {
+        "traitId": "crafty_magic_drainer"
+      }
     ],
     "resistances": {
       "zam": "immune",
@@ -2476,8 +2672,10 @@
       "swords"
     ],
     "skillId": "woosh_sizz",
-    "traitIds": [
-      "crafty_zapper"
+    "traits": [
+      {
+        "traitId": "crafty_zapper"
+      }
     ],
     "resistances": {
       "decelerate": "immune",
@@ -2512,9 +2710,13 @@
       "staves"
     ],
     "skillId": "woosh_crack",
-    "traitIds": [
-      "crackmeister",
-      "strangely_alluring"
+    "traits": [
+      {
+        "traitId": "crackmeister"
+      },
+      {
+        "traitId": "strangely_alluring"
+      }
     ],
     "resistances": {
       "crack": "immune",
@@ -2549,9 +2751,13 @@
       "staves"
     ],
     "skillId": "naturalist",
-    "traitIds": [
-      "psycho",
-      "crafty_zapper"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "crafty_zapper"
+      }
     ],
     "resistances": {
       "sizz": "weak",
@@ -2596,8 +2802,10 @@
       "staves"
     ],
     "skillId": "mime",
-    "traitIds": [
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "dazzle": "immune",
@@ -2627,9 +2835,13 @@
       "swords"
     ],
     "skillId": "enfeebler",
-    "traitIds": [
-      "yellow_belly",
-      "gold_getter"
+    "traits": [
+      {
+        "traitId": "yellow_belly"
+      },
+      {
+        "traitId": "gold_getter"
+      }
     ],
     "resistances": {
       "sizz": "immune",
@@ -2674,9 +2886,13 @@
       "swords"
     ],
     "skillId": "frizz_bang",
-    "traitIds": [
-      "bangmeister",
-      "crafty_banger"
+    "traits": [
+      {
+        "traitId": "bangmeister"
+      },
+      {
+        "traitId": "crafty_banger"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -2720,8 +2936,10 @@
       "swords"
     ],
     "skillId": "saboteur",
-    "traitIds": [
-      "escape_artist"
+    "traits": [
+      {
+        "traitId": "escape_artist"
+      }
     ],
     "resistances": {
       "inaction": "immune",
@@ -2751,8 +2969,10 @@
       "staves"
     ],
     "skillId": "mage_aid",
-    "traitIds": [
-      "escape_artist"
+    "traits": [
+      {
+        "traitId": "escape_artist"
+      }
     ],
     "resistances": {
       "dazzle": "immune",
@@ -2792,10 +3012,16 @@
       "swords"
     ],
     "skillId": "dragon_lore",
-    "traitIds": [
-      "big_hitter",
-      "crafty_zapper",
-      "crafty_gobstopper"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "crafty_zapper"
+      },
+      {
+        "traitId": "crafty_gobstopper"
+      }
     ],
     "resistances": {
       "woosh": "weak",
@@ -2840,9 +3066,13 @@
       "staves"
     ],
     "skillId": "frizz_zap",
-    "traitIds": [
-      "strangely_alluring",
-      "fast_learner"
+    "traits": [
+      {
+        "traitId": "strangely_alluring"
+      },
+      {
+        "traitId": "fast_learner"
+      }
     ],
     "resistances": {
       "ban_dance": "immune"
@@ -2880,9 +3110,13 @@
       "swords"
     ],
     "skillId": "fear_monger",
-    "traitIds": [
-      "desperado",
-      "lootist"
+    "traits": [
+      {
+        "traitId": "desperado"
+      },
+      {
+        "traitId": "lootist"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -2917,9 +3151,13 @@
       "swords"
     ],
     "skillId": "dancer",
-    "traitIds": [
-      "heckling_hector",
-      "crafty_donker"
+    "traits": [
+      {
+        "traitId": "heckling_hector"
+      },
+      {
+        "traitId": "crafty_donker"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -2959,8 +3197,10 @@
       "swords"
     ],
     "skillId": "crack_zam",
-    "traitIds": [
-      "psycho"
+    "traits": [
+      {
+        "traitId": "psycho"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -2990,9 +3230,13 @@
       "staves"
     ],
     "skillId": "crack_sizz",
-    "traitIds": [
-      "crackmeister",
-      "crafty_cracker"
+    "traits": [
+      {
+        "traitId": "crackmeister"
+      },
+      {
+        "traitId": "crafty_cracker"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -3024,9 +3268,13 @@
       "staves"
     ],
     "skillId": "crack_zam",
-    "traitIds": [
-      "crackmeister",
-      "zammeister"
+    "traits": [
+      {
+        "traitId": "crackmeister"
+      },
+      {
+        "traitId": "zammeister"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -3074,8 +3322,10 @@
       "swords"
     ],
     "skillId": "enfeebler",
-    "traitIds": [
-      "crafty_decelerater"
+    "traits": [
+      {
+        "traitId": "crafty_decelerater"
+      }
     ],
     "resistances": {
       "sap": "immune",
@@ -3105,9 +3355,13 @@
       "staves"
     ],
     "skillId": "bad_breath",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_sleeper"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_sleeper"
+      }
     ],
     "resistances": {
       "sleep": "immune",
@@ -3147,9 +3401,13 @@
       "swords"
     ],
     "skillId": "reaper",
-    "traitIds": [
-      "zammeister",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "zammeister"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -3194,8 +3452,10 @@
       "swords"
     ],
     "skillId": "bolsterer",
-    "traitIds": [
-      "critical_massacre"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      }
     ],
     "resistances": {
       "dazzle": "immune",
@@ -3225,9 +3485,13 @@
       "swords"
     ],
     "skillId": "seal",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_dimmer"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_dimmer"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -3257,9 +3521,13 @@
       "swords"
     ],
     "skillId": "white_knight",
-    "traitIds": [
-      "counterstriker",
-      "crafty_banger"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "crafty_banger"
+      }
     ],
     "resistances": {
       "confusion": "immune",
@@ -3289,8 +3557,10 @@
       "staves"
     ],
     "skillId": "fire",
-    "traitIds": [
-      "fast_learner"
+    "traits": [
+      {
+        "traitId": "fast_learner"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -3320,8 +3590,10 @@
       "swords"
     ],
     "skillId": "defender",
-    "traitIds": [
-      "close_scraper"
+    "traits": [
+      {
+        "traitId": "close_scraper"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -3361,9 +3633,13 @@
       "swords"
     ],
     "skillId": "guerrilla",
-    "traitIds": [
-      "early_bird",
-      "timid"
+    "traits": [
+      {
+        "traitId": "early_bird"
+      },
+      {
+        "traitId": "timid"
+      }
     ],
     "resistances": {
       "confusion": "immune",
@@ -3393,8 +3669,10 @@
       "swords"
     ],
     "skillId": "materialist",
-    "traitIds": [
-      "crafty_sapper"
+    "traits": [
+      {
+        "traitId": "crafty_sapper"
+      }
     ],
     "resistances": {
       "inaction": "immune",
@@ -3424,8 +3702,10 @@
       "swords"
     ],
     "skillId": "diabolist",
-    "traitIds": [
-      "crafty_donker"
+    "traits": [
+      {
+        "traitId": "crafty_donker"
+      }
     ],
     "resistances": {
       "bang": "immune",
@@ -3459,9 +3739,13 @@
       "whips"
     ],
     "skillId": "anti_dragon",
-    "traitIds": [
-      "hit_squad",
-      "crafty_zammer"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_zammer"
+      }
     ],
     "resistances": {
       "decelerate": "immune",
@@ -3492,9 +3776,13 @@
       "whips"
     ],
     "skillId": "slimer",
-    "traitIds": [
-      "metal_body",
-      "yellow_belly"
+    "traits": [
+      {
+        "traitId": "metal_body"
+      },
+      {
+        "traitId": "yellow_belly"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -3591,8 +3879,10 @@
       "staves"
     ],
     "skillId": "bang_sizz",
-    "traitIds": [
-      "perilous_parrier"
+    "traits": [
+      {
+        "traitId": "perilous_parrier"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -3645,9 +3935,13 @@
       "staves"
     ],
     "skillId": "fire",
-    "traitIds": [
-      "last_word",
-      "crafty_frizzer"
+    "traits": [
+      {
+        "traitId": "last_word"
+      },
+      {
+        "traitId": "crafty_frizzer"
+      }
     ],
     "resistances": {
       "fire_breath": "immune",
@@ -3687,9 +3981,13 @@
       "staves"
     ],
     "skillId": "hive_mind",
-    "traitIds": [
-      "critical_massacre",
-      "paralysing_touch"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "paralysing_touch"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -3725,8 +4023,10 @@
       "swords"
     ],
     "skillId": "speedster",
-    "traitIds": [
-      "health_professional"
+    "traits": [
+      {
+        "traitId": "health_professional"
+      }
     ],
     "resistances": {
       "sizz": "weak",
@@ -3756,9 +4056,13 @@
       "swords"
     ],
     "skillId": "iceplosion_slashes",
-    "traitIds": [
-      "psycho",
-      "crafty_decelerater"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "crafty_decelerater"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -3787,9 +4091,13 @@
       "staves"
     ],
     "skillId": "hypnotist",
-    "traitIds": [
-      "hit_squad",
-      "late_riser"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "late_riser"
+      }
     ],
     "resistances": {
       "crack": "immune",
@@ -3819,8 +4127,10 @@
       "swords"
     ],
     "skillId": "enfeebler",
-    "traitIds": [
-      "crafty_abiliterator"
+    "traits": [
+      {
+        "traitId": "crafty_abiliterator"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -3880,9 +4190,13 @@
       "whips"
     ],
     "skillId": "healer",
-    "traitIds": [
-      "artful_dodger",
-      "health_professional"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "health_professional"
+      }
     ],
     "resistances": {
       "zap": "absorb",
@@ -3924,8 +4238,10 @@
       "staves"
     ],
     "skillId": "dragon_lore",
-    "traitIds": [
-      "artful_dodger"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      }
     ],
     "resistances": {
       "sizz": "immune",
@@ -3965,9 +4281,13 @@
       "whips"
     ],
     "skillId": "hypnotist",
-    "traitIds": [
-      "poisonous_touch",
-      "crafty_sagger"
+    "traits": [
+      {
+        "traitId": "poisonous_touch"
+      },
+      {
+        "traitId": "crafty_sagger"
+      }
     ],
     "resistances": {
       "poison": "immune",
@@ -4007,9 +4327,13 @@
       "swords"
     ],
     "skillId": "boom_boxer",
-    "traitIds": [
-      "critical_massacre",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -4039,9 +4363,13 @@
       "swords"
     ],
     "skillId": "bird_brain",
-    "traitIds": [
-      "artful_dodger",
-      "fast_learner"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "fast_learner"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -4090,8 +4418,10 @@
       "swords"
     ],
     "skillId": "diabolist",
-    "traitIds": [
-      "crafty_fizzler"
+    "traits": [
+      {
+        "traitId": "crafty_fizzler"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -4135,9 +4465,13 @@
       "swords"
     ],
     "skillId": "wind_blower",
-    "traitIds": [
-      "artful_dodger",
-      "giant_killer"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "giant_killer"
+      }
     ],
     "resistances": {
       "woosh": "immune",
@@ -4187,9 +4521,13 @@
       "staves"
     ],
     "skillId": "woosh_zap",
-    "traitIds": [
-      "psycho",
-      "desperado"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "desperado"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -4224,10 +4562,16 @@
       "swords"
     ],
     "skillId": "seal",
-    "traitIds": [
-      "magic_regenerator",
-      "big_hitter",
-      "crafty_confuser"
+    "traits": [
+      {
+        "traitId": "magic_regenerator"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "crafty_confuser"
+      }
     ],
     "resistances": {
       "crack": "weak",
@@ -4263,8 +4607,10 @@
       "whips"
     ],
     "skillId": "aquapothecary",
-    "traitIds": [
-      "strangely_alluring"
+    "traits": [
+      {
+        "traitId": "strangely_alluring"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -4305,9 +4651,13 @@
       "staves"
     ],
     "skillId": "bounty_hunter",
-    "traitIds": [
-      "psycho",
-      "talent_scout"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "talent_scout"
+      }
     ],
     "resistances": {
       "sizz": "immune",
@@ -4338,9 +4688,13 @@
       "swords"
     ],
     "skillId": "woosh_crack",
-    "traitIds": [
-      "crackmeister",
-      "crafty_cracker"
+    "traits": [
+      {
+        "traitId": "crackmeister"
+      },
+      {
+        "traitId": "crafty_cracker"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -4382,9 +4736,13 @@
       "whips"
     ],
     "skillId": "bang_woosh",
-    "traitIds": [
-      "wooshmeister",
-      "crafty_dimmer"
+    "traits": [
+      {
+        "traitId": "wooshmeister"
+      },
+      {
+        "traitId": "crafty_dimmer"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -4414,9 +4772,13 @@
       "swords"
     ],
     "skillId": "darklight_slashes",
-    "traitIds": [
-      "counterstriker",
-      "crafty_paralyser"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "crafty_paralyser"
+      }
     ],
     "resistances": {
       "paralysis": "immune",
@@ -4446,9 +4808,13 @@
       "staves"
     ],
     "skillId": "frizz_zam",
-    "traitIds": [
-      "frizzmeister",
-      "desperado"
+    "traits": [
+      {
+        "traitId": "frizzmeister"
+      },
+      {
+        "traitId": "desperado"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -4475,11 +4841,19 @@
       "staves"
     ],
     "skillId": "wormonger",
-    "traitIds": [
-      "poisonous",
-      "paralysing",
-      "grand_slammer",
-      "late_riser"
+    "traits": [
+      {
+        "traitId": "poisonous"
+      },
+      {
+        "traitId": "paralysing"
+      },
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "late_riser"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -4525,9 +4899,13 @@
       "whips"
     ],
     "skillId": "slimer",
-    "traitIds": [
-      "critical_massacre",
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {},
     "obtainments": [],
@@ -4554,9 +4932,13 @@
       "staves"
     ],
     "skillId": "cleanser",
-    "traitIds": [
-      "hit_squad",
-      "giant_killer"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "giant_killer"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -4588,9 +4970,13 @@
       "swords"
     ],
     "skillId": "enfeebler",
-    "traitIds": [
-      "close_scraper",
-      "gold_getter"
+    "traits": [
+      {
+        "traitId": "close_scraper"
+      },
+      {
+        "traitId": "gold_getter"
+      }
     ],
     "resistances": {
       "sizz": "immune",
@@ -4621,10 +5007,16 @@
       "swords"
     ],
     "skillId": "frizz_woosh",
-    "traitIds": [
-      "early_bird",
-      "hit_squad",
-      "yellow_belly"
+    "traits": [
+      {
+        "traitId": "early_bird"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "yellow_belly"
+      }
     ],
     "resistances": {
       "zap": "immune",
@@ -4655,9 +5047,13 @@
       "swords"
     ],
     "skillId": "dragon_lore",
-    "traitIds": [
-      "hit_squad",
-      "giant_killer"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "giant_killer"
+      }
     ],
     "resistances": {
       "confusion": "immune",
@@ -4696,9 +5092,13 @@
       "staves"
     ],
     "skillId": "cure_all",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_dazzler"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_dazzler"
+      }
     ],
     "resistances": {
       "cold_breath": "immune",
@@ -4748,8 +5148,10 @@
       "whips"
     ],
     "skillId": "fortifier",
-    "traitIds": [
-      "crafty_poisoner"
+    "traits": [
+      {
+        "traitId": "crafty_poisoner"
+      }
     ],
     "resistances": {
       "poison": "weak",
@@ -4789,7 +5191,7 @@
       "whips"
     ],
     "skillId": "all_rounder",
-    "traitIds": [],
+    "traits": [],
     "resistances": {
       "sleep": "immune",
       "inaction": "weak"
@@ -4822,9 +5224,13 @@
       "staves"
     ],
     "skillId": "sizz_zam",
-    "traitIds": [
-      "sizzmeister",
-      "crafty_paralyser"
+    "traits": [
+      {
+        "traitId": "sizzmeister"
+      },
+      {
+        "traitId": "crafty_paralyser"
+      }
     ],
     "resistances": {
       "zap": "immune",
@@ -4859,7 +5265,7 @@
       "swords"
     ],
     "skillId": "fortifier",
-    "traitIds": [],
+    "traits": [],
     "resistances": {
       "dazzle": "weak",
       "decelerate": "immune"
@@ -4903,9 +5309,13 @@
       "staves"
     ],
     "skillId": "dragon_lore",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_sapper"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_sapper"
+      }
     ],
     "resistances": {
       "fire_breath": "immune",
@@ -4946,9 +5356,13 @@
       "whips"
     ],
     "skillId": "champion",
-    "traitIds": [
-      "fly_swatter",
-      "crafty_blade_blunter"
+    "traits": [
+      {
+        "traitId": "fly_swatter"
+      },
+      {
+        "traitId": "crafty_blade_blunter"
+      }
     ],
     "resistances": {
       "decelerate": "immune",
@@ -4979,10 +5393,16 @@
       "staves"
     ],
     "skillId": "speedster",
-    "traitIds": [
-      "early_bird",
-      "hit_squad",
-      "foot_dragger"
+    "traits": [
+      {
+        "traitId": "early_bird"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "foot_dragger"
+      }
     ],
     "resistances": {
       "paralysis": "weak",
@@ -5034,8 +5454,10 @@
       "swords"
     ],
     "skillId": "bird_brain",
-    "traitIds": [
-      "artful_dodger"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      }
     ],
     "resistances": {
       "inaction": "immune",
@@ -5083,8 +5505,10 @@
       "swords"
     ],
     "skillId": "all_rounder",
-    "traitIds": [
-      "rabble_rouser"
+    "traits": [
+      {
+        "traitId": "rabble_rouser"
+      }
     ],
     "resistances": {
       "sleep": "immune",
@@ -5119,9 +5543,13 @@
       "swords"
     ],
     "skillId": "bang_crack",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_woosher"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_woosher"
+      }
     ],
     "resistances": {
       "bang": "immune",
@@ -5162,8 +5590,10 @@
       "swords"
     ],
     "skillId": "bad_breath",
-    "traitIds": [
-      "poisonous"
+    "traits": [
+      {
+        "traitId": "poisonous"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -5209,9 +5639,13 @@
       "staves"
     ],
     "skillId": "bang_zap",
-    "traitIds": [
-      "hit_squad",
-      "fast_learner"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "fast_learner"
+      }
     ],
     "resistances": {
       "bang": "weak",
@@ -5251,9 +5685,13 @@
       "staves"
     ],
     "skillId": "ice",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_ice_breather"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_ice_breather"
+      }
     ],
     "resistances": {
       "bang": "immune",
@@ -5283,10 +5721,16 @@
       "staves"
     ],
     "skillId": "green_finger",
-    "traitIds": [
-      "steady_recovery",
-      "big_hitter",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "steady_recovery"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -5317,8 +5761,10 @@
       "swords"
     ],
     "skillId": "aquapothecary",
-    "traitIds": [
-      "crafty_abiliterator"
+    "traits": [
+      {
+        "traitId": "crafty_abiliterator"
+      }
     ],
     "resistances": {
       "fire_breath": "weak",
@@ -5357,9 +5803,13 @@
       "swords"
     ],
     "skillId": "woosh_zap",
-    "traitIds": [
-      "hit_squad",
-      "rabble_rouser"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "rabble_rouser"
+      }
     ],
     "resistances": {
       "zam": "immune",
@@ -5394,8 +5844,10 @@
       "swords"
     ],
     "skillId": "thunderwind_slashes",
-    "traitIds": [
-      "able_ambusher"
+    "traits": [
+      {
+        "traitId": "able_ambusher"
+      }
     ],
     "resistances": {
       "whack": "weak",
@@ -5430,9 +5882,13 @@
       "swords"
     ],
     "skillId": "anti_dragon",
-    "traitIds": [
-      "psycho",
-      "crafty_donker"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "crafty_donker"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -5472,9 +5928,13 @@
       "staves"
     ],
     "skillId": "cleric",
-    "traitIds": [
-      "critical_massacre",
-      "close_scraper"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "close_scraper"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -5519,9 +5979,13 @@
       "staves"
     ],
     "skillId": "bombardier",
-    "traitIds": [
-      "able_ambusher",
-      "crafty_banger"
+    "traits": [
+      {
+        "traitId": "able_ambusher"
+      },
+      {
+        "traitId": "crafty_banger"
+      }
     ],
     "resistances": {
       "fire_breath": "immune",
@@ -5557,9 +6021,13 @@
       "swords"
     ],
     "skillId": "anti_metal",
-    "traitIds": [
-      "hit_squad",
-      "heckling_hector"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "heckling_hector"
+      }
     ],
     "resistances": {
       "crack": "immune",
@@ -5608,9 +6076,13 @@
       "staves"
     ],
     "skillId": "speedster",
-    "traitIds": [
-      "able_ambusher",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "able_ambusher"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "dazzle": "immune",
@@ -5649,9 +6121,13 @@
       "swords"
     ],
     "skillId": "anti_metal",
-    "traitIds": [
-      "metal_beater",
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "metal_beater"
+      },
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {
       "bang": "weak",
@@ -5692,9 +6168,13 @@
       "whips"
     ],
     "skillId": "guerrilla",
-    "traitIds": [
-      "hit_squad",
-      "yellow_belly"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "yellow_belly"
+      }
     ],
     "resistances": {
       "inaction": "immune",
@@ -5728,9 +6208,13 @@
       "whips"
     ],
     "skillId": "antimagic",
-    "traitIds": [
-      "hit_squad",
-      "crafty_zammer"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_zammer"
+      }
     ],
     "resistances": {
       "dim": "immune",
@@ -5766,9 +6250,13 @@
       "whips"
     ],
     "skillId": "healer",
-    "traitIds": [
-      "health_professional",
-      "crafty_magic_drainer"
+    "traits": [
+      {
+        "traitId": "health_professional"
+      },
+      {
+        "traitId": "crafty_magic_drainer"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -5804,9 +6292,13 @@
       "staves"
     ],
     "skillId": "assassin",
-    "traitIds": [
-      "perilous_parrier",
-      "crafty_blade_blunter"
+    "traits": [
+      {
+        "traitId": "perilous_parrier"
+      },
+      {
+        "traitId": "crafty_blade_blunter"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -5842,10 +6334,16 @@
       "staves"
     ],
     "skillId": "bang_sizz",
-    "traitIds": [
-      "early_bird",
-      "timid",
-      "crafty_inactivist"
+    "traits": [
+      {
+        "traitId": "early_bird"
+      },
+      {
+        "traitId": "timid"
+      },
+      {
+        "traitId": "crafty_inactivist"
+      }
     ],
     "resistances": {
       "sag": "immune",
@@ -5889,9 +6387,13 @@
       "staves"
     ],
     "skillId": "wind_blower",
-    "traitIds": [
-      "wooshmeister",
-      "wave_of_relief"
+    "traits": [
+      {
+        "traitId": "wooshmeister"
+      },
+      {
+        "traitId": "wave_of_relief"
+      }
     ],
     "resistances": {
       "confusion": "immune",
@@ -5921,9 +6423,13 @@
       "swords"
     ],
     "skillId": "materialist",
-    "traitIds": [
-      "psycho",
-      "crafty_sagger"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "crafty_sagger"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -5963,9 +6469,13 @@
       "swords"
     ],
     "skillId": "trickster",
-    "traitIds": [
-      "artful_dodger",
-      "fly_swatter"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "fly_swatter"
+      }
     ],
     "resistances": {
       "crack": "immune",
@@ -5996,9 +6506,13 @@
       "swords"
     ],
     "skillId": "saboteur",
-    "traitIds": [
-      "paralysing",
-      "lootist"
+    "traits": [
+      {
+        "traitId": "paralysing"
+      },
+      {
+        "traitId": "lootist"
+      }
     ],
     "resistances": {
       "sap": "immune",
@@ -6034,9 +6548,13 @@
       "whips"
     ],
     "skillId": "bombardier",
-    "traitIds": [
-      "metal_body",
-      "escape_artist"
+    "traits": [
+      {
+        "traitId": "metal_body"
+      },
+      {
+        "traitId": "escape_artist"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -6113,8 +6631,10 @@
       "staves"
     ],
     "skillId": "mage_aid",
-    "traitIds": [
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "whack": "weak",
@@ -6154,9 +6674,13 @@
       "swords"
     ],
     "skillId": "berserker",
-    "traitIds": [
-      "crafty_abiliterator",
-      "crafty_blade_blunter"
+    "traits": [
+      {
+        "traitId": "crafty_abiliterator"
+      },
+      {
+        "traitId": "crafty_blade_blunter"
+      }
     ],
     "resistances": {
       "confusion": "immune",
@@ -6191,8 +6715,10 @@
       "swords"
     ],
     "skillId": "antimagic",
-    "traitIds": [
-      "crafty_dazzler"
+    "traits": [
+      {
+        "traitId": "crafty_dazzler"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -6229,10 +6755,16 @@
       "staves"
     ],
     "skillId": "missing_lynx",
-    "traitIds": [
-      "grand_slammer",
-      "imposing",
-      "crafty_woosher"
+    "traits": [
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "imposing"
+      },
+      {
+        "traitId": "crafty_woosher"
+      }
     ],
     "resistances": {
       "woosh": "absorb",
@@ -6280,10 +6812,16 @@
       "swords"
     ],
     "skillId": "dragon_lore",
-    "traitIds": [
-      "big_hitter",
-      "tactical_trooper",
-      "crafty_zapper"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "tactical_trooper"
+      },
+      {
+        "traitId": "crafty_zapper"
+      }
     ],
     "resistances": {
       "woosh": "weak",
@@ -6315,10 +6853,16 @@
       "staves"
     ],
     "skillId": "frizz_zap",
-    "traitIds": [
-      "early_bird",
-      "strangely_alluring",
-      "yellow_belly"
+    "traits": [
+      {
+        "traitId": "early_bird"
+      },
+      {
+        "traitId": "strangely_alluring"
+      },
+      {
+        "traitId": "yellow_belly"
+      }
     ],
     "resistances": {
       "sizz": "immune",
@@ -6348,9 +6892,13 @@
       "swords"
     ],
     "skillId": "enfeebler",
-    "traitIds": [
-      "counterstriker",
-      "heckling_hector"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "heckling_hector"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -6380,10 +6928,16 @@
       "whips"
     ],
     "skillId": "sizz_zap",
-    "traitIds": [
-      "hit_squad",
-      "sizzmeister",
-      "crafty_sizzer"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "sizzmeister"
+      },
+      {
+        "traitId": "crafty_sizzer"
+      }
     ],
     "resistances": {
       "zam": "immune",
@@ -6413,8 +6967,10 @@
       "staves"
     ],
     "skillId": "breath",
-    "traitIds": [
-      "desperado"
+    "traits": [
+      {
+        "traitId": "desperado"
+      }
     ],
     "resistances": {
       "fire_breath": "immune",
@@ -6453,9 +7009,13 @@
       "staves"
     ],
     "skillId": "crack_zap",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_confuser"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_confuser"
+      }
     ],
     "resistances": {
       "sizz": "immune",
@@ -6485,9 +7045,13 @@
       "staves"
     ],
     "skillId": "hive_mind",
-    "traitIds": [
-      "psycho",
-      "crafty_abiliterator"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "crafty_abiliterator"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -6522,9 +7086,13 @@
       "staves"
     ],
     "skillId": "sizz_zap",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_fire_breather"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_fire_breather"
+      }
     ],
     "resistances": {
       "frizz": "absorb",
@@ -6562,9 +7130,13 @@
       "swords"
     ],
     "skillId": "bolsterer",
-    "traitIds": [
-      "frizzmeister",
-      "crafty_frizzer"
+    "traits": [
+      {
+        "traitId": "frizzmeister"
+      },
+      {
+        "traitId": "crafty_frizzer"
+      }
     ],
     "resistances": {
       "frizz": "absorb",
@@ -6606,9 +7178,13 @@
       "swords"
     ],
     "skillId": "cold_sleep",
-    "traitIds": [
-      "able_ambusher",
-      "poisonous_touch"
+    "traits": [
+      {
+        "traitId": "able_ambusher"
+      },
+      {
+        "traitId": "poisonous_touch"
+      }
     ],
     "resistances": {
       "confusion": "immune",
@@ -6647,9 +7223,13 @@
       "swords"
     ],
     "skillId": "woosh_zam",
-    "traitIds": [
-      "artful_dodger",
-      "confusing_touch"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "confusing_touch"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -6689,8 +7269,10 @@
       "swords"
     ],
     "skillId": "healer",
-    "traitIds": [
-      "paralysing_touch"
+    "traits": [
+      {
+        "traitId": "paralysing_touch"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -6731,9 +7313,13 @@
       "whips"
     ],
     "skillId": "muspell",
-    "traitIds": [
-      "zammeister",
-      "heckling_hector"
+    "traits": [
+      {
+        "traitId": "zammeister"
+      },
+      {
+        "traitId": "heckling_hector"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -6787,9 +7373,13 @@
       "swords"
     ],
     "skillId": "guerrilla",
-    "traitIds": [
-      "critical_massacre",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "sag": "immune",
@@ -6829,9 +7419,13 @@
       "staves"
     ],
     "skillId": "toxifier",
-    "traitIds": [
-      "paralysing",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "paralysing"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -6862,8 +7456,10 @@
       "swords"
     ],
     "skillId": "bird_brain",
-    "traitIds": [
-      "fly_swatter"
+    "traits": [
+      {
+        "traitId": "fly_swatter"
+      }
     ],
     "resistances": {
       "sleep": "immune",
@@ -6893,7 +7489,7 @@
       "swords"
     ],
     "skillId": "defender",
-    "traitIds": [],
+    "traits": [],
     "resistances": {
       "sleep": "immune",
       "blade_blunter": "weak"
@@ -6922,9 +7518,13 @@
       "staves"
     ],
     "skillId": "woosh_zam",
-    "traitIds": [
-      "zammeister",
-      "crafty_zammer"
+    "traits": [
+      {
+        "traitId": "zammeister"
+      },
+      {
+        "traitId": "crafty_zammer"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -6954,9 +7554,13 @@
       "swords"
     ],
     "skillId": "assassin",
-    "traitIds": [
-      "counterstriker",
-      "crafty_confuser"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "crafty_confuser"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -7005,9 +7609,13 @@
       "swords"
     ],
     "skillId": "graveheart",
-    "traitIds": [
-      "hit_squad",
-      "confusing_touch"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "confusing_touch"
+      }
     ],
     "resistances": {
       "sizz": "immune",
@@ -7044,9 +7652,13 @@
       "whips"
     ],
     "skillId": "green_finger",
-    "traitIds": [
-      "counterstriker",
-      "crafty_sizzer"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "crafty_sizzer"
+      }
     ],
     "resistances": {
       "zap": "immune",
@@ -7075,10 +7687,16 @@
       "staves"
     ],
     "skillId": "breath",
-    "traitIds": [
-      "artful_dodger",
-      "big_hitter",
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {
       "crack": "weak",
@@ -7119,9 +7737,13 @@
       "staves"
     ],
     "skillId": "huntsman",
-    "traitIds": [
-      "critical_massacre",
-      "imposing"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "imposing"
+      }
     ],
     "resistances": {
       "confusion": "weak",
@@ -7156,10 +7778,16 @@
       "staves"
     ],
     "skillId": "woosh_crack",
-    "traitIds": [
-      "strangely_alluring",
-      "fast_learner",
-      "crafty_magical_saboteur"
+    "traits": [
+      {
+        "traitId": "strangely_alluring"
+      },
+      {
+        "traitId": "fast_learner"
+      },
+      {
+        "traitId": "crafty_magical_saboteur"
+      }
     ],
     "resistances": {
       "decelerate": "immune",
@@ -7194,9 +7822,13 @@
       "swords"
     ],
     "skillId": "nightmare",
-    "traitIds": [
-      "critical_massacre",
-      "pro_talent_scout"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "pro_talent_scout"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -7235,9 +7867,13 @@
       "swords"
     ],
     "skillId": "frizz_bang",
-    "traitIds": [
-      "bangmeister",
-      "crafty_banger"
+    "traits": [
+      {
+        "traitId": "bangmeister"
+      },
+      {
+        "traitId": "crafty_banger"
+      }
     ],
     "resistances": {
       "bang": "immune",
@@ -7277,9 +7913,13 @@
       "swords"
     ],
     "skillId": "muspell",
-    "traitIds": [
-      "desperado",
-      "crafty_sagger"
+    "traits": [
+      {
+        "traitId": "desperado"
+      },
+      {
+        "traitId": "crafty_sagger"
+      }
     ],
     "resistances": {
       "sag": "immune",
@@ -7310,9 +7950,13 @@
       "staves"
     ],
     "skillId": "dark_knight",
-    "traitIds": [
-      "psycho",
-      "zammeister"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "zammeister"
+      }
     ],
     "resistances": {
       "zam": "immune",
@@ -7356,9 +8000,13 @@
       "staves"
     ],
     "skillId": "breath",
-    "traitIds": [
-      "artful_dodger",
-      "magic_regenerator"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "magic_regenerator"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -7388,8 +8036,10 @@
       "staves"
     ],
     "skillId": "cold_sleep",
-    "traitIds": [
-      "desperado"
+    "traits": [
+      {
+        "traitId": "desperado"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -7430,9 +8080,13 @@
       "swords"
     ],
     "skillId": "bird_brain",
-    "traitIds": [
-      "artful_dodger",
-      "heckling_hector"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "heckling_hector"
+      }
     ],
     "resistances": {
       "bang": "weak",
@@ -7462,9 +8116,13 @@
       "staves"
     ],
     "skillId": "wonder_construction",
-    "traitIds": [
-      "gold_getter",
-      "lootist"
+    "traits": [
+      {
+        "traitId": "gold_getter"
+      },
+      {
+        "traitId": "lootist"
+      }
     ],
     "resistances": {
       "dim": "immune",
@@ -7500,10 +8158,16 @@
       "staves"
     ],
     "skillId": "anti_dragon",
-    "traitIds": [
-      "big_hitter",
-      "hit_squad",
-      "intimidating"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "intimidating"
+      }
     ],
     "resistances": {
       "sizz": "weak",
@@ -7549,8 +8213,10 @@
       "swords"
     ],
     "skillId": "frizz_woosh",
-    "traitIds": [
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -7581,9 +8247,13 @@
       "swords"
     ],
     "skillId": "firewind_slashes",
-    "traitIds": [
-      "able_ambusher",
-      "giant_killer"
+    "traits": [
+      {
+        "traitId": "able_ambusher"
+      },
+      {
+        "traitId": "giant_killer"
+      }
     ],
     "resistances": {
       "crack": "immune",
@@ -7624,9 +8294,13 @@
       "whips"
     ],
     "skillId": "bang_crack",
-    "traitIds": [
-      "fast_learner",
-      "crafty_magical_saboteur"
+    "traits": [
+      {
+        "traitId": "fast_learner"
+      },
+      {
+        "traitId": "crafty_magical_saboteur"
+      }
     ],
     "resistances": {
       "sap": "immune",
@@ -7662,9 +8336,13 @@
       "whips"
     ],
     "skillId": "cure_all",
-    "traitIds": [
-      "health_professional",
-      "close_scraper"
+    "traits": [
+      {
+        "traitId": "health_professional"
+      },
+      {
+        "traitId": "close_scraper"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -7694,8 +8372,10 @@
       "staves"
     ],
     "skillId": "boom_boxer",
-    "traitIds": [
-      "intimidating"
+    "traits": [
+      {
+        "traitId": "intimidating"
+      }
     ],
     "resistances": {
       "bang": "immune",
@@ -7740,11 +8420,19 @@
       "staves"
     ],
     "skillId": "bjorn",
-    "traitIds": [
-      "last_word",
-      "grand_slammer",
-      "hit_squad",
-      "imposing"
+    "traits": [
+      {
+        "traitId": "last_word"
+      },
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "imposing"
+      }
     ],
     "resistances": {
       "zap": "immune",
@@ -7786,9 +8474,13 @@
       "staves"
     ],
     "skillId": "naturalist",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_zammer"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_zammer"
+      }
     ],
     "resistances": {
       "fire_breath": "immune",
@@ -7824,10 +8516,16 @@
       "staves"
     ],
     "skillId": "anti_metal",
-    "traitIds": [
-      "last_word",
-      "big_hitter",
-      "crafty_decelerater"
+    "traits": [
+      {
+        "traitId": "last_word"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "crafty_decelerater"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -7872,9 +8570,13 @@
       "swords"
     ],
     "skillId": "barricade",
-    "traitIds": [
-      "critical_massacre",
-      "crafty_sapper"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "crafty_sapper"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -7918,9 +8620,13 @@
       "swords"
     ],
     "skillId": "crack_zam",
-    "traitIds": [
-      "double_trouble",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -7955,8 +8661,10 @@
       "whips"
     ],
     "skillId": "all_rounder",
-    "traitIds": [
-      "rabble_rouser"
+    "traits": [
+      {
+        "traitId": "rabble_rouser"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -7986,8 +8694,10 @@
       "staves"
     ],
     "skillId": "bad_breath",
-    "traitIds": [
-      "poisonous"
+    "traits": [
+      {
+        "traitId": "poisonous"
+      }
     ],
     "resistances": {
       "poison": "immune",
@@ -8022,9 +8732,13 @@
       "staves"
     ],
     "skillId": "ice",
-    "traitIds": [
-      "frizzmeister",
-      "crafty_fire_breather"
+    "traits": [
+      {
+        "traitId": "frizzmeister"
+      },
+      {
+        "traitId": "crafty_fire_breather"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -8064,10 +8778,16 @@
       "whips"
     ],
     "skillId": "thornella",
-    "traitIds": [
-      "health_professional",
-      "big_hitter",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "health_professional"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "crack": "immune",
@@ -8109,9 +8829,13 @@
       "swords"
     ],
     "skillId": "berserker",
-    "traitIds": [
-      "psycho",
-      "crafty_gobstopper"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "crafty_gobstopper"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -8141,9 +8865,13 @@
       "swords"
     ],
     "skillId": "assassin",
-    "traitIds": [
-      "double_trouble",
-      "crafty_inactivist"
+    "traits": [
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "crafty_inactivist"
+      }
     ],
     "resistances": {
       "bang": "weak",
@@ -8179,9 +8907,13 @@
       "swords"
     ],
     "skillId": "reaper",
-    "traitIds": [
-      "hit_squad",
-      "imposing"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "imposing"
+      }
     ],
     "resistances": {
       "woosh": "immune",
@@ -8211,10 +8943,16 @@
       "swords"
     ],
     "skillId": "exorsus",
-    "traitIds": [
-      "big_hitter",
-      "sizzmeister",
-      "crafty_sizzer"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "sizzmeister"
+      },
+      {
+        "traitId": "crafty_sizzer"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -8261,9 +8999,13 @@
       "swords"
     ],
     "skillId": "crusader",
-    "traitIds": [
-      "gold_getter",
-      "crafty_devil"
+    "traits": [
+      {
+        "traitId": "gold_getter"
+      },
+      {
+        "traitId": "crafty_devil"
+      }
     ],
     "resistances": {
       "woosh": "immune",
@@ -8299,10 +9041,16 @@
       "swords"
     ],
     "skillId": "cure_all",
-    "traitIds": [
-      "psycho",
-      "hit_squad",
-      "comeback_kid"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "comeback_kid"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -8342,9 +9090,13 @@
       "swords"
     ],
     "skillId": "sizz_zam",
-    "traitIds": [
-      "metal_beater",
-      "fly_swatter"
+    "traits": [
+      {
+        "traitId": "metal_beater"
+      },
+      {
+        "traitId": "fly_swatter"
+      }
     ],
     "resistances": {
       "crack": "immune",
@@ -8380,11 +9132,19 @@
       "staves"
     ],
     "skillId": "bang_zam",
-    "traitIds": [
-      "metal_body",
-      "early_bird",
-      "big_hitter",
-      "timid"
+    "traits": [
+      {
+        "traitId": "metal_body"
+      },
+      {
+        "traitId": "early_bird"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "timid"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -8442,11 +9202,19 @@
       "whips"
     ],
     "skillId": "dual_duellers",
-    "traitIds": [
-      "double_trouble",
-      "big_hitter",
-      "hit_squad",
-      "poisonous_touch"
+    "traits": [
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "poisonous_touch"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -8488,10 +9256,16 @@
       "staves"
     ],
     "skillId": "firewind_slashes",
-    "traitIds": [
-      "early_bird",
-      "hit_squad",
-      "foot_dragger"
+    "traits": [
+      {
+        "traitId": "early_bird"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "foot_dragger"
+      }
     ],
     "resistances": {
       "confusion": "immune",
@@ -8521,8 +9295,10 @@
       "staves"
     ],
     "skillId": "white_knight",
-    "traitIds": [
-      "critical_massacre"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -8552,7 +9328,7 @@
       "swords"
     ],
     "skillId": "fortifier",
-    "traitIds": [],
+    "traits": [],
     "resistances": {
       "confusion": "immune",
       "blade_blunter": "weak"
@@ -8581,9 +9357,13 @@
       "swords"
     ],
     "skillId": "crack_zap",
-    "traitIds": [
-      "wooshmeister",
-      "crackmeister"
+    "traits": [
+      {
+        "traitId": "wooshmeister"
+      },
+      {
+        "traitId": "crackmeister"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -8613,8 +9393,10 @@
       "swords"
     ],
     "skillId": "cursader",
-    "traitIds": [
-      "crafty_paralyser"
+    "traits": [
+      {
+        "traitId": "crafty_paralyser"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -8645,11 +9427,19 @@
       "whips"
     ],
     "skillId": "mortella",
-    "traitIds": [
-      "big_hitter",
-      "hit_squad",
-      "paralysing_touch",
-      "heckling_hector"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "paralysing_touch"
+      },
+      {
+        "traitId": "heckling_hector"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -8691,11 +9481,19 @@
       "swords"
     ],
     "skillId": "cleric",
-    "traitIds": [
-      "early_bird",
-      "giant_killer",
-      "close_scraper",
-      "foot_dragger"
+    "traits": [
+      {
+        "traitId": "early_bird"
+      },
+      {
+        "traitId": "giant_killer"
+      },
+      {
+        "traitId": "close_scraper"
+      },
+      {
+        "traitId": "foot_dragger"
+      }
     ],
     "resistances": {
       "woosh": "immune",
@@ -8736,9 +9534,13 @@
       "whips"
     ],
     "skillId": "frizz_zap",
-    "traitIds": [
-      "artful_dodger",
-      "crafty_sapper"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "crafty_sapper"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -8768,9 +9570,13 @@
       "swords"
     ],
     "skillId": "crack_sizz",
-    "traitIds": [
-      "psycho",
-      "sizzmeister"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "sizzmeister"
+      }
     ],
     "resistances": {
       "sizz": "immune",
@@ -8805,7 +9611,7 @@
       "whips"
     ],
     "skillId": "mage_aid",
-    "traitIds": [],
+    "traits": [],
     "resistances": {
       "decelerate": "immune",
       "dim": "weak"
@@ -8834,10 +9640,16 @@
       "swords"
     ],
     "skillId": "frizz_zam",
-    "traitIds": [
-      "fly_swatter",
-      "big_hitter",
-      "scare_stare"
+    "traits": [
+      {
+        "traitId": "fly_swatter"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "scare_stare"
+      }
     ],
     "resistances": {
       "zam": "immune",
@@ -8874,9 +9686,13 @@
       "swords"
     ],
     "skillId": "diminisher",
-    "traitIds": [
-      "counterstriker",
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {
       "whack": "weak",
@@ -8907,9 +9723,13 @@
       "staves"
     ],
     "skillId": "barricade",
-    "traitIds": [
-      "critical_massacre",
-      "paralysing"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "paralysing"
+      }
     ],
     "resistances": {
       "sizz": "immune",
@@ -8941,10 +9761,16 @@
       "whips"
     ],
     "skillId": "niflheim",
-    "traitIds": [
-      "big_hitter",
-      "hit_squad",
-      "crafty_dimmer"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_dimmer"
+      }
     ],
     "resistances": {
       "cold_breath": "weak",
@@ -8990,10 +9816,16 @@
       "whips"
     ],
     "skillId": "bang_sizz",
-    "traitIds": [
-      "big_hitter",
-      "hit_squad",
-      "crafty_cracker"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_cracker"
+      }
     ],
     "resistances": {
       "sizz": "absorb",
@@ -9035,8 +9867,10 @@
       "swords"
     ],
     "skillId": "healer",
-    "traitIds": [
-      "health_professional"
+    "traits": [
+      {
+        "traitId": "health_professional"
+      }
     ],
     "resistances": {
       "fizzle": "immune",
@@ -9066,9 +9900,13 @@
       "swords"
     ],
     "skillId": "bang_zam",
-    "traitIds": [
-      "bangmeister",
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "bangmeister"
+      },
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {
       "bang": "absorb",
@@ -9099,9 +9937,13 @@
       "swords"
     ],
     "skillId": "diabolist",
-    "traitIds": [
-      "counterstriker",
-      "heckling_hector"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "heckling_hector"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -9132,10 +9974,16 @@
       "swords"
     ],
     "skillId": "dorsal_fiend",
-    "traitIds": [
-      "wooshmeister",
-      "big_hitter",
-      "crafty_whacker"
+    "traits": [
+      {
+        "traitId": "wooshmeister"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "crafty_whacker"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -9177,9 +10025,13 @@
       "swords"
     ],
     "skillId": "bombardier",
-    "traitIds": [
-      "wooshmeister",
-      "crafty_woosher"
+    "traits": [
+      {
+        "traitId": "wooshmeister"
+      },
+      {
+        "traitId": "crafty_woosher"
+      }
     ],
     "resistances": {
       "crack": "immune",
@@ -9214,10 +10066,16 @@
       "swords"
     ],
     "skillId": "niflheim",
-    "traitIds": [
-      "big_hitter",
-      "scare_stare",
-      "crafty_woosher"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "scare_stare"
+      },
+      {
+        "traitId": "crafty_woosher"
+      }
     ],
     "resistances": {
       "zam": "immune",
@@ -9260,11 +10118,19 @@
       "staves"
     ],
     "skillId": "flute_warrior",
-    "traitIds": [
-      "double_trouble",
-      "last_word",
-      "grand_slammer",
-      "giant_killer"
+    "traits": [
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "last_word"
+      },
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "giant_killer"
+      }
     ],
     "resistances": {
       "zap": "immune",
@@ -9311,11 +10177,19 @@
       "staves"
     ],
     "skillId": "stormsgate_citadel",
-    "traitIds": [
-      "double_trouble",
-      "last_word",
-      "grand_slammer",
-      "perilous_parrier"
+    "traits": [
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "last_word"
+      },
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "perilous_parrier"
+      }
     ],
     "resistances": {
       "woosh": "immune",
@@ -9359,11 +10233,19 @@
       "staves"
     ],
     "skillId": "empyrea",
-    "traitIds": [
-      "grand_slammer",
-      "hit_squad",
-      "tactical_trooper",
-      "crafty_zapper"
+    "traits": [
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "tactical_trooper"
+      },
+      {
+        "traitId": "crafty_zapper"
+      }
     ],
     "resistances": {
       "zap": "absorb",
@@ -9404,9 +10286,13 @@
       "staves"
     ],
     "skillId": "bang_crack",
-    "traitIds": [
-      "metal_body",
-      "escape_artist"
+    "traits": [
+      {
+        "traitId": "metal_body"
+      },
+      {
+        "traitId": "escape_artist"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -9475,9 +10361,13 @@
       "swords"
     ],
     "skillId": "antimagic",
-    "traitIds": [
-      "zammeister",
-      "scare_stare"
+    "traits": [
+      {
+        "traitId": "zammeister"
+      },
+      {
+        "traitId": "scare_stare"
+      }
     ],
     "resistances": {
       "sizz": "immune",
@@ -9508,8 +10398,10 @@
       "staves"
     ],
     "skillId": "bounty_hunter",
-    "traitIds": [
-      "psycho"
+    "traits": [
+      {
+        "traitId": "psycho"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -9543,10 +10435,16 @@
       "staves"
     ],
     "skillId": "diabolist",
-    "traitIds": [
-      "big_hitter",
-      "hopeful_hitter",
-      "tactical_genius"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hopeful_hitter"
+      },
+      {
+        "traitId": "tactical_genius"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -9589,9 +10487,13 @@
       "swords"
     ],
     "skillId": "fear_monger",
-    "traitIds": [
-      "critical_massacre",
-      "perilous_parrier"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "perilous_parrier"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -9621,9 +10523,13 @@
       "staves"
     ],
     "skillId": "bounty_hunter",
-    "traitIds": [
-      "psycho",
-      "imposing"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "imposing"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -9657,8 +10563,10 @@
       "swords"
     ],
     "skillId": "champion",
-    "traitIds": [
-      "psycho"
+    "traits": [
+      {
+        "traitId": "psycho"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -9688,9 +10596,13 @@
       "swords"
     ],
     "skillId": "iceplosion_slashes",
-    "traitIds": [
-      "counterstriker",
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {
       "bang": "immune",
@@ -9727,9 +10639,13 @@
       "staves"
     ],
     "skillId": "toughie",
-    "traitIds": [
-      "critical_massacre",
-      "intimidating"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "intimidating"
+      }
     ],
     "resistances": {
       "zap": "immune",
@@ -9759,10 +10675,16 @@
       "whips"
     ],
     "skillId": "cleanser",
-    "traitIds": [
-      "big_hitter",
-      "hit_squad",
-      "crafty_decelerater"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_decelerater"
+      }
     ],
     "resistances": {
       "poison": {
@@ -9800,9 +10722,13 @@
       "swords"
     ],
     "skillId": "mime",
-    "traitIds": [
-      "counterstriker",
-      "deadly_touch"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "deadly_touch"
+      }
     ],
     "resistances": {
       "confusion": "weak",
@@ -9833,10 +10759,16 @@
       "swords"
     ],
     "skillId": "thunderwind_slashes",
-    "traitIds": [
-      "double_trouble",
-      "hit_squad",
-      "crafty_inactivist"
+    "traits": [
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_inactivist"
+      }
     ],
     "resistances": {
       "bang": "weak",
@@ -9873,9 +10805,13 @@
       "staves"
     ],
     "skillId": "martyr",
-    "traitIds": [
-      "last_word",
-      "giant_killer"
+    "traits": [
+      {
+        "traitId": "last_word"
+      },
+      {
+        "traitId": "giant_killer"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -9906,9 +10842,13 @@
       "swords"
     ],
     "skillId": "reaper",
-    "traitIds": [
-      "poisonous",
-      "magic_regenerator"
+    "traits": [
+      {
+        "traitId": "poisonous"
+      },
+      {
+        "traitId": "magic_regenerator"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -9945,9 +10885,13 @@
       "swords"
     ],
     "skillId": "reaper",
-    "traitIds": [
-      "imposing",
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "imposing"
+      },
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {
       "frizz": "weak",
@@ -9990,10 +10934,16 @@
       "swords"
     ],
     "skillId": "cleric",
-    "traitIds": [
-      "psycho",
-      "big_hitter",
-      "crafty_fire_breather"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "crafty_fire_breather"
+      }
     ],
     "resistances": {
       "zap": "absorb",
@@ -10039,11 +10989,19 @@
       "staves"
     ],
     "skillId": "fire",
-    "traitIds": [
-      "metal_body",
-      "last_word",
-      "big_hitter",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "metal_body"
+      },
+      {
+        "traitId": "last_word"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -10095,9 +11053,13 @@
       "swords"
     ],
     "skillId": "niflheim",
-    "traitIds": [
-      "scare_stare",
-      "crafty_fizzler"
+    "traits": [
+      {
+        "traitId": "scare_stare"
+      },
+      {
+        "traitId": "crafty_fizzler"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -10128,8 +11090,10 @@
       "swords"
     ],
     "skillId": "barricade",
-    "traitIds": [
-      "bangmeister"
+    "traits": [
+      {
+        "traitId": "bangmeister"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -10159,10 +11123,16 @@
       "whips"
     ],
     "skillId": "nightmare",
-    "traitIds": [
-      "crackmeister",
-      "crafty_ice_breather",
-      "crafty_sleeper"
+    "traits": [
+      {
+        "traitId": "crackmeister"
+      },
+      {
+        "traitId": "crafty_ice_breather"
+      },
+      {
+        "traitId": "crafty_sleeper"
+      }
     ],
     "resistances": {
       "zam": "immune",
@@ -10194,11 +11164,19 @@
       "whips"
     ],
     "skillId": "frizz_sizz",
-    "traitIds": [
-      "frizzmeister",
-      "hit_squad",
-      "sizzmeister",
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "frizzmeister"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "sizzmeister"
+      },
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -10229,10 +11207,16 @@
       "staves"
     ],
     "skillId": "cleanser",
-    "traitIds": [
-      "steady_recovery",
-      "hit_squad",
-      "crafty_fizzler"
+    "traits": [
+      {
+        "traitId": "steady_recovery"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_fizzler"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -10263,11 +11247,19 @@
       "swords"
     ],
     "skillId": "healer",
-    "traitIds": [
-      "health_professional",
-      "big_hitter",
-      "hit_squad",
-      "sleepy_touch"
+    "traits": [
+      {
+        "traitId": "health_professional"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "sleepy_touch"
+      }
     ],
     "resistances": {
       "woosh": "weak",
@@ -10303,9 +11295,13 @@
       "whips"
     ],
     "skillId": "captain_crow",
-    "traitIds": [
-      "psycho",
-      "rabble_rouser"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "rabble_rouser"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -10345,10 +11341,16 @@
       "swords"
     ],
     "skillId": "bang_zap",
-    "traitIds": [
-      "magic_regenerator",
-      "big_hitter",
-      "disruptive_wave"
+    "traits": [
+      {
+        "traitId": "magic_regenerator"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "disruptive_wave"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -10391,11 +11393,19 @@
       "staves"
     ],
     "skillId": "canzar",
-    "traitIds": [
-      "double_trouble",
-      "grand_slammer",
-      "hit_squad",
-      "close_scraper"
+    "traits": [
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "close_scraper"
+      }
     ],
     "resistances": {
       "frizz": "reflect",
@@ -10446,11 +11456,19 @@
       "staves"
     ],
     "skillId": "khalamari",
-    "traitIds": [
-      "psycho",
-      "grand_slammer",
-      "hit_squad",
-      "crafty_dazzler"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_dazzler"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -10491,11 +11509,19 @@
       "whips"
     ],
     "skillId": "dhoulmagus",
-    "traitIds": [
-      "psycho",
-      "counterstriker",
-      "zammeister",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "zammeister"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "woosh": "immune",
@@ -10528,11 +11554,19 @@
       "staves"
     ],
     "skillId": "ruin",
-    "traitIds": [
-      "double_trouble",
-      "last_word",
-      "grand_slammer",
-      "hopeful_hitter"
+    "traits": [
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "last_word"
+      },
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "hopeful_hitter"
+      }
     ],
     "resistances": {
       "woosh": "weak",
@@ -10568,10 +11602,16 @@
       "whips"
     ],
     "skillId": "ber_zapologist",
-    "traitIds": [
-      "critical_massacre",
-      "zapmeister",
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "zapmeister"
+      },
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {
       "fire_breath": "reflect"
@@ -10600,11 +11640,19 @@
       "swords"
     ],
     "skillId": "ber_breath",
-    "traitIds": [
-      "big_hitter",
-      "tactical_genius",
-      "crafty_zapper",
-      "crafty_gobstopper"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "tactical_genius"
+      },
+      {
+        "traitId": "crafty_zapper"
+      },
+      {
+        "traitId": "crafty_gobstopper"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -10642,11 +11690,19 @@
       "staves"
     ],
     "skillId": "ber_healer",
-    "traitIds": [
-      "artful_dodger",
-      "desperado",
-      "hit_squad",
-      "giant_killer"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "desperado"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "giant_killer"
+      }
     ],
     "resistances": {
       "woosh": "immune",
@@ -10680,11 +11736,19 @@
       "staves"
     ],
     "skillId": "ber_helpful",
-    "traitIds": [
-      "early_bird",
-      "yellow_belly",
-      "rabble_rouser",
-      "wave_of_relief"
+    "traits": [
+      {
+        "traitId": "early_bird"
+      },
+      {
+        "traitId": "yellow_belly"
+      },
+      {
+        "traitId": "rabble_rouser"
+      },
+      {
+        "traitId": "wave_of_relief"
+      }
     ],
     "resistances": {
       "sizz": "immune",
@@ -10715,10 +11779,16 @@
       "swords"
     ],
     "skillId": "ber_charmer",
-    "traitIds": [
-      "bouncer",
-      "close_scraper",
-      "crafty_confuser"
+    "traits": [
+      {
+        "traitId": "bouncer"
+      },
+      {
+        "traitId": "close_scraper"
+      },
+      {
+        "traitId": "crafty_confuser"
+      }
     ],
     "resistances": {
       "sizz": "immune",
@@ -10750,10 +11820,16 @@
       "swords"
     ],
     "skillId": "ber_dark_dynamiter",
-    "traitIds": [
-      "psycho",
-      "hit_squad",
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {
       "zap": "immune",
@@ -10785,11 +11861,19 @@
       "swords"
     ],
     "skillId": "ber_knight",
-    "traitIds": [
-      "counterstriker",
-      "close_scraper",
-      "disruptive_wave",
-      "crafty_sagger"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "close_scraper"
+      },
+      {
+        "traitId": "disruptive_wave"
+      },
+      {
+        "traitId": "crafty_sagger"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -10822,10 +11906,16 @@
       "staves"
     ],
     "skillId": "dragonlord",
-    "traitIds": [
-      "psycho",
-      "steady_recovery",
-      "big_hitter"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "steady_recovery"
+      },
+      {
+        "traitId": "big_hitter"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -10864,11 +11954,19 @@
       "staves"
     ],
     "skillId": "leopold",
-    "traitIds": [
-      "artful_dodger",
-      "early_bird",
-      "giant_killer",
-      "foot_dragger"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "early_bird"
+      },
+      {
+        "traitId": "giant_killer"
+      },
+      {
+        "traitId": "foot_dragger"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -10901,10 +11999,16 @@
       "swords"
     ],
     "skillId": "niflheim",
-    "traitIds": [
-      "desperado",
-      "big_hitter",
-      "crafty_whacker"
+    "traits": [
+      {
+        "traitId": "desperado"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "crafty_whacker"
+      }
     ],
     "resistances": {
       "bang": "weak",
@@ -10940,9 +12044,13 @@
       "staves"
     ],
     "skillId": "cursader",
-    "traitIds": [
-      "intimidating",
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "intimidating"
+      },
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -10980,11 +12088,19 @@
       "staves"
     ],
     "skillId": "nimzo",
-    "traitIds": [
-      "double_trouble",
-      "big_hitter",
-      "disruptive_wave",
-      "crafty_sapper"
+    "traits": [
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "disruptive_wave"
+      },
+      {
+        "traitId": "crafty_sapper"
+      }
     ],
     "resistances": {
       "zam": "absorb",
@@ -11020,10 +12136,16 @@
       "staves"
     ],
     "skillId": "bang_zap",
-    "traitIds": [
-      "metal_body",
-      "big_hitter",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "metal_body"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -11072,11 +12194,19 @@
       "staves"
     ],
     "skillId": "orochi",
-    "traitIds": [
-      "grand_slammer",
-      "hit_squad",
-      "tactical_genius",
-      "crafty_fire_breather"
+    "traits": [
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "tactical_genius"
+      },
+      {
+        "traitId": "crafty_fire_breather"
+      }
     ],
     "resistances": {
       "crack": "weak",
@@ -11112,9 +12242,13 @@
       "whips"
     ],
     "skillId": "crusader",
-    "traitIds": [
-      "comeback_kid",
-      "wave_of_relief"
+    "traits": [
+      {
+        "traitId": "comeback_kid"
+      },
+      {
+        "traitId": "wave_of_relief"
+      }
     ],
     "resistances": {
       "zap": "immune",
@@ -11155,9 +12289,13 @@
       "whips"
     ],
     "skillId": "green_finger",
-    "traitIds": [
-      "rabble_rouser",
-      "pro_talent_scout"
+    "traits": [
+      {
+        "traitId": "rabble_rouser"
+      },
+      {
+        "traitId": "pro_talent_scout"
+      }
     ],
     "resistances": {
       "zap": "immune",
@@ -11198,11 +12336,19 @@
       "swords"
     ],
     "skillId": "darklight_slashes",
-    "traitIds": [
-      "double_trouble",
-      "bangmeister",
-      "big_hitter",
-      "crafty_inactivist"
+    "traits": [
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "bangmeister"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "crafty_inactivist"
+      }
     ],
     "resistances": {
       "zap": "immune",
@@ -11248,11 +12394,19 @@
       "swords"
     ],
     "skillId": "dr_snapped",
-    "traitIds": [
-      "poisonous",
-      "big_hitter",
-      "hit_squad",
-      "confusing_touch"
+    "traits": [
+      {
+        "traitId": "poisonous"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "confusing_touch"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -11289,9 +12443,13 @@
       "swords"
     ],
     "skillId": "zoma",
-    "traitIds": [
-      "bouncer",
-      "tactical_trooper"
+    "traits": [
+      {
+        "traitId": "bouncer"
+      },
+      {
+        "traitId": "tactical_trooper"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -11323,10 +12481,16 @@
       "swords"
     ],
     "skillId": "hero_of_the_heavens",
-    "traitIds": [
-      "zapmeister",
-      "big_hitter",
-      "comeback_kid"
+    "traits": [
+      {
+        "traitId": "zapmeister"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "comeback_kid"
+      }
     ],
     "resistances": {
       "zap": "absorb",
@@ -11363,11 +12527,19 @@
       "whips"
     ],
     "skillId": "trickster",
-    "traitIds": [
-      "psycho",
-      "counterstriker",
-      "escape_artist",
-      "heckling_hector"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "escape_artist"
+      },
+      {
+        "traitId": "heckling_hector"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -11396,11 +12568,19 @@
       "staves"
     ],
     "skillId": "sagittar",
-    "traitIds": [
-      "double_trouble",
-      "early_bird",
-      "grand_slammer",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "early_bird"
+      },
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "bang": "immune",
@@ -11437,10 +12617,16 @@
       "swords"
     ],
     "skillId": "mortamor",
-    "traitIds": [
-      "magic_regenerator",
-      "big_hitter",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "magic_regenerator"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -11477,10 +12663,16 @@
       "staves"
     ],
     "skillId": "vile_void",
-    "traitIds": [
-      "big_hitter",
-      "intimidating",
-      "crafty_donker"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "intimidating"
+      },
+      {
+        "traitId": "crafty_donker"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -11530,11 +12722,19 @@
       "swords"
     ],
     "skillId": "muspell",
-    "traitIds": [
-      "big_hitter",
-      "hit_squad",
-      "crafty_fire_breather",
-      "crafty_ice_breather"
+    "traits": [
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_fire_breather"
+      },
+      {
+        "traitId": "crafty_ice_breather"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -11572,10 +12772,16 @@
       "staves"
     ],
     "skillId": "breath",
-    "traitIds": [
-      "zapmeister",
-      "big_hitter",
-      "tactical_genius"
+    "traits": [
+      {
+        "traitId": "zapmeister"
+      },
+      {
+        "traitId": "big_hitter"
+      },
+      {
+        "traitId": "tactical_genius"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -11612,10 +12818,16 @@
       "swords"
     ],
     "skillId": "crusader",
-    "traitIds": [
-      "counterstriker",
-      "hit_squad",
-      "intimidating"
+    "traits": [
+      {
+        "traitId": "counterstriker"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "intimidating"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -11656,9 +12868,13 @@
       "staves"
     ],
     "skillId": "rhapthorne",
-    "traitIds": [
-      "artful_dodger",
-      "disruptive_wave"
+    "traits": [
+      {
+        "traitId": "artful_dodger"
+      },
+      {
+        "traitId": "disruptive_wave"
+      }
     ],
     "resistances": {
       "zam": "absorb",
@@ -11687,11 +12903,19 @@
       "staves"
     ],
     "skillId": "aquarion",
-    "traitIds": [
-      "psycho",
-      "double_trouble",
-      "critical_massacre",
-      "grand_slammer"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "grand_slammer"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -11726,11 +12950,19 @@
       "swords"
     ],
     "skillId": "estark",
-    "traitIds": [
-      "grand_slammer",
-      "hit_squad",
-      "tactical_genius",
-      "disruptive_wave"
+    "traits": [
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "tactical_genius"
+      },
+      {
+        "traitId": "disruptive_wave"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -11766,11 +12998,19 @@
       "staves"
     ],
     "skillId": "rhapthorne_2",
-    "traitIds": [
-      "grand_slammer",
-      "hit_squad",
-      "tactical_trooper",
-      "crafty_zammer"
+    "traits": [
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "tactical_trooper"
+      },
+      {
+        "traitId": "crafty_zammer"
+      }
     ],
     "resistances": {
       "zam": "absorb",
@@ -11807,11 +13047,19 @@
       "swords"
     ],
     "skillId": "dragovian_lord",
-    "traitIds": [
-      "critical_massacre",
-      "steady_recovery",
-      "desperado",
-      "big_hitter"
+    "traits": [
+      {
+        "traitId": "critical_massacre"
+      },
+      {
+        "traitId": "steady_recovery"
+      },
+      {
+        "traitId": "desperado"
+      },
+      {
+        "traitId": "big_hitter"
+      }
     ],
     "resistances": {
       "sizz": "weak",
@@ -11845,11 +13093,19 @@
       "staves"
     ],
     "skillId": "great_godbird",
-    "traitIds": [
-      "double_trouble",
-      "grand_slammer",
-      "hit_squad",
-      "crafty_ice_breather"
+    "traits": [
+      {
+        "traitId": "double_trouble"
+      },
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "crafty_ice_breather"
+      }
     ],
     "resistances": {
       "zap": "absorb",
@@ -11887,9 +13143,13 @@
       "swords"
     ],
     "skillId": "wulfspade",
-    "traitIds": [
-      "psycho",
-      "crafty_zapper"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "crafty_zapper"
+      }
     ],
     "resistances": {
       "zam": "weak",
@@ -11929,9 +13189,13 @@
       "swords"
     ],
     "skillId": "hawkhart",
-    "traitIds": [
-      "psycho",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "zam": "weak",
@@ -11962,9 +13226,13 @@
       "swords"
     ],
     "skillId": "cluboon",
-    "traitIds": [
-      "psycho",
-      "giant_killer"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "giant_killer"
+      }
     ],
     "resistances": {
       "zam": "weak",
@@ -11995,9 +13263,13 @@
       "swords"
     ],
     "skillId": "diamagon",
-    "traitIds": [
-      "psycho",
-      "rabble_rouser"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "rabble_rouser"
+      }
     ],
     "resistances": {
       "zam": "weak",
@@ -12028,9 +13300,13 @@
       "swords"
     ],
     "skillId": "wulfspade_3",
-    "traitIds": [
-      "psycho",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -12062,10 +13338,16 @@
       "swords"
     ],
     "skillId": "hawkhart_3",
-    "traitIds": [
-      "psycho",
-      "early_bird",
-      "foot_dragger"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "early_bird"
+      },
+      {
+        "traitId": "foot_dragger"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -12104,9 +13386,13 @@
       "swords"
     ],
     "skillId": "cluboon_3",
-    "traitIds": [
-      "psycho",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -12138,9 +13424,13 @@
       "swords"
     ],
     "skillId": "diamagon_3",
-    "traitIds": [
-      "psycho",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "psycho"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "whack": "immune",
@@ -12172,9 +13462,13 @@
       "swords"
     ],
     "skillId": "cursader",
-    "traitIds": [
-      "zammeister",
-      "hit_squad"
+    "traits": [
+      {
+        "traitId": "zammeister"
+      },
+      {
+        "traitId": "hit_squad"
+      }
     ],
     "resistances": {
       "zap": "weak",
@@ -12207,10 +13501,16 @@
       "swords"
     ],
     "skillId": "wildcard",
-    "traitIds": [
-      "hit_squad",
-      "counteractivist",
-      "wave_of_relief"
+    "traits": [
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "counteractivist"
+      },
+      {
+        "traitId": "wave_of_relief"
+      }
     ],
     "resistances": {
       "zap": "absorb",
@@ -12241,11 +13541,19 @@
       "staves"
     ],
     "skillId": "zenith_dragon",
-    "traitIds": [
-      "desperado",
-      "grand_slammer",
-      "hit_squad",
-      "tactical_genius"
+    "traits": [
+      {
+        "traitId": "desperado"
+      },
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "tactical_genius"
+      }
     ],
     "resistances": {
       "zap": "immune",
@@ -12280,11 +13588,19 @@
       "swords"
     ],
     "skillId": "leonyx",
-    "traitIds": [
-      "grand_slammer",
-      "hit_squad",
-      "tactical_trooper",
-      "crafty_devil"
+    "traits": [
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "hit_squad"
+      },
+      {
+        "traitId": "tactical_trooper"
+      },
+      {
+        "traitId": "crafty_devil"
+      }
     ],
     "resistances": {
       "frizz": "immune",
@@ -12319,11 +13635,19 @@
       "staves"
     ],
     "skillId": "rigor_mortex",
-    "traitIds": [
-      "grand_slammer",
-      "bouncer",
-      "perilous_parrier",
-      "tactical_genius"
+    "traits": [
+      {
+        "traitId": "grand_slammer"
+      },
+      {
+        "traitId": "bouncer"
+      },
+      {
+        "traitId": "perilous_parrier"
+      },
+      {
+        "traitId": "tactical_genius"
+      }
     ],
     "resistances": {
       "sizz": "absorb",

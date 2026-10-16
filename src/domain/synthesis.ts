@@ -46,4 +46,22 @@ export interface LibraryOrderSynthesisRule {
   specialRecipeReplaces: "familyMixCandidate" | "allCandidates"
 }
 
-export type NormalSynthesisRule = LibraryOrderSynthesisRule
+export interface FamilyTableEntry {
+  families: [string, string]
+  /** The child for each rank of the second parent; a rank absent from the row gives none. */
+  results: Record<Rank, string>
+}
+
+/**
+ * Candidates read from a table of ordered family pairs (The Dark Prince): parents of two different families give the
+ * child of each order of their families, at the rank of the second parent, so the order of the parents matters. A
+ * child identical to a parent is not offered; parents of the same family, or of a family absent from the table, give
+ * none. Special recipes add their result to these candidates.
+ */
+export interface FamilyTableSynthesisRule {
+  kind: "familyTable"
+  /** @minItems 1 */
+  table: FamilyTableEntry[]
+}
+
+export type NormalSynthesisRule = LibraryOrderSynthesisRule | FamilyTableSynthesisRule

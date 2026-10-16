@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { useAppContext } from "../../app/context"
 
-defineProps<{ type: "scout" | "event" }>()
+const props = defineProps<{ type: "scout" | "egg" | "event" }>()
 
 const app = useAppContext()
 </script>
 
-<!-- Green "recruitable" / blue "event" tag: the tree node is obtained this way, without synthesis. -->
+<!-- Green "recruitable" / amber "egg" / blue "event" tag: the tree node is obtained this way, without synthesis. -->
 <template>
-  <span class="obtain-tag" :class="type">{{ type === "scout" ? app.text.value.recruitable : app.text.value.event }}</span>
+  <span class="obtain-tag" :class="type">{{ { scout: app.text.value.recruitable, egg: app.text.value.egg, event: app.text.value.event }[props.type] }}</span>
 </template>
 
 <style scoped>
@@ -27,6 +27,10 @@ const app = useAppContext()
 .scout {
   --tag-color: var(--success);
   --tag-soft: var(--success-soft);
+}
+.egg {
+  --tag-color: var(--warning);
+  --tag-soft: var(--warning-soft);
 }
 .event {
   --tag-color: var(--info);

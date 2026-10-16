@@ -1,0 +1,2328 @@
+[
+  {
+    "id": "frizz_afficionado",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "frizz" },
+      { "type": "ability", "points": 10, "abilityId": "flame_slash" },
+      { "type": "ability", "points": 20, "abilityId": "dragon_slash" },
+      { "type": "trait", "points": 30, "traitId": "max_mp_4" },
+      { "type": "ability", "points": 50, "abilityId": "fire_breath" },
+      { "type": "ability", "points": 70, "abilityId": "oomph" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_8" },
+      { "type": "ability", "points": 100, "abilityId": "frizzle" }
+    ]
+  },
+  {
+    "id": "splash_afficionado",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "splish" },
+      { "type": "ability", "points": 10, "abilityId": "heal" },
+      { "type": "ability", "points": 20, "abilityId": "slime_squisher" },
+      { "type": "trait", "points": 30, "traitId": "max_mp_4" },
+      { "type": "ability", "points": 50, "abilityId": "weird_dance" },
+      { "type": "ability", "points": 70, "abilityId": "blunt" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_8" },
+      { "type": "ability", "points": 100, "abilityId": "splash" }
+    ]
+  },
+  {
+    "id": "woosh_afficionado",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "woosh" },
+      { "type": "ability", "points": 10, "abilityId": "gust_slash" },
+      { "type": "ability", "points": 20, "abilityId": "nature_nerfer" },
+      { "type": "trait", "points": 30, "traitId": "max_mp_4" },
+      { "type": "ability", "points": 50, "abilityId": "wind_sickles" },
+      { "type": "ability", "points": 70, "abilityId": "insulate" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_8" },
+      { "type": "ability", "points": 100, "abilityId": "swoosh" }
+    ]
+  },
+  {
+    "id": "crag_afficionado",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "crag" },
+      { "type": "ability", "points": 10, "abilityId": "stone_s_throw" },
+      { "type": "ability", "points": 20, "abilityId": "beast_tamer" },
+      { "type": "trait", "points": 30, "traitId": "max_mp_4" },
+      { "type": "ability", "points": 50, "abilityId": "stomp" },
+      { "type": "ability", "points": 70, "abilityId": "buff" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_8" },
+      { "type": "ability", "points": 100, "abilityId": "craggle" }
+    ]
+  },
+  {
+    "id": "bang_afficionado",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "bang" },
+      { "type": "ability", "points": 10, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 20, "abilityId": "matter_scatterer" },
+      { "type": "trait", "points": 30, "traitId": "max_mp_4" },
+      { "type": "ability", "points": 50, "abilityId": "anchorman" },
+      { "type": "ability", "points": 70, "abilityId": "oomph" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_8" },
+      { "type": "ability", "points": 100, "abilityId": "boom" }
+    ]
+  },
+  {
+    "id": "crack_afficionado",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "crack" },
+      { "type": "ability", "points": 10, "abilityId": "kacrackle_slash" },
+      { "type": "ability", "points": 20, "abilityId": "demon_demeaner" },
+      { "type": "trait", "points": 30, "traitId": "max_mp_4" },
+      { "type": "ability", "points": 50, "abilityId": "cool_breath" },
+      { "type": "ability", "points": 70, "abilityId": "snooze" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_8" },
+      { "type": "ability", "points": 100, "abilityId": "crackle" }
+    ]
+  },
+  {
+    "id": "zap_afficionado",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "zap" },
+      { "type": "ability", "points": 10, "abilityId": "lightning_slash" },
+      { "type": "ability", "points": 20, "abilityId": "numb" },
+      { "type": "trait", "points": 30, "traitId": "max_mp_4" },
+      { "type": "ability", "points": 50, "abilityId": "knuckle_sandwich" },
+      { "type": "ability", "points": 70, "abilityId": "accelerate" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_8" },
+      { "type": "ability", "points": 100, "abilityId": "zapple" }
+    ]
+  },
+  {
+    "id": "sizz_afficionado",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "sizz" },
+      { "type": "ability", "points": 10, "abilityId": "dazzleflash" },
+      { "type": "ability", "points": 20, "abilityId": "undead_undoer" },
+      { "type": "trait", "points": 30, "traitId": "max_mp_4" },
+      { "type": "ability", "points": 50, "abilityId": "magic_pop" },
+      { "type": "ability", "points": 70, "abilityId": "ping" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_8" },
+      { "type": "ability", "points": 100, "abilityId": "sizzle" }
+    ]
+  },
+  {
+    "id": "zam_afficionado",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "zam" },
+      { "type": "ability", "points": 10, "abilityId": "attack_attacker" },
+      { "type": "ability", "points": 20, "abilityId": "victimiser" },
+      { "type": "trait", "points": 30, "traitId": "max_mp_4" },
+      { "type": "ability", "points": 50, "abilityId": "confusion_attack" },
+      { "type": "ability", "points": 70, "abilityId": "sap" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_8" },
+      { "type": "ability", "points": 100, "abilityId": "zammle" }
+    ]
+  },
+  {
+    "id": "blazer",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "fire_breath" },
+      { "type": "ability", "points": 10, "abilityId": "frizz" },
+      { "type": "trait", "points": 20, "traitId": "defence_8" },
+      { "type": "ability", "points": 30, "abilityId": "stone_s_throw" },
+      { "type": "ability", "points": 50, "abilityId": "fuddle" },
+      { "type": "trait", "points": 70, "traitId": "attack_8" },
+      { "type": "ability", "points": 85, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 100, "abilityId": "flame_breath" }
+    ]
+  },
+  {
+    "id": "chilly_receptionist",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "cool_breath" },
+      { "type": "ability", "points": 10, "abilityId": "crack" },
+      { "type": "trait", "points": 20, "traitId": "agility_8" },
+      { "type": "ability", "points": 30, "abilityId": "whack" },
+      { "type": "ability", "points": 50, "abilityId": "snooze" },
+      { "type": "trait", "points": 70, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 85, "abilityId": "dazzleflash" },
+      { "type": "ability", "points": 100, "abilityId": "chilly_breath" }
+    ]
+  },
+  {
+    "id": "shallow_breather",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "fire_breath" },
+      { "type": "ability", "points": 10, "abilityId": "cool_breath" },
+      { "type": "trait", "points": 20, "traitId": "attack_4" },
+      { "type": "ability", "points": 30, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 50, "abilityId": "deep_breath" },
+      { "type": "trait", "points": 70, "traitId": "attack_8" },
+      { "type": "ability", "points": 85, "abilityId": "flame_breath" },
+      { "type": "ability", "points": 100, "abilityId": "chilly_breath" }
+    ]
+  },
+  {
+    "id": "dancer",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "weird_dance" },
+      { "type": "ability", "points": 10, "abilityId": "sultry_dance" },
+      { "type": "ability", "points": 20, "abilityId": "mercurial_thrust" },
+      { "type": "trait", "points": 30, "traitId": "agility_4" },
+      { "type": "ability", "points": 50, "abilityId": "buff" },
+      { "type": "ability", "points": 70, "abilityId": "tap_dance" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_8" },
+      { "type": "ability", "points": 100, "abilityId": "sword_dance" }
+    ]
+  },
+  {
+    "id": "choreographer",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "decelerate" },
+      { "type": "ability", "points": 10, "abilityId": "dim" },
+      { "type": "ability", "points": 20, "abilityId": "weird_dance" },
+      { "type": "ability", "points": 30, "abilityId": "deceleratle" },
+      { "type": "ability", "points": 50, "abilityId": "dazzleflash" },
+      { "type": "ability", "points": 70, "abilityId": "sultry_dance" },
+      { "type": "ability", "points": 85, "abilityId": "fuddle_dance" },
+      { "type": "ability", "points": 100, "abilityId": "kerplunk_dance" }
+    ]
+  },
+  {
+    "id": "slimer",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "frizz" },
+      { "type": "ability", "points": 10, "abilityId": "heal" },
+      { "type": "ability", "points": 20, "abilityId": "slime_squisher" },
+      { "type": "ability", "points": 30, "abilityId": "zap" },
+      { "type": "ability", "points": 50, "abilityId": "accelerate" },
+      { "type": "ability", "points": 70, "abilityId": "dazzleflash" },
+      { "type": "ability", "points": 85, "abilityId": "midheal" },
+      { "type": "trait", "points": 100, "traitId": "auto-restora" }
+    ]
+  },
+  {
+    "id": "dragonheart",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "fire_breath" },
+      { "type": "ability", "points": 10, "abilityId": "cool_breath" },
+      { "type": "ability", "points": 20, "abilityId": "beast_tamer" },
+      { "type": "ability", "points": 30, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 50, "abilityId": "deep_breath" },
+      { "type": "ability", "points": 70, "abilityId": "war_cry" },
+      { "type": "ability", "points": 85, "abilityId": "flame_breath" },
+      { "type": "ability", "points": 100, "abilityId": "chilly_breath" },
+      { "type": "trait", "points": 120, "traitId": "auto-restora" }
+    ]
+  },
+  {
+    "id": "graveheart",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "poison_attack" },
+      { "type": "ability", "points": 10, "abilityId": "decelerate" },
+      { "type": "ability", "points": 20, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 30, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 50, "abilityId": "burning_breath" },
+      { "type": "ability", "points": 70, "abilityId": "confusion_attack" },
+      { "type": "ability", "points": 85, "abilityId": "whack" },
+      { "type": "ability", "points": 100, "abilityId": "kamikazee" }
+    ]
+  },
+  {
+    "id": "hive_mind",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "buff" },
+      { "type": "ability", "points": 10, "abilityId": "snooze" },
+      { "type": "ability", "points": 20, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 30, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 50, "abilityId": "paralysing_punch" },
+      { "type": "ability", "points": 70, "abilityId": "nature_nerfer" },
+      { "type": "ability", "points": 85, "abilityId": "intense_defence" },
+      { "type": "ability", "points": 100, "abilityId": "fuddle_dance" }
+    ]
+  },
+  {
+    "id": "materialist",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "crag" },
+      { "type": "ability", "points": 10, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 20, "abilityId": "matter_scatterer" },
+      { "type": "ability", "points": 30, "abilityId": "stone_s_throw" },
+      { "type": "ability", "points": 50, "abilityId": "kabuff" },
+      { "type": "ability", "points": 70, "abilityId": "fizzle" },
+      { "type": "ability", "points": 85, "abilityId": "knuckle_sandwich" },
+      { "type": "ability", "points": 100, "abilityId": "kamikazee" }
+    ]
+  },
+  {
+    "id": "naturalist",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 10, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 20, "abilityId": "attack_attacker" },
+      { "type": "ability", "points": 30, "abilityId": "mercurial_thrust" },
+      { "type": "ability", "points": 50, "abilityId": "tongue_lashing" },
+      { "type": "ability", "points": 70, "abilityId": "war_cry" },
+      { "type": "ability", "points": 85, "abilityId": "hatchet_man" },
+      { "type": "trait", "points": 100, "traitId": "auto-restora" }
+    ]
+  },
+  {
+    "id": "dark_artist",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "zam" },
+      { "type": "ability", "points": 10, "abilityId": "sap" },
+      { "type": "ability", "points": 20, "abilityId": "dim" },
+      { "type": "ability", "points": 30, "abilityId": "demon_demeaner" },
+      { "type": "ability", "points": 50, "abilityId": "drain_magic" },
+      { "type": "ability", "points": 70, "abilityId": "fizzle" },
+      { "type": "ability", "points": 85, "abilityId": "whack" },
+      { "type": "ability", "points": 100, "abilityId": "zammle" },
+      { "type": "trait", "points": 120, "traitId": "auto-cadabra" }
+    ]
+  },
+  {
+    "id": "blusterer",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "accelerate" },
+      { "type": "ability", "points": 10, "abilityId": "woosh" },
+      { "type": "ability", "points": 20, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 30, "abilityId": "acceleratle" },
+      { "type": "ability", "points": 50, "abilityId": "insulate" },
+      { "type": "ability", "points": 70, "abilityId": "wind_sickles" },
+      { "type": "ability", "points": 85, "abilityId": "insulatle" },
+      { "type": "ability", "points": 100, "abilityId": "brake_wind" },
+      { "type": "ability", "points": 120, "abilityId": "thin_air" }
+    ]
+  },
+  {
+    "id": "nature_child",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "squelch" },
+      { "type": "ability", "points": 10, "abilityId": "heal" },
+      { "type": "ability", "points": 20, "abilityId": "drain_magic" },
+      { "type": "ability", "points": 30, "abilityId": "snooze" },
+      { "type": "ability", "points": 50, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 70, "abilityId": "dazzle" },
+      { "type": "ability", "points": 85, "abilityId": "fizzle" },
+      { "type": "ability", "points": 100, "abilityId": "miracle_slash" },
+      { "type": "trait", "points": 120, "traitId": "auto-cadabra" }
+    ]
+  },
+  {
+    "id": "aquapothecary",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "splish" },
+      { "type": "ability", "points": 10, "abilityId": "heal" },
+      { "type": "ability", "points": 20, "abilityId": "cock-a-doodle-doo" },
+      { "type": "ability", "points": 30, "abilityId": "snooze" },
+      { "type": "ability", "points": 50, "abilityId": "midheal" },
+      { "type": "ability", "points": 70, "abilityId": "chilly_breath" },
+      { "type": "ability", "points": 85, "abilityId": "mist_me" },
+      { "type": "ability", "points": 100, "abilityId": "splash" },
+      { "type": "trait", "points": 120, "traitId": "auto-cadabra" }
+    ]
+  },
+  {
+    "id": "spicy_slasher",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "flame_slash" },
+      { "type": "ability", "points": 10, "abilityId": "frizz" },
+      { "type": "ability", "points": 20, "abilityId": "dragon_slash" },
+      { "type": "trait", "points": 30, "traitId": "attack_4" },
+      { "type": "ability", "points": 50, "abilityId": "squelch" },
+      { "type": "ability", "points": 70, "abilityId": "frizzle" },
+      { "type": "ability", "points": 85, "abilityId": "flame_breath" },
+      { "type": "trait", "points": 100, "traitId": "attack_8" },
+      { "type": "ability", "points": 120, "abilityId": "flamesplitter" }
+    ]
+  },
+  {
+    "id": "soggy_slasher",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "kacrackle_slash" },
+      { "type": "ability", "points": 10, "abilityId": "splish" },
+      { "type": "ability", "points": 20, "abilityId": "slime_squisher" },
+      { "type": "trait", "points": 30, "traitId": "wisdom_8" },
+      { "type": "ability", "points": 50, "abilityId": "cock-a-doodle-doo" },
+      { "type": "ability", "points": 70, "abilityId": "splash" },
+      { "type": "ability", "points": 85, "abilityId": "chilly_breath" },
+      { "type": "trait", "points": 100, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 120, "abilityId": "blightsplitter" }
+    ]
+  },
+  {
+    "id": "blowy_slasher",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "gust_slash" },
+      { "type": "ability", "points": 10, "abilityId": "woosh" },
+      { "type": "ability", "points": 20, "abilityId": "nature_nerfer" },
+      { "type": "trait", "points": 30, "traitId": "agility_8" },
+      { "type": "ability", "points": 50, "abilityId": "tingle" },
+      { "type": "ability", "points": 70, "abilityId": "wind_sickles" },
+      { "type": "ability", "points": 85, "abilityId": "swoosh" },
+      { "type": "trait", "points": 100, "traitId": "agility_16" },
+      { "type": "ability", "points": 120, "abilityId": "skysplitter" }
+    ]
+  },
+  {
+    "id": "stony_slasher",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "lightning_slash" },
+      { "type": "ability", "points": 10, "abilityId": "crag" },
+      { "type": "ability", "points": 20, "abilityId": "beast_tamer" },
+      { "type": "trait", "points": 30, "traitId": "defence_8" },
+      { "type": "ability", "points": 50, "abilityId": "defuddle" },
+      { "type": "ability", "points": 70, "abilityId": "stone_s_throw" },
+      { "type": "ability", "points": 85, "abilityId": "craggle" },
+      { "type": "trait", "points": 100, "traitId": "defence_16" },
+      { "type": "ability", "points": 120, "abilityId": "brightsplitter" }
+    ]
+  },
+  {
+    "id": "thrill-seeker",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "decelerate" },
+      { "type": "ability", "points": 10, "abilityId": "crack" },
+      { "type": "ability", "points": 20, "abilityId": "cool_breath" },
+      { "type": "ability", "points": 30, "abilityId": "sap" },
+      { "type": "ability", "points": 50, "abilityId": "war_cry" },
+      { "type": "ability", "points": 70, "abilityId": "whack" },
+      { "type": "ability", "points": 85, "abilityId": "fuddle" },
+      { "type": "trait", "points": 100, "traitId": "wisdom_24" },
+      { "type": "ability", "points": 120, "abilityId": "crackle" }
+    ]
+  },
+  {
+    "id": "hexcommunicator",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "zam" },
+      { "type": "ability", "points": 10, "abilityId": "sap" },
+      { "type": "ability", "points": 20, "abilityId": "cool_breath" },
+      { "type": "ability", "points": 30, "abilityId": "blunt" },
+      { "type": "ability", "points": 50, "abilityId": "fuddle" },
+      { "type": "ability", "points": 70, "abilityId": "numb" },
+      { "type": "ability", "points": 85, "abilityId": "whack" },
+      { "type": "trait", "points": 100, "traitId": "wisdom_24" },
+      { "type": "ability", "points": 120, "abilityId": "zammle" }
+    ]
+  },
+  {
+    "id": "speedster",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "accelerate" },
+      { "type": "ability", "points": 10, "abilityId": "heal" },
+      { "type": "ability", "points": 20, "abilityId": "decelerate" },
+      { "type": "trait", "points": 30, "traitId": "agility_4" },
+      { "type": "ability", "points": 50, "abilityId": "dodgy_dance" },
+      { "type": "ability", "points": 70, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 85, "abilityId": "acceleratle" },
+      { "type": "ability", "points": 100, "abilityId": "mercurial_thrust" }
+    ]
+  },
+  {
+    "id": "cupid",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "heal" },
+      { "type": "ability", "points": 10, "abilityId": "buff" },
+      { "type": "ability", "points": 20, "abilityId": "sizz" },
+      { "type": "ability", "points": 30, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 50, "abilityId": "sizzle" },
+      { "type": "ability", "points": 70, "abilityId": "dazzleflash" },
+      { "type": "trait", "points": 85, "traitId": "max_hp_8" },
+      { "type": "ability", "points": 100, "abilityId": "shining_shot" }
+    ]
+  },
+  {
+    "id": "power_player",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 10, "abilityId": "slime_squisher" },
+      { "type": "trait", "points": 20, "traitId": "attack_4" },
+      { "type": "ability", "points": 30, "abilityId": "seethe" },
+      { "type": "ability", "points": 50, "abilityId": "hatchet_man" },
+      { "type": "ability", "points": 70, "abilityId": "oomph" },
+      { "type": "trait", "points": 85, "traitId": "attack_12" },
+      { "type": "ability", "points": 100, "abilityId": "anchorman" }
+    ]
+  },
+  {
+    "id": "wild_child",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 10, "abilityId": "frenzy" },
+      { "type": "ability", "points": 20, "abilityId": "attack_attacker" },
+      { "type": "trait", "points": 30, "traitId": "attack_4" },
+      { "type": "ability", "points": 50, "abilityId": "confusion_attack" },
+      { "type": "ability", "points": 70, "abilityId": "war_cry" },
+      { "type": "ability", "points": 85, "abilityId": "persecutter" },
+      { "type": "ability", "points": 100, "abilityId": "fuddle_dance" }
+    ]
+  },
+  {
+    "id": "outlaw",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 10, "abilityId": "tongue_lashing" },
+      { "type": "trait", "points": 20, "traitId": "max_hp_4" },
+      { "type": "ability", "points": 30, "abilityId": "poison_attack" },
+      { "type": "ability", "points": 50, "abilityId": "stone_s_throw" },
+      { "type": "ability", "points": 70, "abilityId": "war_cry" },
+      { "type": "ability", "points": 85, "abilityId": "parallax" },
+      { "type": "ability", "points": 100, "abilityId": "hustle_dance" }
+    ]
+  },
+  {
+    "id": "fighter",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 10, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 20, "abilityId": "frenzy" },
+      { "type": "ability", "points": 30, "abilityId": "stone_s_throw" },
+      { "type": "ability", "points": 50, "abilityId": "hatchet_man" },
+      { "type": "ability", "points": 70, "abilityId": "roundhouse_kick" },
+      { "type": "ability", "points": 85, "abilityId": "war_cry" },
+      { "type": "ability", "points": 100, "abilityId": "knuckle_sandwich" }
+    ]
+  },
+  {
+    "id": "martial_maven",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 10, "abilityId": "seethe" },
+      { "type": "trait", "points": 20, "traitId": "max_hp_8" },
+      { "type": "ability", "points": 30, "abilityId": "roundhouse_kick" },
+      { "type": "ability", "points": 50, "abilityId": "knuckle_sandwich" },
+      { "type": "ability", "points": 70, "abilityId": "anchorman" },
+      { "type": "ability", "points": 85, "abilityId": "meditation" },
+      { "type": "ability", "points": 100, "abilityId": "multifists" }
+    ]
+  },
+  {
+    "id": "magic_maven",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "frizz" },
+      { "type": "ability", "points": 10, "abilityId": "heal" },
+      { "type": "ability", "points": 20, "abilityId": "crack" },
+      { "type": "ability", "points": 30, "abilityId": "drain_magic" },
+      { "type": "ability", "points": 50, "abilityId": "sap" },
+      { "type": "ability", "points": 70, "abilityId": "sizz" },
+      { "type": "ability", "points": 85, "abilityId": "woosh" },
+      { "type": "ability", "points": 100, "abilityId": "oomph" },
+      { "type": "ability", "points": 120, "abilityId": "splash" },
+      { "type": "ability", "points": 150, "abilityId": "boom" }
+    ]
+  },
+  {
+    "id": "blade_maven",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "flame_slash" },
+      { "type": "ability", "points": 10, "abilityId": "gust_slash" },
+      { "type": "trait", "points": 20, "traitId": "attack_4" },
+      { "type": "ability", "points": 30, "abilityId": "kacrackle_slash" },
+      { "type": "ability", "points": 50, "abilityId": "lightning_slash" },
+      { "type": "ability", "points": 70, "abilityId": "multislash" },
+      { "type": "ability", "points": 85, "abilityId": "hatchet_man" },
+      { "type": "ability", "points": 100, "abilityId": "miracle_slash" }
+    ]
+  },
+  {
+    "id": "good_knight",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "demon_demeaner" },
+      { "type": "ability", "points": 10, "abilityId": "buff" },
+      { "type": "ability", "points": 20, "abilityId": "mercurial_thrust" },
+      { "type": "ability", "points": 30, "abilityId": "oomph" },
+      { "type": "ability", "points": 50, "abilityId": "wind_sickles" },
+      { "type": "ability", "points": 70, "abilityId": "midheal" },
+      { "type": "ability", "points": 85, "abilityId": "selflessness" },
+      { "type": "ability", "points": 100, "abilityId": "meditation" },
+      { "type": "ability", "points": 120, "abilityId": "miracle_slash" }
+    ]
+  },
+  {
+    "id": "cutpurse",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "accelerate" },
+      { "type": "ability", "points": 10, "abilityId": "poison_attack" },
+      { "type": "ability", "points": 20, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 30, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 50, "abilityId": "dodgy_dance" },
+      { "type": "ability", "points": 70, "abilityId": "mercurial_thrust" },
+      { "type": "ability", "points": 85, "abilityId": "victimiser" },
+      { "type": "ability", "points": 100, "abilityId": "persecutter" }
+    ]
+  },
+  {
+    "id": "sweet-talker",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "heal" },
+      { "type": "ability", "points": 10, "abilityId": "tongue_lashing" },
+      { "type": "ability", "points": 20, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 30, "abilityId": "buff" },
+      { "type": "trait", "points": 50, "traitId": "max_hp_8" },
+      { "type": "ability", "points": 70, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 85, "abilityId": "miracle_slash" },
+      { "type": "trait", "points": 100, "traitId": "auto-cadabra" }
+    ]
+  },
+  {
+    "id": "hottie",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "splish" },
+      { "type": "ability", "points": 10, "abilityId": "sultry_dance" },
+      { "type": "ability", "points": 20, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 30, "abilityId": "frizzle" },
+      { "type": "ability", "points": 50, "abilityId": "flame_breath" },
+      { "type": "ability", "points": 70, "abilityId": "sizzle" },
+      { "type": "ability", "points": 85, "abilityId": "hustle_dance" },
+      { "type": "trait", "points": 100, "traitId": "auto-cadabra" }
+    ]
+  },
+  {
+    "id": "tongue_twister",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "tongue_lashing" },
+      { "type": "ability", "points": 10, "abilityId": "splish" },
+      { "type": "ability", "points": 20, "abilityId": "decelerate" },
+      { "type": "ability", "points": 30, "abilityId": "drain_magic" },
+      { "type": "ability", "points": 50, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 70, "abilityId": "dazzleflash" },
+      { "type": "ability", "points": 85, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 100, "abilityId": "tongue_bashing" }
+    ]
+  },
+  {
+    "id": "assassin",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 10, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 20, "abilityId": "mercurial_thrust" },
+      { "type": "ability", "points": 30, "abilityId": "seethe" },
+      { "type": "ability", "points": 50, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 70, "abilityId": "hatchet_man" },
+      { "type": "ability", "points": 85, "abilityId": "whack" },
+      { "type": "ability", "points": 100, "abilityId": "assassin_s_stab" }
+    ]
+  },
+  {
+    "id": "hulk",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 10, "abilityId": "slime_squisher" },
+      { "type": "ability", "points": 20, "abilityId": "intense_defence" },
+      { "type": "ability", "points": 30, "abilityId": "war_cry" },
+      { "type": "trait", "points": 50, "traitId": "max_hp_8" },
+      { "type": "ability", "points": 70, "abilityId": "selflessness" },
+      { "type": "ability", "points": 85, "abilityId": "anchorman" },
+      { "type": "ability", "points": 100, "abilityId": "stomp" }
+    ]
+  },
+  {
+    "id": "martyr",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "whack" },
+      { "type": "trait", "points": 10, "traitId": "max_hp_8" },
+      { "type": "ability", "points": 20, "abilityId": "intense_defence" },
+      { "type": "trait", "points": 30, "traitId": "defence_8" },
+      { "type": "ability", "points": 50, "abilityId": "selflessness" },
+      { "type": "ability", "points": 70, "abilityId": "anchorman" },
+      { "type": "ability", "points": 85, "abilityId": "kamikazee" },
+      { "type": "ability", "points": 100, "abilityId": "kerplunk" }
+    ]
+  },
+  {
+    "id": "mad_scientist",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "squelch" },
+      { "type": "ability", "points": 10, "abilityId": "nature_nerfer" },
+      { "type": "ability", "points": 20, "abilityId": "defuddle" },
+      { "type": "ability", "points": 30, "abilityId": "bang" },
+      { "type": "ability", "points": 50, "abilityId": "poison_attack" },
+      { "type": "trait", "points": 70, "traitId": "wisdom_8" },
+      { "type": "ability", "points": 85, "abilityId": "katox" },
+      { "type": "trait", "points": 100, "traitId": "wisdom_24" },
+      { "type": "ability", "points": 120, "abilityId": "boom" }
+    ]
+  },
+  {
+    "id": "prankster",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "tongue_lashing" },
+      { "type": "ability", "points": 10, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 20, "abilityId": "poison_attack" },
+      { "type": "ability", "points": 30, "abilityId": "dazzle" },
+      { "type": "ability", "points": 50, "abilityId": "gobstopper" },
+      { "type": "ability", "points": 70, "abilityId": "fuddle" },
+      { "type": "trait", "points": 85, "traitId": "agility_4" },
+      { "type": "ability", "points": 100, "abilityId": "burning_breath" }
+    ]
+  },
+  {
+    "id": "healer",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "heal" },
+      { "type": "ability", "points": 10, "abilityId": "buff" },
+      { "type": "ability", "points": 20, "abilityId": "squelch" },
+      { "type": "ability", "points": 30, "abilityId": "insulate" },
+      { "type": "ability", "points": 50, "abilityId": "midheal" },
+      { "type": "ability", "points": 70, "abilityId": "zing" },
+      { "type": "ability", "points": 85, "abilityId": "meditation" },
+      { "type": "ability", "points": 100, "abilityId": "mist_me" },
+      { "type": "ability", "points": 120, "abilityId": "kazing" }
+    ]
+  },
+  {
+    "id": "paramedic",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "heal" },
+      { "type": "ability", "points": 10, "abilityId": "squelch" },
+      { "type": "ability", "points": 20, "abilityId": "tingle" },
+      { "type": "ability", "points": 30, "abilityId": "defuddle" },
+      { "type": "ability", "points": 50, "abilityId": "cock-a-doodle-doo" },
+      { "type": "ability", "points": 70, "abilityId": "drain_magic" },
+      { "type": "ability", "points": 85, "abilityId": "zing" },
+      { "type": "ability", "points": 100, "abilityId": "wave_of_relief" }
+    ]
+  },
+  {
+    "id": "soothesayer",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "heal" },
+      { "type": "ability", "points": 10, "abilityId": "sizz" },
+      { "type": "ability", "points": 20, "abilityId": "buff" },
+      { "type": "ability", "points": 30, "abilityId": "insulate" },
+      { "type": "ability", "points": 50, "abilityId": "snooze" },
+      { "type": "ability", "points": 70, "abilityId": "gobstopper" },
+      { "type": "ability", "points": 85, "abilityId": "war_cry" },
+      { "type": "ability", "points": 100, "abilityId": "mist_me" },
+      { "type": "ability", "points": 120, "abilityId": "right_as_rain" }
+    ]
+  },
+  {
+    "id": "sleep_counsellor",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "snooze" },
+      { "type": "ability", "points": 10, "abilityId": "dazzle" },
+      { "type": "ability", "points": 20, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 30, "abilityId": "fuddle" },
+      { "type": "ability", "points": 50, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 70, "abilityId": "confusion_attack" },
+      { "type": "ability", "points": 85, "abilityId": "kasnooze" },
+      { "type": "ability", "points": 100, "abilityId": "kafuddle" }
+    ]
+  },
+  {
+    "id": "toxicologist",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "tox" },
+      { "type": "ability", "points": 10, "abilityId": "poison_attack" },
+      { "type": "ability", "points": 20, "abilityId": "tongue_lashing" },
+      { "type": "ability", "points": 30, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 50, "abilityId": "poison_breath" },
+      { "type": "ability", "points": 70, "abilityId": "dim" },
+      { "type": "ability", "points": 85, "abilityId": "katox" },
+      { "type": "ability", "points": 100, "abilityId": "tongue_bashing" }
+    ]
+  },
+  {
+    "id": "anaesthetist",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "numb" },
+      { "type": "ability", "points": 10, "abilityId": "tongue_lashing" },
+      { "type": "ability", "points": 20, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 30, "abilityId": "paralysing_punch" },
+      { "type": "ability", "points": 50, "abilityId": "assassin_s_stab" },
+      { "type": "ability", "points": 70, "abilityId": "parallax" },
+      { "type": "ability", "points": 85, "abilityId": "kanumb" },
+      { "type": "ability", "points": 100, "abilityId": "tongue_bashing" }
+    ]
+  },
+  {
+    "id": "fortifier",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "heal" },
+      { "type": "ability", "points": 10, "abilityId": "accelerate" },
+      { "type": "ability", "points": 20, "abilityId": "buff" },
+      { "type": "ability", "points": 30, "abilityId": "ping" },
+      { "type": "ability", "points": 50, "abilityId": "oomph" },
+      { "type": "ability", "points": 70, "abilityId": "insulate" },
+      { "type": "ability", "points": 85, "abilityId": "midheal" },
+      { "type": "ability", "points": 100, "abilityId": "oomphle" }
+    ]
+  },
+  {
+    "id": "enfeebler",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "decelerate" },
+      { "type": "ability", "points": 10, "abilityId": "sap" },
+      { "type": "ability", "points": 20, "abilityId": "dim" },
+      { "type": "ability", "points": 30, "abilityId": "blunt" },
+      { "type": "ability", "points": 50, "abilityId": "deceleratle" },
+      { "type": "ability", "points": 70, "abilityId": "kasap" },
+      { "type": "ability", "points": 85, "abilityId": "kadim" },
+      { "type": "ability", "points": 100, "abilityId": "tongue_bashing" }
+    ]
+  },
+  {
+    "id": "willing_helper",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "squelch" },
+      { "type": "ability", "points": 10, "abilityId": "heal" },
+      { "type": "ability", "points": 20, "abilityId": "tingle" },
+      { "type": "ability", "points": 30, "abilityId": "buff" },
+      { "type": "ability", "points": 50, "abilityId": "accelerate" },
+      { "type": "ability", "points": 70, "abilityId": "ping" },
+      { "type": "ability", "points": 85, "abilityId": "oomph" },
+      { "type": "ability", "points": 100, "abilityId": "insulate" },
+      { "type": "ability", "points": 120, "abilityId": "midheal" },
+      { "type": "trait", "points": 150, "traitId": "max_mp_24" }
+    ]
+  },
+  {
+    "id": "breath_taker",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "gobstopper" },
+      { "type": "ability", "points": 10, "abilityId": "insulate" },
+      { "type": "ability", "points": 20, "abilityId": "dragon_slash" },
+      { "type": "ability", "points": 30, "abilityId": "insulatle" },
+      { "type": "trait", "points": 50, "traitId": "max_hp_4" },
+      { "type": "ability", "points": 70, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 85, "abilityId": "mist_me" },
+      { "type": "ability", "points": 100, "abilityId": "brake_wind" }
+    ]
+  },
+  {
+    "id": "antimagician",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "dim" },
+      { "type": "ability", "points": 10, "abilityId": "fizzle" },
+      { "type": "ability", "points": 20, "abilityId": "ping" },
+      { "type": "ability", "points": 30, "abilityId": "drain_magic" },
+      { "type": "ability", "points": 50, "abilityId": "mist_me" },
+      { "type": "ability", "points": 70, "abilityId": "kadim" },
+      { "type": "ability", "points": 85, "abilityId": "mercurial_thrust" },
+      { "type": "ability", "points": 100, "abilityId": "bounce" }
+    ]
+  },
+  {
+    "id": "defender",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "buff" },
+      { "type": "ability", "points": 10, "abilityId": "heal" },
+      { "type": "ability", "points": 20, "abilityId": "attack_attacker" },
+      { "type": "ability", "points": 30, "abilityId": "dazzleflash" },
+      { "type": "ability", "points": 50, "abilityId": "kabuff" },
+      { "type": "ability", "points": 70, "abilityId": "intense_defence" },
+      { "type": "ability", "points": 85, "abilityId": "midheal" },
+      { "type": "ability", "points": 100, "abilityId": "selflessness" }
+    ]
+  },
+  {
+    "id": "barricade",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "insulate" },
+      { "type": "trait", "points": 10, "traitId": "defence_4" },
+      { "type": "ability", "points": 20, "abilityId": "kabuff" },
+      { "type": "ability", "points": 30, "abilityId": "mist_me" },
+      { "type": "ability", "points": 50, "abilityId": "knuckle_sandwich" },
+      { "type": "ability", "points": 70, "abilityId": "intense_defence" },
+      { "type": "ability", "points": 85, "abilityId": "critical_meltdown" },
+      { "type": "ability", "points": 100, "abilityId": "selflessness" }
+    ]
+  },
+  {
+    "id": "irritant",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "sap" },
+      { "type": "ability", "points": 10, "abilityId": "snooze" },
+      { "type": "ability", "points": 20, "abilityId": "tox" },
+      { "type": "ability", "points": 30, "abilityId": "poison_attack" },
+      { "type": "ability", "points": 50, "abilityId": "numb" },
+      { "type": "ability", "points": 70, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 85, "abilityId": "assassin_s_stab" },
+      { "type": "ability", "points": 100, "abilityId": "kanumb" }
+    ]
+  },
+  {
+    "id": "vexologist",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "tox" },
+      { "type": "ability", "points": 10, "abilityId": "dodgy_dance" },
+      { "type": "ability", "points": 20, "abilityId": "gobstopper" },
+      { "type": "ability", "points": 30, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 50, "abilityId": "critical_meltdown" },
+      { "type": "ability", "points": 70, "abilityId": "brake_wind" },
+      { "type": "ability", "points": 85, "abilityId": "katox" },
+      { "type": "ability", "points": 100, "abilityId": "tongue_bashing" }
+    ]
+  },
+  {
+    "id": "charmer",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "sultry_dance" },
+      { "type": "ability", "points": 10, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 20, "abilityId": "dazzle" },
+      { "type": "ability", "points": 30, "abilityId": "drain_magic" },
+      { "type": "ability", "points": 50, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 70, "abilityId": "fuddle_dance" },
+      { "type": "ability", "points": 85, "abilityId": "fan_dango" },
+      { "type": "ability", "points": 100, "abilityId": "giga_drain_magic" }
+    ]
+  },
+  {
+    "id": "stinker",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "tox" },
+      { "type": "ability", "points": 10, "abilityId": "gobstopper" },
+      { "type": "ability", "points": 20, "abilityId": "poison_breath" },
+      { "type": "ability", "points": 30, "abilityId": "fuddle" },
+      { "type": "ability", "points": 50, "abilityId": "whack" },
+      { "type": "ability", "points": 70, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 85, "abilityId": "war_cry" },
+      { "type": "ability", "points": 100, "abilityId": "burning_breath" }
+    ]
+  },
+  {
+    "id": "strong_speller",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "oomph" },
+      { "type": "ability", "points": 10, "abilityId": "kabuff" },
+      { "type": "ability", "points": 20, "abilityId": "splash" },
+      { "type": "trait", "points": 30, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 50, "abilityId": "frizzle" },
+      { "type": "ability", "points": 70, "abilityId": "moreheal" },
+      { "type": "ability", "points": 85, "abilityId": "kasnooze" },
+      { "type": "trait", "points": 100, "traitId": "max_mp_60" },
+      { "type": "ability", "points": 120, "abilityId": "kazing" },
+      { "type": "ability", "points": 150, "abilityId": "kazapple" }
+    ]
+  },
+  {
+    "id": "smarty-pants",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "kaping" },
+      { "type": "ability", "points": 10, "abilityId": "insulatle" },
+      { "type": "ability", "points": 20, "abilityId": "fizzle" },
+      { "type": "ability", "points": 30, "abilityId": "frizzle" },
+      { "type": "trait", "points": 50, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 70, "abilityId": "thwack" },
+      { "type": "ability", "points": 85, "abilityId": "kabuff" },
+      { "type": "trait", "points": 100, "traitId": "max_mp_60" },
+      { "type": "trait", "points": 120, "traitId": "auto-cadabra" },
+      { "type": "ability", "points": 150, "abilityId": "kaboomle" }
+    ]
+  },
+  {
+    "id": "paragon",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "attack_attacker" },
+      { "type": "ability", "points": 10, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 20, "abilityId": "intense_defence" },
+      { "type": "ability", "points": 30, "abilityId": "hatchet_man" },
+      { "type": "trait", "points": 50, "traitId": "attack_8" },
+      { "type": "ability", "points": 70, "abilityId": "anchorman" },
+      { "type": "ability", "points": 85, "abilityId": "multifists" },
+      { "type": "ability", "points": 100, "abilityId": "hellish_howl" },
+      { "type": "trait", "points": 120, "traitId": "attack_30" },
+      { "type": "ability", "points": 150, "abilityId": "boulder_toss" }
+    ]
+  },
+  {
+    "id": "wrecker",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 10, "abilityId": "frenzy" },
+      { "type": "ability", "points": 20, "abilityId": "hatchet_man" },
+      { "type": "ability", "points": 30, "abilityId": "stomp" },
+      { "type": "ability", "points": 50, "abilityId": "war_cry" },
+      { "type": "trait", "points": 70, "traitId": "attack_16" },
+      { "type": "ability", "points": 85, "abilityId": "anchorman" },
+      { "type": "ability", "points": 100, "abilityId": "withering_look" },
+      { "type": "trait", "points": 120, "traitId": "attack_36" },
+      { "type": "ability", "points": 150, "abilityId": "big_banga" }
+    ]
+  },
+  {
+    "id": "musclehead",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 10, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 20, "abilityId": "dodgy_dance" },
+      { "type": "ability", "points": 30, "abilityId": "seethe" },
+      { "type": "trait", "points": 50, "traitId": "attack_16" },
+      { "type": "ability", "points": 70, "abilityId": "intense_defence" },
+      { "type": "ability", "points": 85, "abilityId": "knuckle_sandwich" },
+      { "type": "ability", "points": 100, "abilityId": "selflessness" },
+      { "type": "trait", "points": 120, "traitId": "max_hp_36" },
+      { "type": "ability", "points": 150, "abilityId": "meditation" }
+    ]
+  },
+  {
+    "id": "duelist",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "gust_slash" },
+      { "type": "ability", "points": 10, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 20, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 30, "abilityId": "hatchet_man" },
+      { "type": "ability", "points": 50, "abilityId": "multislash" },
+      { "type": "trait", "points": 70, "traitId": "attack_16" },
+      { "type": "ability", "points": 85, "abilityId": "skysplitter" },
+      { "type": "ability", "points": 100, "abilityId": "earthsplitter" },
+      { "type": "trait", "points": 120, "traitId": "attack_36" },
+      { "type": "ability", "points": 150, "abilityId": "gigagash" }
+    ]
+  },
+  {
+    "id": "maniac",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "frenzy" },
+      { "type": "ability", "points": 10, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 20, "abilityId": "multislash" },
+      { "type": "ability", "points": 30, "abilityId": "sword_dance" },
+      { "type": "trait", "points": 50, "traitId": "agility_20" },
+      { "type": "ability", "points": 70, "abilityId": "blightsplitter" },
+      { "type": "ability", "points": 85, "abilityId": "parallax" },
+      { "type": "ability", "points": 100, "abilityId": "multifists" },
+      { "type": "trait", "points": 120, "traitId": "attack_36" },
+      { "type": "ability", "points": 150, "abilityId": "multi-victimiser" }
+    ]
+  },
+  {
+    "id": "leading_light",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "dragon_slash" },
+      { "type": "ability", "points": 10, "abilityId": "kabuff" },
+      { "type": "ability", "points": 20, "abilityId": "mercurial_thrust" },
+      { "type": "ability", "points": 30, "abilityId": "multislash" },
+      { "type": "ability", "points": 50, "abilityId": "oomphle" },
+      { "type": "trait", "points": 70, "traitId": "max_hp_12" },
+      { "type": "ability", "points": 85, "abilityId": "flamesplitter" },
+      { "type": "ability", "points": 100, "abilityId": "brightsplitter" },
+      { "type": "trait", "points": 120, "traitId": "max_mp_32" },
+      { "type": "ability", "points": 150, "abilityId": "kazapple" }
+    ]
+  },
+  {
+    "id": "slayer",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "kacrackle_slash" },
+      { "type": "ability", "points": 10, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 20, "abilityId": "poison_attack" },
+      { "type": "ability", "points": 30, "abilityId": "frenzy" },
+      { "type": "trait", "points": 50, "traitId": "agility_20" },
+      { "type": "ability", "points": 70, "abilityId": "paralysing_punch" },
+      { "type": "ability", "points": 85, "abilityId": "assassin_s_stab" },
+      { "type": "ability", "points": 100, "abilityId": "parallax" },
+      { "type": "trait", "points": 120, "traitId": "attack_48" },
+      { "type": "ability", "points": 150, "abilityId": "multi-victimiser" }
+    ]
+  },
+  {
+    "id": "destroyer",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "undead_undoer" },
+      { "type": "ability", "points": 10, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 20, "abilityId": "assassin_s_stab" },
+      { "type": "ability", "points": 30, "abilityId": "death_dance" },
+      { "type": "ability", "points": 50, "abilityId": "thwack" },
+      { "type": "ability", "points": 70, "abilityId": "withering_look" },
+      { "type": "ability", "points": 85, "abilityId": "tidal_wave" },
+      { "type": "trait", "points": 100, "traitId": "attack_48" },
+      { "type": "ability", "points": 120, "abilityId": "kamikazee" },
+      { "type": "ability", "points": 150, "abilityId": "gigagash" }
+    ]
+  },
+  {
+    "id": "respirator",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "poison_breath" },
+      { "type": "ability", "points": 10, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 20, "abilityId": "flame_breath" },
+      { "type": "ability", "points": 30, "abilityId": "deep_breath" },
+      { "type": "ability", "points": 50, "abilityId": "freezing_blizzard" },
+      { "type": "ability", "points": 70, "abilityId": "blessed_breath" },
+      { "type": "ability", "points": 85, "abilityId": "brake_wind" },
+      { "type": "ability", "points": 100, "abilityId": "scorch" },
+      { "type": "trait", "points": 120, "traitId": "ultra_frizz_ward" },
+      { "type": "ability", "points": 150, "abilityId": "ice_age" }
+    ]
+  },
+  {
+    "id": "fire_chief",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "flame_slash" },
+      { "type": "ability", "points": 10, "abilityId": "flame_breath" },
+      { "type": "ability", "points": 20, "abilityId": "deep_breath" },
+      { "type": "ability", "points": 30, "abilityId": "boom" },
+      { "type": "ability", "points": 50, "abilityId": "inferno" },
+      { "type": "ability", "points": 70, "abilityId": "burning_breath" },
+      { "type": "ability", "points": 85, "abilityId": "kaboom" },
+      { "type": "ability", "points": 100, "abilityId": "scorch" },
+      { "type": "trait", "points": 120, "traitId": "ultra_frizz_ward" },
+      { "type": "ability", "points": 150, "abilityId": "hellitosis" }
+    ]
+  },
+  {
+    "id": "cold_snapper",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "kacrackle_slash" },
+      { "type": "ability", "points": 10, "abilityId": "snooze" },
+      { "type": "ability", "points": 20, "abilityId": "chilly_breath" },
+      { "type": "ability", "points": 30, "abilityId": "numb" },
+      { "type": "ability", "points": 50, "abilityId": "kasnooze" },
+      { "type": "ability", "points": 70, "abilityId": "freezing_blizzard" },
+      { "type": "ability", "points": 85, "abilityId": "assassin_s_stab" },
+      { "type": "ability", "points": 100, "abilityId": "c-c-cold_breath" },
+      { "type": "trait", "points": 120, "traitId": "ultra_crack_ward" },
+      { "type": "ability", "points": 150, "abilityId": "ice_age" }
+    ]
+  },
+  {
+    "id": "party_monster",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "sultry_dance" },
+      { "type": "ability", "points": 10, "abilityId": "dodgy_dance" },
+      { "type": "trait", "points": 20, "traitId": "agility_4" },
+      { "type": "ability", "points": 30, "abilityId": "sword_dance" },
+      { "type": "ability", "points": 50, "abilityId": "tap_dance" },
+      { "type": "ability", "points": 70, "abilityId": "fan_dango" },
+      { "type": "ability", "points": 85, "abilityId": "hustle_dance" },
+      { "type": "ability", "points": 100, "abilityId": "mirror_moves" },
+      { "type": "ability", "points": 120, "abilityId": "hotstepper" }
+    ]
+  },
+  {
+    "id": "rockin_roller",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "buff" },
+      { "type": "ability", "points": 10, "abilityId": "matter_scatterer" },
+      { "type": "ability", "points": 20, "abilityId": "craggle" },
+      { "type": "ability", "points": 30, "abilityId": "dodgy_dance" },
+      { "type": "ability", "points": 50, "abilityId": "stone_s_throw" },
+      { "type": "ability", "points": 70, "abilityId": "sultry_dance" },
+      { "type": "ability", "points": 85, "abilityId": "earthsplitter" },
+      { "type": "ability", "points": 100, "abilityId": "kerplunk" },
+      { "type": "trait", "points": 120, "traitId": "ultra_crag_ward" },
+      { "type": "ability", "points": 150, "abilityId": "boulder_toss" }
+    ]
+  },
+  {
+    "id": "pop_idol",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "dodgy_dance" },
+      { "type": "trait", "points": 10, "traitId": "max_hp_4" },
+      { "type": "ability", "points": 20, "abilityId": "dazzleflash" },
+      { "type": "ability", "points": 30, "abilityId": "magic_pop" },
+      { "type": "ability", "points": 50, "abilityId": "fan_dango" },
+      { "type": "ability", "points": 70, "abilityId": "shining_shot" },
+      { "type": "ability", "points": 85, "abilityId": "hustle_dance" },
+      { "type": "trait", "points": 100, "traitId": "ultra_sizz_ward" },
+      { "type": "ability", "points": 120, "abilityId": "electric_boogie" }
+    ]
+  },
+  {
+    "id": "firebrand",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "flame_slash" },
+      { "type": "trait", "points": 10, "traitId": "attack_16" },
+      { "type": "ability", "points": 20, "abilityId": "frizzle" },
+      { "type": "ability", "points": 30, "abilityId": "flame_breath" },
+      { "type": "ability", "points": 50, "abilityId": "flamesplitter" },
+      { "type": "ability", "points": 70, "abilityId": "kafrizz" },
+      { "type": "ability", "points": 85, "abilityId": "oomphle" },
+      { "type": "ability", "points": 100, "abilityId": "scorch" },
+      { "type": "ability", "points": 120, "abilityId": "burning_breath" },
+      { "type": "ability", "points": 150, "abilityId": "hellitosis" }
+    ]
+  },
+  {
+    "id": "pyrotechnician",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "flame_slash" },
+      { "type": "ability", "points": 10, "abilityId": "frizzle" },
+      { "type": "ability", "points": 20, "abilityId": "flame_breath" },
+      { "type": "ability", "points": 30, "abilityId": "magma_blast" },
+      { "type": "ability", "points": 50, "abilityId": "thwack" },
+      { "type": "trait", "points": 70, "traitId": "wisdom_24" },
+      { "type": "ability", "points": 85, "abilityId": "kazam" },
+      { "type": "ability", "points": 100, "abilityId": "hotstepper" },
+      { "type": "trait", "points": 120, "traitId": "ultra_frizz_ward" },
+      { "type": "ability", "points": 150, "abilityId": "hellitosis" }
+    ]
+  },
+  {
+    "id": "refrigerator",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "kacrackle_slash" },
+      { "type": "ability", "points": 10, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 20, "abilityId": "zammle" },
+      { "type": "ability", "points": 30, "abilityId": "crackle" },
+      { "type": "ability", "points": 50, "abilityId": "kasnooze" },
+      { "type": "trait", "points": 70, "traitId": "max_mp_24" },
+      { "type": "ability", "points": 85, "abilityId": "multi-persecutter" },
+      { "type": "ability", "points": 100, "abilityId": "kacrack" },
+      { "type": "trait", "points": 120, "traitId": "ultra_crack_ward" },
+      { "type": "ability", "points": 150, "abilityId": "ice_age" }
+    ]
+  },
+  {
+    "id": "demoniac",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "whack" },
+      { "type": "ability", "points": 10, "abilityId": "frenzy" },
+      { "type": "ability", "points": 20, "abilityId": "zammle" },
+      { "type": "ability", "points": 30, "abilityId": "blightsplitter" },
+      { "type": "ability", "points": 50, "abilityId": "freezing_blizzard" },
+      { "type": "ability", "points": 70, "abilityId": "kazam" },
+      { "type": "trait", "points": 85, "traitId": "ultra_clear_thinker" },
+      { "type": "ability", "points": 100, "abilityId": "kanumb" },
+      { "type": "trait", "points": 120, "traitId": "ultra_tough_customer" },
+      { "type": "ability", "points": 150, "abilityId": "tidal_wave" }
+    ]
+  },
+  {
+    "id": "blighter",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "whack" },
+      { "type": "ability", "points": 10, "abilityId": "kadim" },
+      { "type": "ability", "points": 20, "abilityId": "zammle" },
+      { "type": "ability", "points": 30, "abilityId": "chilly_breath" },
+      { "type": "ability", "points": 50, "abilityId": "blightsplitter" },
+      { "type": "ability", "points": 70, "abilityId": "black_breath" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_24" },
+      { "type": "ability", "points": 100, "abilityId": "kazammle" },
+      { "type": "trait", "points": 120, "traitId": "ultra_zam_ward" },
+      { "type": "ability", "points": 150, "abilityId": "grim_breath" }
+    ]
+  },
+  {
+    "id": "dark_horse",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "mercurial_thrust" },
+      { "type": "ability", "points": 10, "abilityId": "acceleratle" },
+      { "type": "ability", "points": 20, "abilityId": "zammle" },
+      { "type": "ability", "points": 30, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 50, "abilityId": "black_breath" },
+      { "type": "trait", "points": 70, "traitId": "agility_12" },
+      { "type": "ability", "points": 85, "abilityId": "kazam" },
+      { "type": "ability", "points": 100, "abilityId": "assassin_s_stab" },
+      { "type": "trait", "points": 120, "traitId": "ultra_zam_ward" },
+      { "type": "ability", "points": 150, "abilityId": "bad_hand" }
+    ]
+  },
+  {
+    "id": "evil_genius",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "kasap" },
+      { "type": "ability", "points": 10, "abilityId": "confusion_attack" },
+      { "type": "ability", "points": 20, "abilityId": "frenzy" },
+      { "type": "ability", "points": 30, "abilityId": "katox" },
+      { "type": "ability", "points": 50, "abilityId": "kanumb" },
+      { "type": "ability", "points": 70, "abilityId": "thwack" },
+      { "type": "ability", "points": 85, "abilityId": "multi-persecutter" },
+      { "type": "trait", "points": 100, "traitId": "ultra_fidget" },
+      { "type": "trait", "points": 120, "traitId": "ultra_antitoxidant" },
+      { "type": "ability", "points": 150, "abilityId": "giga_drain_magic" }
+    ]
+  },
+  {
+    "id": "agent_provocateur",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "confusion_attack" },
+      { "type": "ability", "points": 10, "abilityId": "sizzle" },
+      { "type": "ability", "points": 20, "abilityId": "midheal" },
+      { "type": "ability", "points": 30, "abilityId": "black_breath" },
+      { "type": "ability", "points": 50, "abilityId": "kazam" },
+      { "type": "ability", "points": 70, "abilityId": "multiheal" },
+      { "type": "ability", "points": 85, "abilityId": "power_surge" },
+      { "type": "trait", "points": 100, "traitId": "ultra_clear_thinker" },
+      { "type": "ability", "points": 120, "abilityId": "kasizzle" }
+    ]
+  },
+  {
+    "id": "bobby-dazzler",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "sizzle" },
+      { "type": "ability", "points": 10, "abilityId": "miracle_slash" },
+      { "type": "ability", "points": 20, "abilityId": "kasnooze" },
+      { "type": "trait", "points": 30, "traitId": "max_hp_4" },
+      { "type": "ability", "points": 50, "abilityId": "brightsplitter" },
+      { "type": "ability", "points": 70, "abilityId": "moreheal" },
+      { "type": "ability", "points": 85, "abilityId": "butterfly_bop" },
+      { "type": "ability", "points": 100, "abilityId": "shining_shot" },
+      { "type": "trait", "points": 120, "traitId": "max_mp_60" },
+      { "type": "ability", "points": 150, "abilityId": "gigagash" }
+    ]
+  },
+  {
+    "id": "pop_diva",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "sultry_dance" },
+      { "type": "ability", "points": 10, "abilityId": "dazzleflash" },
+      { "type": "ability", "points": 20, "abilityId": "tap_dance" },
+      { "type": "trait", "points": 30, "traitId": "max_mp_24" },
+      { "type": "ability", "points": 50, "abilityId": "sword_dance" },
+      { "type": "ability", "points": 70, "abilityId": "mirror_moves" },
+      { "type": "ability", "points": 85, "abilityId": "hustle_dance" },
+      { "type": "ability", "points": 100, "abilityId": "starfall" },
+      { "type": "ability", "points": 120, "abilityId": "butterfly_bop" }
+    ]
+  },
+  {
+    "id": "heavenly_herald",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "magic_pop" },
+      { "type": "ability", "points": 10, "abilityId": "midheal" },
+      { "type": "ability", "points": 20, "abilityId": "kabuff" },
+      { "type": "ability", "points": 30, "abilityId": "fizzle" },
+      { "type": "ability", "points": 50, "abilityId": "blessed_breath" },
+      { "type": "trait", "points": 70, "traitId": "max_mp_16" },
+      { "type": "ability", "points": 85, "abilityId": "kasizz" },
+      { "type": "trait", "points": 100, "traitId": "max_mp_24" },
+      { "type": "ability", "points": 120, "abilityId": "multiheal" },
+      { "type": "ability", "points": 150, "abilityId": "shining_shot" }
+    ]
+  },
+  {
+    "id": "just_ruler",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "midheal" },
+      { "type": "ability", "points": 10, "abilityId": "kabuff" },
+      { "type": "trait", "points": 20, "traitId": "attack_16" },
+      { "type": "ability", "points": 30, "abilityId": "zapple" },
+      { "type": "ability", "points": 50, "abilityId": "selflessness" },
+      { "type": "ability", "points": 70, "abilityId": "zing" },
+      { "type": "ability", "points": 85, "abilityId": "fan_dango" },
+      { "type": "ability", "points": 100, "abilityId": "shining_shot" },
+      { "type": "ability", "points": 120, "abilityId": "gigaslash" },
+      { "type": "ability", "points": 150, "abilityId": "lightning_storm" }
+    ]
+  },
+  {
+    "id": "charge_leader",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "lightning_slash" },
+      { "type": "ability", "points": 10, "abilityId": "heal" },
+      { "type": "ability", "points": 20, "abilityId": "flame_breath" },
+      { "type": "ability", "points": 30, "abilityId": "oomphle" },
+      { "type": "ability", "points": 50, "abilityId": "midheal" },
+      { "type": "ability", "points": 70, "abilityId": "kazap" },
+      { "type": "ability", "points": 85, "abilityId": "gigaslash" },
+      { "type": "trait", "points": 100, "traitId": "ultra_zap_ward" },
+      { "type": "trait", "points": 120, "traitId": "ultra_sizz_ward" },
+      { "type": "ability", "points": 150, "abilityId": "gigagash" }
+    ]
+  },
+  {
+    "id": "lightning_rod",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "lightning_slash" },
+      { "type": "trait", "points": 10, "traitId": "max_hp_8" },
+      { "type": "ability", "points": 20, "abilityId": "sizzle" },
+      { "type": "ability", "points": 30, "abilityId": "brightsplitter" },
+      { "type": "ability", "points": 50, "abilityId": "lightning" },
+      { "type": "ability", "points": 70, "abilityId": "kasizz" },
+      { "type": "trait", "points": 85, "traitId": "agility_30" },
+      { "type": "ability", "points": 100, "abilityId": "gigaslash" },
+      { "type": "trait", "points": 120, "traitId": "ultra_zap_ward" },
+      { "type": "ability", "points": 150, "abilityId": "lightning_storm" }
+    ]
+  },
+  {
+    "id": "vagabond",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "gust_slash" },
+      { "type": "ability", "points": 10, "abilityId": "lightning_slash" },
+      { "type": "ability", "points": 20, "abilityId": "mercurial_thrust" },
+      { "type": "ability", "points": 30, "abilityId": "multislash" },
+      { "type": "ability", "points": 50, "abilityId": "skysplitter" },
+      { "type": "ability", "points": 70, "abilityId": "lightning" },
+      { "type": "ability", "points": 85, "abilityId": "kaswoosh" },
+      { "type": "ability", "points": 100, "abilityId": "gigaslash" },
+      { "type": "trait", "points": 120, "traitId": "ultra_woosh_ward" },
+      { "type": "ability", "points": 150, "abilityId": "lightning_storm" }
+    ]
+  },
+  {
+    "id": "snow_drifter",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "thin_air" },
+      { "type": "ability", "points": 10, "abilityId": "magic_pop" },
+      { "type": "ability", "points": 20, "abilityId": "insulatle" },
+      { "type": "ability", "points": 30, "abilityId": "blessed_breath" },
+      { "type": "ability", "points": 50, "abilityId": "kaswoosh" },
+      { "type": "ability", "points": 70, "abilityId": "brake_wind" },
+      { "type": "ability", "points": 85, "abilityId": "multiheal" },
+      { "type": "ability", "points": 100, "abilityId": "c-c-cold_breath" },
+      { "type": "ability", "points": 120, "abilityId": "kaswooshle" }
+    ]
+  },
+  {
+    "id": "bombshell",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "bang" },
+      { "type": "ability", "points": 8, "abilityId": "stomp" },
+      { "type": "ability", "points": 16, "abilityId": "craggle" },
+      { "type": "ability", "points": 28, "abilityId": "boom" },
+      { "type": "ability", "points": 40, "abilityId": "kacrag" },
+      { "type": "ability", "points": 55, "abilityId": "kaboom" },
+      { "type": "trait", "points": 75, "traitId": "attack_30" },
+      { "type": "ability", "points": 100, "abilityId": "multifists" },
+      { "type": "trait", "points": 120, "traitId": "ultra_bang_ward" },
+      { "type": "ability", "points": 150, "abilityId": "kamikazee" }
+    ]
+  },
+  {
+    "id": "storm_chaser",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "dazzleflash" },
+      { "type": "ability", "points": 8, "abilityId": "flame_breath" },
+      { "type": "trait", "points": 16, "traitId": "max_hp_12" },
+      { "type": "ability", "points": 28, "abilityId": "thin_air" },
+      { "type": "ability", "points": 40, "abilityId": "swoosh" },
+      { "type": "ability", "points": 55, "abilityId": "skysplitter" },
+      { "type": "trait", "points": 75, "traitId": "agility_20" },
+      { "type": "ability", "points": 100, "abilityId": "kaswoosh" },
+      { "type": "ability", "points": 120, "abilityId": "brake_wind" },
+      { "type": "ability", "points": 150, "abilityId": "kaboomle" }
+    ]
+  },
+  {
+    "id": "mariner",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "kacrackle_slash" },
+      { "type": "ability", "points": 10, "abilityId": "splash" },
+      { "type": "ability", "points": 20, "abilityId": "midheal" },
+      { "type": "trait", "points": 30, "traitId": "max_mp_8" },
+      { "type": "ability", "points": 50, "abilityId": "kasplash" },
+      { "type": "ability", "points": 70, "abilityId": "anchorman" },
+      { "type": "ability", "points": 85, "abilityId": "moreheal" },
+      { "type": "ability", "points": 100, "abilityId": "multifists" },
+      { "type": "ability", "points": 120, "abilityId": "tidal_wave" },
+      { "type": "ability", "points": 150, "abilityId": "kasplashle" }
+    ]
+  },
+  {
+    "id": "water_baby",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "splash" },
+      { "type": "ability", "points": 10, "abilityId": "kabuff" },
+      { "type": "ability", "points": 20, "abilityId": "chilly_breath" },
+      { "type": "ability", "points": 30, "abilityId": "moreheal" },
+      { "type": "ability", "points": 50, "abilityId": "multiheal" },
+      { "type": "ability", "points": 70, "abilityId": "kasplash" },
+      { "type": "ability", "points": 85, "abilityId": "right_as_rain" },
+      { "type": "trait", "points": 100, "traitId": "ultra_splish_ward" },
+      { "type": "trait", "points": 120, "traitId": "auto-cadabra" }
+    ]
+  },
+  {
+    "id": "hardliner",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "mercurial_thrust" },
+      { "type": "ability", "points": 10, "abilityId": "gust_slash" },
+      { "type": "ability", "points": 20, "abilityId": "frizzle" },
+      { "type": "ability", "points": 30, "abilityId": "knuckle_sandwich" },
+      { "type": "trait", "points": 50, "traitId": "attack_12" },
+      { "type": "ability", "points": 70, "abilityId": "anchorman" },
+      { "type": "ability", "points": 85, "abilityId": "hotstepper" },
+      { "type": "ability", "points": 100, "abilityId": "shining_shot" },
+      { "type": "trait", "points": 120, "traitId": "attack_20" },
+      { "type": "ability", "points": 150, "abilityId": "kazap" }
+    ]
+  },
+  {
+    "id": "enigma",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "weird_dance" },
+      { "type": "ability", "points": 10, "abilityId": "victimiser" },
+      { "type": "ability", "points": 20, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 30, "abilityId": "persecutter" },
+      { "type": "ability", "points": 50, "abilityId": "blunt" },
+      { "type": "ability", "points": 70, "abilityId": "tap_dance" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_24" },
+      { "type": "ability", "points": 100, "abilityId": "tongue_bashing" },
+      { "type": "trait", "points": 120, "traitId": "ultra_insomniac" },
+      { "type": "ability", "points": 150, "abilityId": "kamikazee" }
+    ]
+  },
+  {
+    "id": "vaudevillian",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "war_cry" },
+      { "type": "ability", "points": 10, "abilityId": "flame_breath" },
+      { "type": "ability", "points": 20, "abilityId": "miracle_slash" },
+      { "type": "ability", "points": 30, "abilityId": "sword_dance" },
+      { "type": "ability", "points": 50, "abilityId": "lightning" },
+      { "type": "ability", "points": 70, "abilityId": "tongue_bashing" },
+      { "type": "ability", "points": 85, "abilityId": "pearly_gates" },
+      { "type": "trait", "points": 100, "traitId": "ultra_woosh_ward" },
+      { "type": "ability", "points": 120, "abilityId": "kerplunk_dance" }
+    ]
+  },
+  {
+    "id": "airhead",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "snooze" },
+      { "type": "ability", "points": 10, "abilityId": "thin_air" },
+      { "type": "ability", "points": 20, "abilityId": "stomp" },
+      { "type": "ability", "points": 30, "abilityId": "lightning" },
+      { "type": "ability", "points": 50, "abilityId": "seethe" },
+      { "type": "trait", "points": 70, "traitId": "max_mp_24" },
+      { "type": "ability", "points": 85, "abilityId": "brake_wind" },
+      { "type": "trait", "points": 100, "traitId": "max_mp_40" },
+      { "type": "ability", "points": 120, "abilityId": "lightning_storm" },
+      { "type": "ability", "points": 150, "abilityId": "big_banga" }
+    ]
+  },
+  {
+    "id": "empath",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "heal" },
+      { "type": "ability", "points": 10, "abilityId": "ping" },
+      { "type": "ability", "points": 20, "abilityId": "intense_defence" },
+      { "type": "trait", "points": 30, "traitId": "max_hp_8" },
+      { "type": "ability", "points": 50, "abilityId": "selflessness" },
+      { "type": "ability", "points": 70, "abilityId": "moreheal" },
+      { "type": "trait", "points": 85, "traitId": "max_mp_32" },
+      { "type": "ability", "points": 100, "abilityId": "multiheal" },
+      { "type": "ability", "points": 120, "abilityId": "gigagash" },
+      { "type": "ability", "points": 150, "abilityId": "magic_burst" }
+    ]
+  },
+  {
+    "id": "cool_customer",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "kasnooze" },
+      { "type": "ability", "points": 10, "abilityId": "chilly_breath" },
+      { "type": "ability", "points": 20, "abilityId": "kanumb" },
+      { "type": "ability", "points": 30, "abilityId": "critical_meltdown" },
+      { "type": "ability", "points": 50, "abilityId": "black_breath" },
+      { "type": "trait", "points": 70, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 85, "abilityId": "withering_look" },
+      { "type": "ability", "points": 100, "abilityId": "mirror_moves" },
+      { "type": "trait", "points": 120, "traitId": "ultra_crack_ward" },
+      { "type": "ability", "points": 150, "abilityId": "disruptive_wave" }
+    ]
+  },
+  {
+    "id": "hater",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "undead_undoer" },
+      { "type": "ability", "points": 10, "abilityId": "gobstopper" },
+      { "type": "ability", "points": 20, "abilityId": "war_cry" },
+      { "type": "ability", "points": 30, "abilityId": "critical_meltdown" },
+      { "type": "ability", "points": 50, "abilityId": "black_breath" },
+      { "type": "ability", "points": 70, "abilityId": "multi-victimiser" },
+      { "type": "trait", "points": 85, "traitId": "wisdom_24" },
+      { "type": "ability", "points": 100, "abilityId": "multi-persecutter" },
+      { "type": "trait", "points": 120, "traitId": "ultra_death_defier" },
+      { "type": "ability", "points": 150, "abilityId": "death_dance" }
+    ]
+  },
+  {
+    "id": "super_naturalist",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "tongue_lashing" },
+      { "type": "ability", "points": 10, "abilityId": "wind_sickles" },
+      { "type": "ability", "points": 20, "abilityId": "poison_attack" },
+      { "type": "ability", "points": 30, "abilityId": "persecutter" },
+      { "type": "ability", "points": 50, "abilityId": "war_cry" },
+      { "type": "ability", "points": 70, "abilityId": "mist_me" },
+      { "type": "trait", "points": 85, "traitId": "max_hp_48" },
+      { "type": "ability", "points": 100, "abilityId": "tongue_bashing" },
+      { "type": "trait", "points": 120, "traitId": "ultra_granite_chin" },
+      { "type": "ability", "points": 150, "abilityId": "multi-persecutter" }
+    ]
+  },
+  {
+    "id": "cleric",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "oomph" },
+      { "type": "trait", "points": 10, "traitId": "attack_4" },
+      { "type": "ability", "points": 20, "abilityId": "brightsplitter" },
+      { "type": "ability", "points": 30, "abilityId": "zing" },
+      { "type": "ability", "points": 50, "abilityId": "multiheal" },
+      { "type": "ability", "points": 70, "abilityId": "starfall" },
+      { "type": "ability", "points": 85, "abilityId": "pearly_gates" },
+      { "type": "ability", "points": 100, "abilityId": "gigaslash" },
+      { "type": "ability", "points": 120, "abilityId": "omniheal" },
+      { "type": "ability", "points": 150, "abilityId": "gigagash" }
+    ]
+  },
+  {
+    "id": "cure-all",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "heal" },
+      { "type": "ability", "points": 10, "abilityId": "kabuff" },
+      { "type": "ability", "points": 20, "abilityId": "zing" },
+      { "type": "ability", "points": 30, "abilityId": "multiheal" },
+      { "type": "ability", "points": 50, "abilityId": "right_as_rain" },
+      { "type": "ability", "points": 70, "abilityId": "insulatle" },
+      { "type": "ability", "points": 85, "abilityId": "hustle_dance" },
+      { "type": "trait", "points": 100, "traitId": "max_mp_32" },
+      { "type": "ability", "points": 120, "abilityId": "omniheal" }
+    ]
+  },
+  {
+    "id": "devil_s_advocate",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 10, "abilityId": "poison_breath" },
+      { "type": "ability", "points": 20, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 30, "abilityId": "blightsplitter" },
+      { "type": "ability", "points": 50, "abilityId": "burning_breath" },
+      { "type": "ability", "points": 70, "abilityId": "sandy_sigh" },
+      { "type": "ability", "points": 85, "abilityId": "katoxle" },
+      { "type": "ability", "points": 100, "abilityId": "withering_look" },
+      { "type": "trait", "points": 120, "traitId": "ultra_fidget" },
+      { "type": "ability", "points": 150, "abilityId": "hellish_howl" }
+    ]
+  },
+  {
+    "id": "nuisance",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "dazzle" },
+      { "type": "ability", "points": 10, "abilityId": "fuddle" },
+      { "type": "ability", "points": 20, "abilityId": "poison_attack" },
+      { "type": "ability", "points": 30, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 50, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 70, "abilityId": "burning_breath" },
+      { "type": "ability", "points": 85, "abilityId": "tongue_bashing" },
+      { "type": "trait", "points": 100, "traitId": "ultra_insomniac" },
+      { "type": "trait", "points": 120, "traitId": "ultra_fidget" },
+      { "type": "ability", "points": 150, "abilityId": "hellish_howl" }
+    ]
+  },
+  {
+    "id": "doomsayer",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "sandstorm" },
+      { "type": "ability", "points": 10, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 20, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 30, "abilityId": "dazzle" },
+      { "type": "ability", "points": 50, "abilityId": "assassin_s_stab" },
+      { "type": "ability", "points": 70, "abilityId": "burning_breath" },
+      { "type": "ability", "points": 85, "abilityId": "sandy_sigh" },
+      { "type": "ability", "points": 100, "abilityId": "death_dance" },
+      { "type": "trait", "points": 120, "traitId": "ultra_death_defier" },
+      { "type": "ability", "points": 150, "abilityId": "kamikazee" }
+    ]
+  },
+  {
+    "id": "mouth_guard",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "insulate" },
+      { "type": "ability", "points": 10, "abilityId": "weird_dance" },
+      { "type": "ability", "points": 20, "abilityId": "fizzle" },
+      { "type": "ability", "points": 30, "abilityId": "mist_me" },
+      { "type": "trait", "points": 50, "traitId": "max_mp_16" },
+      { "type": "ability", "points": 70, "abilityId": "insulatle" },
+      { "type": "ability", "points": 85, "abilityId": "brake_wind" },
+      { "type": "ability", "points": 100, "abilityId": "mirror_moves" },
+      { "type": "trait", "points": 120, "traitId": "defence_40" },
+      { "type": "ability", "points": 150, "abilityId": "bounce" }
+    ]
+  },
+  {
+    "id": "protector",
+    "tiers": [
+      { "type": "ability", "points": 3, "abilityId": "attack_attacker" },
+      { "type": "ability", "points": 10, "abilityId": "gobstopper" },
+      { "type": "ability", "points": 20, "abilityId": "kabuff" },
+      { "type": "ability", "points": 30, "abilityId": "fizzle" },
+      { "type": "trait", "points": 50, "traitId": "max_hp_8" },
+      { "type": "ability", "points": 70, "abilityId": "intense_defence" },
+      { "type": "ability", "points": 85, "abilityId": "mist_me" },
+      { "type": "ability", "points": 100, "abilityId": "selflessness" },
+      { "type": "trait", "points": 120, "traitId": "defence_40" },
+      { "type": "ability", "points": 150, "abilityId": "bounce" }
+    ]
+  },
+  {
+    "id": "heretic",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "kasizz" },
+      { "type": "ability", "points": 20, "abilityId": "pearly_gates" },
+      { "type": "ability", "points": 30, "abilityId": "bounce" },
+      { "type": "ability", "points": 50, "abilityId": "kazammle" },
+      { "type": "ability", "points": 70, "abilityId": "kamikazee" },
+      { "type": "ability", "points": 100, "abilityId": "kaboomle" },
+      { "type": "ability", "points": 120, "abilityId": "kerplunk" },
+      { "type": "ability", "points": 150, "abilityId": "giga_drain_magic" },
+      { "type": "ability", "points": 200, "abilityId": "magic_burst" }
+    ]
+  },
+  {
+    "id": "mystic",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "midheal" },
+      { "type": "ability", "points": 20, "abilityId": "squelch" },
+      { "type": "ability", "points": 30, "abilityId": "tingle" },
+      { "type": "ability", "points": 50, "abilityId": "moreheal" },
+      { "type": "ability", "points": 70, "abilityId": "defuddle" },
+      { "type": "ability", "points": 85, "abilityId": "multiheal" },
+      { "type": "ability", "points": 100, "abilityId": "cock-a-doodle-doo" },
+      { "type": "ability", "points": 120, "abilityId": "zing" },
+      { "type": "ability", "points": 150, "abilityId": "omniheal" },
+      { "type": "ability", "points": 200, "abilityId": "kazing" }
+    ]
+  },
+  {
+    "id": "sage",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "deceleratle" },
+      { "type": "ability", "points": 20, "abilityId": "kablunt" },
+      { "type": "ability", "points": 30, "abilityId": "acceleratle" },
+      { "type": "ability", "points": 50, "abilityId": "kasap" },
+      { "type": "ability", "points": 70, "abilityId": "kaping" },
+      { "type": "ability", "points": 85, "abilityId": "kadim" },
+      { "type": "ability", "points": 100, "abilityId": "kabuff" },
+      { "type": "ability", "points": 120, "abilityId": "oomphle" },
+      { "type": "ability", "points": 150, "abilityId": "insulatle" },
+      { "type": "ability", "points": 200, "abilityId": "giga_drain_magic" }
+    ]
+  },
+  {
+    "id": "grump",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "dazzle" },
+      { "type": "ability", "points": 20, "abilityId": "katoxle" },
+      { "type": "ability", "points": 30, "abilityId": "kasnooze" },
+      { "type": "ability", "points": 50, "abilityId": "kafuddle" },
+      { "type": "ability", "points": 70, "abilityId": "kanumb" },
+      { "type": "ability", "points": 85, "abilityId": "fizzle" },
+      { "type": "ability", "points": 100, "abilityId": "thwack" },
+      { "type": "ability", "points": 120, "abilityId": "frenzy" },
+      { "type": "ability", "points": 150, "abilityId": "kamikazee" },
+      { "type": "ability", "points": 200, "abilityId": "shadow_blast" }
+    ]
+  },
+  {
+    "id": "breath_worker",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "dazzleflash" },
+      { "type": "ability", "points": 20, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 30, "abilityId": "deep_breath" },
+      { "type": "ability", "points": 50, "abilityId": "blessed_breath" },
+      { "type": "ability", "points": 75, "abilityId": "c-c-cold_breath" },
+      { "type": "ability", "points": 100, "abilityId": "sandy_sigh" },
+      { "type": "ability", "points": 150, "abilityId": "ice_age" },
+      { "type": "ability", "points": 200, "abilityId": "wave_of_relief" }
+    ]
+  },
+  {
+    "id": "bad_breather",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "poison_breath" },
+      { "type": "ability", "points": 20, "abilityId": "deep_breath" },
+      { "type": "ability", "points": 30, "abilityId": "war_cry" },
+      { "type": "ability", "points": 50, "abilityId": "black_breath" },
+      { "type": "ability", "points": 75, "abilityId": "scorch" },
+      { "type": "ability", "points": 100, "abilityId": "burning_breath" },
+      { "type": "ability", "points": 150, "abilityId": "hellitosis" },
+      { "type": "ability", "points": 200, "abilityId": "grim_breath" }
+    ]
+  },
+  {
+    "id": "altruist",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "dodgy_dance" },
+      { "type": "ability", "points": 20, "abilityId": "intense_defence" },
+      { "type": "ability", "points": 30, "abilityId": "mist_me" },
+      { "type": "ability", "points": 50, "abilityId": "selflessness" },
+      { "type": "ability", "points": 75, "abilityId": "meditation" },
+      { "type": "ability", "points": 100, "abilityId": "right_as_rain" },
+      { "type": "ability", "points": 150, "abilityId": "brake_wind" },
+      { "type": "ability", "points": 200, "abilityId": "wave_of_relief" }
+    ]
+  },
+  {
+    "id": "walking_disaster",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "thin_air" },
+      { "type": "ability", "points": 20, "abilityId": "starfall" },
+      { "type": "ability", "points": 30, "abilityId": "tidal_wave" },
+      { "type": "ability", "points": 50, "abilityId": "boulder_toss" },
+      { "type": "ability", "points": 75, "abilityId": "lightning_storm" },
+      { "type": "ability", "points": 100, "abilityId": "kacraggle" },
+      { "type": "ability", "points": 150, "abilityId": "big_banga" },
+      { "type": "ability", "points": 200, "abilityId": "bad_hand" }
+    ]
+  },
+  {
+    "id": "warmonger",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "mercurial_thrust" },
+      { "type": "ability", "points": 20, "abilityId": "frenzy" },
+      { "type": "ability", "points": 30, "abilityId": "roundhouse_kick" },
+      { "type": "ability", "points": 50, "abilityId": "hatchet_man" },
+      { "type": "ability", "points": 70, "abilityId": "knuckle_sandwich" },
+      { "type": "ability", "points": 85, "abilityId": "miracle_slash" },
+      { "type": "ability", "points": 100, "abilityId": "parallax" },
+      { "type": "ability", "points": 120, "abilityId": "anchorman" },
+      { "type": "ability", "points": 150, "abilityId": "multifists" },
+      { "type": "ability", "points": 200, "abilityId": "shining_shot" }
+    ]
+  },
+  {
+    "id": "pest_controller",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "dragon_slash" },
+      { "type": "ability", "points": 20, "abilityId": "slime_squisher" },
+      { "type": "ability", "points": 30, "abilityId": "nature_nerfer" },
+      { "type": "ability", "points": 50, "abilityId": "frenzy" },
+      { "type": "ability", "points": 70, "abilityId": "beast_tamer" },
+      { "type": "ability", "points": 85, "abilityId": "matter_scatterer" },
+      { "type": "ability", "points": 100, "abilityId": "hatchet_man" },
+      { "type": "ability", "points": 120, "abilityId": "demon_demeaner" },
+      { "type": "ability", "points": 150, "abilityId": "undead_undoer" },
+      { "type": "ability", "points": 200, "abilityId": "shadow_blast" }
+    ]
+  },
+  {
+    "id": "multidisciplinarian",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "attack_attacker" },
+      { "type": "ability", "points": 20, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 30, "abilityId": "poison_attack" },
+      { "type": "ability", "points": 50, "abilityId": "heart_breaker" },
+      { "type": "ability", "points": 70, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 85, "abilityId": "confusion_attack" },
+      { "type": "ability", "points": 100, "abilityId": "paralysing_punch" },
+      { "type": "ability", "points": 120, "abilityId": "assassin_s_stab" },
+      { "type": "ability", "points": 150, "abilityId": "multi-victimiser" },
+      { "type": "ability", "points": 200, "abilityId": "multi-persecutter" }
+    ]
+  },
+  {
+    "id": "rug_cutter",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "sword_dance" },
+      { "type": "ability", "points": 20, "abilityId": "fan_dango" },
+      { "type": "ability", "points": 30, "abilityId": "fuddle_dance" },
+      { "type": "ability", "points": 50, "abilityId": "hotstepper" },
+      { "type": "ability", "points": 70, "abilityId": "mirror_moves" },
+      { "type": "ability", "points": 85, "abilityId": "electric_boogie" },
+      { "type": "ability", "points": 100, "abilityId": "death_dance" },
+      { "type": "ability", "points": 120, "abilityId": "butterfly_bop" },
+      { "type": "ability", "points": 150, "abilityId": "hustle_dance" },
+      { "type": "ability", "points": 200, "abilityId": "kerplunk_dance" }
+    ]
+  },
+  {
+    "id": "rainmaker",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "blessed_breath" },
+      { "type": "ability", "points": 20, "abilityId": "moreheal" },
+      { "type": "ability", "points": 30, "abilityId": "zing" },
+      { "type": "ability", "points": 50, "abilityId": "starfall" },
+      { "type": "ability", "points": 75, "abilityId": "multiheal" },
+      { "type": "ability", "points": 100, "abilityId": "mist_me" },
+      { "type": "ability", "points": 150, "abilityId": "right_as_rain" },
+      { "type": "ability", "points": 200, "abilityId": "wave_of_relief" }
+    ]
+  },
+  {
+    "id": "sovereign",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "kazap" },
+      { "type": "ability", "points": 20, "abilityId": "miracle_slash" },
+      { "type": "ability", "points": 30, "abilityId": "brightsplitter" },
+      { "type": "ability", "points": 50, "abilityId": "multiheal" },
+      { "type": "ability", "points": 75, "abilityId": "scorch" },
+      { "type": "ability", "points": 100, "abilityId": "pearly_gates" },
+      { "type": "ability", "points": 150, "abilityId": "c-c-cold_breath" },
+      { "type": "ability", "points": 200, "abilityId": "kazapple" }
+    ]
+  },
+  {
+    "id": "the_dragonlord",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "inferno" },
+      { "type": "ability", "points": 20, "abilityId": "moreheal" },
+      { "type": "ability", "points": 30, "abilityId": "deep_breath" },
+      { "type": "ability", "points": 50, "abilityId": "fizzle" },
+      { "type": "trait", "points": 70, "traitId": "defence_8" },
+      { "type": "ability", "points": 85, "abilityId": "burning_breath" },
+      { "type": "ability", "points": 100, "abilityId": "kasizzle" },
+      { "type": "trait", "points": 120, "traitId": "defence_16" },
+      { "type": "ability", "points": 150, "abilityId": "hellitosis" },
+      { "type": "ability", "points": 200, "abilityId": "wave_of_panic" }
+    ]
+  },
+  {
+    "id": "hargon",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "snooze" },
+      { "type": "ability", "points": 20, "abilityId": "kasizz" },
+      { "type": "ability", "points": 30, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 50, "abilityId": "moreheal" },
+      { "type": "trait", "points": 70, "traitId": "wisdom_8" },
+      { "type": "trait", "points": 85, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 100, "abilityId": "zing" },
+      { "type": "ability", "points": 120, "abilityId": "multiheal" },
+      { "type": "ability", "points": 150, "abilityId": "kaboomle" },
+      { "type": "ability", "points": 200, "abilityId": "hellitosis" }
+    ]
+  },
+  {
+    "id": "malroth",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "sleep_attack" },
+      { "type": "ability", "points": 20, "abilityId": "kabuff" },
+      { "type": "ability", "points": 30, "abilityId": "kasap" },
+      { "type": "trait", "points": 50, "traitId": "attack_8" },
+      { "type": "trait", "points": 70, "traitId": "defence_16" },
+      { "type": "ability", "points": 85, "abilityId": "moreheal" },
+      { "type": "ability", "points": 100, "abilityId": "kazammle" },
+      { "type": "ability", "points": 120, "abilityId": "lightning_storm" },
+      { "type": "ability", "points": 150, "abilityId": "hellitosis" },
+      { "type": "ability", "points": 200, "abilityId": "wave_of_panic" }
+    ]
+  },
+  {
+    "id": "aamon",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "kaswoosh" },
+      { "type": "ability", "points": 20, "abilityId": "meditation" },
+      { "type": "ability", "points": 30, "abilityId": "katoxle" },
+      { "type": "trait", "points": 50, "traitId": "wisdom_8" },
+      { "type": "ability", "points": 70, "abilityId": "kaboom" },
+      { "type": "ability", "points": 85, "abilityId": "giga_drain_magic" },
+      { "type": "ability", "points": 100, "abilityId": "bounce" },
+      { "type": "trait", "points": 120, "traitId": "auto-restora" },
+      { "type": "ability", "points": 150, "abilityId": "kafrizzle" },
+      { "type": "ability", "points": 200, "abilityId": "kacrackle" }
+    ]
+  },
+  {
+    "id": "psaro_the_manslayer",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "inferno" },
+      { "type": "ability", "points": 20, "abilityId": "kabuff" },
+      { "type": "ability", "points": 30, "abilityId": "sweet_breath" },
+      { "type": "ability", "points": 50, "abilityId": "kasizz" },
+      { "type": "ability", "points": 70, "abilityId": "meditation" },
+      { "type": "trait", "points": 85, "traitId": "attack_12" },
+      { "type": "ability", "points": 100, "abilityId": "kacrack" },
+      { "type": "ability", "points": 120, "abilityId": "bounce" },
+      { "type": "ability", "points": 150, "abilityId": "ice_age" },
+      { "type": "ability", "points": 200, "abilityId": "disruptive_wave" }
+    ]
+  },
+  {
+    "id": "bishop_ladja",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "numb" },
+      { "type": "ability", "points": 20, "abilityId": "magma_blast" },
+      { "type": "ability", "points": 30, "abilityId": "hatchet_man" },
+      { "type": "ability", "points": 50, "abilityId": "burning_breath" },
+      { "type": "ability", "points": 70, "abilityId": "kanumb" },
+      { "type": "trait", "points": 85, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 100, "abilityId": "kafrizzle" },
+      { "type": "trait", "points": 120, "traitId": "auto-restora" },
+      { "type": "ability", "points": 150, "abilityId": "bounce" },
+      { "type": "ability", "points": 200, "abilityId": "ice_age" }
+    ]
+  },
+  {
+    "id": "nimzo",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "kasap" },
+      { "type": "ability", "points": 20, "abilityId": "inferno" },
+      { "type": "ability", "points": 30, "abilityId": "meditation" },
+      { "type": "trait", "points": 50, "traitId": "attack_12" },
+      { "type": "ability", "points": 70, "abilityId": "c-c-cold_breath" },
+      { "type": "ability", "points": 85, "abilityId": "kaboom" },
+      { "type": "trait", "points": 100, "traitId": "auto-restora" },
+      { "type": "ability", "points": 120, "abilityId": "bounce" },
+      { "type": "ability", "points": 150, "abilityId": "kafrizzle" },
+      { "type": "ability", "points": 200, "abilityId": "disruptive_wave" }
+    ]
+  },
+  {
+    "id": "murdaw",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "kasap" },
+      { "type": "ability", "points": 20, "abilityId": "poison_breath" },
+      { "type": "trait", "points": 30, "traitId": "wisdom_8" },
+      { "type": "ability", "points": 50, "abilityId": "dazzleflash" },
+      { "type": "ability", "points": 70, "abilityId": "lightning" },
+      { "type": "trait", "points": 85, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 100, "abilityId": "withering_look" },
+      { "type": "ability", "points": 120, "abilityId": "kazapple" },
+      { "type": "trait", "points": 150, "traitId": "max_mp_16" },
+      { "type": "ability", "points": 200, "abilityId": "ice_age" }
+    ]
+  },
+  {
+    "id": "mortamor",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "mercurial_thrust" },
+      { "type": "ability", "points": 20, "abilityId": "freezing_blizzard" },
+      { "type": "ability", "points": 30, "abilityId": "intense_defence" },
+      { "type": "ability", "points": 50, "abilityId": "oomph" },
+      { "type": "ability", "points": 70, "abilityId": "kafrizz" },
+      { "type": "ability", "points": 85, "abilityId": "meditation" },
+      { "type": "ability", "points": 100, "abilityId": "kaboom" },
+      { "type": "ability", "points": 120, "abilityId": "bounce" },
+      { "type": "ability", "points": 150, "abilityId": "disruptive_wave" },
+      { "type": "ability", "points": 200, "abilityId": "magic_burst" }
+    ]
+  },
+  {
+    "id": "orgodemir",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "magma_blast" },
+      { "type": "ability", "points": 20, "abilityId": "kafrizz" },
+      { "type": "ability", "points": 30, "abilityId": "kasnooze" },
+      { "type": "ability", "points": 50, "abilityId": "paralysing_punch" },
+      { "type": "trait", "points": 70, "traitId": "attack_8" },
+      { "type": "ability", "points": 85, "abilityId": "kaboom" },
+      { "type": "trait", "points": 100, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 120, "abilityId": "hellitosis" },
+      { "type": "ability", "points": 150, "abilityId": "disruptive_wave" },
+      { "type": "ability", "points": 200, "abilityId": "magic_burst" }
+    ]
+  },
+  {
+    "id": "dhoulmagus",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "thin_air" },
+      { "type": "ability", "points": 20, "abilityId": "war_cry" },
+      { "type": "ability", "points": 30, "abilityId": "multiheal" },
+      { "type": "trait", "points": 50, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 70, "abilityId": "kacrack" },
+      { "type": "ability", "points": 85, "abilityId": "kasizz" },
+      { "type": "ability", "points": 100, "abilityId": "boulder_toss" },
+      { "type": "ability", "points": 120, "abilityId": "kasplashle" },
+      { "type": "ability", "points": 150, "abilityId": "hellitosis" },
+      { "type": "ability", "points": 200, "abilityId": "disruptive_wave" }
+    ]
+  },
+  {
+    "id": "rhapthorne",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "inferno" },
+      { "type": "ability", "points": 20, "abilityId": "dazzleflash" },
+      { "type": "ability", "points": 30, "abilityId": "starfall" },
+      { "type": "ability", "points": 50, "abilityId": "meditation" },
+      { "type": "ability", "points": 70, "abilityId": "c-c-cold_breath" },
+      { "type": "ability", "points": 85, "abilityId": "kafrizzle" },
+      { "type": "ability", "points": 100, "abilityId": "boulder_toss" },
+      { "type": "ability", "points": 120, "abilityId": "kaboomle" },
+      { "type": "ability", "points": 150, "abilityId": "disruptive_wave" },
+      { "type": "ability", "points": 200, "abilityId": "magic_burst" }
+    ]
+  },
+  {
+    "id": "greygnarl",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "magma_blast" },
+      { "type": "ability", "points": 20, "abilityId": "blessed_breath" },
+      { "type": "ability", "points": 30, "abilityId": "hellish_howl" },
+      { "type": "trait", "points": 50, "traitId": "attack_8" },
+      { "type": "ability", "points": 70, "abilityId": "kazapple" },
+      { "type": "ability", "points": 85, "abilityId": "giga_drain_magic" },
+      { "type": "trait", "points": 100, "traitId": "attack_12" },
+      { "type": "ability", "points": 120, "abilityId": "hellitosis" },
+      { "type": "ability", "points": 150, "abilityId": "wave_of_relief" },
+      { "type": "ability", "points": 200, "abilityId": "magic_burst" }
+    ]
+  },
+  {
+    "id": "barbarus",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "black_breath" },
+      { "type": "ability", "points": 20, "abilityId": "hellish_howl" },
+      { "type": "ability", "points": 30, "abilityId": "roundhouse_kick" },
+      { "type": "ability", "points": 50, "abilityId": "heart_breaker" },
+      { "type": "trait", "points": 70, "traitId": "wisdom_8" },
+      { "type": "ability", "points": 85, "abilityId": "kazammle" },
+      { "type": "ability", "points": 100, "abilityId": "grim_breath" },
+      { "type": "trait", "points": 120, "traitId": "max_hp_12" },
+      { "type": "ability", "points": 150, "abilityId": "ice_age" },
+      { "type": "ability", "points": 200, "abilityId": "wave_of_panic" }
+    ]
+  },
+  {
+    "id": "corvus",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "burning_breath" },
+      { "type": "ability", "points": 20, "abilityId": "seethe" },
+      { "type": "ability", "points": 30, "abilityId": "meditation" },
+      { "type": "ability", "points": 50, "abilityId": "multifists" },
+      { "type": "trait", "points": 70, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 85, "abilityId": "lightning_storm" },
+      { "type": "ability", "points": 100, "abilityId": "grim_breath" },
+      { "type": "ability", "points": 120, "abilityId": "kafrizzle" },
+      { "type": "ability", "points": 150, "abilityId": "magic_burst" },
+      { "type": "ability", "points": 200, "abilityId": "ice_age" }
+    ]
+  },
+  {
+    "id": "razerburn",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "magma_blast" },
+      { "type": "ability", "points": 20, "abilityId": "seethe" },
+      { "type": "ability", "points": 30, "abilityId": "knuckle_sandwich" },
+      { "type": "ability", "points": 50, "abilityId": "roundhouse_kick" },
+      { "type": "ability", "points": 70, "abilityId": "thin_air" },
+      { "type": "trait", "points": 85, "traitId": "defence_8" },
+      { "type": "ability", "points": 100, "abilityId": "multi-victimiser" },
+      { "type": "trait", "points": 120, "traitId": "attack_12" },
+      { "type": "ability", "points": 150, "abilityId": "disruptive_wave" },
+      { "type": "ability", "points": 200, "abilityId": "wave_of_relief" }
+    ]
+  },
+  {
+    "id": "nelgel_the_netherfiend",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "roundhouse_kick" },
+      { "type": "ability", "points": 20, "abilityId": "oomph" },
+      { "type": "ability", "points": 30, "abilityId": "starfall" },
+      { "type": "ability", "points": 50, "abilityId": "meditation" },
+      { "type": "trait", "points": 70, "traitId": "attack_12" },
+      { "type": "ability", "points": 85, "abilityId": "kafrizzle" },
+      { "type": "ability", "points": 100, "abilityId": "kazammle" },
+      { "type": "ability", "points": 120, "abilityId": "kacrackle" },
+      { "type": "ability", "points": 150, "abilityId": "kaboomle" },
+      { "type": "ability", "points": 200, "abilityId": "disruptive_wave" }
+    ]
+  },
+  {
+    "id": "jasper_unbound",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "multifists" },
+      { "type": "ability", "points": 20, "abilityId": "knuckle_sandwich" },
+      { "type": "ability", "points": 30, "abilityId": "fizzle" },
+      { "type": "trait", "points": 50, "traitId": "wisdom_8" },
+      { "type": "ability", "points": 70, "abilityId": "power_surge" },
+      { "type": "ability", "points": 85, "abilityId": "blightsplitter" },
+      { "type": "trait", "points": 100, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 120, "abilityId": "brake_wind" },
+      { "type": "ability", "points": 150, "abilityId": "grim_breath" },
+      { "type": "ability", "points": 200, "abilityId": "wave_of_panic" }
+    ]
+  },
+  {
+    "id": "mordegon_lord_of_shadows",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "kacrack" },
+      { "type": "ability", "points": 20, "abilityId": "meditation" },
+      { "type": "ability", "points": 30, "abilityId": "hellish_howl" },
+      { "type": "trait", "points": 50, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 70, "abilityId": "kaboom" },
+      { "type": "ability", "points": 85, "abilityId": "power_surge" },
+      { "type": "ability", "points": 100, "abilityId": "giga_drain_magic" },
+      { "type": "ability", "points": 120, "abilityId": "kazammle" },
+      { "type": "ability", "points": 150, "abilityId": "ice_age" },
+      { "type": "ability", "points": 200, "abilityId": "disruptive_wave" }
+    ]
+  },
+  {
+    "id": "calasmos",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "meditation" },
+      { "type": "ability", "points": 20, "abilityId": "poison_attack" },
+      { "type": "ability", "points": 30, "abilityId": "confusion_attack" },
+      { "type": "ability", "points": 50, "abilityId": "paralysing_punch" },
+      { "type": "trait", "points": 70, "traitId": "max_hp_8" },
+      { "type": "ability", "points": 85, "abilityId": "kaswooshle" },
+      { "type": "ability", "points": 100, "abilityId": "kaboomle" },
+      { "type": "trait", "points": 120, "traitId": "max_hp_12" },
+      { "type": "ability", "points": 150, "abilityId": "wave_of_panic" },
+      { "type": "ability", "points": 200, "abilityId": "hold_fire" }
+    ]
+  },
+  {
+    "id": "uberkilling_machine",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "dragon_slash" },
+      { "type": "ability", "points": 20, "abilityId": "multislash" },
+      { "type": "ability", "points": 30, "abilityId": "helm_splitter" },
+      { "type": "ability", "points": 50, "abilityId": "hatchet_man" },
+      { "type": "trait", "points": 70, "traitId": "attack_12" },
+      { "type": "ability", "points": 85, "abilityId": "parallax" },
+      { "type": "ability", "points": 100, "abilityId": "multifists" },
+      { "type": "ability", "points": 120, "abilityId": "earthsplitter" },
+      { "type": "trait", "points": 150, "traitId": "attack_16" },
+      { "type": "ability", "points": 200, "abilityId": "gigacross" }
+    ]
+  },
+  {
+    "id": "fluffy",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "tingle" },
+      { "type": "ability", "points": 20, "abilityId": "cock-a-doodle-doo" },
+      { "type": "ability", "points": 30, "abilityId": "oomphle" },
+      { "type": "ability", "points": 50, "abilityId": "kabuff" },
+      { "type": "ability", "points": 70, "abilityId": "kasap" },
+      { "type": "ability", "points": 85, "abilityId": "acceleratle" },
+      { "type": "ability", "points": 100, "abilityId": "kaping" },
+      { "type": "ability", "points": 120, "abilityId": "insulatle" },
+      { "type": "ability", "points": 150, "abilityId": "right_as_rain" },
+      { "type": "ability", "points": 200, "abilityId": "wave_of_relief" }
+    ]
+  },
+  {
+    "id": "scruffy",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "snooze" },
+      { "type": "ability", "points": 20, "abilityId": "fuddle" },
+      { "type": "ability", "points": 30, "abilityId": "numb" },
+      { "type": "ability", "points": 50, "abilityId": "kablunt" },
+      { "type": "ability", "points": 70, "abilityId": "kasap" },
+      { "type": "ability", "points": 85, "abilityId": "deceleratle" },
+      { "type": "ability", "points": 100, "abilityId": "kadim" },
+      { "type": "ability", "points": 120, "abilityId": "dazzle" },
+      { "type": "ability", "points": 150, "abilityId": "katoxle" },
+      { "type": "ability", "points": 200, "abilityId": "wave_of_panic" }
+    ]
+  },
+  {
+    "id": "fuzzy_thinker",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "dodgy_dance" },
+      { "type": "ability", "points": 20, "abilityId": "dazzleflash" },
+      { "type": "trait", "points": 30, "traitId": "max_hp_16" },
+      { "type": "ability", "points": 50, "abilityId": "magic_pop" },
+      { "type": "ability", "points": 70, "abilityId": "tongue_bashing" },
+      { "type": "ability", "points": 85, "abilityId": "right_as_rain" },
+      { "type": "trait", "points": 100, "traitId": "max_mp_16" },
+      { "type": "ability", "points": 120, "abilityId": "wave_of_relief" },
+      { "type": "ability", "points": 150, "abilityId": "wave_of_panic" },
+      { "type": "ability", "points": 200, "abilityId": "disruptive_wave" }
+    ]
+  },
+  {
+    "id": "wyrmhole_dragon",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "skysplitter" },
+      { "type": "ability", "points": 20, "abilityId": "kasizzle" },
+      { "type": "trait", "points": 30, "traitId": "wisdom_8" },
+      { "type": "ability", "points": 50, "abilityId": "lightning_storm" },
+      { "type": "trait", "points": 70, "traitId": "attack_12" },
+      { "type": "ability", "points": 85, "abilityId": "grim_breath" },
+      { "type": "ability", "points": 100, "abilityId": "magic_burst" },
+      { "type": "ability", "points": 120, "abilityId": "hellitosis" },
+      { "type": "ability", "points": 150, "abilityId": "wave_of_panic" },
+      { "type": "ability", "points": 200, "abilityId": "bad_hand" }
+    ]
+  },
+  {
+    "id": "baramos",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "fuddle" },
+      { "type": "ability", "points": 20, "abilityId": "kafrizz" },
+      { "type": "trait", "points": 30, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 50, "abilityId": "boulder_toss" },
+      { "type": "ability", "points": 70, "abilityId": "kafuddle" },
+      { "type": "ability", "points": 85, "abilityId": "lightning_storm" },
+      { "type": "ability", "points": 100, "abilityId": "kaboomle" },
+      { "type": "trait", "points": 120, "traitId": "auto-restora" },
+      { "type": "ability", "points": 150, "abilityId": "hellitosis" },
+      { "type": "ability", "points": 200, "abilityId": "disruptive_wave" }
+    ]
+  },
+  {
+    "id": "zoma",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "kacrackle_slash" },
+      { "type": "ability", "points": 20, "abilityId": "freezing_blizzard" },
+      { "type": "trait", "points": 30, "traitId": "wisdom_8" },
+      { "type": "ability", "points": 50, "abilityId": "kacrackle" },
+      { "type": "trait", "points": 70, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 85, "abilityId": "bounce" },
+      { "type": "ability", "points": 100, "abilityId": "ice_age" },
+      { "type": "trait", "points": 120, "traitId": "auto-restora" },
+      { "type": "ability", "points": 150, "abilityId": "disruptive_wave" },
+      { "type": "ability", "points": 200, "abilityId": "big_banga" }
+    ]
+  },
+  {
+    "id": "the_almighty",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "sultry_dance" },
+      { "type": "trait", "points": 20, "traitId": "max_hp_8" },
+      { "type": "ability", "points": 30, "abilityId": "hotstepper" },
+      { "type": "trait", "points": 50, "traitId": "max_hp_12" },
+      { "type": "ability", "points": 70, "abilityId": "multiheal" },
+      { "type": "ability", "points": 85, "abilityId": "electric_boogie" },
+      { "type": "trait", "points": 100, "traitId": "auto-restora" },
+      { "type": "ability", "points": 120, "abilityId": "lightning_storm" },
+      { "type": "ability", "points": 150, "abilityId": "hustle_dance" },
+      { "type": "ability", "points": 200, "abilityId": "wave_of_relief" }
+    ]
+  },
+  {
+    "id": "estark",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "multislash" },
+      { "type": "ability", "points": 20, "abilityId": "matter_scatterer" },
+      { "type": "ability", "points": 30, "abilityId": "hatchet_man" },
+      { "type": "ability", "points": 50, "abilityId": "skysplitter" },
+      { "type": "ability", "points": 70, "abilityId": "blightsplitter" },
+      { "type": "trait", "points": 85, "traitId": "auto-restora" },
+      { "type": "ability", "points": 100, "abilityId": "gigagash" },
+      { "type": "ability", "points": 120, "abilityId": "shadow_blast" },
+      { "type": "ability", "points": 150, "abilityId": "wave_of_panic" },
+      { "type": "ability", "points": 200, "abilityId": "disruptive_wave" }
+    ]
+  },
+  {
+    "id": "ramia",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "blessed_breath" },
+      { "type": "ability", "points": 20, "abilityId": "moreheal" },
+      { "type": "ability", "points": 30, "abilityId": "magic_pop" },
+      { "type": "trait", "points": 50, "traitId": "wisdom_8" },
+      { "type": "ability", "points": 70, "abilityId": "pearly_gates" },
+      { "type": "trait", "points": 85, "traitId": "wisdom_16" },
+      { "type": "ability", "points": 100, "abilityId": "shining_shot" },
+      { "type": "ability", "points": 120, "abilityId": "bounce" },
+      { "type": "ability", "points": 150, "abilityId": "wave_of_relief" },
+      { "type": "ability", "points": 200, "abilityId": "kerplunk" }
+    ]
+  },
+  {
+    "id": "lord_of_the_dragovians",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "insulatle" },
+      { "type": "ability", "points": 20, "abilityId": "scorch" },
+      { "type": "ability", "points": 30, "abilityId": "c-c-cold_breath" },
+      { "type": "ability", "points": 50, "abilityId": "war_cry" },
+      { "type": "trait", "points": 70, "traitId": "attack_8" },
+      { "type": "ability", "points": 85, "abilityId": "kazapple" },
+      { "type": "ability", "points": 100, "abilityId": "hellitosis" },
+      { "type": "trait", "points": 120, "traitId": "attack_12" },
+      { "type": "ability", "points": 150, "abilityId": "magic_burst" },
+      { "type": "ability", "points": 200, "abilityId": "gigacross" }
+    ]
+  },
+  {
+    "id": "xenlon",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "freezing_blizzard" },
+      { "type": "ability", "points": 20, "abilityId": "deep_breath" },
+      { "type": "ability", "points": 30, "abilityId": "magic_pop" },
+      { "type": "ability", "points": 50, "abilityId": "scorch" },
+      { "type": "trait", "points": 70, "traitId": "defence_8" },
+      { "type": "ability", "points": 85, "abilityId": "kazapple" },
+      { "type": "trait", "points": 100, "traitId": "defence_16" },
+      { "type": "ability", "points": 120, "abilityId": "hellitosis" },
+      { "type": "ability", "points": 150, "abilityId": "ice_age" },
+      { "type": "ability", "points": 200, "abilityId": "wave_of_relief" }
+    ]
+  },
+  {
+    "id": "nokturnus",
+    "tiers": [
+      { "type": "ability", "points": 10, "abilityId": "oomph" },
+      { "type": "ability", "points": 20, "abilityId": "dragon_slash" },
+      { "type": "ability", "points": 30, "abilityId": "sword_dance" },
+      { "type": "ability", "points": 50, "abilityId": "kazap" },
+      { "type": "ability", "points": 70, "abilityId": "skysplitter" },
+      { "type": "ability", "points": 85, "abilityId": "hellish_howl" },
+      { "type": "ability", "points": 100, "abilityId": "pearly_gates" },
+      { "type": "ability", "points": 120, "abilityId": "ice_age" },
+      { "type": "ability", "points": 150, "abilityId": "gigacross" },
+      { "type": "ability", "points": 200, "abilityId": "disruptive_wave" }
+    ]
+  }
+]

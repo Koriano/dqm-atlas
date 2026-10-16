@@ -18,13 +18,18 @@ export interface PartialResistance {
   percent: 25 | 50 | 75
 }
 
-export type Resistance = "weak" | "immune" | "absorb" | "reflect" | PartialResistance
+/**
+ * A named resistance, for a game that shows each one directly; or the game's resistance value, for a game that
+ * declares `resistanceStages` and names a value by the stage it reaches.
+ */
+export type Resistance = "weak" | "immune" | "absorb" | "reflect" | PartialResistance | number
 
 export type ResistanceMap = Record<string, Resistance>
 
 /** @minProperties 1 */
 export interface ScoutSituation {
   timeOfDay?: string
+  season?: string
   weather?: string
   storyStage?: string
 }
@@ -36,7 +41,28 @@ export type Obtainment =
       /** Absent when the monster appears in every situation. @minItems 1 */
       when?: ScoutSituation[]
     }
+  | {
+      type: "egg"
+      /** The region where the egg is found. */
+      locationId: string
+      /** The colours of egg it can hatch from. @minItems 1 */
+      eggColours: string[]
+      /** Absent when the egg is found from the start. */
+      storyStage?: string
+    }
   | { type: "event"; eventId: string }
+
+export interface MonsterTrait {
+  traitId: string
+  /**
+   * Level at which the monster gains the trait; absent when it has it from the start.
+   * @asType integer
+   * @minimum 2
+   */
+  level?: number
+  /** The only size in which the monster has the trait; absent when it has it in every size. */
+  size?: MonsterSize
+}
 
 export interface Monster {
   id: string
@@ -45,10 +71,10 @@ export interface Monster {
   rank: Rank
   size: MonsterSize
   maxStats: MonsterStats
-  /** @minItems 1 */
-  equipment: string[]
+  /** Absent in a game where monsters carry no equipment. @minItems 1 */
+  equipment?: string[]
   skillId: string
-  traitIds: string[]
+  traits: MonsterTrait[]
   resistances: ResistanceMap
   obtainments: Obtainment[]
   iconAssetKey: string

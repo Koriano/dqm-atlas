@@ -2,6 +2,7 @@ import { computed, inject, type InjectionKey, provide, reactive, readonly, ref, 
 
 import { loadGame, type UpcomingGameId } from "../data"
 import type { GameData, GameId } from "../domain/game"
+import type { Monster, MonsterSize } from "../domain/monster"
 import {
   ancestry,
   descendants,
@@ -17,8 +18,10 @@ import {
 } from "../services/graph/focusTree"
 import { decodeTree, encodeTree } from "../services/graph/treeCode"
 import { appText, type GameNames, type Language, LANGUAGES, loadGameNames } from "../i18n"
-import { statMaxima } from "../services/stats"
+import { monsterIconUrl } from "../services/assets"
+import { monsterSizes, statMaxima } from "../services/stats"
 import { createSynthesisEngine, type SynthesisEngine } from "../services/synthesis"
+import { preloadImages } from "./preload"
 
 /** The synthesis tree being explored: its root, the user's choice per node and the node whose sheet is open. */
 export interface TreeState {
@@ -42,6 +45,8 @@ export interface AppState {
   leftPanelOpen: boolean
   /** Kept from one sheet to the next, so several monsters can be compared on the same tab. */
   detailTab: DetailTab
+  /** The size the sheet shows, kept like the tab; null shows each monster in its own size. */
+  sheetSize: MonsterSize | null
 }
 
 const engines = new WeakMap<GameData, SynthesisEngine>()
@@ -68,21 +73,36 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
     parentDepth: 1,
     childDepth: 1,
     detailTab: "obtainment",
+    sheetSize: null,
   })
 
   const game = shallowRef<GameData | null>(null)
   const names = shallowRef<GameNames | null>(null)
   const status = ref<"loading" | "ready" | "error">("loading")
+  /** Icons of the game being loaded: null until its data has arrived. */
+  const loadProgress = shallowRef<{ done: number; total: number } | null>(null)
 
   watch(
     () => [state.gameId, state.language] as const,
     async ([gameId, language], _previous, onCleanup) => {
       let cancelled = false
       onCleanup(() => (cancelled = true))
-      if (game.value?.id !== gameId) status.value = "loading"
+      const newGame = game.value?.id !== gameId
+      if (newGame) {
+        status.value = "loading"
+        loadProgress.value = null
+      }
       try {
-        const [data, gameNames] = await Promise.all([game.value?.id === gameId ? game.value : loadGame(gameId), loadGameNames(gameId, language)])
-        if (cancelled) return
+        const [data, gameNames] = await Promise.all([newGame ? loadGame(gameId) : game.value, loadGameNames(gameId, language)])
+        if (cancelled || !data) return
+        // A game has several hundred monster icons: they are loaded before its atlas is shown.
+        if (newGame) {
+          const urls = data.monsters.map((monster) => monsterIconUrl(gameId, monster.iconAssetKey))
+          await preloadImages(urls, (done, total) => {
+            if (!cancelled) loadProgress.value = { done, total }
+          })
+          if (cancelled) return
+        }
         game.value = data
         names.value = gameNames
         status.value = "ready"
@@ -123,7 +143,7 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
       recipes: new Map(game.value.recipes.map((recipe) => [recipe.id, recipe])),
     }
   })
-  const maxima = computed(() => (game.value ? statMaxima(game.value.monsters) : null))
+  const maxima = computed(() => (game.value ? statMaxima(game.value) : null))
   const treeRoot = computed(() => (state.tree && sources.value ? (sources.value.monsters.get(state.tree.rootId) ?? null) : null))
   const ancestryTree = computed(() => {
     const tree = state.tree
@@ -171,8 +191,8 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
     if (!sources.value || item?.type !== "monster" || node?.choice?.type !== "normal") return
     const next: [string | null, string | null] = [...node.choice.parents]
     next[index] = monsterId
-    const other = next[1 - index]
-    if (monsterId && other && !isNormalPair(sources.value, item.monsterId, monsterId, other)) next[1 - index] = null
+    const [first, second] = next
+    if (monsterId && first && second && !isNormalPair(sources.value, item.monsterId, first, second)) next[1 - index] = null
     setChoice(nodeId, { type: "normal", parents: next })
   }
 
@@ -183,6 +203,7 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
     /** The monsters of the game by id. */
     monsters,
     status,
+    loadProgress,
     engine,
     statMaxima: maxima,
     treeRoot,
@@ -198,6 +219,7 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
       if (state.gameId === gameId) return
       state.gameId = gameId
       state.tree = null
+      state.sheetSize = null
     },
     setLanguage(language: Language) {
       state.language = language
@@ -276,6 +298,14 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
     },
     setDetailTab(tab: DetailTab) {
       state.detailTab = tab
+    },
+    setSheetSize(size: MonsterSize | null) {
+      state.sheetSize = size
+    },
+    /** The size the sheet shows for a monster: the chosen one when the monster can have it, otherwise its own. */
+    sheetSizeOf(monster: Monster): MonsterSize {
+      const chosen = state.sheetSize
+      return chosen && game.value && monsterSizes(monster, game.value).includes(chosen) ? chosen : monster.size
     },
     setLeftPanelOpen(open: boolean) {
       state.leftPanelOpen = open

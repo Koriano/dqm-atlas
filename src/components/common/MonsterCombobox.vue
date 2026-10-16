@@ -5,6 +5,7 @@ import { useAppContext } from "../../app/context"
 import type { Monster } from "../../domain/monster"
 import { formatText } from "../../i18n"
 import { monsterIconUrl } from "../../services/assets"
+import { setIconRendering } from "./iconRendering"
 import { matchesSearch } from "../../services/search"
 
 const props = withDefaults(
@@ -207,7 +208,7 @@ function onInput(event: Event) {
         @click="pick(monster)"
       >
         <span class="option-icon" aria-hidden="true">
-          <img :src="monsterIconUrl(app.state.gameId, monster.iconAssetKey)" alt="" />
+          <img :src="monsterIconUrl(app.state.gameId, monster.iconAssetKey)" alt="" @load="setIconRendering" />
         </span>
         <span class="option-name">{{ name(monster.id) }}</span>
         <span class="option-meta">{{ app.entityName("families", monster.familyId) }} · {{ monster.rank }}</span>
@@ -306,7 +307,6 @@ function onInput(event: Event) {
 .option-icon img {
   width: 100%;
   height: auto;
-  image-rendering: pixelated;
   display: block;
 }
 .option-name {

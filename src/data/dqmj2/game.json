@@ -10,6 +10,7 @@
     { "id": "undead", "iconAssetKey": "undead_family" },
     { "id": "unknown", "iconAssetKey": "boss_family" }
   ],
+  "familyIconFrame": { "width": 48, "height": 49, "drawn": { "x": 17, "y": 14, "width": 14, "height": 20 } },
   "abilities": [
     { "id": "abiliterator" },
     { "id": "accelerate" },
@@ -376,6 +377,7 @@
     { "id": "magical_sabotage" },
     { "id": "donk" }
   ],
+  "resistanceStages": [],
   "locations": [
     { "id": "albatross" },
     { "id": "treepidation" },
@@ -392,6 +394,7 @@
     { "id": "day" },
     { "id": "night" }
   ],
+  "seasons": [],
   "weathers": [
     { "id": "clear" },
     { "id": "bad_weather" }
@@ -435,6 +438,7 @@
     { "id": "nintendo_channel_distribution", "kind": "distribution", "regionId": "jp" },
     { "id": "battle_road_link", "kind": "linked_game", "regionId": "jp" }
   ],
+  "eggColours": [],
   "monsterGroups": [
     { "id": "incarnus", "monsterIds": ["wulfspade", "hawkhart", "cluboon", "diamagon", "wulfspade_ace", "hawkhart_ace", "cluboon_ace", "diamagon_ace"] }
   ],

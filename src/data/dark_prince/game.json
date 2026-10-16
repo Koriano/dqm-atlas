@@ -1,0 +1,839 @@
+{
+  "id": "dark_prince",
+  "families": [
+    { "id": "slime", "iconAssetKey": "slime_family" },
+    { "id": "dragon", "iconAssetKey": "dragon_family" },
+    { "id": "nature", "iconAssetKey": "nature_family" },
+    { "id": "material", "iconAssetKey": "material_family" },
+    { "id": "beast", "iconAssetKey": "beast_family" },
+    { "id": "demon", "iconAssetKey": "demon_family" },
+    { "id": "undead", "iconAssetKey": "undead_family" },
+    { "id": "unknown", "iconAssetKey": "boss_family" }
+  ],
+  "familyIconFrame": {
+    "width": 35,
+    "height": 35,
+    "drawn": { "x": 0, "y": 0, "width": 34, "height": 35 }
+  },
+  "abilities": [
+    { "id": "frizz" },
+    { "id": "frizzle" },
+    { "id": "kafrizz" },
+    { "id": "kafrizzle" },
+    { "id": "splish" },
+    { "id": "splash" },
+    { "id": "kasplash" },
+    { "id": "kasplashle" },
+    { "id": "woosh" },
+    { "id": "swoosh" },
+    { "id": "kaswoosh" },
+    { "id": "kaswooshle" },
+    { "id": "crag" },
+    { "id": "craggle" },
+    { "id": "kacrag" },
+    { "id": "kacraggle" },
+    { "id": "bang" },
+    { "id": "boom" },
+    { "id": "kaboom" },
+    { "id": "kaboomle" },
+    { "id": "crack" },
+    { "id": "crackle" },
+    { "id": "kacrack" },
+    { "id": "kacrackle" },
+    { "id": "zap" },
+    { "id": "zapple" },
+    { "id": "kazap" },
+    { "id": "kazapple" },
+    { "id": "sizz" },
+    { "id": "sizzle" },
+    { "id": "kasizz" },
+    { "id": "kasizzle" },
+    { "id": "zam" },
+    { "id": "zammle" },
+    { "id": "kazam" },
+    { "id": "kazammle" },
+    { "id": "pearly_gates" },
+    { "id": "magic_pop" },
+    { "id": "magic_burst" },
+    { "id": "heal" },
+    { "id": "midheal" },
+    { "id": "moreheal" },
+    { "id": "multiheal" },
+    { "id": "omniheal" },
+    { "id": "zing" },
+    { "id": "kazing" },
+    { "id": "kerplunk" },
+    { "id": "squelch" },
+    { "id": "tingle" },
+    { "id": "defuddle" },
+    { "id": "cock-a-doodle-doo" },
+    { "id": "oomph" },
+    { "id": "oomphle" },
+    { "id": "blunt" },
+    { "id": "kablunt" },
+    { "id": "buff" },
+    { "id": "kabuff" },
+    { "id": "sap" },
+    { "id": "kasap" },
+    { "id": "accelerate" },
+    { "id": "acceleratle" },
+    { "id": "decelerate" },
+    { "id": "deceleratle" },
+    { "id": "ping" },
+    { "id": "kaping" },
+    { "id": "dim" },
+    { "id": "kadim" },
+    { "id": "insulate" },
+    { "id": "insulatle" },
+    { "id": "dazzle" },
+    { "id": "fizzle" },
+    { "id": "bounce" },
+    { "id": "drain_magic" },
+    { "id": "giga_drain_magic" },
+    { "id": "fuddle" },
+    { "id": "kafuddle" },
+    { "id": "snooze" },
+    { "id": "kasnooze" },
+    { "id": "numb" },
+    { "id": "kanumb" },
+    { "id": "tox" },
+    { "id": "katox" },
+    { "id": "katoxle" },
+    { "id": "whack" },
+    { "id": "thwack" },
+    { "id": "kamikazee" },
+    { "id": "flame_slash" },
+    { "id": "gust_slash" },
+    { "id": "kacrackle_slash" },
+    { "id": "lightning_slash" },
+    { "id": "flamesplitter" },
+    { "id": "skysplitter" },
+    { "id": "earthsplitter" },
+    { "id": "brightsplitter" },
+    { "id": "blightsplitter" },
+    { "id": "gigaslash" },
+    { "id": "gigagash" },
+    { "id": "gigacross" },
+    { "id": "shadow_blast" },
+    { "id": "slime_squisher" },
+    { "id": "dragon_slash" },
+    { "id": "nature_nerfer" },
+    { "id": "beast_tamer" },
+    { "id": "matter_scatterer" },
+    { "id": "demon_demeaner" },
+    { "id": "undead_undoer" },
+    { "id": "multifists" },
+    { "id": "shining_shot" },
+    { "id": "multislash" },
+    { "id": "mercurial_thrust" },
+    { "id": "anchorman" },
+    { "id": "knuckle_sandwich" },
+    { "id": "roundhouse_kick" },
+    { "id": "hatchet_man" },
+    { "id": "frenzy" },
+    { "id": "miracle_slash" },
+    { "id": "attack_attacker" },
+    { "id": "helm_splitter" },
+    { "id": "confusion_attack" },
+    { "id": "sleep_attack" },
+    { "id": "paralysing_punch" },
+    { "id": "parallax" },
+    { "id": "heart_breaker" },
+    { "id": "poison_attack" },
+    { "id": "assassin_s_stab" },
+    { "id": "victimiser" },
+    { "id": "multi-victimiser" },
+    { "id": "persecutter" },
+    { "id": "multi-persecutter" },
+    { "id": "magma_blast" },
+    { "id": "tidal_wave" },
+    { "id": "wind_sickles" },
+    { "id": "thin_air" },
+    { "id": "stone_s_throw" },
+    { "id": "stomp" },
+    { "id": "boulder_toss" },
+    { "id": "big_banga" },
+    { "id": "lightning" },
+    { "id": "lightning_storm" },
+    { "id": "starfall" },
+    { "id": "bad_hand" },
+    { "id": "withering_look" },
+    { "id": "hellish_howl" },
+    { "id": "power_surge" },
+    { "id": "hold_fire" },
+    { "id": "meditation" },
+    { "id": "right_as_rain" },
+    { "id": "disruptive_wave" },
+    { "id": "wave_of_relief" },
+    { "id": "wave_of_panic" },
+    { "id": "sandstorm" },
+    { "id": "dazzleflash" },
+    { "id": "gobstopper" },
+    { "id": "critical_meltdown" },
+    { "id": "brake_wind" },
+    { "id": "mist_me" },
+    { "id": "war_cry" },
+    { "id": "tongue_lashing" },
+    { "id": "tongue_bashing" },
+    { "id": "seethe" },
+    { "id": "dodgy_dance" },
+    { "id": "selflessness" },
+    { "id": "fire_breath" },
+    { "id": "flame_breath" },
+    { "id": "inferno" },
+    { "id": "scorch" },
+    { "id": "hellitosis" },
+    { "id": "cool_breath" },
+    { "id": "chilly_breath" },
+    { "id": "freezing_blizzard" },
+    { "id": "c-c-cold_breath" },
+    { "id": "ice_age" },
+    { "id": "sandy_sigh" },
+    { "id": "blessed_breath" },
+    { "id": "black_breath" },
+    { "id": "grim_breath" },
+    { "id": "deep_breath" },
+    { "id": "sweet_breath" },
+    { "id": "burning_breath" },
+    { "id": "poison_breath" },
+    { "id": "sword_dance" },
+    { "id": "fan_dango" },
+    { "id": "butterfly_bop" },
+    { "id": "hotstepper" },
+    { "id": "electric_boogie" },
+    { "id": "hustle_dance" },
+    { "id": "kerplunk_dance" },
+    { "id": "weird_dance" },
+    { "id": "tap_dance" },
+    { "id": "fuddle_dance" },
+    { "id": "sultry_dance" },
+    { "id": "death_dance" },
+    { "id": "mirror_moves" },
+    { "id": "intense_defence" }
+  ],
+  "traits": [
+    { "id": "tactical_trooper" },
+    { "id": "tactical_commander" },
+    { "id": "tactical_genius" },
+    { "id": "tactical_titan" },
+    { "id": "insta-oomph" },
+    { "id": "insta-buff" },
+    { "id": "insta-accel" },
+    { "id": "insta-ping" },
+    { "id": "insta-bounce" },
+    { "id": "rando-oomph" },
+    { "id": "rando-buff" },
+    { "id": "rando-accel" },
+    { "id": "rando-ping" },
+    { "id": "rando-mister" },
+    { "id": "rando-relief" },
+    { "id": "rando-panic" },
+    { "id": "rando-disrupt" },
+    { "id": "rando-muster" },
+    { "id": "low_heal" },
+    { "id": "high_heal" },
+    { "id": "wizardly_waft" },
+    { "id": "wizardly_wind" },
+    { "id": "last_gasp" },
+    { "id": "frizzmeister" },
+    { "id": "splishmeister" },
+    { "id": "wooshmeister" },
+    { "id": "cragmeister" },
+    { "id": "bangmeister" },
+    { "id": "crackmeister" },
+    { "id": "zapmeister" },
+    { "id": "sizzmeister" },
+    { "id": "zammeister" },
+    { "id": "health_professional" },
+    {
+      "id": "metal_skin",
+      "sheetEffect": {
+        "statMultipliers": { "hp": 0.3333 },
+        "resistanceBonus": { "fire": 50, "water": 50, "wind": 50, "earth": 50, "explosions": 50, "ice": 50, "electricity": 50, "light": 50, "dark": 50, "confusion": 25, "sleep": -50, "paralysis": 25, "stun": -50, "poison": 25, "instant_death": 25 }
+      }
+    },
+    { "id": "slick_skin" },
+    { "id": "spiky_skin" },
+    { "id": "infected_skin" },
+    { "id": "stunning_skin" },
+    { "id": "somnolent_skin" },
+    { "id": "stupefying_skin" },
+    { "id": "insensitive_skin" },
+    { "id": "spongy_skin" },
+    { "id": "ace_evader" },
+    { "id": "supreme_sidestepper" },
+    { "id": "dodge_denier" },
+    { "id": "critical_triumph" },
+    { "id": "critical_sensation" },
+    { "id": "critical_moment" },
+    { "id": "critical_theorist" },
+    { "id": "critical_mastermind" },
+    { "id": "magical_moment" },
+    { "id": "desperate_measures" },
+    { "id": "hothead" },
+    { "id": "auto-restora" },
+    { "id": "auto-cadabra" },
+    { "id": "slimesbane" },
+    { "id": "dragonsbane" },
+    { "id": "beastsbane" },
+    { "id": "naturesbane" },
+    { "id": "demonsbane" },
+    { "id": "zombiesbane" },
+    { "id": "matterbane" },
+    { "id": "bossesbane" },
+    { "id": "uber_slimesbane" },
+    { "id": "uber_dragonsbane" },
+    { "id": "uber_beastsbane" },
+    { "id": "uber_naturesbane" },
+    { "id": "uber_demonsbane" },
+    { "id": "uber_zombiesbane" },
+    { "id": "uber_matterbane" },
+    { "id": "uber_bossesbane" },
+    { "id": "poisonous_touch" },
+    { "id": "stunning_touch" },
+    { "id": "sleepy_touch" },
+    { "id": "confusing_touch" },
+    { "id": "paralysing_touch" },
+    { "id": "deadly_touch" },
+    { "id": "miraculous_touch" },
+    { "id": "absorbent_touch" },
+    { "id": "metal_beater" },
+    { "id": "metal_medley" },
+    { "id": "little_menace" },
+    { "id": "big_bully" },
+    { "id": "insult_to_injury" },
+    { "id": "intimidating" },
+    { "id": "strangely_alluring" },
+    { "id": "agent_of_chaos" },
+    { "id": "sleep_twitch" },
+    { "id": "static_discharge" },
+    { "id": "sobering_slap" },
+    { "id": "detox" },
+    { "id": "decontaminate" },
+    { "id": "heaven-sent" },
+    { "id": "bigger_upper" },
+    { "id": "major_downer" },
+    { "id": "close_scraper" },
+    { "id": "last_legs" },
+    { "id": "snappy_comeback" },
+    { "id": "parting_gift" },
+    { "id": "benefaction" },
+    { "id": "strong_starter" },
+    { "id": "late_bloomer" },
+    { "id": "tit_for_tat" },
+    { "id": "naked_ambition" },
+    { "id": "attacking_impulse" },
+    { "id": "defensive_impulse" },
+    { "id": "evasive_impulse" },
+    { "id": "unhealthy_advantage" },
+    { "id": "collective_punishment" },
+    { "id": "personal_grudge" },
+    { "id": "echonomist" },
+    { "id": "adrenaline_rush" },
+    { "id": "trance_state" },
+    { "id": "ultra_crafty_frizzer" },
+    { "id": "ultra_crafty_splasher" },
+    { "id": "ultra_crafty_woosher" },
+    { "id": "ultra_crafty_cragger" },
+    { "id": "ultra_crafty_banger" },
+    { "id": "ultra_crafty_cracker" },
+    { "id": "ultra_crafty_zapper" },
+    { "id": "ultra_crafty_sizzer" },
+    { "id": "ultra_crafty_zammer" },
+    { "id": "ultra_crafty_debilitator" },
+    { "id": "ultra_crafty_dazzler" },
+    { "id": "ultra_crafty_spellbinder" },
+    { "id": "ultra_crafty_magic_drainer" },
+    { "id": "ultra_crafty_confuser" },
+    { "id": "ultra_crafty_sleeper" },
+    { "id": "ultra_crafty_paralyser" },
+    { "id": "ultra_crafty_stunner" },
+    { "id": "ultra_crafty_poisoner" },
+    { "id": "ultra_crafty_whacker" },
+    { "id": "crafty_devil" },
+    { "id": "max_hp_4" },
+    { "id": "max_hp_8" },
+    { "id": "max_hp_12" },
+    { "id": "max_hp_16" },
+    { "id": "max_hp_36" },
+    { "id": "max_hp_48" },
+    { "id": "max_mp_4" },
+    { "id": "max_mp_8" },
+    { "id": "max_mp_16" },
+    { "id": "max_mp_24" },
+    { "id": "max_mp_32" },
+    { "id": "max_mp_40" },
+    { "id": "max_mp_60" },
+    { "id": "attack_4" },
+    { "id": "attack_8" },
+    { "id": "attack_12" },
+    { "id": "attack_16" },
+    { "id": "attack_20" },
+    { "id": "attack_30" },
+    { "id": "attack_36" },
+    { "id": "attack_48" },
+    { "id": "defence_4" },
+    { "id": "defence_8" },
+    { "id": "defence_16" },
+    { "id": "defence_40" },
+    { "id": "agility_4" },
+    { "id": "agility_8" },
+    { "id": "agility_12" },
+    { "id": "agility_16" },
+    { "id": "agility_20" },
+    { "id": "agility_30" },
+    { "id": "wisdom_8" },
+    { "id": "wisdom_16" },
+    { "id": "wisdom_24" },
+    { "id": "ultra_frizz_ward" },
+    { "id": "ultra_splish_ward" },
+    { "id": "ultra_woosh_ward" },
+    { "id": "ultra_crag_ward" },
+    { "id": "ultra_bang_ward" },
+    { "id": "ultra_crack_ward" },
+    { "id": "ultra_zap_ward" },
+    { "id": "ultra_sizz_ward" },
+    { "id": "ultra_zam_ward" },
+    { "id": "ultra_antitoxidant" },
+    { "id": "ultra_granite_chin" },
+    { "id": "ultra_clear_thinker" },
+    { "id": "ultra_insomniac" },
+    { "id": "ultra_fidget" },
+    { "id": "ultra_death_defier" },
+    { "id": "ultra_tough_customer" }
+  ],
+  "equipmentTypes": [],
+  "resistanceCategories": [
+    { "id": "fire" },
+    { "id": "water" },
+    { "id": "wind" },
+    { "id": "earth" },
+    { "id": "explosions" },
+    { "id": "ice" },
+    { "id": "electricity" },
+    { "id": "light" },
+    { "id": "dark" },
+    { "id": "debilitation" },
+    { "id": "bedazzlement" },
+    { "id": "antimagic" },
+    { "id": "mp_absorption" },
+    { "id": "confusion" },
+    { "id": "sleep" },
+    { "id": "paralysis" },
+    { "id": "stun" },
+    { "id": "poison" },
+    { "id": "instant_death" }
+  ],
+  "resistanceStages": [
+    { "id": "weak", "min": -100 },
+    { "id": "normal", "min": 0 },
+    { "id": "strong", "min": 1 },
+    { "id": "very_strong", "min": 50 },
+    { "id": "immune", "min": 100 },
+    { "id": "absorbs", "min": 101 }
+  ],
+  "locations": [
+    {
+      "id": "plains",
+      "weathersBySeason": {
+        "spring": ["fine", "rain"],
+        "summer": ["fine", "rain"],
+        "autumn": ["fine", "rain"],
+        "winter": ["fine", "snow"]
+      }
+    },
+    {
+      "id": "plains_forest",
+      "weathersBySeason": {
+        "spring": ["fine", "rain"],
+        "summer": ["fine", "rain"],
+        "autumn": ["fine", "rain"],
+        "winter": ["fine", "snow"]
+      }
+    },
+    {
+      "id": "circle_of_temper_lower_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "heat_rain"],
+        "summer": ["fine", "heat_rain"],
+        "autumn": ["fine", "heat_rain"],
+        "winter": ["fine", "blizzard"]
+      }
+    },
+    { "id": "circle_of_temper_lower_echelon_dungeon" },
+    {
+      "id": "circle_of_temper_middle_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "heat_rain"],
+        "summer": ["fine", "heat_rain"],
+        "autumn": ["fine", "heat_rain"],
+        "winter": ["fine", "blizzard"]
+      }
+    },
+    { "id": "circle_of_temper_middle_echelon_dungeon" },
+    {
+      "id": "circle_of_temper_upper_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "heat_rain"],
+        "summer": ["fine", "heat_rain"],
+        "autumn": ["fine", "heat_rain"],
+        "winter": ["fine", "blizzard"]
+      }
+    },
+    { "id": "circle_of_temper_upper_echelon_dungeon" },
+    {
+      "id": "circle_of_conquest_lower_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "golden_ring_eclipse"],
+        "summer": ["fine", "green_rain"],
+        "autumn": ["fine", "golden_ring_eclipse"],
+        "winter": ["fine", "golden_ring_eclipse"]
+      }
+    },
+    {
+      "id": "circle_of_conquest_middle_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "golden_ring_eclipse"],
+        "summer": ["fine", "green_rain"],
+        "autumn": ["fine", "golden_ring_eclipse"],
+        "winter": ["fine", "golden_ring_eclipse"]
+      }
+    },
+    { "id": "circle_of_conquest_middle_echelon_dungeon" },
+    {
+      "id": "circle_of_conquest_upper_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "golden_ring_eclipse"],
+        "summer": ["fine", "green_rain"],
+        "autumn": ["fine", "golden_ring_eclipse"],
+        "winter": ["fine", "golden_ring_eclipse"]
+      }
+    },
+    { "id": "circle_of_conquest_upper_echelon_dungeon" },
+    {
+      "id": "circle_of_indulgence_lower_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "candy_rain"],
+        "summer": ["fine", "candy_rain"],
+        "autumn": ["fine", "ghost"],
+        "winter": ["fine", "candy_rain"]
+      }
+    },
+    { "id": "circle_of_indulgence_lower_echelon_dungeon" },
+    {
+      "id": "circle_of_indulgence_middle_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "candy_rain"],
+        "summer": ["fine", "candy_rain"],
+        "autumn": ["fine", "ghost"],
+        "winter": ["fine", "candy_rain"]
+      }
+    },
+    { "id": "circle_of_indulgence_middle_echelon_dungeon" },
+    {
+      "id": "circle_of_indulgence_upper_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "candy_rain"],
+        "summer": ["fine", "candy_rain"],
+        "autumn": ["fine", "ghost"],
+        "winter": ["fine", "candy_rain"]
+      }
+    },
+    { "id": "circle_of_indulgence_upper_echelon_dungeon" },
+    {
+      "id": "circle_of_fortitude_lower_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "gas"],
+        "summer": ["fine", "gas"],
+        "autumn": ["fine", "thunderbolt"],
+        "winter": ["fine", "gas"]
+      }
+    },
+    { "id": "circle_of_fortitude_lower_echelon_dungeon" },
+    {
+      "id": "circle_of_fortitude_middle_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "gas"],
+        "summer": ["fine", "gas"],
+        "autumn": ["fine", "thunderbolt"],
+        "winter": ["fine", "gas"]
+      }
+    },
+    { "id": "circle_of_fortitude_middle_echelon_dungeon" },
+    {
+      "id": "circle_of_fortitude_upper_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "gas"],
+        "summer": ["fine", "gas"],
+        "autumn": ["fine", "thunderbolt"],
+        "winter": ["fine", "gas"]
+      }
+    },
+    { "id": "circle_of_fortitude_upper_echelon_dungeon" },
+    {
+      "id": "circle_of_caprice_lower_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "twilight"],
+        "summer": ["fine", "twilight"],
+        "autumn": ["fine", "twilight"],
+        "winter": ["fine", "twilight"]
+      }
+    },
+    { "id": "circle_of_caprice_lower_echelon_dungeon" },
+    {
+      "id": "circle_of_caprice_middle_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "sandstorm"],
+        "summer": ["fine", "sandstorm"],
+        "autumn": ["fine", "sandstorm"],
+        "winter": ["fine", "twilight"]
+      }
+    },
+    { "id": "circle_of_caprice_middle_echelon_dungeon" },
+    {
+      "id": "circle_of_caprice_upper_echelon",
+      "weathersBySeason": {
+        "spring": ["fine", "twilight"],
+        "summer": ["fine", "twilight"],
+        "autumn": ["fine", "twilight"],
+        "winter": ["fine", "twilight"]
+      }
+    },
+    { "id": "circle_of_caprice_upper_echelon_dungeon" },
+    { "id": "cradle_of_corruption_lower_level" },
+    { "id": "cradle_of_corruption_middle_level" },
+    { "id": "cradle_of_corruption_upper_level" },
+    { "id": "the_whispwoods" },
+    { "id": "terrestria" },
+    { "id": "circle_of_temper" },
+    { "id": "circle_of_conquest" },
+    { "id": "circle_of_indulgence" },
+    { "id": "circle_of_fortitude" },
+    { "id": "circle_of_caprice" }
+  ],
+  "timesOfDay": [],
+  "seasons": [
+    { "id": "spring", "iconAssetKey": "spring" },
+    { "id": "summer", "iconAssetKey": "summer" },
+    { "id": "autumn", "iconAssetKey": "autumn" },
+    { "id": "winter", "iconAssetKey": "winter" }
+  ],
+  "weathers": [
+    { "id": "fine", "iconAssetKey": "fine" },
+    { "id": "rain", "iconAssetKey": "rain" },
+    { "id": "snow", "iconAssetKey": "snow" },
+    { "id": "heat_rain", "iconAssetKey": "heat_rain" },
+    { "id": "blizzard", "iconAssetKey": "blizzard" },
+    { "id": "green_rain", "iconAssetKey": "green_rain" },
+    { "id": "golden_ring_eclipse", "iconAssetKey": "golden_ring_eclipse" },
+    { "id": "candy_rain", "iconAssetKey": "candy_rain" },
+    { "id": "ghost", "iconAssetKey": "ghost" },
+    { "id": "thunderbolt", "iconAssetKey": "thunderbolt" },
+    { "id": "gas", "iconAssetKey": "gas" },
+    { "id": "sandstorm", "iconAssetKey": "sandstorm" },
+    { "id": "twilight", "iconAssetKey": "twilight" }
+  ],
+  "storyStages": [
+    { "id": "after_succubat" },
+    { "id": "caprice_upper_reached" },
+    { "id": "postgame" },
+    { "id": "after_venjurah" }
+  ],
+  "eventKinds": [
+    { "id": "joins_party" }
+  ],
+  "regions": [],
+  "events": [
+    { "id": "joins_party", "kind": "joins_party" }
+  ],
+  "eggColours": [
+    { "id": "white" },
+    { "id": "silver" },
+    { "id": "gold" },
+    { "id": "rainbow" }
+  ],
+  "monsterGroups": [],
+  "rules": {
+    "rankOrder": ["G", "F", "E", "D", "C", "B", "A", "S", "X"],
+    "normalSynthesis": {
+      "kind": "familyTable",
+      "table": [
+        {
+          "families": ["slime", "dragon"],
+          "results": { "G": "wing_slime", "F": "drake_slime", "E": "behemoth_slime", "D": "dragon_slime", "C": "shadow_slime", "B": "goomulonimbus" }
+        },
+        {
+          "families": ["slime", "nature"],
+          "results": { "G": "buddy_slime", "F": "onion_slime", "E": "angel_slime", "D": "scuttle_slime", "C": "flutter_slime", "B": "king_cureslime" }
+        },
+        {
+          "families": ["slime", "material"],
+          "results": { "G": "scallop_slime", "F": "slime_stack", "E": "rubble_slime", "D": "cococoa_blobelisk", "C": "cyber_slime", "B": "slime_snack" }
+        },
+        {
+          "families": ["slime", "beast"],
+          "results": { "G": "shell_slime", "F": "feral_slime", "E": "spiny_slime", "D": "wild_slime", "C": "mottle_she-slime", "B": "shogum" }
+        },
+        {
+          "families": ["slime", "demon"],
+          "results": { "G": "fright_bulb", "F": "she-slime", "E": "dark_slime", "D": "dark_king_slime", "C": "metal_slime_knight", "B": "king_slick_slime" }
+        },
+        {
+          "families": ["slime", "undead"],
+          "results": { "G": "slimeshroom", "F": "snowmangler", "E": "mouldy_slime", "D": "king_bubble_slime", "C": "jester_slime", "B": "king_jester_slime" }
+        },
+        {
+          "families": ["dragon", "slime"],
+          "results": { "G": "small_fry", "F": "raptile", "E": "wyrtle", "D": "saltwater_stallion", "C": "noble_gasbagon", "B": "drakulard" }
+        },
+        {
+          "families": ["dragon", "nature"],
+          "results": { "G": "dragonthorn", "F": "briny_bronco", "E": "lumbering_lizard", "D": "tundragster", "C": "heligator", "B": "mandrake_marshal" }
+        },
+        {
+          "families": ["dragon", "material"],
+          "results": { "G": "nardragon", "F": "armoured_wartoise", "E": "stabosaur", "D": "metal_dragon", "C": "tyrannoceratops", "B": "iron_tortoise" }
+        },
+        {
+          "families": ["dragon", "beast"],
+          "results": { "G": "komodo", "F": "jargon", "E": "tortoceratops", "D": "wyvern", "C": "bobonga", "B": "hacksaurus" }
+        },
+        {
+          "families": ["dragon", "demon"],
+          "results": { "G": "pteranodon", "F": "drag_racer", "E": "mandrake_major", "D": "axesaurus", "C": "liege_lizard", "B": "black_dragon" }
+        },
+        {
+          "families": ["dragon", "undead"],
+          "results": { "G": "killer_gila", "F": "flython", "E": "cauldragon", "D": "abyss_diver", "C": "flapdragon", "B": "dread_dragooner" }
+        },
+        {
+          "families": ["nature", "slime"],
+          "results": { "G": "khalamari_kid", "F": "mitey_oak", "E": "puffpoise", "D": "brimstone_bulb", "C": "tufty_tot", "B": "tuffpoise" }
+        },
+        {
+          "families": ["nature", "dragon"],
+          "results": { "G": "killerpillar", "F": "pogoin_penguin", "E": "chimaera", "D": "zaptile", "C": "grillerpillar", "B": "firebird" }
+        },
+        {
+          "families": ["nature", "material"],
+          "results": { "G": "capsichum", "F": "scissor_beatle", "E": "crabid", "D": "palooka_prawn", "C": "armoured_scorpion", "B": "gangleclaw" }
+        },
+        {
+          "families": ["nature", "beast"],
+          "results": { "G": "bludgerigar", "F": "bagworm", "E": "weaken_beakon", "D": "tuskateer", "C": "roistering_rooster", "B": "fowl_beast" }
+        },
+        {
+          "families": ["nature", "demon"],
+          "results": { "G": "ornery_onion", "F": "cyclown", "E": "octopot", "D": "rockin_rockhopper", "C": "fandangow", "B": "cosmic_chimaera" }
+        },
+        {
+          "families": ["nature", "undead"],
+          "results": { "G": "stark_raven", "F": "odd_cob", "E": "scornet", "D": "carnivine", "C": "crabber_dabber_doo", "B": "belisha_beakon" }
+        },
+        {
+          "families": ["material", "slime"],
+          "results": { "G": "bag_o_laughs", "F": "mudraker", "E": "goodybag", "D": "shivery_shrubbery", "C": "bomboulder", "B": "hard-boiled_eggsoskeleton" }
+        },
+        {
+          "families": ["material", "dragon"],
+          "results": { "G": "mecha-mynah", "F": "bongo_drongo", "E": "well_wisher", "D": "dancing_flame", "C": "bongo_fandango", "B": "ne_er-do-well" }
+        },
+        {
+          "families": ["material", "nature"],
+          "results": { "G": "cumaulus", "F": "avian_android", "E": "clockwork_cuckoo", "D": "coralossus", "C": "flamethrower", "B": "snowgre" }
+        },
+        {
+          "families": ["material", "beast"],
+          "results": { "G": "eggsoskeleton", "F": "foo_dog", "E": "escudogre", "D": "abracadabrador", "C": "face_invader", "B": "king_foo_dog" }
+        },
+        {
+          "families": ["material", "demon"],
+          "results": { "G": "spitnik", "F": "pocus_poppet", "E": "rockbomb", "D": "paralyslicer", "C": "flying_saucers", "B": "alarmour" }
+        },
+        {
+          "families": ["material", "undead"],
+          "results": { "G": "sacksquatch", "F": "horriflying_saucers", "E": "brollygagger", "D": "frostburn", "C": "blue_moon", "B": "admirer" }
+        },
+        {
+          "families": ["beast", "slime"],
+          "results": { "G": "great_sabrecub", "F": "boppin_badger", "E": "dark_sabrecub", "D": "cheater_cheetah", "C": "dark_hare", "B": "mogus" }
+        },
+        {
+          "families": ["beast", "dragon"],
+          "results": { "G": "sham_hatwitch", "F": "vampire_cat", "E": "jumping_jackal", "D": "great_sabrecat", "C": "jowler", "B": "tantamount" }
+        },
+        {
+          "families": ["beast", "nature"],
+          "results": { "G": "feralball", "F": "orc", "E": "splatypunk", "D": "giruffian", "C": "hellion", "B": "draguar" }
+        },
+        {
+          "families": ["beast", "material"],
+          "results": { "G": "mischievous_mole", "F": "napir", "E": "brownie", "D": "calypso_king", "C": "maniacal_mole", "B": "mohawker" }
+        },
+        {
+          "families": ["beast", "demon"],
+          "results": { "G": "pan_piper", "F": "hawk_man", "E": "meowgician", "D": "gargoyle", "C": "notso_macho", "B": "dark_sabrecat" }
+        },
+        {
+          "families": ["beast", "undead"],
+          "results": { "G": "fat_rat", "F": "guaardvark", "E": "jailcat", "D": "sweaty_yeti", "C": "gnumesis", "B": "ursa_mega" }
+        },
+        {
+          "families": ["demon", "slime"],
+          "results": { "G": "picksy", "F": "imp", "E": "drackolyte", "D": "minidemon", "C": "gander", "B": "hocus-poker" }
+        },
+        {
+          "families": ["demon", "dragon"],
+          "results": { "G": "gremlin", "F": "pickayune", "E": "beleth", "D": "low_djinks", "C": "sintaur", "B": "archdemon" }
+        },
+        {
+          "families": ["demon", "nature"],
+          "results": { "G": "lunatick", "F": "merman", "E": "jinkster", "D": "kisser", "C": "drackyma", "B": "gigantes" }
+        },
+        {
+          "families": ["demon", "material"],
+          "results": { "G": "leery_lout", "F": "cannonbrawler", "E": "hooper_trooper", "D": "knight_errant", "C": "swingre", "B": "bilhaw" }
+        },
+        {
+          "families": ["demon", "beast"],
+          "results": { "G": "teeny_sanguini", "F": "succubat", "E": "bodkin_fletcher", "D": "silvapithecus", "C": "togre", "B": "grrrgoyle" }
+        },
+        {
+          "families": ["demon", "undead"],
+          "results": { "G": "lump_wizard", "F": "dancing_devil", "E": "lump_shaman", "D": "hypothermion", "C": "grim_keeper", "B": "jugular_joker" }
+        },
+        {
+          "families": ["undead", "slime"],
+          "results": { "G": "soft_serve_spook", "F": "scarfish", "E": "chocolate_whisp", "D": "fightgeist", "C": "skellyfish", "B": "drooling_ghoul" }
+        },
+        {
+          "families": ["undead", "dragon"],
+          "results": { "G": "firespirit", "F": "skullrider", "E": "grinferno", "D": "bone_idol", "C": "dullahan", "B": "grotwyrm" }
+        },
+        {
+          "families": ["undead", "nature"],
+          "results": { "G": "stump_chump", "F": "monolog", "E": "morphean_mushroom", "D": "cursed_crooner", "C": "treevil", "B": "hellspawn" }
+        },
+        {
+          "families": ["undead", "material"],
+          "results": { "G": "wax_murderer", "F": "muddy_hand", "E": "iron_maiden", "D": "bloody_hand", "C": "phantom_swordsman", "B": "headless_horseman" }
+        },
+        {
+          "families": ["undead", "beast"],
+          "results": { "G": "putrefido", "F": "walking_corpse", "E": "frolicker", "D": "grim_rider", "C": "grincinerator", "B": "bone_baron" }
+        },
+        {
+          "families": ["undead", "demon"],
+          "results": { "G": "drohl_drone", "F": "hellbound_horror", "E": "skeleton_soldier", "D": "soulspawn", "C": "sekerleton", "B": "demon-at-arms" }
+        }
+      ]
+    },
+    "sizeVariants": [
+      {
+        "size": "G",
+        "statMultipliers": { "hp": 1.5, "mp": 1.5, "attack": 1.1, "defence": 1.1, "agility": 1.1, "wisdom": 1.1 },
+        "resistanceBonus": { "confusion": 50, "sleep": 50, "paralysis": 50, "stun": 50, "poison": 50, "instant_death": 50 }
+      }
+    ]
+  }
+}

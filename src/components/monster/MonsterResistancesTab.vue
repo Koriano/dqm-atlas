@@ -4,21 +4,37 @@ import { computed } from "vue"
 import { useAppContext } from "../../app/context"
 import type { Monster } from "../../domain/monster"
 import { formatText } from "../../i18n"
+import { resistanceStage, sheetResistances } from "../../services/stats"
 
 const props = defineProps<{ monster: Monster }>()
 
 const app = useAppContext()
 
+/** The colour of a resistance value: below zero, zero, a reduction up to immunity, beyond it. */
+function valueLevel(value: number): "weak" | "normal" | "resistant" | "absorb" {
+  return value < 0 ? "weak" : value === 0 ? "normal" : value <= 100 ? "resistant" : "absorb"
+}
+
 /** Every category of the game's catalog, in its order; one without a stored value is a normal resistance. */
-const resistances = computed(() =>
-  (app.game.value?.resistanceCategories ?? []).map((category) => {
-    const resistance = props.monster.resistances[category.id] ?? ("normal" as const)
-    const levels = app.text.value.resistanceLevels
+const resistances = computed(() => {
+  const game = app.game.value
+  if (!game) return []
+  const shown = sheetResistances(props.monster, game, app.sheetSizeOf(props.monster))
+  const levels = app.text.value.resistanceLevels
+  return game.resistanceCategories.map((category) => {
+    const resistance = shown[category.id]
+    // A game that gives values names the stage each one reaches.
+    if (game.resistanceStages.length > 0) {
+      const value = typeof resistance === "number" ? resistance : 0
+      const stage = resistanceStage(game.resistanceStages, value)
+      return { id: category.id, level: valueLevel(value), label: stage ? app.entityName("resistanceStages", stage.id) : String(value) }
+    }
+    if (resistance === undefined || typeof resistance === "number") return { id: category.id, level: "normal", label: levels.normal }
     return typeof resistance === "string"
       ? { id: category.id, level: resistance, label: levels[resistance] }
       : { id: category.id, level: resistance.level, label: formatText(levels.resistant, { percent: resistance.percent }) }
-  }),
-)
+  })
+})
 </script>
 
 <template>

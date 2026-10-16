@@ -3,7 +3,8 @@
 A visual atlas of the monsters and synthesis paths of the Dragon Quest Monsters games: browse every monster of a
 game, open one, and work out step by step how to obtain it.
 
-V1 covers **Dragon Quest Monsters: Joker 2** (original version, not Professional). Other games are planned.
+It covers **Dragon Quest Monsters: Joker 2** (original version, not Professional) and **Dragon Quest Monsters: The Dark
+Prince**. Other games are planned.
 
 DQM Atlas is an unofficial fan site, free and without ads. It is not affiliated with or endorsed by Square Enix.
 Dragon Quest is a trademark of Square Enix; the names, texts and images taken from the game belong to their

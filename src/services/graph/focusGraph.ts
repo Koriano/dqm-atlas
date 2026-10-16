@@ -24,7 +24,7 @@ const FIELD_HEIGHT = 24
 const FIELD_ROW = FIELD_HEIGHT + 4
 
 /** `tag`: the node is obtained by scouting or an event (its chosen method), shown under its name. */
-export type ObtainTagType = "scout" | "event" | null
+export type ObtainTagType = "scout" | "egg" | "event" | null
 
 export type FocusNodeData =
   | { kind: "focus"; monster: Monster; selected: boolean; tag: ObtainTagType }
@@ -98,7 +98,7 @@ export function focusGraph({ root, children, monsters, selectedId, labels }: Foc
   function nodeData(node: RelationNode, side: "root" | "parent" | "child"): FocusNodeData {
     const item = node.item
     const selected = selectedId === node.id
-    const tag = node.choice?.type === "scout" || node.choice?.type === "event" ? node.choice.type : null
+    const tag = node.choice?.type === "scout" || node.choice?.type === "egg" || node.choice?.type === "event" ? node.choice.type : null
     switch (item.type) {
       case "monster": {
         const monster = monsters.get(item.monsterId)

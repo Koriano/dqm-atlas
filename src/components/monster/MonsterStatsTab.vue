@@ -4,27 +4,32 @@ import { computed } from "vue"
 import { useAppContext } from "../../app/context"
 import type { Monster } from "../../domain/monster"
 import { EQUIPMENT_ICON_SIZE, equipmentIconUrl } from "../../services/assets"
-import { STAT_KEYS } from "../../services/stats"
+import { sheetStats, STAT_KEYS } from "../../services/stats"
 
 const props = defineProps<{ monster: Monster }>()
 
 const app = useAppContext()
 
 /** In the game's catalog order, so the types line up from one monster to the next. */
-const equipment = computed(() => (app.game.value?.equipmentTypes ?? []).filter((type) => props.monster.equipment.includes(type.id)))
+const equipment = computed(() => {
+  const carried = props.monster.equipment
+  return carried ? (app.game.value?.equipmentTypes ?? []).filter((type) => carried.includes(type.id)) : null
+})
 
-const stats = computed(() =>
-  STAT_KEYS.map((key) => {
-    const value = props.monster.maxStats[key]
+const stats = computed(() => {
+  const game = app.game.value
+  const values = game ? sheetStats(props.monster, game, app.sheetSizeOf(props.monster)) : props.monster.maxStats
+  return STAT_KEYS.map((key) => {
+    const value = values[key]
     const max = app.statMaxima.value?.[key] ?? 0
     return { key, value, ratio: max > 0 ? value / max : 0 }
-  }),
-)
+  })
+})
 </script>
 
 <template>
   <div>
-    <section class="block">
+    <section v-if="equipment" class="block">
       <h3 class="section-title">{{ app.text.value.equipment }}</h3>
       <ul class="equipment">
         <li v-for="type in equipment" :key="type.id" class="equipment-type">

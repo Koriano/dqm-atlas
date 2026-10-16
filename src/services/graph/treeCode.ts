@@ -37,6 +37,7 @@ function encodeNode(node: RelationNode): EncodedNode | null {
   const choice = node.choice
   if (!choice) return [id]
   if (choice.type === "scout") return [id, "s", choice.locationId]
+  if (choice.type === "egg") return [id, "g", choice.locationId]
   if (choice.type === "event") return [id, "e", choice.eventId]
   const parents = node.branches.length > 0 ? [node.branches.map(encodeNode)] : []
   return choice.type === "recipe" ? [id, "r", choice.recipeId, ...parents] : [id, "n", ...parents]
@@ -103,6 +104,8 @@ export async function decodeTree(code: string, sources: TreeSources, gameId: Gam
     const choice: NodeChoice | null =
       kind === "s" && typeof first === "string"
         ? { type: "scout", locationId: first }
+        : kind === "g" && typeof first === "string"
+          ? { type: "egg", locationId: first }
         : kind === "e" && typeof first === "string"
           ? { type: "event", eventId: first }
           : kind === "r" && typeof first === "string"
@@ -115,8 +118,8 @@ export async function decodeTree(code: string, sources: TreeSources, gameId: Gam
       return
     }
     const entries = choice.type === "recipe" ? second : first
-    if (choice.type === "scout" || choice.type === "event" || !Array.isArray(entries)) {
-      // Scouting and events have no parents; a synthesis has none listed at the depth limit only.
+    if (choice.type === "scout" || choice.type === "egg" || choice.type === "event" || !Array.isArray(entries)) {
+      // Scouting, eggs and events have no parents; a synthesis has none listed at the depth limit only.
       if (choice.type === "recipe" || choice.type === "normal") mismatch ||= level < depth
       choices[id] = choice
       return

@@ -3,6 +3,7 @@ import { computed, nextTick, ref, useId } from "vue"
 
 import { type DetailTab, useAppContext } from "../../app/context"
 import { formatText } from "../../i18n"
+import { monsterSizes } from "../../services/stats"
 import InfoPopover from "../common/InfoPopover.vue"
 import MonsterIcon from "../common/MonsterIcon.vue"
 import MonsterResistancesTab from "./MonsterResistancesTab.vue"
@@ -21,6 +22,9 @@ const skillTiers = computed(() => {
       : { key: `trait:${tier.traitId}`, points: tier.points, name: app.entityName("traits", tier.traitId) },
   )
 })
+/** The sizes the sheet can show; a single one means the game gives every monster its own size only. */
+const sizes = computed(() => (node.value && app.game.value ? monsterSizes(node.value.monster, app.game.value) : []))
+const shownSize = computed(() => (node.value ? app.sheetSizeOf(node.value.monster) : null))
 const tabsId = useId()
 const tabList = ref<HTMLElement>()
 
@@ -64,7 +68,21 @@ const tabs = computed<{ id: DetailTab; label: string }[]>(() => [
         <dt>{{ app.text.value.rank }}</dt>
         <dd>{{ node.monster.rank }}</dd>
         <dt>{{ app.text.value.size }}</dt>
-        <dd>{{ node.monster.size }}</dd>
+        <dd>
+          <div v-if="sizes.length > 1" class="size-switch" role="group" :aria-label="app.text.value.sheetSize">
+            <button
+              v-for="size in sizes"
+              :key="size"
+              type="button"
+              class="size-button"
+              :aria-pressed="size === shownSize"
+              @click="app.setSheetSize(size)"
+            >
+              {{ size }}
+            </button>
+          </div>
+          <template v-else>{{ node.monster.size }}</template>
+        </dd>
         <dt>{{ app.text.value.skill }}</dt>
         <dd>
           <InfoPopover :label="app.entityName('skills', node.monster.skillId)">
@@ -84,12 +102,22 @@ const tabs = computed<{ id: DetailTab; label: string }[]>(() => [
             </table>
           </InfoPopover>
         </dd>
-        <template v-if="node.monster.traitIds.length > 0">
+        <template v-if="node.monster.traits.length > 0">
           <dt>{{ app.text.value.traits }}</dt>
           <dd>
+            <!-- Every trait is listed, whatever the size shown; one the monster lacks in that size is dimmed. -->
             <ul class="traits">
-              <li v-for="traitId in node.monster.traitIds" :key="traitId">
-                <InfoPopover :label="app.entityName('traits', traitId)">{{ app.entityName("traitDescriptions", traitId) }}</InfoPopover>
+              <li
+                v-for="trait in node.monster.traits"
+                :key="`${trait.traitId} ${trait.level ?? ''} ${trait.size ?? ''}`"
+                class="trait"
+                :class="{ absent: trait.size !== undefined && trait.size !== shownSize }"
+              >
+                <span v-if="trait.level" class="trait-level">{{ formatText(app.text.value.traitLevel, { level: trait.level }) }}</span>
+                <InfoPopover :label="app.entityName('traits', trait.traitId)">{{ app.entityName("traitDescriptions", trait.traitId) }}</InfoPopover>
+                <span v-if="trait.size" class="trait-size" :title="formatText(app.text.value.traitSizeOnly, { size: trait.size })">
+                  <span aria-hidden="true">{{ trait.size }}</span><span class="visually-hidden">{{ formatText(app.text.value.traitSizeOnly, { size: trait.size }) }}</span>
+                </span>
               </li>
             </ul>
           </dd>
@@ -180,6 +208,67 @@ const tabs = computed<{ id: DetailTab; label: string }[]>(() => [
   margin: 0;
   padding: 0;
   list-style: none;
+}
+/* Positioned so the hidden size text stays within the scrolling panel. */
+.trait {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+/* Only the trait itself is dimmed: its open details stay fully readable. */
+.trait.absent > :deep(:not(.info-popover)) {
+  opacity: 0.55;
+}
+.trait-level {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+.trait-size {
+  padding: 0 0.35rem;
+  border-radius: 0.25rem;
+  background: var(--info-soft);
+  color: var(--info);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+/* Read by screen readers only: the tag itself just shows the size. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.size-switch {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.size-button {
+  min-width: 2.25rem;
+  padding: 0.1rem 0.6rem;
+  border: 0;
+  background: var(--surface);
+  color: var(--text-muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.size-button + .size-button {
+  border-left: 1px solid var(--border);
+}
+.size-button[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--surface);
+}
+.size-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -3px;
 }
 .tiers {
   border-collapse: collapse;

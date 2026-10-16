@@ -60,11 +60,13 @@ interface MonsterGroup extends CatalogEntry {
 | `families` | `Monster.familyId`, family parent conditions |
 | `skills` (declared in `skills.json`) | `Monster.skillId` |
 | `abilities` | ability tiers of a skill |
-| `traits` | `Monster.traitIds`, trait tiers of a skill |
+| `traits` | `Monster.traits`, trait tiers of a skill |
 | `equipmentTypes` | `Monster.equipment` |
 | `resistanceCategories` | keys of `Monster.resistances` |
-| `locations` | scout obtainments |
-| `timesOfDay`, `weathers`, `storyStages` | scout situations |
+| `resistanceStages` | reached by a resistance value (see Monster) |
+| `locations` | scout and egg obtainments |
+| `timesOfDay`, `seasons`, `weathers`, `storyStages` | scout situations (`storyStages` also eggs) |
+| `eggColours` | egg obtainments |
 | `events`, `eventKinds`, `regions` | event obtainments, `GameEvent.kind`, `GameEvent.regionId` |
 | `monsterGroups` | group parent conditions |
 
@@ -83,6 +85,33 @@ interface EquipmentType extends CatalogEntry {
 }
 ```
 
+A game also says how its family icon files are drawn, since only the drawing
+is shown, at the same height in every game:
+
+```ts
+interface FamilyIconFrame {
+  width: number // size of the files
+  height: number
+  drawn: { x: number; y: number; width: number; height: number } // the area holding the drawing
+}
+```
+
+DQMJ2 draws in a 14×20 area of a 48×49 canvas; The Dark Prince fills its 35×35
+files.
+
+A trait that changes the monster's sheet declares it; the computation is in `services/stats.ts`:
+
+```ts
+interface SheetEffect {
+  statMultipliers?: Partial<MonsterStats>
+  resistanceBonus?: Record<string, number> // added to the resistance value of each category
+}
+
+interface Trait extends CatalogEntry {
+  sheetEffect?: SheetEffect // The Dark Prince: Metal Body divides max HP by three and raises resistances
+}
+```
+
 ## Monster
 
 ```ts
@@ -93,28 +122,53 @@ interface Monster {
   rank: Rank
   size: MonsterSize
   maxStats: MonsterStats
-  equipment: string[]
+  equipment?: string[]
   skillId: string
-  traitIds: string[]
+  traits: MonsterTrait[]
   resistances: ResistanceMap
   obtainments: Obtainment[]
   iconAssetKey: string
 }
 ```
 
-Every field is required: every monster has a size, maximum stats, at
-least one equipment type and an icon. `traitIds` may be empty: some
-monsters have no trait. `skillId`
+Every field is required except `equipment`, absent in a game where
+monsters carry none (The Dark Prince); when present it lists at least one
+equipment type. `traits` may be empty: some monsters have no trait. `skillId`
 references the monster's signature skill: the skill it always offers,
 whether obtained through synthesis or scouted in the wild.
 
+`size` is the size the monster is drawn in, and its own. A game whose
+monsters can all have another size declares it in `rules.sizeVariants`.
+
 ```ts
-type Resistance = "weak" | "immune" | "absorb" | "reflect" | { level: "resistant"; percent: 25 | 50 | 75 }
+interface MonsterTrait {
+  traitId: string
+  level?: number // the level that unlocks it; absent: from the start
+  size?: MonsterSize // the only size in which the monster has it; absent: every size
+}
+```
+
+`traits` keeps the game's order. Maximum stats and resistances are stored
+for the monster's own size, without any trait: the sheet's values in a
+size are computed.
+
+```ts
+type Resistance =
+  | "weak" | "immune" | "absorb" | "reflect" | { level: "resistant"; percent: 25 | 50 | 75 }
+  | number
 type ResistanceMap = Record<string, Resistance>
+
+interface ResistanceStage extends CatalogEntry {
+  min: number // lowest value of the stage
+}
 ```
 
 `resistances` only lists non-neutral categories, keyed by resistance
-category id (declared in `resistanceCategories`).
+category id (declared in `resistanceCategories`). A game names each
+resistance directly (DQMJ2) or gives its value, which the sheet names by the
+stage it reaches, as the game does (The Dark Prince: from −25 to 125, stages
+from "weak" to "absorbs"). A game gives values exactly when it declares
+`resistanceStages` (ascending `min`); DQMJ2 declares none.
 `absorb` means the monster is healed by the attack; `reflect` means it
 bounces the attack back.
 
@@ -241,7 +295,7 @@ synthesis relationship. It applies to every parent of the recipe. Since
 levels belong to individual monsters, not species, the engine reports what
 the pair gives when the condition is met and when it is not.
 
-New condition types are added only when a real DQMJ2 mechanic requires
+New condition types are added only when a real game mechanic requires
 them, as structured variants — never as a free-form escape hatch.
 
 ## Obtainment
@@ -252,12 +306,14 @@ methods are recorded explicitly:
 ```ts
 interface ScoutSituation {
   timeOfDay?: string // a timesOfDay id
+  season?: string // a seasons id
   weather?: string // a weathers id
   storyStage?: string // a storyStages id, e.g. "postgame"
 }
 
 type Obtainment =
   | { type: "scout"; locationId: string; when?: ScoutSituation[] }
+  | { type: "egg"; locationId: string; eggColours: string[]; storyStage?: string }
   | { type: "event"; eventId: string }
 ```
 
@@ -267,6 +323,19 @@ monster appears in every situation, and a situation omits an axis that does
 not restrict it (`{ timeOfDay: "night" }` means at night in any weather).
 In DQMJ2, `bad_weather` is the area's bad-weather state (rain, fog, snow…).
 
+A location may list the weathers it can have in each season
+(`Location.weathersBySeason`): a situation then covers "every weather" of a
+season once it covers those, and a situation the place can never have is not
+stored. In The Dark Prince, each world echelon has fine weather and one or two
+weathers of its own, which change with the season (fire rain except in winter,
+blizzard in winter…); its dungeons have neither season nor weather, so their
+scout entries have no `season` or `weather`. A weather or a season that the
+game shows as an icon declares it (`iconAssetKey`).
+
+An `egg` entry exists per region where the monster hatches from an egg found
+there (The Dark Prince), with the colours of egg it can come from and, when
+the egg only appears from a point of the story, that `storyStage`.
+
 An `event` entry references a declared `GameEvent` (library reward,
 battle reward, side quest, tag mode encounter, distribution, linked game,
 online prize…), whose `kind` groups similar events. Region-locked events
@@ -275,23 +344,27 @@ online prize…), whose `kind` groups similar events. Region-locked events
 ## Game Data
 
 ```ts
-type GameId = "dqmj2"
+type GameId = "dqmj2" | "dark_prince"
 
 interface GameData {
   id: GameId
   families: Family[]
+  familyIconFrame: FamilyIconFrame
   skills: Skill[]
   abilities: Ability[]
   traits: Trait[]
   equipmentTypes: EquipmentType[]
   resistanceCategories: ResistanceCategory[]
+  resistanceStages: ResistanceStage[]
   locations: Location[]
   timesOfDay: TimeOfDay[]
+  seasons: Season[]
   weathers: Weather[]
   storyStages: StoryStage[]
   eventKinds: EventKind[]
   regions: Region[]
   events: GameEvent[]
+  eggColours: EggColour[]
   monsterGroups: MonsterGroup[]
   monsters: Monster[]
   recipes: SynthesisRecipe[]
@@ -305,8 +378,17 @@ interface GameData {
 interface GameRules {
   rankOrder: Rank[] // lowest to highest
   normalSynthesis: NormalSynthesisRule
+  sizeVariants?: SizeVariant[] // absent: every monster has its own size only
+}
+
+interface SizeVariant extends SheetEffect {
+  size: MonsterSize
 }
 ```
+
+A size variant is another size any monster can have, and what it changes on
+its sheet (The Dark Prince's large size: max HP and MP ×1.5, other stats ×1.1,
++50 to six status resistances).
 
 `GameRules` only holds rules that are intrinsic to the dataset and needed
 to evaluate its recipes. Universal prerequisites of the synthesis system
@@ -320,7 +402,7 @@ discriminated union so games with other systems add a new `kind` without
 changing the engine's reverse lookups.
 
 ```ts
-type NormalSynthesisRule = LibraryOrderSynthesisRule
+type NormalSynthesisRule = LibraryOrderSynthesisRule | FamilyTableSynthesisRule
 
 interface LibraryOrderSynthesisRule {
   kind: "libraryOrder"
@@ -344,6 +426,24 @@ only ever produces monsters listed in `resultMonsterIds`:
   candidate;
 - when a special recipe matches the pair, it replaces either the family-mix
   candidate only or every candidate, per `specialRecipeReplaces`.
+
+```ts
+interface FamilyTableSynthesisRule {
+  kind: "familyTable"
+  table: { families: [string, string]; results: Record<Rank, string> }[]
+}
+```
+
+`familyTable` (The Dark Prince) reads the game's table of ordered family
+pairs. The order of the two parents matters:
+
+- parents of the same family, or of a family absent from the table (`???`),
+  give no candidate;
+- otherwise the row "family of parent 1 × family of parent 2" and the row
+  "family of parent 2 × family of parent 1" each give the child of the rank
+  of **parent 2**; a rank absent from the row (A, S, X) gives none;
+- a candidate identical to one of the parents is not offered;
+- special recipes add their result to these candidates, they replace none.
 
 ## Engine Result
 
@@ -382,5 +482,7 @@ Icons are provided manually by the project owner; they are not game data and are
 | `Monster` | `iconAssetKey` | `public/assets/<game>/monsters/<iconAssetKey>.png` |
 | `Family` | `iconAssetKey` | `public/assets/<game>/families/<iconAssetKey>.png` |
 | `EquipmentType` | `iconAssetKey` | `public/assets/<game>/equipment/<iconAssetKey>.png` |
+| `Weather` | `iconAssetKey` (optional) | `public/assets/<game>/weathers/<iconAssetKey>.png` |
+| `Season` | `iconAssetKey` (optional) | `public/assets/<game>/seasons/<iconAssetKey>.png` |
 
 Addresses are built in one place (`src/services/assets.ts`). The validator checks that each file exists.

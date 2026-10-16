@@ -11,10 +11,9 @@
   --danger: #c0352b;
   --info: #1f5fbf;
   --info-soft: #e3edfb;
+  --warning: #8a5a00;
+  --warning-soft: #fbefd9;
   --shadow: 0 4px 16px rgb(0 0 0 / 0.18);
-  /* Background and frame of the monster icons, for the boxes standing in for one. */
-  --icon-background: rgb(49 74 90);
-  --icon-border: rgb(74 99 107);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color: var(--text);
   background: var(--canvas);
@@ -33,6 +32,8 @@
     --danger: #ff8a80;
     --info: #8db8ff;
     --info-soft: #1c2a40;
+    --warning: #f2c26b;
+    --warning-soft: #3a2d14;
     --shadow: 0 4px 16px rgb(0 0 0 / 0.5);
   }
 }

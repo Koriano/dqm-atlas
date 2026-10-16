@@ -9,9 +9,10 @@ export const MAX_CHILD_DEPTH = 2
 /** Id of the tree's root node; ancestors are `root/<index>:<key>/…`, descendants `child:<index>:<monsterId>/…`. */
 export const ROOT_ID = "root"
 
-/** How one monster occurrence of the tree is obtained. Scouting and events end the tree there. */
+/** How one monster occurrence of the tree is obtained. Scouting, eggs and events end the tree there. */
 export type NodeChoice =
   | { type: "scout"; locationId: string }
+  | { type: "egg"; locationId: string }
   | { type: "event"; eventId: string }
   /** `picks`: the monster chosen for a generic parent (family, group) of the recipe, by parent index. */
   | { type: "recipe"; recipeId: string; picks?: Readonly<Record<number, string>> }
@@ -88,18 +89,20 @@ function recipeParentItems(sources: TreeSources, recipe: SynthesisRecipe, picks:
 export function normalParentOptions(sources: TreeSources, monsterId: string, parents: readonly [string | null, string | null]): [string[], string[]] {
   const pairs = sources.engine.obtainMethods(monsterId).normal
   const [first, second] = parents
-  return [sources.engine.partnerOptions(pairs, second ?? undefined), sources.engine.partnerOptions(pairs, first ?? undefined)]
+  return [sources.engine.parentOptions(pairs, 0, second ?? undefined), sources.engine.parentOptions(pairs, 1, first ?? undefined)]
 }
 
 export function isNormalPair(sources: TreeSources, monsterId: string, a: string, b: string): boolean {
-  return sources.engine.obtainMethods(monsterId).normal.some(({ parentIds: [x, y] }) => (x === a && y === b) || (x === b && y === a))
+  const ordered = sources.engine.orderedParents
+  return sources.engine.obtainMethods(monsterId).normal.some(({ parentIds: [x, y] }) => (x === a && y === b) || (!ordered && x === b && y === a))
 }
 
 /** Whether the monster can be obtained that way at all (picked parents are not checked). */
 export function isAvailable(sources: TreeSources, monster: Monster, choice: NodeChoice): boolean {
   switch (choice.type) {
     case "scout":
-      return monster.obtainments.some((obtainment) => obtainment.type === "scout" && obtainment.locationId === choice.locationId)
+    case "egg":
+      return monster.obtainments.some((obtainment) => obtainment.type === choice.type && obtainment.locationId === choice.locationId)
     case "event":
       return monster.obtainments.some((obtainment) => obtainment.type === "event" && obtainment.eventId === choice.eventId)
     case "recipe":
@@ -109,19 +112,19 @@ export function isAvailable(sources: TreeSources, monster: Monster, choice: Node
   }
 }
 
-function firstObtainment(monster: Monster, type: "scout" | "event"): NodeChoice | null {
+function firstObtainment(monster: Monster, type: "scout" | "egg" | "event"): NodeChoice | null {
   const found = monster.obtainments.find((obtainment) => obtainment.type === type)
   if (!found) return null
-  return found.type === "scout" ? { type: "scout", locationId: found.locationId } : { type: "event", eventId: found.eventId }
+  return found.type === "event" ? { type: "event", eventId: found.eventId } : { type: found.type, locationId: found.locationId }
 }
 
 /**
- * Same priority as the sheet — recruitment, then synthesis, then events — except for the root, which starts on its
- * representative synthesis since the tree is opened to see it. Scouting and events need no parents, so they end the
- * branch.
+ * Same priority as the sheet — recruitment, eggs, then synthesis, then events — except for the root, which starts on
+ * its representative synthesis since the tree is opened to see it. Scouting, eggs and events need no parents, so they
+ * end the branch.
  */
 function defaultChoice(sources: TreeSources, monster: Monster, isRoot: boolean): NodeChoice | null {
-  const scout = firstObtainment(monster, "scout")
+  const scout = firstObtainment(monster, "scout") ?? firstObtainment(monster, "egg")
   const event = firstObtainment(monster, "event")
   const origin = sources.engine.representativeOrigin(monster.id)
   const synthesis: NodeChoice | null =
