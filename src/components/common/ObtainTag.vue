@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { useAppContext } from "../../app/context"
+import type { DirectChoice } from "../../services/graph/focusTree"
 
-const props = defineProps<{ type: "scout" | "egg" | "event" }>()
+const props = defineProps<{ type: DirectChoice["type"] }>()
 
 const app = useAppContext()
 </script>

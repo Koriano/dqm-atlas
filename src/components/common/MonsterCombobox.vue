@@ -6,7 +6,7 @@ import type { Monster } from "../../domain/monster"
 import { formatText } from "../../i18n"
 import { monsterIconUrl } from "../../services/assets"
 import { setIconRendering } from "./iconRendering"
-import { matchesSearch } from "../../services/search"
+import { matchesSearch, normalizeForSearch, searchWords } from "../../services/search"
 
 const props = withDefaults(
   defineProps<{
@@ -37,12 +37,17 @@ const activeIndex = ref(0)
 
 const name = (monsterId: string) => app.entityName("monsters", monsterId)
 
-const matches = computed(() =>
-  props.monsterIds
-    .filter((monsterId) => matchesSearch(query.value, [name(monsterId), ...app.searchKeys(monsterId)]))
+const matches = computed(() => {
+  const words = searchWords(query.value)
+  return props.monsterIds
+    .filter((monsterId) => {
+      // Until the names in every language are loaded, the shown name is searched.
+      const keys = app.searchKeys(monsterId)
+      return matchesSearch(words, keys.length > 0 ? keys : [normalizeForSearch(name(monsterId))])
+    })
     .map((monsterId) => app.monsters.value.get(monsterId))
-    .filter((monster): monster is Monster => monster !== undefined),
-)
+    .filter((monster): monster is Monster => monster !== undefined)
+})
 const shown = computed(() => matches.value.slice(0, MAX_SHOWN))
 
 const displayedValue = computed(() => (open.value || !props.modelValue ? query.value : name(props.modelValue)))
@@ -196,27 +201,30 @@ function onInput(event: Event) {
       on the page. A press on it (padding, scrollbar) must not take the focus from the field either.
     -->
     <ul v-show="open" :id="listId" ref="list" class="options" role="listbox" tabindex="-1" :aria-label="label" :style="listStyle" @mousedown.prevent>
-      <li
-        v-for="(monster, index) in shown"
-        :id="`${id}-option-${index}`"
-        :key="monster.id"
-        class="option"
-        :class="{ active: index === activeIndex, selected: monster.id === modelValue }"
-        role="option"
-        :aria-selected="monster.id === modelValue"
-        @mouseenter="activeIndex = index"
-        @click="pick(monster)"
-      >
-        <span class="option-icon" aria-hidden="true">
-          <img :src="monsterIconUrl(app.state.gameId, monster.iconAssetKey)" alt="" @load="setIconRendering" />
-        </span>
-        <span class="option-name">{{ name(monster.id) }}</span>
-        <span class="option-meta">{{ app.entityName("families", monster.familyId) }} · {{ monster.rank }}</span>
-      </li>
-      <li v-if="shown.length === 0" class="note" role="presentation">{{ app.text.value.noResults }}</li>
-      <li v-else-if="matches.length > shown.length" class="note" role="presentation">
-        {{ formatText(app.text.value.moreResults, { count: matches.length - shown.length }) }}
-      </li>
+      <!-- Rows only while open: the header search is always on the page. -->
+      <template v-if="open">
+        <li
+          v-for="(monster, index) in shown"
+          :id="`${id}-option-${index}`"
+          :key="monster.id"
+          class="option"
+          :class="{ active: index === activeIndex, selected: monster.id === modelValue }"
+          role="option"
+          :aria-selected="monster.id === modelValue"
+          @mouseenter="activeIndex = index"
+          @click="pick(monster)"
+        >
+          <span class="option-icon" aria-hidden="true">
+            <img :src="monsterIconUrl(app.state.gameId, monster.iconAssetKey)" alt="" @load="setIconRendering" />
+          </span>
+          <span class="option-name">{{ name(monster.id) }}</span>
+          <span class="option-meta">{{ app.entityName("families", monster.familyId) }} · {{ monster.rank }}</span>
+        </li>
+        <li v-if="shown.length === 0" class="note" role="presentation">{{ app.text.value.noResults }}</li>
+        <li v-else-if="matches.length > shown.length" class="note" role="presentation">
+          {{ formatText(app.text.value.moreResults, { count: matches.length - shown.length }) }}
+        </li>
+      </template>
     </ul>
   </div>
 </template>

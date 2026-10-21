@@ -4,7 +4,10 @@ import type { Monster, MonsterSize, MonsterStats, MonsterTrait, ResistanceMap } 
 /** Display order of the stats. */
 export const STAT_KEYS = ["hp", "mp", "attack", "defence", "agility", "wisdom"] as const satisfies readonly (keyof MonsterStats)[]
 
-/** A bonus never raises a resistance above this value (immune); a value already above it keeps its own. */
+/**
+ * Immunity: a bonus never raises a resistance above this value, and a value already above it (an absorption) keeps
+ * its own.
+ */
 const RESISTANCE_BONUS_CAP = 100
 
 /** The sizes a monster's sheet can show: its own, then the other sizes the game gives every monster. */
@@ -13,16 +16,20 @@ export function monsterSizes(monster: Monster, game: GameData): MonsterSize[] {
   return [monster.size, ...others]
 }
 
-/** The monster's traits in a size: those of every size and those of that size only. */
+/** Whether the monster has the trait in a size: a trait of every size, or one of that size only. */
+export function hasTraitInSize(trait: MonsterTrait, size: MonsterSize): boolean {
+  return trait.size === undefined || trait.size === size
+}
+
+/** The monster's traits in a size. */
 export function traitsInSize(monster: Monster, size: MonsterSize): MonsterTrait[] {
-  return monster.traits.filter((trait) => trait.size === undefined || trait.size === size)
+  return monster.traits.filter((trait) => hasTraitInSize(trait, size))
 }
 
 /** What changes the sheet in a size: the size itself when it is not the monster's own, then its traits, in order. */
 function sheetEffects(monster: Monster, game: GameData, size: MonsterSize): SheetEffect[] {
   const variant = size === monster.size ? undefined : game.rules.sizeVariants?.find((entry) => entry.size === size)
-  const traits = new Map(game.traits.map((trait) => [trait.id, trait]))
-  const fromTraits = traitsInSize(monster, size).flatMap((trait) => traits.get(trait.traitId)?.sheetEffect ?? [])
+  const fromTraits = traitsInSize(monster, size).flatMap((trait) => game.traits.find((entry) => entry.id === trait.traitId)?.sheetEffect ?? [])
   return variant ? [variant, ...fromTraits] : fromTraits
 }
 
@@ -53,6 +60,11 @@ export function sheetResistances(monster: Monster, game: GameData, size: Monster
     resistances[category.id] = bonus > 0 ? Math.min(stored + bonus, Math.max(stored, RESISTANCE_BONUS_CAP)) : stored + bonus
   }
   return resistances
+}
+
+/** The level of a resistance value: below zero, zero, a reduction up to immunity, beyond it. */
+export function resistanceLevel(value: number): "weak" | "normal" | "resistant" | "absorb" {
+  return value < 0 ? "weak" : value === 0 ? "normal" : value <= RESISTANCE_BONUS_CAP ? "resistant" : "absorb"
 }
 
 /** The stage a resistance value reaches: the last one whose minimum it reaches, or the first. */

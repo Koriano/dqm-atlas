@@ -3,7 +3,7 @@ import { computed, nextTick, ref, useId } from "vue"
 
 import { type DetailTab, useAppContext } from "../../app/context"
 import { formatText } from "../../i18n"
-import { monsterSizes } from "../../services/stats"
+import { hasTraitInSize, monsterSizes } from "../../services/stats"
 import InfoPopover from "../common/InfoPopover.vue"
 import MonsterIcon from "../common/MonsterIcon.vue"
 import MonsterResistancesTab from "./MonsterResistancesTab.vue"
@@ -111,7 +111,7 @@ const tabs = computed<{ id: DetailTab; label: string }[]>(() => [
                 v-for="trait in node.monster.traits"
                 :key="`${trait.traitId} ${trait.level ?? ''} ${trait.size ?? ''}`"
                 class="trait"
-                :class="{ absent: trait.size !== undefined && trait.size !== shownSize }"
+                :class="{ absent: shownSize && !hasTraitInSize(trait, shownSize) }"
               >
                 <span v-if="trait.level" class="trait-level">{{ formatText(app.text.value.traitLevel, { level: trait.level }) }}</span>
                 <InfoPopover :label="app.entityName('traits', trait.traitId)">{{ app.entityName("traitDescriptions", trait.traitId) }}</InfoPopover>
@@ -233,15 +233,6 @@ const tabs = computed<{ id: DetailTab; label: string }[]>(() => [
   color: var(--info);
   font-size: 0.75rem;
   font-weight: 700;
-}
-/* Read by screen readers only: the tag itself just shows the size. */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
 }
 .size-switch {
   display: inline-flex;

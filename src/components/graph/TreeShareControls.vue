@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ControlButton } from "@vue-flow/controls"
-import { computed, ref, useId } from "vue"
+import { computed, ref } from "vue"
 
 import { useAppContext } from "../../app/context"
+import AppDialog from "../common/AppDialog.vue"
 
 /** Tree buttons for the canvas controls: reset to the defaults, export / import with their dialog. */
 const app = useAppContext()
 const hasChoices = computed(() => Object.keys(app.state.tree?.choices ?? {}).length > 0)
-const dialog = ref<HTMLDialogElement>()
-const titleId = useId()
+const dialog = ref<InstanceType<typeof AppDialog>>()
 const field = ref<HTMLTextAreaElement>()
 const mode = ref<"export" | "import">("export")
 const code = ref("")
@@ -46,10 +46,6 @@ async function submit() {
   if (result === "ok") dialog.value?.close()
   else error.value = { invalid: text.importInvalid, otherGame: text.importOtherGame, mismatch: text.importMismatch }[result]
 }
-
-function onBackdropClick(event: MouseEvent) {
-  if (event.target === dialog.value) dialog.value?.close()
-}
 </script>
 
 <template>
@@ -62,40 +58,36 @@ function onBackdropClick(event: MouseEvent) {
   <ControlButton :title="app.text.value.importTree" :aria-label="app.text.value.importTree" @click="show('import')">
     <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8.5M4.5 7 8 10.5 11.5 7M2 10.5V14h12v-3.5" /></svg>
   </ControlButton>
-  <Teleport to="body">
-    <!-- Escape closes the dialog only: it must not reach the shell, which would close the tree on mobile. -->
-    <dialog ref="dialog" class="share-dialog" :aria-labelledby="titleId" @click="onBackdropClick" @keydown.stop>
-      <form class="share-form" method="dialog" @submit.prevent="submit">
-        <h2 :id="titleId" class="share-title">{{ mode === "export" ? app.text.value.exportTree : app.text.value.importTree }}</h2>
-        <p class="share-hint">{{ mode === "export" ? app.text.value.exportHint : app.text.value.importHint }}</p>
-        <textarea
-          ref="field"
-          v-model="code"
-          class="share-code"
-          :class="{ invalid: error }"
-          rows="5"
-          spellcheck="false"
-          autocomplete="off"
-          :readonly="mode === 'export'"
-          :aria-label="app.text.value.treeCode"
-          :aria-invalid="error !== null"
-          aria-describedby="share-error"
-          @focus="mode === 'export' && field?.select()"
-          @input="error = null"
-        />
-        <p v-if="error" id="share-error" class="share-error" role="alert">
-          <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" /><path d="M8 4.5v4M8 11.2v.1" /></svg>
-          {{ error }}
-        </p>
-        <div class="share-actions">
-          <span v-if="copied" class="share-copied" role="status">{{ app.text.value.copied }}</span>
-          <button type="button" class="share-button" @click="dialog?.close()">{{ app.text.value.close }}</button>
-          <button v-if="mode === 'export'" type="button" class="share-button primary" :disabled="!code" @click="copy">{{ app.text.value.copy }}</button>
-          <button v-else type="submit" class="share-button primary" :disabled="!code.trim()">{{ app.text.value.import }}</button>
-        </div>
-      </form>
-    </dialog>
-  </Teleport>
+  <AppDialog ref="dialog" :title="mode === 'export' ? app.text.value.exportTree : app.text.value.importTree" max-width="26rem">
+    <div class="share-form">
+      <p class="share-hint">{{ mode === "export" ? app.text.value.exportHint : app.text.value.importHint }}</p>
+      <textarea
+        ref="field"
+        v-model="code"
+        class="share-code"
+        :class="{ invalid: error }"
+        rows="5"
+        spellcheck="false"
+        autocomplete="off"
+        :readonly="mode === 'export'"
+        :aria-label="app.text.value.treeCode"
+        :aria-invalid="error !== null"
+        aria-describedby="share-error"
+        @focus="mode === 'export' && field?.select()"
+        @input="error = null"
+      />
+      <p v-if="error" id="share-error" class="share-error" role="alert">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" /><path d="M8 4.5v4M8 11.2v.1" /></svg>
+        {{ error }}
+      </p>
+    </div>
+    <template #actions>
+      <span v-if="copied" class="share-copied" role="status">{{ app.text.value.copied }}</span>
+      <button type="button" class="text-button" @click="dialog?.close()">{{ app.text.value.close }}</button>
+      <button v-if="mode === 'export'" type="button" class="text-button primary" :disabled="!code" @click="copy">{{ app.text.value.copy }}</button>
+      <button v-else type="button" class="text-button primary" :disabled="!code.trim()" @click="submit">{{ app.text.value.import }}</button>
+    </template>
+  </AppDialog>
 </template>
 
 <style scoped>
@@ -113,28 +105,10 @@ svg {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.share-dialog {
-  width: min(26rem, calc(100% - 1.5rem));
-  box-sizing: border-box;
-  padding: 0;
-  border: 0;
-  border-radius: 0.75rem;
-  background: var(--surface);
-  color: var(--text);
-  box-shadow: var(--shadow);
-}
-.share-dialog::backdrop {
-  background: rgb(0 0 0 / 0.4);
-}
 .share-form {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  padding: 1rem;
-}
-.share-title {
-  margin: 0;
-  font-size: 1.05rem;
 }
 .share-hint {
   margin: 0;
@@ -172,34 +146,19 @@ svg {
   height: 1rem;
   margin-top: 0.05rem;
 }
-.share-actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.5rem;
-}
 .share-copied {
   margin-right: auto;
   color: var(--success);
   font-size: 0.85rem;
   font-weight: 600;
 }
-.share-button {
-  padding: 0.35rem 0.9rem;
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  background: var(--surface);
-  color: var(--text);
-  font: inherit;
-  cursor: pointer;
-}
-.share-button.primary {
+.text-button.primary {
   border-color: var(--accent);
   background: var(--accent);
   color: var(--surface);
   font-weight: 600;
 }
-.share-button:disabled {
+.text-button:disabled {
   opacity: 0.5;
   cursor: default;
 }

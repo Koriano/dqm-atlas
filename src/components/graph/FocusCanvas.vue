@@ -33,12 +33,10 @@ const NOTE_FONT_SIZE = 11
 /** How a parent slot is named, in its node and in the search picking its monster. */
 function slotLabel(slot: ParentSlot) {
   const { condition, options } = slot
-  if (!condition) {
-    return { title: app.text.value.parentToChoose, detail: null, hint: choiceHint(app, options), familyId: commonFamily(app, options) }
-  }
+  const familyId = commonFamily(app, options)
+  if (!condition) return { title: app.text.value.parentToChoose, detail: null, hint: choiceHint(app, options), familyId }
   // A condition is named after itself ("Incarnus", "Famille Nature"): its candidates are not a whole family.
   const title = conditionName(app, condition)
-  const familyId = condition.type === "family" ? condition.familyId : commonFamily(app, options)
   return { title, detail: conditionDetail(app, condition), hint: formatText(app.text.value.slotChoice, { title, count: options.length }), familyId }
 }
 

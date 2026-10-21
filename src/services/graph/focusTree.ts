@@ -1,4 +1,4 @@
-import type { Monster } from "../../domain/monster"
+import type { Monster, Obtainment } from "../../domain/monster"
 import type { ParentCondition, SynthesisRecipe } from "../../domain/synthesis"
 import type { SynthesisEngine } from "../synthesis"
 
@@ -17,6 +17,11 @@ export type NodeChoice =
   /** `picks`: the monster chosen for a generic parent (family, group) of the recipe, by parent index. */
   | { type: "recipe"; recipeId: string; picks?: Readonly<Record<number, string>> }
   | { type: "normal"; parents: readonly [string | null, string | null] }
+
+/** A choice that needs no parents: scouting, an egg or an event. */
+export type DirectChoice = Extract<NodeChoice, { type: "scout" | "egg" | "event" }>
+
+export const isDirect = (choice: NodeChoice): choice is DirectChoice => choice.type !== "recipe" && choice.type !== "normal"
 
 /** Explicit choices of the user, keyed by node id: every occurrence of a monster has its own. */
 export type TreeChoices = Readonly<Record<string, NodeChoice>>
@@ -47,8 +52,6 @@ export interface RelationNode {
   item: RelationItem
   /** Root and ancestors only: how this occurrence is obtained (explicit or default), null when it cannot be at all. */
   choice?: NodeChoice | null
-  /** Root and ancestors only: whether `choice` was picked by the user. */
-  explicit?: boolean
   /** Root and ancestors only: the choice has parents, hidden because the node is at the depth limit. */
   truncated?: boolean
   /** Set on a parent still to pick (condition, parent to choose) and on the monster picked for it. */
@@ -97,6 +100,26 @@ export function isNormalPair(sources: TreeSources, monsterId: string, a: string,
   return sources.engine.obtainMethods(monsterId).normal.some(({ parentIds: [x, y] }) => (x === a && y === b) || (!ordered && x === b && y === a))
 }
 
+/**
+ * The choice of `monsterId` once the monster of its parent `index` is picked, or that parent emptied with null; null
+ * when the choice has no such parent. Picking a normal-synthesis parent drops the other one when the two no longer
+ * form a valid pair.
+ */
+export function withParentPick(sources: TreeSources, monsterId: string, choice: NodeChoice, index: number, pickedId: string | null): NodeChoice | null {
+  if (choice.type === "recipe") {
+    const picks = { ...choice.picks }
+    if (pickedId === null) delete picks[index]
+    else picks[index] = pickedId
+    return { type: "recipe", recipeId: choice.recipeId, picks }
+  }
+  if (choice.type !== "normal" || (index !== 0 && index !== 1)) return null
+  const parents: [string | null, string | null] = [...choice.parents]
+  parents[index] = pickedId
+  const [first, second] = parents
+  if (pickedId && first && second && !isNormalPair(sources, monsterId, first, second)) parents[1 - index] = null
+  return { type: "normal", parents }
+}
+
 /** Whether the monster can be obtained that way at all (picked parents are not checked). */
 export function isAvailable(sources: TreeSources, monster: Monster, choice: NodeChoice): boolean {
   switch (choice.type) {
@@ -112,10 +135,29 @@ export function isAvailable(sources: TreeSources, monster: Monster, choice: Node
   }
 }
 
-function firstObtainment(monster: Monster, type: "scout" | "egg" | "event"): NodeChoice | null {
+/** The choice standing for an obtainment of the monster. */
+export function obtainmentChoice(obtainment: Obtainment): NodeChoice {
+  return obtainment.type === "event" ? { type: "event", eventId: obtainment.eventId } : { type: obtainment.type, locationId: obtainment.locationId }
+}
+
+/** Whether two choices are the same way of obtaining the monster, whatever parents they picked. */
+export function sameMethod(a: NodeChoice, b: NodeChoice): boolean {
+  switch (a.type) {
+    case "scout":
+    case "egg":
+      return b.type === a.type && b.locationId === a.locationId
+    case "event":
+      return b.type === "event" && b.eventId === a.eventId
+    case "recipe":
+      return b.type === "recipe" && b.recipeId === a.recipeId
+    case "normal":
+      return b.type === "normal"
+  }
+}
+
+function firstObtainment(monster: Monster, type: Obtainment["type"]): NodeChoice | null {
   const found = monster.obtainments.find((obtainment) => obtainment.type === type)
-  if (!found) return null
-  return found.type === "event" ? { type: "event", eventId: found.eventId } : { type: found.type, locationId: found.locationId }
+  return found ? obtainmentChoice(found) : null
 }
 
 /**
@@ -139,10 +181,11 @@ function parentItems(sources: TreeSources, monsterId: string, choice: NodeChoice
   }
   if (choice?.type === "normal") {
     const options = normalParentOptions(sources, monsterId, choice.parents)
+    const unrestricted = normalParentOptions(sources, monsterId, [null, null])
     return ([0, 1] as const).map((index): ParentItem => {
       const picked = choice.parents[index]
       // A picked parent can be changed for any other one: the other parent is dropped if the pair no longer works.
-      if (picked) return { item: { type: "monster", monsterId: picked, recipe: null }, slot: { options: normalParentOptions(sources, monsterId, [null, null])[index] } }
+      if (picked) return { item: { type: "monster", monsterId: picked, recipe: null }, slot: { options: unrestricted[index] } }
       return { item: { type: "parentToChoose", options: options[index] }, slot: { options: options[index] } }
     })
   }
@@ -157,21 +200,20 @@ function parentItems(sources: TreeSources, monsterId: string, choice: NodeChoice
 export function ancestry(sources: TreeSources, rootId: string, choices: TreeChoices, depth: number): RelationNode | null {
   const build = (item: Extract<RelationItem, { type: "monster" }>, id: string, level: number): RelationNode => {
     const monster = sources.monsters.get(item.monsterId)
-    if (!monster) return { id, item, choice: null, explicit: false, branches: [] }
+    if (!monster) return { id, item, choice: null, branches: [] }
     const chosen = choices[id]
-    const explicit = chosen !== undefined && isAvailable(sources, monster, chosen)
-    const choice = explicit ? chosen : defaultChoice(sources, monster, level === 0)
-    const hasParents = choice?.type === "recipe" || choice?.type === "normal"
+    const choice = chosen !== undefined && isAvailable(sources, monster, chosen) ? chosen : defaultChoice(sources, monster, level === 0)
+    const hasParents = choice !== null && !isDirect(choice)
     const withinDepth = level < depth
     if (!hasParents || !withinDepth) {
-      return { id, item, choice, explicit, truncated: hasParents && !withinDepth && depth > 0, branches: [] }
+      return { id, item, choice, truncated: hasParents && !withinDepth && depth > 0, branches: [] }
     }
     const branches = parentItems(sources, monster.id, choice).map(({ item: parent, slot }, index): RelationNode => {
       const parentId = parentNodeId(id, index, itemKey(parent))
       const node: RelationNode = parent.type === "monster" ? build(parent, parentId, level + 1) : { id: parentId, item: parent, branches: [] }
       return slot ? { ...node, slot: { ownerId: id, index, ...slot } } : node
     })
-    return { id, item, choice, explicit, branches }
+    return { id, item, choice, branches }
   }
   if (!sources.monsters.has(rootId)) return null
   return build({ type: "monster", monsterId: rootId, recipe: null }, ROOT_ID, 0)
@@ -207,20 +249,18 @@ export type NodeSide = "root" | "parent" | "child"
 export interface IndexedNode {
   node: RelationNode
   side: NodeSide
-  /** The node this one is linked to towards the root: the node below a parent, the node above a child. */
-  relative: RelationNode | null
 }
 
-/** Every node of the graph by id, with its side and the node it hangs from. */
+/** Every node of the graph by id, with its side. */
 export function indexNodes(root: RelationNode | null, children: RelationNode[]): Map<string, IndexedNode> {
   const index = new Map<string, IndexedNode>()
-  const visit = (node: RelationNode, side: NodeSide, relative: RelationNode | null) => {
-    index.set(node.id, { node, side, relative })
-    for (const branch of node.branches) visit(branch, side === "root" ? "parent" : side, node)
+  const visit = (node: RelationNode, side: NodeSide) => {
+    index.set(node.id, { node, side })
+    for (const branch of node.branches) visit(branch, side === "root" ? "parent" : side)
   }
   if (root) {
-    visit(root, "root", null)
-    for (const child of children) visit(child, "child", root)
+    visit(root, "root")
+    for (const child of children) visit(child, "child")
   }
   return index
 }

@@ -63,6 +63,26 @@ select {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* A dialog's button: close, copy, import… */
+.text-button {
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* Read by screen readers only. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;

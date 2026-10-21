@@ -4,16 +4,11 @@ import { computed } from "vue"
 import { useAppContext } from "../../app/context"
 import type { Monster } from "../../domain/monster"
 import { formatText } from "../../i18n"
-import { resistanceStage, sheetResistances } from "../../services/stats"
+import { resistanceLevel, resistanceStage, sheetResistances } from "../../services/stats"
 
 const props = defineProps<{ monster: Monster }>()
 
 const app = useAppContext()
-
-/** The colour of a resistance value: below zero, zero, a reduction up to immunity, beyond it. */
-function valueLevel(value: number): "weak" | "normal" | "resistant" | "absorb" {
-  return value < 0 ? "weak" : value === 0 ? "normal" : value <= 100 ? "resistant" : "absorb"
-}
 
 /** Every category of the game's catalog, in its order; one without a stored value is a normal resistance. */
 const resistances = computed(() => {
@@ -27,7 +22,7 @@ const resistances = computed(() => {
     if (game.resistanceStages.length > 0) {
       const value = typeof resistance === "number" ? resistance : 0
       const stage = resistanceStage(game.resistanceStages, value)
-      return { id: category.id, level: valueLevel(value), label: stage ? app.entityName("resistanceStages", stage.id) : String(value) }
+      return { id: category.id, level: resistanceLevel(value), label: stage ? app.entityName("resistanceStages", stage.id) : String(value) }
     }
     if (resistance === undefined || typeof resistance === "number") return { id: category.id, level: "normal", label: levels.normal }
     return typeof resistance === "string"

@@ -5,7 +5,7 @@ import { useAppContext } from "../../app/context"
 import type { Monster } from "../../domain/monster"
 import type { ParentCondition, SynthesisRecipe } from "../../domain/synthesis"
 import { formatText } from "../../i18n"
-import type { NodeChoice } from "../../services/graph/focusTree"
+import { type NodeChoice, obtainmentChoice, sameMethod } from "../../services/graph/focusTree"
 import { MONSTER_ICON_SLOT, monsterIconUrl } from "../../services/assets"
 import FamilyIcon from "../common/FamilyIcon.vue"
 import { setIconRendering } from "../common/iconRendering"
@@ -51,7 +51,7 @@ const node = computed(() => app.selectedNode.value)
 const recruitment = computed<Option[]>(() =>
   (node.value?.monster.obtainments ?? []).flatMap((obtainment): Option[] => {
     if (obtainment.type !== "scout") return []
-    const choice: NodeChoice = { type: "scout", locationId: obtainment.locationId }
+    const choice = obtainmentChoice(obtainment)
     const text = app.entityName("locations", obtainment.locationId)
     const when = obtainment.when ?? []
     if ((app.game.value?.seasons.length ?? 0) > 0) {
@@ -69,7 +69,7 @@ const eggs = computed<Option[]>(() =>
     if (obtainment.type !== "egg") return []
     const colours = obtainment.eggColours.map((colour) => app.entityName("eggColours", colour)).join(", ")
     const notes = [textNote(colours), ...(obtainment.storyStage ? [textNote(app.entityName("storyStages", obtainment.storyStage))] : [])]
-    const choice: NodeChoice = { type: "egg", locationId: obtainment.locationId }
+    const choice = obtainmentChoice(obtainment)
     return [{ key: `egg:${obtainment.locationId}`, choice, parents: [], lines: [{ text: app.entityName("locations", obtainment.locationId), notes }] }]
   }),
 )
@@ -81,7 +81,7 @@ const events = computed<Option[]>(() => {
     if (obtainment.type !== "event") return []
     const regionId = catalog.get(obtainment.eventId)?.regionId
     const note = regionId ? formatText(app.text.value.regionOnly, { region: app.entityName("regions", regionId) }) : null
-    const choice: NodeChoice = { type: "event", eventId: obtainment.eventId }
+    const choice = obtainmentChoice(obtainment)
     return [{ key: `event:${obtainment.eventId}`, choice, parents: [], lines: [{ text: app.entityName("events", obtainment.eventId), notes: note ? [textNote(note)] : [] }] }]
   })
 })
@@ -90,7 +90,6 @@ function parentOf(condition: ParentCondition): Parent {
   const name = conditionName(app, condition)
   const note = conditionDetail(app, condition)
   if (condition.type === "monster") return { name, note, monster: app.monsters.value.get(condition.monsterId) ?? null, familyId: null }
-  if (condition.type === "family") return { name, note, monster: null, familyId: condition.familyId }
   return { name, note, monster: null, familyId: commonFamily(app, app.engine.value?.conditionCandidates(condition) ?? []) }
 }
 
@@ -124,6 +123,7 @@ const sections = computed(() =>
   ].filter((section) => section.options.length > 0),
 )
 
+// The games count four-way recipes among the special syntheses: both are labelled the same.
 function typeLabel(choice: NodeChoice): string | null {
   if (choice.type === "recipe") return app.text.value.special
   if (choice.type === "normal") return app.text.value.normal
@@ -132,11 +132,7 @@ function typeLabel(choice: NodeChoice): string | null {
 
 function isActive(choice: NodeChoice): boolean {
   const active = node.value?.choice
-  if (!active || active.type !== choice.type) return false
-  if (active.type === "recipe") return choice.type === "recipe" && active.recipeId === choice.recipeId
-  if (active.type === "scout" || active.type === "egg") return choice.type === active.type && active.locationId === choice.locationId
-  if (active.type === "event") return choice.type === "event" && active.eventId === choice.eventId
-  return true
+  return !!active && sameMethod(active, choice)
 }
 
 function choose(choice: NodeChoice) {
@@ -359,14 +355,6 @@ function choose(choice: NodeChoice) {
 .season-name {
   color: var(--text-muted);
   font-size: 0.75rem;
-}
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
 }
 /* The game's own weather and season icons, at the height of the text. */
 .situation-icon {

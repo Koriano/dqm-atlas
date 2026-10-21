@@ -12,10 +12,12 @@ export function normalizeForSearch(text: string): string {
     .trim()
 }
 
-/** True when every word of the query appears in one of the names (in any language). */
-export function matchesSearch(query: string, names: string[]): boolean {
-  const words = normalizeForSearch(query).split(" ").filter(Boolean)
-  if (words.length === 0) return true
-  const haystacks = names.map(normalizeForSearch)
-  return haystacks.some((name) => words.every((word) => name.includes(word)))
+/** The normalised words of a query. */
+export function searchWords(query: string): string[] {
+  return normalizeForSearch(query).split(" ").filter(Boolean)
+}
+
+/** True when every word appears in one of the names, already normalised (in any language). */
+export function matchesSearch(words: string[], names: string[]): boolean {
+  return words.length === 0 || names.some((name) => words.every((word) => name.includes(word)))
 }

@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { computed, ref, shallowRef, useId } from "vue"
+import { computed, ref, shallowRef } from "vue"
 
 import { useAppContext } from "../../app/context"
+import AppDialog from "../common/AppDialog.vue"
 
 /** Header button opening the list of changes. The releases are only loaded when the list is first opened. */
 const app = useAppContext()
-const dialog = ref<HTMLDialogElement>()
-const titleId = useId()
+const dialog = ref<InstanceType<typeof AppDialog>>()
 const changelog = shallowRef<typeof import("../../changelog")>()
 
 /** One block per release, its changes grouped by kind. */
@@ -28,10 +28,6 @@ async function open() {
   changelog.value ??= await import("../../changelog")
   dialog.value?.showModal()
 }
-
-function onBackdropClick(event: MouseEvent) {
-  if (event.target === dialog.value) dialog.value?.close()
-}
 </script>
 
 <template>
@@ -43,31 +39,22 @@ function onBackdropClick(event: MouseEvent) {
     </svg>
     <span class="changelog-label">{{ app.text.value.changelog }}</span>
   </button>
-  <Teleport to="body">
-    <!-- Escape closes the dialog only: it must not reach the shell, which would close the tree on mobile. -->
-    <dialog ref="dialog" class="changelog-dialog" :aria-labelledby="titleId" @click="onBackdropClick" @keydown.stop>
-      <div class="changelog">
-        <h2 :id="titleId" class="changelog-title">{{ app.text.value.changelog }}</h2>
-        <div class="changelog-days">
-          <section v-for="release in releases" :key="release.date">
-            <h3 class="day-title">
-              <time :datetime="release.date">{{ release.title }}</time>
-              <span class="day-age">{{ release.age }}</span>
-            </h3>
-            <template v-for="group in release.groups" :key="group.kind">
-              <h4 class="kind-title" :class="group.kind">{{ app.text.value.changeKinds[group.kind] }}</h4>
-              <ul class="entries">
-                <li v-for="(entry, index) in group.entries" :key="index">{{ entry[app.state.language] }}</li>
-              </ul>
-            </template>
-          </section>
-        </div>
-        <div class="changelog-actions">
-          <button type="button" class="close-button" @click="dialog?.close()">{{ app.text.value.close }}</button>
-        </div>
-      </div>
-    </dialog>
-  </Teleport>
+  <AppDialog ref="dialog" :title="app.text.value.changelog" max-width="32rem">
+    <div class="changelog-days">
+      <section v-for="release in releases" :key="release.date">
+        <h3 class="day-title">
+          <time :datetime="release.date">{{ release.title }}</time>
+          <span class="day-age">{{ release.age }}</span>
+        </h3>
+        <template v-for="group in release.groups" :key="group.kind">
+          <h4 class="kind-title" :class="group.kind">{{ app.text.value.changeKinds[group.kind] }}</h4>
+          <ul class="entries">
+            <li v-for="(entry, index) in group.entries" :key="index">{{ entry[app.state.language] }}</li>
+          </ul>
+        </template>
+      </section>
+    </div>
+  </AppDialog>
 </template>
 
 <style scoped>
@@ -105,37 +92,6 @@ function onBackdropClick(event: MouseEvent) {
   font-size: 0.8rem;
   font-weight: 400;
 }
-.changelog-dialog {
-  width: min(32rem, calc(100% - 1.5rem));
-  max-height: min(40rem, calc(100% - 1.5rem));
-  box-sizing: border-box;
-  padding: 0;
-  border: 0;
-  border-radius: 0.75rem;
-  background: var(--surface);
-  color: var(--text);
-  box-shadow: var(--shadow);
-}
-/* Only the list scrolls: the title and the close button stay in view. */
-.changelog-dialog[open] {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.changelog-dialog::backdrop {
-  background: rgb(0 0 0 / 0.4);
-}
-.changelog {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  min-height: 0;
-  padding: 1rem;
-}
-.changelog-title {
-  margin: 0;
-  font-size: 1.05rem;
-}
 .changelog-days {
   display: grid;
   gap: 1rem;
@@ -172,19 +128,6 @@ function onBackdropClick(event: MouseEvent) {
   margin: 0;
   padding-left: 1.1rem;
   font-size: 0.9rem;
-}
-.changelog-actions {
-  display: flex;
-  justify-content: flex-end;
-}
-.close-button {
-  padding: 0.35rem 0.9rem;
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  background: var(--surface);
-  color: var(--text);
-  font: inherit;
-  cursor: pointer;
 }
 @media (max-width: 600px) {
   .changelog-label {

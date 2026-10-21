@@ -17,11 +17,8 @@ export type SynthesisOutcome =
   | (OutcomeBase & { type: "recipe"; recipe: SpecialSynthesis })
   | (OutcomeBase & { type: "normal"; slot: NormalSlot })
 
-export type NormalOutcome = Extract<SynthesisOutcome, { type: "normal" }>
-
 export interface ParentPair {
   parentIds: [string, string]
-  outcome: NormalOutcome
 }
 
 export interface ObtainMethods {
@@ -30,14 +27,10 @@ export interface ObtainMethods {
   normal: ParentPair[]
 }
 
-export interface NormalChild {
-  resultId: string
-  partnerIds: string[]
-}
-
 export interface UsageMethods {
   recipes: SynthesisRecipe[]
-  normal: NormalChild[]
+  /** Every monster a normal synthesis with this one can give, in library order. */
+  normal: string[]
 }
 
 export type RepresentativeOrigin = { type: "recipe"; recipe: SynthesisRecipe } | { type: "normal" } | null

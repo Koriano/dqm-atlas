@@ -119,6 +119,10 @@ function checkReferences(dir: string, game: GameData): void {
   const unique = (label: string, values: (string | number)[], where: string) => {
     for (const value of duplicates(values)) errors.push(`${where}: duplicate ${label} "${value}"`)
   }
+  const icon = (folder: string, iconAssetKey: string, where: string) => {
+    const file = join(ASSET_DIR, game.id, folder, `${iconAssetKey}.png`)
+    if (!existsSync(file)) errors.push(`${where}: icon file ${file} does not exist`)
+  }
 
   if (game.id !== dir.split(/[\\/]/).pop()) errors.push(`${at("game.json")}: id "${game.id}" does not match its folder`)
   for (const key of CATALOG_KEYS) unique(`${key} id`, game[key].map((entry) => entry.id), at("game.json"))
@@ -130,16 +134,9 @@ function checkReferences(dir: string, game: GameData): void {
   const { drawn, width, height } = game.familyIconFrame
   if (drawn.x + drawn.width > width || drawn.y + drawn.height > height)
     errors.push(`${at("game.json")}: familyIconFrame.drawn goes beyond the ${width}×${height} icon`)
-  for (const family of game.families) {
-    const icon = join(ASSET_DIR, game.id, "families", `${family.iconAssetKey}.png`)
-    if (!existsSync(icon)) errors.push(`${at("game.json", family.id)}: icon file ${icon} does not exist`)
-  }
-  for (const [key, folder] of [["weathers", "weathers"], ["seasons", "seasons"]] as const) {
-    for (const entry of game[key]) {
-      if (entry.iconAssetKey === undefined) continue
-      const icon = join(ASSET_DIR, game.id, folder, `${entry.iconAssetKey}.png`)
-      if (!existsSync(icon)) errors.push(`${at("game.json", entry.id)}: icon file ${icon} does not exist`)
-    }
+  for (const family of game.families) icon("families", family.iconAssetKey, at("game.json", family.id))
+  for (const kind of ["weathers", "seasons"] as const) {
+    for (const entry of game[kind]) if (entry.iconAssetKey !== undefined) icon(kind, entry.iconAssetKey, at("game.json", entry.id))
   }
   for (const location of game.locations) {
     for (const [season, weathers] of Object.entries(location.weathersBySeason ?? {})) {
@@ -147,10 +144,7 @@ function checkReferences(dir: string, game: GameData): void {
       for (const id of weathers) ref("weathers", id, at("game.json", location.id))
     }
   }
-  for (const type of game.equipmentTypes) {
-    const icon = join(ASSET_DIR, game.id, "equipment", `${type.iconAssetKey}.png`)
-    if (!existsSync(icon)) errors.push(`${at("game.json", type.id)}: icon file ${icon} does not exist`)
-  }
+  for (const type of game.equipmentTypes) icon("equipment", type.iconAssetKey, at("game.json", type.id))
   for (const event of game.events) {
     ref("eventKinds", event.kind, at("game.json", event.id))
     if (event.regionId !== undefined) ref("regions", event.regionId, at("game.json", event.id))
@@ -224,8 +218,7 @@ function checkReferences(dir: string, game: GameData): void {
     }
     unique("scout location", monster.obtainments.flatMap((o) => (o.type === "scout" ? [o.locationId] : [])), where)
     unique("egg location", monster.obtainments.flatMap((o) => (o.type === "egg" ? [o.locationId] : [])), where)
-    const icon = join(ASSET_DIR, game.id, "monsters", `${monster.iconAssetKey}.png`)
-    if (!existsSync(icon)) errors.push(`${where}: icon file ${icon} does not exist`)
+    icon("monsters", monster.iconAssetKey, where)
   }
 
   const normalSynthesis = game.rules.normalSynthesis

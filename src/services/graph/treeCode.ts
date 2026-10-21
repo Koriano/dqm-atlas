@@ -2,6 +2,7 @@ import type { GameId } from "../../domain/game"
 import type { Monster } from "../../domain/monster"
 import {
   isAvailable,
+  isDirect,
   isNormalPair,
   MAX_PARENT_DEPTH,
   type NodeChoice,
@@ -118,9 +119,9 @@ export async function decodeTree(code: string, sources: TreeSources, gameId: Gam
       return
     }
     const entries = choice.type === "recipe" ? second : first
-    if (choice.type === "scout" || choice.type === "egg" || choice.type === "event" || !Array.isArray(entries)) {
+    if (isDirect(choice) || !Array.isArray(entries)) {
       // Scouting, eggs and events have no parents; a synthesis has none listed at the depth limit only.
-      if (choice.type === "recipe" || choice.type === "normal") mismatch ||= level < depth
+      if (!isDirect(choice)) mismatch ||= level < depth
       choices[id] = choice
       return
     }

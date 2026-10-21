@@ -7,7 +7,6 @@ import {
   ancestry,
   descendants,
   indexNodes,
-  isNormalPair,
   MAX_CHILD_DEPTH,
   MAX_PARENT_DEPTH,
   type NodeChoice,
@@ -15,10 +14,12 @@ import {
   ROOT_ID,
   type TreeChoices,
   type TreeSources,
+  withParentPick,
 } from "../services/graph/focusTree"
 import { decodeTree, encodeTree } from "../services/graph/treeCode"
 import { appText, type GameNames, type Language, LANGUAGES, loadGameNames } from "../i18n"
 import { monsterIconUrl } from "../services/assets"
+import { normalizeForSearch } from "../services/search"
 import { monsterSizes, statMaxima } from "../services/stats"
 import { createSynthesisEngine, type SynthesisEngine } from "../services/synthesis"
 import { preloadImages } from "./preload"
@@ -132,6 +133,17 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
     { immediate: true },
   )
 
+  /** The normalised names of each monster, ready to be searched. */
+  const searchIndex = computed(() => {
+    const index = new Map<string, string[]>()
+    for (const names of searchNames.value) {
+      for (const [monsterId, name] of Object.entries(names.monsters ?? {})) {
+        index.set(monsterId, [...(index.get(monsterId) ?? []), normalizeForSearch(name)])
+      }
+    }
+    return index
+  })
+
   const text = computed(() => appText(state.language).ui)
   const engine = computed(() => (game.value ? engineFor(game.value) : null))
   const monsters = computed(() => new Map((game.value?.monsters ?? []).map((monster) => [monster.id, monster])))
@@ -164,16 +176,13 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
     const item = found?.node.item
     const monster = item?.type === "monster" ? sources.value?.monsters.get(item.monsterId) : undefined
     if (!found || !monster || !sources.value) return null
-    const relativeItem = found.relative?.item
-    const choice = found.node.choice ?? null
     return {
       id: found.node.id,
       monster,
       side: found.side,
-      relativeMonsterId: relativeItem?.type === "monster" ? relativeItem.monsterId : null,
       /** Descendants only show how they are obtained: their choice would not change the tree. */
       editable: found.side !== "child",
-      choice: found.side === "child" ? null : choice,
+      choice: found.node.choice ?? null,
       truncated: found.node.truncated ?? false,
       obtainMethods: sources.value.engine.obtainMethods(monster.id),
     }
@@ -182,18 +191,6 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
   function setChoice(nodeId: string, choice: NodeChoice) {
     if (!state.tree) return
     state.tree.choices = { ...state.tree.choices, [nodeId]: choice }
-  }
-
-  /** Picking a parent drops the other one when the two no longer form a valid pair. */
-  function setNormalParent(nodeId: string, index: 0 | 1, monsterId: string | null) {
-    const node = treeNodes.value.get(nodeId)?.node
-    const item = node?.item
-    if (!sources.value || item?.type !== "monster" || node?.choice?.type !== "normal") return
-    const next: [string | null, string | null] = [...node.choice.parents]
-    next[index] = monsterId
-    const [first, second] = next
-    if (monsterId && first && second && !isNormalPair(sources.value, item.monsterId, first, second)) next[1 - index] = null
-    setChoice(nodeId, { type: "normal", parents: next })
   }
 
   return {
@@ -211,7 +208,8 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
     descendantTree,
     treeNodes,
     selectedNode,
-    searchKeys: (monsterId: string) => searchNames.value.map((names) => names.monsters?.[monsterId]).filter((name): name is string => !!name),
+    /** The monster's names in every language, normalised for search; empty until they are loaded. */
+    searchKeys: (monsterId: string) => searchIndex.value.get(monsterId) ?? [],
     gameName: (gameId: GameId | UpcomingGameId) => appText(state.language).games[gameId],
     entityName: (section: string, id: string) => names.value?.[section]?.[id] ?? id,
 
@@ -245,17 +243,11 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
     pickParent(slotNodeId: string, monsterId: string | null): string | null {
       const slot = treeNodes.value.get(slotNodeId)?.node.slot
       const owner = slot && treeNodes.value.get(slot.ownerId)?.node
-      const choice = owner?.choice
-      if (!state.tree || !slot || !choice) return null
+      if (!state.tree || !sources.value || !slot || !owner?.choice || owner.item.type !== "monster") return null
       if (monsterId !== null && !slot.options.includes(monsterId)) return null
-      if (choice.type === "normal" && (slot.index === 0 || slot.index === 1)) {
-        setNormalParent(slot.ownerId, slot.index, monsterId)
-      } else if (choice.type === "recipe") {
-        const picks = { ...choice.picks }
-        if (monsterId === null) delete picks[slot.index]
-        else picks[slot.index] = monsterId
-        setChoice(slot.ownerId, { type: "recipe", recipeId: choice.recipeId, picks })
-      } else return null
+      const choice = withParentPick(sources.value, owner.item.monsterId, owner.choice, slot.index, monsterId)
+      if (!choice) return null
+      setChoice(slot.ownerId, choice)
       if (monsterId !== null) {
         state.tree.selectedId = parentNodeId(slot.ownerId, slot.index, monsterId)
         return state.tree.selectedId

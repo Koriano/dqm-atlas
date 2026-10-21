@@ -56,7 +56,7 @@ src/
 │   ├── layout/   header, relations panel, "What's new" and "About" buttons
 │   ├── graph/    AtlasCanvas, FocusCanvas, its viewport and parent picker, TreeShareControls
 │   ├── monster/  detail panel, its tabs, obtainment cards
-│   └── common/   combobox, icons, loading indicator, popover, tags, labels, focus and text-measuring helpers
+│   └── common/   combobox, dialog, icons, loading indicator, popover, tags, labels, focus and text-measuring helpers
 ├── domain/       monster.ts, synthesis.ts, game.ts
 ├── services/
 │   ├── synthesis/  engine, recipe matching, normal-synthesis strategies
@@ -82,7 +82,7 @@ State:
 - `detailTab`, the sheet's tab, kept from one node to the next;
 - `sheetSize`, the size the sheet shows, kept the same way (null: each monster in its own size).
 
-Derived from it: the loaded `GameData`, `monsters` (the one index of its monsters by id), the translated names and UI texts, `searchKeys` (every language),
+Derived from it: the loaded `GameData`, `monsters` (the one index of its monsters by id), the translated names and UI texts, `searchKeys` (every language, normalised once for search),
 `statMaxima` (the highest value of each stat in the game, in any size: the scale of the gauges), the cached synthesis engine,
 `ancestryTree` / `descendantTree` / `treeNodes`, and `selectedNode` (its monster, side, whether it is editable, its
 resolved choice, its normal-parent options).
@@ -101,7 +101,7 @@ The game data is never mutated.
 multiplies the stored maximum stats by the size's multipliers (`rules.sizeVariants`) and those of the traits the
 monster has in that size (`Trait.sheetEffect`), then rounds once; `sheetResistances` adds their resistance bonuses
 to the stored values, a bonus never taking a value above 100 (immune). `resistanceStage` names a value by the stage
-it reaches. Components only display the result.
+it reaches, and `resistanceLevel` gives its colour (weak, normal, resistant, absorb). Components only display the result.
 
 ## Synthesis engine
 
@@ -136,7 +136,8 @@ own place (`orderedParents`).
 - `MAX_PARENT_DEPTH` is 5 and `MAX_CHILD_DEPTH` 2: on DQMJ2 the worst cases are 187 and 70 nodes.
 
 A parent the user must pick is a `slot` node. `pickParent(slotNodeId, monsterId | null)` writes the pick in the
-owner node's choice. For a normal synthesis, the other parent is dropped when the new pair is not valid.
+owner node's choice (`withParentPick` in `focusTree.ts`). For a normal synthesis, the other parent is dropped when the
+new pair is not valid.
 
 `src/services/graph/focusGraph.ts` projects that tree into what is drawn: the kind and content of each node, its
 size, its position (through `focusLayout.ts`) and the edges. It knows nothing of Vue or Vue Flow. The texts come
@@ -220,7 +221,8 @@ are only downloaded when the list is opened.
 
 ## Focus and keyboard
 
-- Dialogs are native `<dialog>` elements named by their title.
+- Dialogs are native `<dialog>` elements named by their title, all through `common/AppDialog.vue`: a click on the
+  backdrop closes one, and Escape closes it without reaching the shell.
 - The mobile drawer is modal while open: the header, canvas and sheet are `inert`.
 - The parent picker keeps Tab inside and gives the focus back to what opened it, or to the node now filling the slot.
 - The sheet's tabs follow the ARIA tabs pattern.

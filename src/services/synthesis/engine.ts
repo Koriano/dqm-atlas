@@ -26,7 +26,8 @@ export interface SynthesisEngine {
 
 interface SynthesisIndex {
   obtain: Map<string, ParentPair[]>
-  children: Map<string, Map<string, Set<string>>>
+  /** Normal-synthesis results by parent. */
+  children: Map<string, Set<string>>
 }
 
 export function createSynthesisEngine(game: GameData): SynthesisEngine {
@@ -72,22 +73,21 @@ export function createSynthesisEngine(game: GameData): SynthesisEngine {
   function getIndex(): SynthesisIndex {
     if (index) return index
     const built: SynthesisIndex = { obtain: new Map(), children: new Map() }
-    const addChild = (parentId: string, resultId: string, partnerId: string) => {
-      const byResult = built.children.get(parentId) ?? new Map<string, Set<string>>()
-      byResult.set(resultId, (byResult.get(resultId) ?? new Set()).add(partnerId))
-      built.children.set(parentId, byResult)
+    const addChild = (parentId: string, resultId: string) => {
+      built.children.set(parentId, (built.children.get(parentId) ?? new Set()).add(resultId))
     }
     const ids = game.monsters.map((m) => m.id)
     for (let i = 0; i < ids.length; i++) {
       for (let j = normal.ordered ? 0 : i; j < ids.length; j++) {
-        const parentIds: [string, string] = [ids[i], ids[j]]
-        for (const outcome of synthesize(...parentIds)) {
-          if (outcome.type !== "normal" || parentIds.includes(outcome.resultId)) continue
+        // One pair object shared by every result of the pair.
+        const pair: ParentPair = { parentIds: [ids[i], ids[j]] }
+        for (const outcome of synthesize(ids[i], ids[j])) {
+          if (outcome.type !== "normal" || pair.parentIds.includes(outcome.resultId)) continue
           const pairs = built.obtain.get(outcome.resultId) ?? []
-          pairs.push({ parentIds, outcome })
+          pairs.push(pair)
           built.obtain.set(outcome.resultId, pairs)
-          addChild(parentIds[0], outcome.resultId, parentIds[1])
-          addChild(parentIds[1], outcome.resultId, parentIds[0])
+          addChild(ids[i], outcome.resultId)
+          addChild(ids[j], outcome.resultId)
         }
       }
     }
@@ -109,12 +109,9 @@ export function createSynthesisEngine(game: GameData): SynthesisEngine {
 
     usages(monsterId) {
       const used = monster(monsterId)
-      const children = getIndex().children.get(monsterId) ?? new Map<string, Set<string>>()
       return {
         recipes: game.recipes.filter((recipe) => recipe.parents.some((parent) => recipes.fits(parent, used))),
-        normal: [...children]
-          .map(([resultId, partners]) => ({ resultId, partnerIds: [...partners].sort(libraryOrder) }))
-          .sort((x, y) => libraryOrder(x.resultId, y.resultId)),
+        normal: [...(getIndex().children.get(monsterId) ?? [])].sort(libraryOrder),
       }
     },
 
