@@ -22,8 +22,7 @@ export function readRoute(): Route | null {
   return known ? { gameId: known, monsterId: monsterId || null } : null
 }
 
-/** The default game's atlas has no hash at all. */
+/** Every address names its game, the default one included. */
 export function routeHash({ gameId, monsterId }: Route): string {
-  if (monsterId) return `#/${gameId}/${encodeURIComponent(monsterId)}`
-  return gameId === GAME_IDS[0] ? "" : `#/${gameId}`
+  return monsterId ? `#/${gameId}/${encodeURIComponent(monsterId)}` : `#/${gameId}`
 }

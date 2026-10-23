@@ -102,7 +102,8 @@ French name in the English interface. Hiragana and katakana are read alike.
 ### Sharing
 
 The address names the game and the tree's root (`#/<gameId>/<monsterId>`), so the default tree of a monster can be
-linked to. An address naming an unknown game or monster falls back to the atlas.
+linked to. The bare site address opens the first game's atlas (`#/dqmj2`); an address naming an unknown game or
+monster falls back to the atlas.
 
 A customised tree is shared as a text code, exported and imported from buttons next to the zoom controls. The code is
 a snapshot of the choice of every displayed monster and of the parent depth. An imported code is never trusted: every

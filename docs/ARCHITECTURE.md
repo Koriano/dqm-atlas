@@ -193,8 +193,8 @@ The 900 px breakpoint is only written in `App.vue`, which sets the `wide` class 
 ## Address and sharing
 
 `src/app/route.ts` reads and writes `#/<gameId>/<monsterId>`; `App.vue` keeps it in sync with the state
-(`pushState`, `hashchange`). An address naming nothing is corrected with `replaceState`, so Back does not return to
-it.
+(`pushState`, `hashchange`). Every address names its game, the first game's atlas included (`#/dqmj2`). An address
+naming nothing, the bare site address among them, is corrected with `replaceState`, so Back does not return to it.
 
 `src/services/graph/treeCode.ts` encodes a tree as `dqm1.` + base64url(deflate-raw(JSON)). The code is a
 **snapshot**: the resolved choice of every displayed occurrence, defaults included, plus the parent depth — so a

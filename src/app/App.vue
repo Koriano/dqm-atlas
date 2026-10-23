@@ -27,11 +27,14 @@ const app = createAppContext({ gameId: readRoute()?.gameId ?? GAME_IDS[0], langu
 provideAppContext(app)
 
 // The address names the game and the root of the open tree, so a tree can be linked to and Back returns to the atlas.
+const currentHash = () => routeHash({ gameId: app.state.gameId, monsterId: app.state.tree?.rootId ?? null })
 function applyRoute() {
   const route = readRoute()
   app.setGame(route?.gameId ?? GAME_IDS[0])
   const monsterId = route?.monsterId ?? null
   if ((app.state.tree?.rootId ?? null) !== monsterId) app.openTree(monsterId)
+  // An address without a known game (the bare site address among them) is replaced by the one of the game shown.
+  if (window.location.hash !== currentHash()) window.history.replaceState(null, "", currentHash())
 }
 applyRoute()
 onMounted(() => window.addEventListener("hashchange", applyRoute))
@@ -39,14 +42,11 @@ onUnmounted(() => window.removeEventListener("hashchange", applyRoute))
 // Set while an address naming nothing is being corrected: the correction takes its place in the history instead of
 // adding an entry, otherwise Back would land on the bad address again and be sent forward each time.
 let correctingAddress = false
-watch(
-  () => routeHash({ gameId: app.state.gameId, monsterId: app.state.tree?.rootId ?? null }),
-  (hash) => {
-    const method = correctingAddress ? "replaceState" : "pushState"
-    correctingAddress = false
-    if (window.location.hash !== hash) window.history[method](null, "", hash || window.location.pathname + window.location.search)
-  },
-)
+watch(currentHash, (hash) => {
+  const method = correctingAddress ? "replaceState" : "pushState"
+  correctingAddress = false
+  if (window.location.hash !== hash) window.history[method](null, "", hash)
+})
 // A linked monster that does not exist in the game falls back to the atlas.
 watch(
   () => app.status.value === "ready" && app.state.tree !== null && !app.treeRoot.value,
