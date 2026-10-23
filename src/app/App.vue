@@ -112,7 +112,10 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown))
 </script>
 
 <template>
-  <div class="app-shell" :class="{ wide, 'left-open': app.state.leftPanelOpen, 'sheet-open': sheetOpen }">
+  <div
+    class="app-shell"
+    :class="{ wide, 'left-open': app.state.leftPanelOpen, 'sheet-open': sheetOpen, 'detail-collapsed': !app.state.detailExpanded }"
+  >
     <AppHeader class="shell-header" :inert="drawerOpen || undefined" />
     <aside
       v-if="app.state.leftPanelOpen || wide"
@@ -162,7 +165,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown))
         <FocusCanvas v-if="app.treeRoot.value" :game="app.game.value" :bottom-inset="bottomInset" />
       </template>
     </main>
-    <aside ref="detailPanel" class="shell-detail" :hidden="!wide && !sheetOpen" :inert="drawerOpen || undefined">
+    <aside id="detail-panel" ref="detailPanel" class="shell-detail" :hidden="!wide && !sheetOpen" :inert="drawerOpen || undefined">
       <MonsterDetailPanel />
     </aside>
   </div>
@@ -216,15 +219,20 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown))
   box-shadow: var(--shadow);
 }
 
-/* Wide screens: left column (full or collapsed to a rail), persistent right column. */
+/* Wide screens: left column (full or collapsed to a rail), persistent right column (full or collapsed to the heading). */
 .app-shell.wide {
-  grid-template-columns: 3.25rem minmax(0, 1fr) 23rem;
+  --left-width: 3.25rem;
+  --detail-width: 23rem;
+  grid-template-columns: var(--left-width) minmax(0, 1fr) var(--detail-width);
   grid-template-areas:
     "header header header"
     "left canvas detail";
 }
 .app-shell.wide.left-open {
-  grid-template-columns: 17rem minmax(0, 1fr) 23rem;
+  --left-width: 17rem;
+}
+.app-shell.wide.detail-collapsed {
+  --detail-width: 8rem;
 }
 .app-shell.wide .shell-left {
   grid-area: left;

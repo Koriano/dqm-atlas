@@ -28,6 +28,8 @@
     "loadingIcons": "アイコンを読み込み中…",
     "loadError": "ゲームデータを読み込めませんでした。",
     "details": "モンスターの詳細",
+    "expandDetails": "詳細をすべて表示",
+    "collapseDetails": "詳細を縮小",
     "noSelection": "モンスターを選ぶと詳細が表示されます。",
     "family": "系統",
     "rank": "ランク",

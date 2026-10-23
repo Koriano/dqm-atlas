@@ -90,6 +90,9 @@ const allMonsterIds = computed(() => (app.game.value?.monsters ?? []).map((monst
   font-size: 0.85rem;
   min-width: 0;
 }
+.control-label {
+  white-space: nowrap;
+}
 .control select {
   min-width: 0;
 }
@@ -103,29 +106,42 @@ const allMonsterIds = computed(() => (app.game.value?.monsters ?? []).map((monst
 .search {
   width: 100%;
 }
-/* Narrow screen: the sides dissolve, their controls wrap as direct items of the header. */
+/*
+ * Narrow screen: the sides dissolve and their controls are placed directly on two fixed rows, whatever the width — the
+ * title, the game and the language, then the search and the app's buttons. Wrapping would let the search climb onto
+ * the first row and crush the game.
+ */
 .app-shell:not(.wide) .app-header {
-  display: flex;
-  flex-wrap: wrap;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  grid-template-areas:
+    "title game language language"
+    "search search changelog about";
 }
 .app-shell:not(.wide) .header-side {
   display: contents;
 }
-.app-shell:not(.wide) .language-control {
-  margin-left: auto;
+.app-shell:not(.wide) .app-title {
+  grid-area: title;
 }
-/* Second row: too wide for the first one, the search leaves the rest of its row to the app's buttons. */
+.app-shell:not(.wide) .game-control {
+  grid-area: game;
+}
+/* As wide as its longest name allows, then it shrinks with the row. */
+.app-shell:not(.wide) .game-control select {
+  max-width: 100%;
+}
+.app-shell:not(.wide) .language-control {
+  grid-area: language;
+  justify-self: end;
+}
 .app-shell:not(.wide) .search {
-  order: 1;
-  flex: 1 0 60%;
-  width: auto;
-  margin-left: 0;
+  grid-area: search;
 }
 .app-shell:not(.wide) .changelog-control {
-  order: 2;
+  grid-area: changelog;
 }
 .app-shell:not(.wide) .about-control {
-  order: 3;
+  grid-area: about;
 }
 @media (max-width: 600px) {
   .app-header {
@@ -134,11 +150,6 @@ const allMonsterIds = computed(() => (app.game.value?.monsters ?? []).map((monst
   }
   .game-control {
     padding-left: 0.6rem;
-    flex: 1;
-  }
-  .game-control select {
-    max-width: 100%;
-    width: 100%;
   }
   .control-label {
     position: absolute;

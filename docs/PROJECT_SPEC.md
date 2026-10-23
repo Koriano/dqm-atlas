@@ -45,6 +45,10 @@ The page has a header, a main canvas and two panels.
 Under 900 px the canvas keeps the whole screen: the left panel becomes a drawer opened by a floating button, and the
 sheet becomes a bottom sheet shown while a tree is open.
 
+The sheet has two sizes, switched by a button on it: full, or reduced to the monster's icon, name and "View" button so
+the canvas gets the room. It shrinks towards its edge — downwards to a thin bar on a phone, rightwards to a narrow
+column on a wide screen — and keeps its size from one monster to the next.
+
 ### Atlas
 
 Every monster of the game, without any link: families as columns, ranks as rows, positions stable from one visit to

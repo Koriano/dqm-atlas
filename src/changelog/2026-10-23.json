@@ -1,0 +1,16 @@
+{
+  "feature": [
+    {
+      "fr": "La fiche d'un monstre peut être réduite d'un bouton : seuls restent son icône et son nom, et l'arbre de synthèse profite de toute la place libérée.",
+      "en": "A monster's sheet can be shrunk with a button: only its icon and name remain, and the synthesis tree gets all the room freed up.",
+      "ja": "モンスターの詳細はボタンで縮小できるようになりました。アイコンと名前だけが残り、空いたスペースを配合ツリーに使えます。"
+    }
+  ],
+  "fix": [
+    {
+      "fr": "L'interface a été améliorée pour les petits écrans.",
+      "en": "The interface has been improved for small screens.",
+      "ja": "小さい画面で、画面表示を改善しました。"
+    }
+  ]
+}

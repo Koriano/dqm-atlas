@@ -44,6 +44,8 @@ export interface AppState {
   parentDepth: number
   childDepth: number
   leftPanelOpen: boolean
+  /** The sheet shows everything, or only the monster's heading so the canvas gets the room. */
+  detailExpanded: boolean
   /** Kept from one sheet to the next, so several monsters can be compared on the same tab. */
   detailTab: DetailTab
   /** The size the sheet shows, kept like the tab; null shows each monster in its own size. */
@@ -73,6 +75,7 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
     showChildren: true,
     parentDepth: 1,
     childDepth: 1,
+    detailExpanded: true,
     detailTab: "obtainment",
     sheetSize: null,
   })
@@ -301,6 +304,9 @@ export function createAppContext(initial: Pick<AppState, "gameId" | "language" |
     },
     setLeftPanelOpen(open: boolean) {
       state.leftPanelOpen = open
+    },
+    setDetailExpanded(expanded: boolean) {
+      state.detailExpanded = expanded
     },
   }
 }

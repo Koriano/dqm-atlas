@@ -28,6 +28,8 @@
     "loadingIcons": "Chargement des icônes…",
     "loadError": "Impossible de charger les données du jeu.",
     "details": "Détails du monstre",
+    "expandDetails": "Afficher toute la fiche",
+    "collapseDetails": "Réduire la fiche",
     "noSelection": "Sélectionnez un monstre pour voir ses détails.",
     "family": "Famille",
     "rank": "Rang",

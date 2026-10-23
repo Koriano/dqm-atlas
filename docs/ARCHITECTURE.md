@@ -79,6 +79,7 @@ State:
 - `tree`: `{ rootId, choices, selectedId }`, or `null` while the atlas is shown;
 - show parents / children and their depth;
 - left panel open or not;
+- `detailExpanded`, the sheet full or reduced to its heading, kept from one node to the next;
 - `detailTab`, the sheet's tab, kept from one node to the next;
 - `sheetSize`, the size the sheet shows, kept the same way (null: each monster in its own size).
 
@@ -168,7 +169,8 @@ clicks. Its viewport is `focusViewport.ts` and its parent picker `ParentPicker.v
 
 - The atlas stays mounted (`v-show`) while a tree is open, so it keeps its viewport.
 - A new tree is fitted in the view, above the mobile bottom sheet. Once the user has panned or zoomed, later changes
-  keep the selected node at the same place on screen instead of refitting. Vue Flow emits `nodes-initialized` again
+  keep the selected node at the same place on screen instead of refitting. The same holds when the visible area
+  changes: the bottom sheet's height, or the canvas width when a side column opens or collapses. Vue Flow emits `nodes-initialized` again
   for every new node, and `move-start` on a plain click: neither can be used as "the user moved".
 
 **Parent picker.** Clicking a slot opens the `MonsterCombobox` in a dialog centred over the dimmed canvas. The field

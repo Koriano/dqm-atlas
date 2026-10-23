@@ -6,12 +6,14 @@ import { formatText } from "../../i18n"
 import { hasTraitInSize, monsterSizes } from "../../services/stats"
 import InfoPopover from "../common/InfoPopover.vue"
 import MonsterIcon from "../common/MonsterIcon.vue"
+import PanelToggleIcon from "../common/PanelToggleIcon.vue"
 import MonsterResistancesTab from "./MonsterResistancesTab.vue"
 import MonsterStatsTab from "./MonsterStatsTab.vue"
 import ObtainmentOptions from "./ObtainmentOptions.vue"
 
 const app = useAppContext()
 const node = computed(() => app.selectedNode.value)
+const expanded = computed(() => app.state.detailExpanded)
 /** What the selected monster's skill unlocks, in the game's order. */
 const skillTiers = computed(() => {
   const skillId = node.value?.monster.skillId
@@ -48,7 +50,19 @@ const tabs = computed<{ id: DetailTab; label: string }[]>(() => [
 </script>
 
 <template>
-  <section class="detail-panel" :aria-label="app.text.value.details">
+  <section class="detail-panel" :class="{ collapsed: !expanded }" :aria-label="app.text.value.details">
+    <!-- The sheet shrinks towards its edge of the screen: downwards on a phone, rightwards on a wide screen. -->
+    <button
+      type="button"
+      class="icon-button sheet-toggle"
+      :aria-expanded="expanded"
+      aria-controls="detail-panel"
+      :aria-label="expanded ? app.text.value.collapseDetails : app.text.value.expandDetails"
+      :title="expanded ? app.text.value.collapseDetails : app.text.value.expandDetails"
+      @click="app.setDetailExpanded(!expanded)"
+    >
+      <PanelToggleIcon :direction="expanded ? 'close' : 'open'" />
+    </button>
     <template v-if="node">
       <header class="detail-header">
         <div class="detail-portrait">
@@ -62,98 +76,159 @@ const tabs = computed<{ id: DetailTab; label: string }[]>(() => [
           <p class="detail-number">{{ formatText(app.text.value.libraryNumber, { number: node.monster.libraryId }) }}</p>
         </div>
       </header>
-      <dl class="facts">
-        <dt>{{ app.text.value.family }}</dt>
-        <dd>{{ app.entityName("families", node.monster.familyId) }}</dd>
-        <dt>{{ app.text.value.rank }}</dt>
-        <dd>{{ node.monster.rank }}</dd>
-        <dt>{{ app.text.value.size }}</dt>
-        <dd>
-          <div v-if="sizes.length > 1" class="size-switch" role="group" :aria-label="app.text.value.sheetSize">
-            <button
-              v-for="size in sizes"
-              :key="size"
-              type="button"
-              class="size-button"
-              :aria-pressed="size === shownSize"
-              @click="app.setSheetSize(size)"
-            >
-              {{ size }}
-            </button>
-          </div>
-          <template v-else>{{ node.monster.size }}</template>
-        </dd>
-        <dt>{{ app.text.value.skill }}</dt>
-        <dd>
-          <InfoPopover :label="app.entityName('skills', node.monster.skillId)">
-            <table class="tiers">
-              <thead>
-                <tr>
-                  <th scope="col">{{ app.text.value.skillPoints }}</th>
-                  <th scope="col">{{ app.text.value.skillUnlocks }}</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="tier in skillTiers" :key="tier.key">
-                  <td class="tier-points">{{ tier.points }}</td>
-                  <td>{{ tier.name }}</td>
-                </tr>
-              </tbody>
-            </table>
-          </InfoPopover>
-        </dd>
-        <template v-if="node.monster.traits.length > 0">
-          <dt>{{ app.text.value.traits }}</dt>
+      <template v-if="expanded">
+        <dl class="facts">
+          <dt>{{ app.text.value.family }}</dt>
+          <dd>{{ app.entityName("families", node.monster.familyId) }}</dd>
+          <dt>{{ app.text.value.rank }}</dt>
+          <dd>{{ node.monster.rank }}</dd>
+          <dt>{{ app.text.value.size }}</dt>
           <dd>
-            <!-- Every trait is listed, whatever the size shown; one the monster lacks in that size is dimmed. -->
-            <ul class="traits">
-              <li
-                v-for="trait in node.monster.traits"
-                :key="`${trait.traitId} ${trait.level ?? ''} ${trait.size ?? ''}`"
-                class="trait"
-                :class="{ absent: shownSize && !hasTraitInSize(trait, shownSize) }"
+            <div v-if="sizes.length > 1" class="size-switch" role="group" :aria-label="app.text.value.sheetSize">
+              <button
+                v-for="size in sizes"
+                :key="size"
+                type="button"
+                class="size-button"
+                :aria-pressed="size === shownSize"
+                @click="app.setSheetSize(size)"
               >
-                <span v-if="trait.level" class="trait-level">{{ formatText(app.text.value.traitLevel, { level: trait.level }) }}</span>
-                <InfoPopover :label="app.entityName('traits', trait.traitId)">{{ app.entityName("traitDescriptions", trait.traitId) }}</InfoPopover>
-                <span v-if="trait.size" class="trait-size" :title="formatText(app.text.value.traitSizeOnly, { size: trait.size })">
-                  <span aria-hidden="true">{{ trait.size }}</span><span class="visually-hidden">{{ formatText(app.text.value.traitSizeOnly, { size: trait.size }) }}</span>
-                </span>
-              </li>
-            </ul>
+                {{ size }}
+              </button>
+            </div>
+            <template v-else>{{ node.monster.size }}</template>
           </dd>
-        </template>
-      </dl>
-      <div ref="tabList" class="tabs" role="tablist" :aria-label="app.text.value.detailTabs" @keydown="onTabKeydown">
-        <button
-          v-for="tab in tabs"
-          :id="`${tabsId}-${tab.id}`"
-          :key="tab.id"
-          type="button"
-          role="tab"
-          class="tab"
-          :class="{ active: app.state.detailTab === tab.id }"
-          :aria-selected="app.state.detailTab === tab.id"
-          :aria-controls="`${tabsId}-panel`"
-          :tabindex="app.state.detailTab === tab.id ? 0 : -1"
-          @click="app.setDetailTab(tab.id)"
-        >
-          {{ tab.label }}
-        </button>
-      </div>
-      <!-- One panel, filled by the open tab. Focusable, since the stats and resistances have nothing to tab to. -->
-      <div :id="`${tabsId}-panel`" class="tab-panel" role="tabpanel" :aria-labelledby="`${tabsId}-${app.state.detailTab}`" tabindex="0">
-        <MonsterStatsTab v-if="app.state.detailTab === 'stats'" :monster="node.monster" />
-        <MonsterResistancesTab v-else-if="app.state.detailTab === 'resistances'" :monster="node.monster" />
-        <ObtainmentOptions v-else />
-      </div>
+          <dt>{{ app.text.value.skill }}</dt>
+          <dd>
+            <InfoPopover :label="app.entityName('skills', node.monster.skillId)">
+              <table class="tiers">
+                <thead>
+                  <tr>
+                    <th scope="col">{{ app.text.value.skillPoints }}</th>
+                    <th scope="col">{{ app.text.value.skillUnlocks }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="tier in skillTiers" :key="tier.key">
+                    <td class="tier-points">{{ tier.points }}</td>
+                    <td>{{ tier.name }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </InfoPopover>
+          </dd>
+          <template v-if="node.monster.traits.length > 0">
+            <dt>{{ app.text.value.traits }}</dt>
+            <dd>
+              <!-- Every trait is listed, whatever the size shown; one the monster lacks in that size is dimmed. -->
+              <ul class="traits">
+                <li
+                  v-for="trait in node.monster.traits"
+                  :key="`${trait.traitId} ${trait.level ?? ''} ${trait.size ?? ''}`"
+                  class="trait"
+                  :class="{ absent: shownSize && !hasTraitInSize(trait, shownSize) }"
+                >
+                  <span v-if="trait.level" class="trait-level">{{ formatText(app.text.value.traitLevel, { level: trait.level }) }}</span>
+                  <InfoPopover :label="app.entityName('traits', trait.traitId)">{{ app.entityName("traitDescriptions", trait.traitId) }}</InfoPopover>
+                  <span v-if="trait.size" class="trait-size" :title="formatText(app.text.value.traitSizeOnly, { size: trait.size })">
+                    <span aria-hidden="true">{{ trait.size }}</span><span class="visually-hidden">{{ formatText(app.text.value.traitSizeOnly, { size: trait.size }) }}</span>
+                  </span>
+                </li>
+              </ul>
+            </dd>
+          </template>
+        </dl>
+        <div ref="tabList" class="tabs" role="tablist" :aria-label="app.text.value.detailTabs" @keydown="onTabKeydown">
+          <button
+            v-for="tab in tabs"
+            :id="`${tabsId}-${tab.id}`"
+            :key="tab.id"
+            type="button"
+            role="tab"
+            class="tab"
+            :class="{ active: app.state.detailTab === tab.id }"
+            :aria-selected="app.state.detailTab === tab.id"
+            :aria-controls="`${tabsId}-panel`"
+            :tabindex="app.state.detailTab === tab.id ? 0 : -1"
+            @click="app.setDetailTab(tab.id)"
+          >
+            {{ tab.label }}
+          </button>
+        </div>
+        <!-- One panel, filled by the open tab. Focusable, since the stats and resistances have nothing to tab to. -->
+        <div :id="`${tabsId}-panel`" class="tab-panel" role="tabpanel" :aria-labelledby="`${tabsId}-${app.state.detailTab}`" tabindex="0">
+          <MonsterStatsTab v-if="app.state.detailTab === 'stats'" :monster="node.monster" />
+          <MonsterResistancesTab v-else-if="app.state.detailTab === 'resistances'" :monster="node.monster" />
+          <ObtainmentOptions v-else />
+        </div>
+      </template>
     </template>
-    <p v-else class="placeholder">{{ app.text.value.noSelection }}</p>
+    <p v-else-if="expanded" class="placeholder">{{ app.text.value.noSelection }}</p>
   </section>
 </template>
 
 <style scoped>
 .detail-panel {
   padding: 1rem;
+}
+/* The header beside it starts its own formatting context, so it keeps clear of the floated button. */
+.sheet-toggle {
+  float: right;
+  margin: 0 0 0.5rem 0.75rem;
+}
+/* The icon draws a left panel: it is turned towards the sheet's edge of the screen. */
+.app-shell.wide .sheet-toggle > .panel-toggle-icon {
+  transform: scaleX(-1);
+}
+.app-shell:not(.wide) .sheet-toggle > .panel-toggle-icon {
+  transform: rotate(-90deg);
+}
+/* Collapsed on a wide screen: a narrow column, the button above the portrait and the name. */
+.app-shell.wide .detail-panel.collapsed {
+  padding: 0.75rem 0.5rem;
+}
+.app-shell.wide .collapsed .sheet-toggle {
+  float: none;
+  display: grid;
+  margin: 0 auto 0.75rem;
+}
+.app-shell.wide .collapsed .detail-header {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.app-shell.wide .collapsed .detail-heading {
+  flex: none;
+  width: 100%;
+}
+.app-shell.wide .collapsed .detail-name {
+  font-size: 0.95rem;
+}
+/* Collapsed on a phone: one thin row under the canvas — icon, name, "View", then the button. */
+.app-shell:not(.wide) .detail-panel.collapsed {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+}
+.app-shell:not(.wide) .collapsed .sheet-toggle {
+  margin: 0;
+}
+.app-shell:not(.wide) .collapsed .detail-header {
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+}
+.app-shell:not(.wide) .collapsed .detail-portrait {
+  display: contents;
+}
+.app-shell:not(.wide) .collapsed .monster-icon {
+  width: auto;
+  height: 3rem;
+}
+.app-shell:not(.wide) .collapsed .view-button {
+  order: 1;
 }
 .detail-header {
   display: flex;

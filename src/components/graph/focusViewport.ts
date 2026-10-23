@@ -1,5 +1,5 @@
 import { useVueFlow } from "@vue-flow/core"
-import { type Ref, watch } from "vue"
+import { onUnmounted, type Ref, watch } from "vue"
 
 import { ROOT_ID } from "../../services/graph/focusTree"
 
@@ -102,7 +102,25 @@ export function useFocusViewport({ container, nodes, rootId, anchorId, bottomIns
     },
     { flush: "post" },
   )
-  watch(bottomInset, () => (userMoved ? ensureVisible(anchorId()) : fit()), { flush: "post" })
+  const followVisibleArea = () => (userMoved ? ensureVisible(anchorId()) : fit())
+  watch(bottomInset, followVisibleArea, { flush: "post" })
+  // The canvas narrows or widens when a side column opens or collapses. Its first measure is not a change: the tree's
+  // nodes may not be measured yet.
+  let observedWidth = 0
+  const resizeObserver = new ResizeObserver(([entry]) => {
+    const width = entry ? entry.contentRect.width : 0
+    if (observedWidth && width !== observedWidth) followVisibleArea()
+    observedWidth = width
+  })
+  watch(
+    container,
+    (element, previous) => {
+      if (previous) resizeObserver.unobserve(previous)
+      if (element) resizeObserver.observe(element)
+    },
+    { immediate: true },
+  )
+  onUnmounted(() => resizeObserver.disconnect())
 
   return {
     visibleHeight,

@@ -28,6 +28,8 @@
     "loadingIcons": "Loading icons…",
     "loadError": "Could not load the game data.",
     "details": "Monster details",
+    "expandDetails": "Show the full sheet",
+    "collapseDetails": "Shrink the sheet",
     "noSelection": "Select a monster to see its details.",
     "family": "Family",
     "rank": "Rank",
